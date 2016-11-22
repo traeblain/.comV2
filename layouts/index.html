@@ -29,7 +29,8 @@
         <a href="{{ "blog" | absURL }}">&nbsp;</a>
       </div>
       <div class="eight columns">
-        {{ range first 4 .Paginator.Pages }}
+        {{ $paginator := .Paginate (where .Data.Pages "Draft" false) }}
+        {{ range first 4 $paginator.Pages }}
           {{ .Render "li" }}
         {{ end }}
       </div>

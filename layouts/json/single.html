@@ -1,8 +1,14 @@
-[{{ range $index, $page := .Site.Pages}}{{ if ne $page.Type "json" }}{{ if $index }},{{ end }}
+[{{ range $index, $page := .Site.Pages}}{{ if ne $page.Type "json" }}{{ if eq $page.Draft false }}
 {
   "href": "{{ $page.RelPermalink }}",
   "title": "{{ $page.Title }}",
   "tags": [{{ range $tindex, $tag := $page.Params.tags }}{{ if $tindex }}, {{ end }}"{{ $tag }}"{{ end }}],
   "content": "{{ $page.PlainWords }}"
-}{{ end }}{{ end }}
+},{{ end }}{{ end }}{{ end }}
+{
+  "href": "/",
+  "title": "Trae Blain",
+  "tags": ["home", "main"],
+  "content": "[notebook activity driving social twitter goodreads tumblr github music television movies pgp gpg encryption bitcoin]"
+}
 ]
