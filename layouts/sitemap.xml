@@ -1,5 +1,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {{ range where .Data.Pages "Type" "!=" "json" }}
+  {{ $datapages :=  (where .Data.Pages "Type" "!=" "json") }}
+  {{ range (where $datapages "Draft" false) }}
   <url>
     <loc>https:{{ .Permalink }}</loc>
     <lastmod>{{ safeHTML ( .Date.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>{{ with .Sitemap.ChangeFreq }}

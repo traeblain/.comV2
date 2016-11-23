@@ -1,16 +1,23 @@
 ---
-title: Test Post
-date: '2016-11-21T13:54:58-06:00'
+background: /images/machinery-1.jpg
+date: 2016-11-21T13:54:00
+draft: true
 tags:
 - test
 - new
-background: "/images/machinery-1.jpg"
-text_color: ''
-draft: true
-
+- site
+title: Test Post
 ---
+
+
 Just some basic text...
 
 ## Another Title
 
 Word...
+
+More...
+
+And again...
+
+![Image](https://phantombuster.s3.amazonaws.com/JvGsCizilFY/u9-wrDly9NjCqvqiR4Z89w/gitlabcal.svg)

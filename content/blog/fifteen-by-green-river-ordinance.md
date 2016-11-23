@@ -9,7 +9,7 @@ The [new album][amz] from Ft. Worth's own [Green River Ordinance][GRO] (GRO) was
 
 The album starts off with probably their weakest song of the album, _Keep Your Cool_ is choppy and light.  I'm surprised it was ordered so early, but once you get past this one you are good.  _Red Fire Night_ is a great song.  It's currently charting high on the Folk charts (GRO has been [snubbed from the Country charts][billboard] regardless of the fact that many artists that make Billboard's country charts aren't country at all...), and for good reason. It is a classic feel-good, Texas bonfire song.
 
-<blockquote class="embedly-card" data-card-key="bdfeaf9e6c274fb9a648b7a58a607e12"><h4><a href="https://youtu.be/-tcAwyNlSjs">Green River Ordinance - Red Fire Night (Official Music Video)</a></h4><p>Official Music Video for Green River Ordinance's "Red Fire Night" Director: Sam Ryan Pre-Order the New Album 'Fifteen' now!</p></blockquote>
+<blockquote class="embedly-card" data-card-key="bdfeaf9e6c274fb9a648b7a58a607e12"><h4><a href="https://youtu.be/-tcAwyNlSjs">Green River Ordinance - Red Fire Night (Official Music Video)</a></h4><p>Official Music Video for Green River Ordinance's 'Red Fire Night' Director: Sam Ryan Pre-Order the New Album 'Fifteen' now!</p></blockquote>
 
 _Maybe It's Time (Gravity)_ reminds me of some classic 60s-70s tunes, although grounded in modern pop.  The next two songs are actually quite similar.  While _Simple Life_ is a classic ballad, _Tallahassee_ is classic country.  The next song is, honestly, probably the the best ballad I've heard in years.  _You, Me & the Sea_ curls beautiful prose into a melody that sticks with you...love this song.
 
