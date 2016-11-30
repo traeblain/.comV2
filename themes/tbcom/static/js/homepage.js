@@ -365,7 +365,7 @@ fetch('https://traeblain.apispark.net/v1/reads/?%24size=80', headers)
   document.getElementById('lastread').innerHTML = "Data collection failed..."
   console.log('parsing failed', ex)
 })
-fetch('http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=tblain&api_key=b25b959554ed76058ac220b7b2e0a026&period=6month&format=json', headers)
+fetch('https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=tblain&api_key=b25b959554ed76058ac220b7b2e0a026&period=6month&format=json', headers)
 .then(function(response) {
   return response.json()
 }).then(function(json) {
