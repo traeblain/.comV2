@@ -365,23 +365,24 @@ fetch('https://traeblain.apispark.net/v1/reads/?%24size=80', headers)
   document.getElementById('lastread').innerHTML = "Data collection failed..."
   console.log('parsing failed', ex)
 })
-fetch('https://api.fieldbook.com/v1/56e1cca05d27c403000d63b0/lastfm', headers)
+fetch('http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=tblain&api_key=b25b959554ed76058ac220b7b2e0a026&period=6month&format=json', headers)
 .then(function(response) {
   return response.json()
 }).then(function(json) {
-  var r = '<div{0} style="background-image: url({1})"><span class="artistbottom"><p><a target="_blank" href="http://www.last.fm/music/{5}">{3}</a></p><p><em>{4} plays</em></p></span></div>'
+  var r = '<div{0} style="background-image: url({1})"><span class="artistbottom"><p><a target="_blank" href="{5}">{3}</a></p><p><em>{4} plays</em></p></span></div>'
   var html = ''
-  var images = ['/images/topartists/first.png', '/images/topartists/second.png', '/images/topartists/third.png', '/images/topartists/fourth.png', '/images/topartists/fifth.png']
-  for (var i = 0; i < json.length; i++) {
+  var artists = json.topartists.artist
+  //var images = ['/images/topartists/first.png', '/images/topartists/second.png', '/images/topartists/third.png', '/images/topartists/fourth.png', '/images/topartists/fifth.png']
+  for (var i = 0; i < 5; i++) {
     if (i == 0) {
-      html = r.replace('{0}', ' class="first"').replace('{1}', images[i]).replace('{3}', json[i].artist).replace('{4}', json[i].plays).replace('{5}', json[i].artist.replace(' ', '+')) + '<div class="artistwrap">'
+      html = r.replace('{0}', ' class="first"').replace('{1}', artists[i].image[3]['#text']).replace('{3}', artists[i].name).replace('{4}', artists[i].playcount).replace('{5}', artists[i].url) + '<div class="artistwrap">'
     } else {
-      html = html + r.replace('{0}', '').replace('{1}', images[i]).replace('{3}', json[i].artist).replace('{4}', json[i].plays).replace('{5}', json[i].artist.replace(' ', '+'))
+      html = html + r.replace('{0}', '').replace('{1}', artists[i].image[2]['#text']).replace('{3}', artists[i].name).replace('{4}', artists[i].playcount).replace('{5}', artists[i].url)
     }
   }
   document.getElementById('music').innerHTML = '<div class="musicwrap">' + html + '</div></div>'
 }).catch(function(ex) {
-  document.getElementById('music').innerHTML = "Failed to gather music data..."
+  docsument.getElementById('music').innerHTML = "Failed to gather music data..."
   console.log('parsing failed', ex)
 })
 
