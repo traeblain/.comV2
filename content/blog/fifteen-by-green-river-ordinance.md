@@ -2,7 +2,7 @@
 title: "Fifteen by Green River Ordinance"
 date: "2016-02-03"
 tags: [ "music", "review" ]
-background: "/images/gro-fifteen.jpg"
+background: "https://res.cloudinary.com/dixwznarl/image/upload/q_auto:eco/v1480480425/gro-fifteen_otcyn1.jpg"
 ---
 
 The [new album][amz] from Ft. Worth's own [Green River Ordinance][GRO] (GRO) was released a few weeks ago.  I've been able to listen to the entire album a couple times and I'm impressed at how good a release this is.  I initially found GRO by a random "give-away" by [NoiseTrade][nt].  My son and I constantly blurt out **"She beats right through to the heart of me, to the part of me, that I can't explain!"**  Their new album, [Fifteen][amz], dives much deeper into their country roots, which might alienate a few listeners, but the album is still very strong.

@@ -2,7 +2,7 @@
 date: "2016-01-30"
 title: "So Many Books!!"
 tags: [ "reading", "books" ]
-background: "/images/many-books.jpg"
+background: "https://res.cloudinary.com/dixwznarl/image/upload/q_auto:eco/v1480480424/many-books_mm4e6j.jpg"
 text_color: "dark"
 ---
 

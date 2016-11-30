@@ -6,6 +6,6 @@
 
 > All the data stuff that makes up [traeblain.com](https://traeblain.com/) except for the stuff that isn't here
 
-![TB Monogram](https://traeblain.com/images/tbmonogram-name.png)
+![TB Monogram](https://res.cloudinary.com/dixwznarl/image/upload/q_auto:low/v1480537060/tbmonogram-name_ee22vs.png)
 
-Build with [Hugo](https://gohugo.io/)...essentially.
+Built with [Hugo](https://gohugo.io/)...essentially.
