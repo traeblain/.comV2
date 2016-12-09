@@ -1,7 +1,13 @@
 <article class="twelve columns post">
+  {{ $dateends := (slice "th" "st" "nd" "rd" "th" "th" "th" "th" "th" "th") }}
+  {{ $test := (mod (.Date.Day) 10) }}
+  {{ $.Scratch.Set "ends" "th" }}
+  {{ if and ((.Date.Day) lt 11) ((.Date.Day) gt 13) }}
+    {{ $.Scratch.Set "ends" (index $dateends (mod (.Date.Day) 10)) }}
+  {{ end }}
   <header class="twelve columns {{ .Params.text_color }}" style="{{ if .Params.background }}background: url({{ .Params.background }}) no-repeat center center; background-color: transparent;{{end}}">
     <h1 class="headline {{ .Params.text_color }}">{{ .Title }}</h1>
-    <time class="datetime {{ .Params.text_color }}" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Monday, January 2nd, 2006"}}</time>
+    <time class="datetime {{ .Params.text_color }}" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Monday, January 2" }}{{ $.Scratch.Get "ends" }}, {{ .Date.Format "2006" }}</time>
   </header>
   <section class="twelve columns content">
     {{ .Content }}
