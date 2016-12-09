@@ -1,6 +1,5 @@
 <article class="twelve columns post">
   {{ $dateends := (slice "th" "st" "nd" "rd" "th" "th" "th" "th" "th" "th") }}
-  {{ $test := (mod (.Date.Day) 10) }}
   {{ $.Scratch.Set "ends" "th" }}
   {{ if and ((.Date.Day) lt 11) ((.Date.Day) gt 13) }}
     {{ $.Scratch.Set "ends" (index $dateends (mod (.Date.Day) 10)) }}
