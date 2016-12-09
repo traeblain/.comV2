@@ -1,12 +1,12 @@
 ---
-date: "2016-03-01"
+date: "2016-12-08"
 title: "To DH, or Not To DH"
 tags: [ "commentary", "sports" ]
 background: "https://res.cloudinary.com/dixwznarl/image/upload/notebook/baseball.jpg"
 draft: true
 ---
 
-The question of Major League Baseball's (MLB) use of the Designated Hitter (DH) is once again up for debate.  [ESPN spoke][espn] to all club managers and general mangers on the topic.  Commissioner Rob Manfred [threw out][commishdh] the option...then quickly [took it back][commishnodh].  This argument is probably as old as the 1973 rule change itself.  It's AL'ers vs. NL'ers, Progressives vs. Purists, Shift vs. No Shift, Republicans vs. Democrats, Cats vs. Dogs...er...
+The question of Major League Baseball's (MLB) use of the Designated Hitter (DH) is once again up for debate.  [ESPN spoke][espn] to all club managers and general mangers last winter meeting on the topic.  Commissioner Rob Manfred [threw out][commishdh] the option...then quickly [took it back][commishnodh].  This argument is probably as old as the 1973 rule change itself.  It's AL'ers vs. NL'ers, Progressives vs. Purists, Shift vs. No Shift, Republicans vs. Democrats, Cats vs. Dogs...er...
 
 Personally, I wish those that oppose the DH would understand that it is inevitable and stop pushing back.  Maybe they continue to push to simply hold on to what they feel is classic baseball, and I completely understand that.  But it's also a petty thing that I'm a bit tired of hearing about each spring training and all through the offseason.
 
@@ -24,7 +24,9 @@ The League is driven by one thing: **Financial gains**.  When doping was floodin
 
 ### The MLBPA
 
-It is absurd to think that the MLBPA is unwilling to limit or not push for longer and more lucrative player contracts.  The Angels and Mariners didn't sign over $0.5 million on two players to have them remain at 1st and 2nd base well into their careers.  At some point, they will be used for offense only.  And there's the rub.  _**Fact:** If there were 15 more DH positions open, that means 15 other players would have the opportunity to have more lucrative contracts._  So yes, the MLBPA wants the universal DH because it wants more money to move into the players pockets.  This may seem counter to the above until you factor in...
+It is absurd to think that the MLBPA is unwilling to limit or not push for longer and more lucrative player contracts.  The Angels and Mariners didn't sign over \$0.5 million on two players to have them remain at 1st and 2nd base well into their careers.  Pujols essentially played DH all last year, and Cano still has some defensive chops, but it won't last forever.  And there's the rub.  _**Fact:** If there were 15 more DH positions open, that means 15 other players would have the opportunity to have more lucrative contracts._  So yes, the MLBPA wants the universal DH because it wants more money to move into the players pockets.  This may seem counter to the above until you factor in the topic below. Carlos Beltran got a 1-yr, $16 million deal, just think of the number of teams that would have been willing to throw 2-3 years at him if 15 more teams were in the mix.
+
+But the MLBPA is not only looking out simply for player salaries...they are also concerned with player health.  And with pitchers getting injured during their at bats (Scherzer, Wainwright, Vogelsong, etc.), it only strengthens the argument that these guys should not be batting.
 
 ### Ticket/Merchandise Buying and Viewing Public
 
@@ -32,9 +34,9 @@ I make a distinct effort not to say "fan" here.  Because the group of "Purists" 
 
 ## Universal DH is Coming
 
-It is coming.  If you are outside one of those three groups, your opinion doesn't matter.  My opinion doesn't matter as I will be a baseball consumer regardless of the rule.  The guy that claims he'd stop watching baseball if they put the DH in the National League...his opinion doesn't matter because you know he's either lying or a few years away from meeting Jesus.
+It is coming.  If you are outside one of those three groups, **your opinion doesn't matter.**  _My_ opinion doesn't matter as I will be a baseball consumer regardless of the rule.  The guy that claims he'd stop watching baseball if they put the DH in the National League...his opinion doesn't matter because you know he's either lying or a few years away from meeting Jesus.
 
-The League wants to maximize profit for themselves, the MLBPA wants to maximize profits for its players, the consumers want a better product.  These are the driving components and arguing over merit, purity of the game, style are mute in the face of these aspects.  So let's settle down and play some ball.
+The League wants to maximize profit for themselves, the MLBPA wants to maximize profits for its players, the consumers want a better product.  These are the driving components and arguing over merit, purity of the game, and style are moot in the face of these aspects.  So let's settle down and play some ball.
 
 [espn]: http://espn.go.com/mlb/story/_/page/springtraining_DHdebate/mlb-managers-gms-weigh-dh-debate
 [commishnodh]: http://espn.go.com/mlb/story/_/id/14643947/mlb-commissioner-rob-manfred-says-no-foreseeable-change-designated-hitter-rule-coming
