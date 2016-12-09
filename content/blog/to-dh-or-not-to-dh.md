@@ -1,5 +1,5 @@
 ---
-date: "2016-12-08"
+date: "2016-12-09"
 title: "To DH, or Not To DH"
 tags: [ "commentary", "sports" ]
 background: "https://res.cloudinary.com/dixwznarl/image/upload/notebook/baseball.jpg"
@@ -20,17 +20,29 @@ As fans we like to throw around numbers.  We like to think we have such a strong
 
 ### The League
 
-The League is driven by one thing: **Financial gains**.  When doping was flooding the league like crazy, they turned a blind eye because the product of the doping was renewing baseball's dominance.  Had they known the fall it would cause when it became public, maybe they would have changed their tune...but that's hind-sight.  And at some point they will go the way of all entities trying to maximize those gains.  _**Fact:** DH position raises team BA and therefore improves offensive output._   It has been this way since the 1973 implementation.  Does this mean AL teams are better?  No, but it does mean there is a higher probability of seeing a home run, catching a home run, getting a foul ball (reduction in bunts), and in general more in play balls.  This is what fans want, in which I'll explain later.  What does this have to do with Financial Gains?  Higher attendance (ticket sales), higher viewership (more lucrative TV deals), and more merchandise. 
+The League is driven by one thing: **Financial gains**.  When doping was flooding the league like crazy, they turned a blind eye because the product of the doping was renewing baseball's dominance.  Had they known the fall it would cause when it became public, maybe they would have changed their tune...but that's hind-sight.  And at some point they will go the way of all entities trying to maximize those gains.  
+
+> _**Fact:** DH position raises team BA and therefore improves offensive output._
+
+It has been this way since the 1973 implementation.  Does this mean AL teams are better?  No, but it does mean there is a higher probability of seeing a home run, catching a home run, getting a foul ball (reduction in bunts), and in general more in play balls.  This is what fans want, in which I'll explain later.  What does this have to do with Financial Gains?  Higher attendance (ticket sales), higher viewership (more lucrative TV deals), and more merchandise. 
 
 ### The MLBPA
 
-It is absurd to think that the MLBPA is unwilling to limit or not push for longer and more lucrative player contracts.  The Angels and Mariners didn't sign over \$0.5 million on two players to have them remain at 1st and 2nd base well into their careers.  Pujols essentially played DH all last year, and Cano still has some defensive chops, but it won't last forever.  And there's the rub.  _**Fact:** If there were 15 more DH positions open, that means 15 other players would have the opportunity to have more lucrative contracts._  So yes, the MLBPA wants the universal DH because it wants more money to move into the players pockets.  This may seem counter to the above until you factor in the topic below. Carlos Beltran got a 1-yr, $16 million deal, just think of the number of teams that would have been willing to throw 2-3 years at him if 15 more teams were in the mix.
+It is absurd to think that the MLBPA is unwilling to limit or not push for longer and more lucrative player contracts.  The Angels and Mariners didn't sign over $0.5 million on two players to have them remain at 1st and 2nd base well into their careers.  Pujols essentially played DH all last year, and Cano still has some defensive chops, but it won't last forever.  And there's the rub.  
+
+> _**Fact:** If there were 15 more DH positions open, that means 15 other players would have the opportunity to have more lucrative contracts._ 
+
+So yes, the MLBPA wants the universal DH because it wants more money to move into the players pockets.  This may seem counter to the above until you factor in the topic below. Carlos Beltran got a 1-yr, $16 million deal, just think of the number of teams that would have been willing to throw 2-3 years at him if 15 more teams were in the mix.
 
 But the MLBPA is not only looking out simply for player salaries...they are also concerned with player health.  And with pitchers getting injured during their at bats (Scherzer, Wainwright, Vogelsong, etc.), it only strengthens the argument that these guys should not be batting.
 
 ### Ticket/Merchandise Buying and Viewing Public
 
-I make a distinct effort not to say "fan" here.  Because the group of "Purists" that claim they are the true baseball fan is only a small sample of the indicated group.  _**Fact:** A majority of this group are people who could care less about the DH and "purity of the game", but want to get there money's worth when they buy a ticket/jersey/MLB@Bat/[absurdly large hot dog][longdog]._  And when offense goes up, when their favorite player has 2-4 more years in their team's jersey, and when they can tell their kids about when they watched him play 2nd base...that is when more tickets will be sold and more revenue to pay for these large contracts.  The real people whose impact is being considered in this debate are the people that go from casual-to-fans or from nonfan-to-consumer.  The diehard "Purists" barely factor into this equation.  This is why you are seeing time limits on pauses.  These time limits will effect even more aspects of the game if this current experiment shows increased viewer engagement (which it apparently is being that it was [expanded already][paceofgame]).
+I make a distinct effort not to say "fan" here.  Because the group of "Purists" that claim they are the true baseball fan is only a small sample of the indicated group.  
+
+> _**Fact:** A majority of this group are people who could care less about the DH and "purity of the game", but want to get there money's worth when they buy a ticket/jersey/MLB@Bat/[absurdly large hot dog][longdog]._  
+
+And when offense goes up, when their favorite player has 2-4 more years in their team's jersey, and when they can tell their kids about when they watched him play 2nd base...that is when more tickets will be sold and more revenue to pay for these large contracts.  The real people whose impact is being considered in this debate are the people that go from casual-to-fans or from nonfan-to-consumer.  The diehard "Purists" barely factor into this equation.  This is why you are seeing time limits on pauses.  These time limits will effect even more aspects of the game if this current experiment shows increased viewer engagement (which it apparently is being that it was [expanded already][paceofgame]).
 
 ## Universal DH is Coming
 
