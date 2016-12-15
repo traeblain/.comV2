@@ -106,19 +106,21 @@ void loop() {
 
 We've now got a working prototype. Push the button, the servo moves...push it again, it moves back. 
 
-### The Build
+### Packaging
 
 Now to install it into the blinds.  I have to take this mess...
 
 **----Insert picture here----**
 
-And get it into a set of 2in blinds. 
+And get it into a set of 2in blinds.  Additionally, I need to make sure the servo does not spin, but spin the tilt rod, as well as find some way to grab the tilt rod.  So essentially I need at least 2 custom parts.
 
-So it was time to model it up.  I used [OnShape][onshape] (they used to allow 10 private files, don't know why they stopped) to model the blinds and tilt rod, then put all the parts in.  Made sure I could fit in some wires (measurements and assumptions), then built a part to hold everything.  The result is below:
+So it was time to model it up.  I used [OnShape][onshape] (they used to allow 10 private files, don't know why they stopped, this honestly--combined with the online structure--was the differentiating factor for using them over something like FreeCAD or SketchUp, it's sad they eliminated it) to model the blinds and tilt rod, then put all the parts in.  Made sure I could fit in some wires (measurements and assumptions), then built a part to hold everything.  The result is below:
 
 **----Insert OnShape Solid Model, consider 3d JS to actually allow rotation----**
 
-If you have your own 3D printer, then feel free to build the part yourself.  If you don't, then I'd highly suggest [3D Hubs][3dhubs].  I had 2 parts made for $15.00 total. That's cheap... So tack on \$7.50 more (or less if you have your own printer) to the overall cost, and you're still getting out cheap.
+The screws generally come packaged with the Servo, so nothing more there (I used some basic McMaster-Carr models to simulate what I had).  I had to cut off one of the mounting ears of the Servo to get it to fit, but was also surprised at how well it fit after I Dremeled them off.  It made for the custom part to be build relatively simple.  Next was getting the Tilt Rod to move with the servo.  I used 1.25in Dowel rod because it was cheap and I had a 6mm chisel, and the rod was a 6mm square.  I was able to use this to make a nice square hole in the dowel rod that accepted the tilt rod nice and tightly. This way I don't lose motion while it waits to grab to rod, nor do I need to worry about any backlash either.  Wood also worked in my favor for fastening, easy to handle and the right combination of softness and strength.  Finally, I filled the rest of the space with a block that holds all the parts.  I did not want to drill holes in the blinds or anything, so just filling the space allows it to hold firmly in place during motion and does not need screws.  This again is huge for troubleshooting and aesthetics. 
+
+If you have your own 3D printer, then feel free to build the parts yourself.  If you don't, then I'd highly suggest [3D Hubs][3dhubs].  I had 2 of the base parts made for $15.00 total. That's cheap... So tack on \$7.50 more (or less if you have your own printer) to the overall cost, and you're still getting out cheap.
 
 Another design choice I really wanted to address was power to the Trinket.  I wanted to use USB (the trinket can get power elsewhere up to 16V) because I wanted to be able to change the code without ripping the whole thing out of the blinds all the time.  This worked out with a 10ft USB cord I had lying around so it became really easy to troubleshoot (remember to debounce...).  All the wire was run towards the window down the wall and fairly hidden away.  Then the button mounted on the wall.
 
