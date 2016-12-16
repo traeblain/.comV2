@@ -56,7 +56,7 @@ So this is a sufficient setup for a push button activated servo.  The code neede
 3. I use the Servo state (the angle) to let the code know the current state of the blinds.  If it's at 0, then Open the Blinds, if it's already at 125 (Open) then close the blinds.
 4. Lastly, to keep the servo from moving back and forth, I put a half-second delay when the servo starts moving.  The expectation is the operator will release the button upon the event occuring,  and it definitely helps.
 
-```c
+```clike
 #include <Servo.h>  //Need the Servo module
 
 Servo servo_obj; //Define the Servo Object
@@ -152,7 +152,7 @@ Things worked great, but I notice one really odd thing.  The Open signal (WHITE 
 
 Since the new Z Wave code only compliments the push button code, there's nothing I had to change on the button code. I simply added the additional Z-Wave information.  Like I said, check your pin assignment (can guess, then just fix it if you guessed wrong) for the OPEN and CLOSE signals are correct.  Then it's ready to load.
 
-```c
+```clike
 #include <Servo.h>  //Need the Servo module
 
 Servo servo_obj; //Define the Servo Object
