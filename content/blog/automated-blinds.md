@@ -245,7 +245,7 @@ That's it.  It was slid back into the blinds, then mounted the discreet little w
 
 The final result is what you see here.
 
-<blockquote class="embedly-card" data-card-key="bdfeaf9e6c274fb9a648b7a58a607e12"><h4><a href="https://www.youtube.com/watch?v=1Buc7xSToSo">(null)</a></h4><p>DIY Automated Blinds</p></blockquote>
+<blockquote class="embedly-card" data-card-key="bdfeaf9e6c274fb9a648b7a58a607e12"><h4><a href="https://www.youtube.com/watch?v=1Buc7xSToSo">DIY Automated Blinds</a></h4><p>DIY Automated Blinds</p></blockquote>
 
 ## The Source
 
@@ -279,8 +279,8 @@ You can do this too.  It's not that hard.  All the data you need is right here, 
 [curtainmodule]: http://www.monoprice.com/product?p_id=11992	"Monoprice Z-Wave Curtain Module"
 [1225]: http://amzn.to/2hLLj0H	"12V to 5V DC converter"
 [onshapedata]: https://cad.onshape.com/documents/8ed92bd7a8a283c1cce0d0e1/w/60f2cbadd25be0ffdfbe1d93/e/90822f0c91f3fc46d97b8cc1 "Automated Blinds Assembly"
-[mntblock]: https://traeblain.com/blog/automated-blinds/mount-block.stl "Mount Block"
-[tiltrodblock]: https://traeblain.com/blog/automated-blinds/tilt-rod-block.stl "Tilt Rod Block"
-[assydrw]: https://traeblain.com/blog/automated-blinds/blinds-assembly-drawing.pdf "Drawing"
+[mntblock]: https://github.com/traeblain/OSH-Projects/blob/master/automated-blinds/mount-block.stl "Mount Block"
+[tiltrodblock]: https://github.com/traeblain/OSH-Projects/blob/master/automated-blinds/tilt-rod-block.stl "Tilt Rod Block"
+[assydrw]: https://github.com/traeblain/OSH-Projects/blob/master/automated-blinds/blinds-assembly-drawing.pdf "Drawing"
 [code]: https://github.com/traeblain/OSH-Projects/blob/master/automated-blinds/trinket-code.ino "Automated Blinds Arduino Code"
 
