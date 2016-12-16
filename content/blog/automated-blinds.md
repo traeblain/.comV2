@@ -118,7 +118,11 @@ So it was time to model it up.  I used [OnShape][onshape] (they used to allow 10
 
 <iframe src="https://clara.io/embed/e695bdd6-c3a9-46be-9e95-6cd8935a9592?renderer=webgl" width="800" height="600" allowfullscreen></iframe>
 
-The screws generally come packaged with the Servo, so nothing more there (I used some basic McMaster-Carr models to simulate what I had).  I had to cut off one of the mounting ears of the Servo to get it to fit, but was also surprised at how well it fit after I Dremeled them off.  It made for the custom part to be build relatively simple.  Next was getting the Tilt Rod to move with the servo.  I used 1.25in Dowel rod because it was cheap and I had a 6mm chisel, and the rod was a 6mm square.  I was able to use this to make a nice square hole in the dowel rod that accepted the tilt rod nice and tightly. This way I don't lose motion while it waits to grab to rod, nor do I need to worry about any backlash either.  Wood also worked in my favor for fastening, easy to handle and the right combination of softness and strength.  Finally, I filled the rest of the space with a block that holds all the parts.  I did not want to drill holes in the blinds or anything, so just filling the space allows it to hold firmly in place during motion and does not need screws.  This again is huge for troubleshooting and aesthetics. 
+The screws generally come packaged with the Servo, so nothing more there (I used some basic McMaster-Carr models to simulate what I had).  I had to cut off one of the mounting ears of the Servo to get it to fit, but was also surprised at how well it fit after I Dremeled them off.  It made for the custom part to be build relatively simple.  
+
+Next was getting the Tilt Rod to move with the servo.  I used 1.25in Dowel rod because it was cheap and I had a 6mm chisel, and the rod was a 6mm square.  I was able to use this to make a nice square hole in the dowel rod that accepted the tilt rod nice and tightly. This way I don't lose motion while it waits to grab to rod, nor do I need to worry about any backlash either.  Wood also worked in my favor for fastening, easy to handle and the right combination of softness and strength.  
+
+Finally, I filled the rest of the space with a block that holds all the parts.  I did not want to drill holes in the blinds or anything, so just filling the space allows it to hold firmly in place during motion and does not need screws.  This again is huge for troubleshooting and aesthetics. 
 
 If you have your own 3D printer, then feel free to build the parts yourself.  If you don't, then I'd highly suggest [3D Hubs][3dhubs].  I had 2 of the base parts made for $15.00 total. That's cheap... So tack on \$7.50 more (or less if you have your own printer) to the overall cost, and you're still getting out cheap.
 
@@ -241,7 +245,18 @@ That's it.  It was slid back into the blinds, then mounted the discreet little w
 
 The final result is what you see here.
 
-<blockquote class="embedly-card" data-card-key="bdfeaf9e6c274fb9a648b7a58a607e12"><h4><a href="https://www.youtube.com/watch?v=1Buc7xSToSo">(null)</a></h4><p>(null)</p></blockquote>
+<blockquote class="embedly-card" data-card-key="bdfeaf9e6c274fb9a648b7a58a607e12"><h4><a href="https://www.youtube.com/watch?v=1Buc7xSToSo">(null)</a></h4><p>DIY Automated Blinds</p></blockquote>
+
+## The Source
+
+You can do this too.  It's not that hard.  All the data you need is right here, you don't have to skip through my pains of working out the problems...you can just grab and go.  I've decided to run things though a CC-BY-4.0 license.  If you want to use it, just attribute the source.  Also, let me know if you improve on the build...you probably can do massively better than my soldering for starters.
+
+- [Assembly Model Source Data][onshapedata] - OnShape
+- [Mount Block FDM Model][mntblock] (.stl)
+- [Tilt Rod Block FDM Model][tiltrodblock] (.stl)
+- [Assembly Drawing (Block Drawings also)][assydrw] (.pdf)
+- [Arduino Code][code] (.ino) - Github
+
 <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
 [trinket]: http://amzn.to/2hKPlGO	"Adafruit Trinket Pro 5 Volt"
@@ -263,3 +278,9 @@ The final result is what you see here.
 [Wink]: https://www.wink.com	"Wink Smart Home System"
 [curtainmodule]: http://www.monoprice.com/product?p_id=11992	"Monoprice Z-Wave Curtain Module"
 [1225]: http://amzn.to/2hLLj0H	"12V to 5V DC converter"
+[onshapedata]: https://cad.onshape.com/documents/8ed92bd7a8a283c1cce0d0e1/w/60f2cbadd25be0ffdfbe1d93/e/90822f0c91f3fc46d97b8cc1 "Automated Blinds Assembly"
+[mntblock]: https://traeblain.com/blog/automated-blinds/mount-block.stl "Mount Block"
+[tiltrodblock]: https://traeblain.com/blog/automated-blinds/tilt-rod-block.stl "Tilt Rod Block"
+[assydrw]: https://traeblain.com/blog/automated-blinds/blinds-assembly-drawing.pdf "Drawing"
+[code]: https://github.com/traeblain/OSH-Projects/blob/master/automated-blinds/trinket-code.ino "Automated Blinds Arduino Code"
+
