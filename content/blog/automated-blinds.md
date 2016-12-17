@@ -21,9 +21,9 @@ After watching the above video, I essentially knew what I needed.  An Arduino, a
 ### Parts List
 
 - [Adafruit Trinket Pro 5V][trinket] - $10.93
-- [TowerPro MG946R Servo][servoamz] - $6.00 to \$12.00
+- [TowerPro MG946R Servo][servoamz] - $6.00 to $12.00
   ([AliExpress][servoali] ~$5.00)
-- [Door Bell Switch][doorbell] - $6.00 to \$19.00
+- [Door Bell Switch][doorbell] - $6.00 to $19.00
 - [1.25in Dowel Rod][dowel] - $4.50
 - [90 Degree Header Pins][header] - $0.02
 - [Wire (paired)][wire] - $0.35
@@ -35,7 +35,7 @@ Total Cost: $28.61
 
 Startup Cost: $51.72 + Wire Cost
 
-So the cost is excellent.  Other systems like the Somfy systems require $150-300 investment initially to get the powered tilt.  The difference in the Total and Startup costs is that the Total is the actual cost, where some of the products are purchased in a kit/multiples so the investment in the parts is a little higher.  Even with that, \$52--before wire--is great.  If you don't mind the shipping delays and got almost everything from AliExpress, you can get everything (in bigger quantities) for around \$38.56...that's awesome.
+So the cost is excellent.  Other systems like the Somfy systems require $150-$300 investment initially to get the powered tilt.  The difference in the Total and Startup costs is that the Total is the actual cost, where some of the products are purchased in a kit/multiples so the investment in the parts is a little higher.  Even with that, $52--before wire--is great.  If you don't mind the shipping delays and got almost everything from AliExpress, you can get everything (in bigger quantities) for around $38.56...that's awesome.
 
 ### Prototype
 
@@ -124,7 +124,7 @@ Finally, I filled the rest of the space with a block that holds all the parts.  
 
 <iframe src="https://clara.io/embed/e695bdd6-c3a9-46be-9e95-6cd8935a9592?renderer=webgl" width="800" height="600" allowfullscreen></iframe>
 
-If you have your own 3D printer, then feel free to build the parts yourself.  If you don't, then I'd highly suggest [3D Hubs][3dhubs].  I had 2 of the base parts made for $15.00 total. That's cheap... So tack on \$7.50 more (or less if you have your own printer) to the overall cost, and you're still getting out cheap.
+If you have your own 3D printer, then feel free to build the parts yourself.  If you don't, then I'd highly suggest [3D Hubs][3dhubs].  I had 2 of the base parts made for $15.00 total. That's cheap... So tack on $7.50 more (or less if you have your own printer) to the overall cost, and you're still getting out cheap.
 
 Another design choice I really wanted to address was power to the Trinket.  I wanted to use USB (the trinket can get power elsewhere up to 16V) because I wanted to be able to change the code without ripping the whole thing out of the blinds all the time.  This worked out with a 10ft USB cord I had lying around so it became really easy to troubleshoot (remember to debounce...).  All the wire was run towards the window down the wall and fairly hidden away.  Then the button mounted on the wall.  I bought a nice brushed nickel  door bell switch one to--again--keep my wife from see a "hobby home" instead of a "living home".  If you do use a door bell switch, keep in mind that most have a light in them and so technically it's like the button is constantly pushed. But it is easy to remedy by just snipping out the light and you'll have a true momentary switch.
 
@@ -271,6 +271,8 @@ You can do this too.  It's not that hard.  All the data you need is right here, 
 - [Graphics][fritzingfiles] (.fzz) - Github (Using [Fritzing][])
 - [Custom Board Gerbers][gerbers] - Github (Not used, but could be useful.)
 
+In general you can get all the latest parts/code from [this Github repository][oshblinds] and offer better ways of doing things.
+
 <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
 [trinket]: http://amzn.to/2hKPlGO	"Adafruit Trinket Pro 5 Volt"
@@ -302,4 +304,5 @@ You can do this too.  It's not that hard.  All the data you need is right here, 
 [fritzingfiles]: https://github.com/traeblain/OSH-Projects/blob/master/automated-blinds/autoblinds.fzz "Fritzing Native File"
 [gerbers]: https://github.com/traeblain/OSH-Projects/blob/master/automated-blinds/autoblinds-gerbers.zip "Gerber Files"
 [schematic]: https://github.com/traeblain/OSH-Projects/blob/master/automated-blinds/autoblinds_esd.pdf "Project Schematic"
+[oshblinds]: https://github.com/traeblain/OSH-Projects/ "Open Source Hardware Projects (traeblain)"
 
