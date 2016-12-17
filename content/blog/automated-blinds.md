@@ -114,9 +114,7 @@ Now to install it into the blinds.  I have to take this mess...
 
 And get it into a set of 2in blinds.  Additionally, I need to make sure the servo does not spin, but spin the tilt rod, as well as find some way to grab the tilt rod.  So essentially I need at least 2 custom parts.
 
-So it was time to model it up.  I used [OnShape][onshape] (they used to allow 10 private files, don't know why they stopped, this honestly--combined with the online structure--was the differentiating factor for using them over something like FreeCAD or SketchUp, it's sad they eliminated it) to model the blinds and tilt rod, then put all the parts in.  Made sure I could fit in some wires (measurements and assumptions), then built a part to hold everything.  The result is below:
-
-<iframe src="https://clara.io/embed/e695bdd6-c3a9-46be-9e95-6cd8935a9592?renderer=webgl" width="800" height="600" allowfullscreen></iframe>
+So it was time to model it up.  I used [OnShape][onshape] (they used to allow 10 private files, don't know why they stopped, this honestly--combined with the online structure--was the differentiating factor for using them over something like FreeCAD or SketchUp, it's sad they eliminated it) to model the blinds and tilt rod, then put all the parts in.  Made sure I could fit in some wires (measurements and assumptions), then built a part to hold everything.  
 
 The screws generally come packaged with the Servo, so nothing more there (I used some basic McMaster-Carr models to simulate what I had).  I had to cut off one of the mounting ears of the Servo to get it to fit, but was also surprised at how well it fit after I Dremeled them off.  It made for the custom part to be build relatively simple.  
 
@@ -124,15 +122,17 @@ Next was getting the Tilt Rod to move with the servo.  I used 1.25in Dowel rod b
 
 Finally, I filled the rest of the space with a block that holds all the parts.  I did not want to drill holes in the blinds or anything, so just filling the space allows it to hold firmly in place during motion and does not need screws.  This again is huge for troubleshooting and aesthetics. 
 
+<iframe src="https://clara.io/embed/e695bdd6-c3a9-46be-9e95-6cd8935a9592?renderer=webgl" width="800" height="600" allowfullscreen></iframe>
+
 If you have your own 3D printer, then feel free to build the parts yourself.  If you don't, then I'd highly suggest [3D Hubs][3dhubs].  I had 2 of the base parts made for $15.00 total. That's cheap... So tack on \$7.50 more (or less if you have your own printer) to the overall cost, and you're still getting out cheap.
 
-Another design choice I really wanted to address was power to the Trinket.  I wanted to use USB (the trinket can get power elsewhere up to 16V) because I wanted to be able to change the code without ripping the whole thing out of the blinds all the time.  This worked out with a 10ft USB cord I had lying around so it became really easy to troubleshoot (remember to debounce...).  All the wire was run towards the window down the wall and fairly hidden away.  Then the button mounted on the wall.
+Another design choice I really wanted to address was power to the Trinket.  I wanted to use USB (the trinket can get power elsewhere up to 16V) because I wanted to be able to change the code without ripping the whole thing out of the blinds all the time.  This worked out with a 10ft USB cord I had lying around so it became really easy to troubleshoot (remember to debounce...).  All the wire was run towards the window down the wall and fairly hidden away.  Then the button mounted on the wall.  I bought a nice brushed nickel  door bell switch one to--again--keep my wife from see a "hobby home" instead of a "living home".  If you do use a door bell switch, keep in mind that most have a light in them and so technically it's like the button is constantly pushed. But it is easy to remedy by just snipping out the light and you'll have a true momentary switch.
 
 Everything looks really nice and instead of a twist pole, I have a button....but that's not automated.  That's simply a convenience you don't need.
 
 ## Z-Wave
 
-Now we need to automate it.  In the original video, (if you watched) the guy mentioned a Z-Wave button.  That device was a [Remotec ZFM-80US][remotec], and although good and working it's bulky (remember my wife does not want ugly fixturing) and if you can find it, it's expensive ($40-$50).  So I decided to avoid that.  Additionally, I use the [Wink][] system and if I was to install that switch, the system will think it's a Light/Power switch. I don't want a power switch to control my blinds, I want blind controllers!
+Now we need to automate it.  In the original video, (if you watched it) the guy mentioned a Z-Wave button.  That device was a [Remotec ZFM-80US][remotec], and although good and working it's bulky (remember my wife does not want ugly fixturing) and if you can find it, it's expensive ($40-$50).  So I decided to avoid that.  Additionally, I use the [Wink][] system and if I was to install that switch, the system will think it's a Light/Power switch. I don't want a power switch to control my blinds, I want blind controllers!
 
 Enter the [Monoprice Z-Wave Curtain Module][curtainmodule]! This little device is designed to control motorized curtain rolls, like Metech's or a Projector Screen.  For $14, it handles all the Z-Wave functions, provides some features we can use in the Trinket, and shows up as blinds in my Wink app...pretty awesome!
 
@@ -150,13 +150,24 @@ Since I have no details to how this little thing works, I had to do some experim
 
 The box is emitted to ground already (same 5V ground now that it's being powered by the same Bus), so when the signal for the OPEN (V~IN~) is energized, the Trinket (V~OUT~) will see a low voltage instead of the high voltage seen when not energized.  Using 2 more 10k Ohm resistors, I loaded them into that diagram (equivalent) and proceeded to have my Wink Hub command to Open the blinds, then Close the Blinds.
 
-**---Insert Fritzing image with NPN---**
+![Final Breadboard](https://cl.ly/1W3l2r1z2a1c/2016-12-16%2023_51_55-autoblinds.fzz_%20-%20Fritzing%20-%20[Breadboard%20View].png)
 
-Things worked great, but I notice one really odd thing.  The Open signal (WHITE from the datasheet) would only go HIGH when commanded to Close.  The Close (GRAY from the datasheet) would only go HIGH when commanded to Open.  No big deal, just need to swap my Pin assignments in the code and I'm ready to rock.
+Things worked great, but I notice one really odd thing.  The Open signal (WHITE from the datasheet) would only read LOW when commanded to Close.  The Close (GRAY from the datasheet) would only read LOW when commanded to Open.  No big deal, just need to swap my Pin assignments in the Arduino code and I'm ready to rock.
 
 Since the new Z Wave code only compliments the push button code, there's nothing I had to change on the button code. I simply added the additional Z-Wave information.  Like I said, check your pin assignment (can guess, then just fix it if you guessed wrong) for the OPEN and CLOSE signals are correct.  Then it's ready to load.
 
 ```clike
+/*===================================================================
+ * Automated Blinds for Trinket Pro 5V
+ *===================================================================
+ * 
+ * Created 2016-12-16 by Trae Blain
+ * Licensed under CC-BY-4.0 (See LICENSE file)
+ * http://traeblain.com/
+ *
+ * Build details found: https://traeblain.com/blog/automated-blinds/
+ *
+ */
 #include <Servo.h>  //Need the Servo module
 
 Servo servo_obj; //Define the Servo Object
@@ -255,7 +266,10 @@ You can do this too.  It's not that hard.  All the data you need is right here, 
 - [Mount Block FDM Model][mntblock] (.stl)
 - [Tilt Rod Block FDM Model][tiltrodblock] (.stl)
 - [Assembly Drawing (Block Drawings also)][assydrw] (.pdf)
+- [Assembly Schematic Diagram][schematic] (.pdf)
 - [Arduino Code][code] (.ino) - Github
+- [Graphics][fritzingfiles] (.fzz) - Github (Using [Fritzing][])
+- [Custom Board Gerbers][gerbers] - Github (Not used, but could be useful.)
 
 <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
@@ -283,4 +297,9 @@ You can do this too.  It's not that hard.  All the data you need is right here, 
 [tiltrodblock]: https://github.com/traeblain/OSH-Projects/blob/master/automated-blinds/tilt-rod-block.stl "Tilt Rod Block"
 [assydrw]: https://github.com/traeblain/OSH-Projects/blob/master/automated-blinds/blinds-assembly-drawing.pdf "Drawing"
 [code]: https://github.com/traeblain/OSH-Projects/blob/master/automated-blinds/trinket-code.ino "Automated Blinds Arduino Code"
+
+[fritzing]: http://fritzing.org/home/ "Fritzing - Electronics Made Easy"
+[fritzingfiles]: https://github.com/traeblain/OSH-Projects/blob/master/automated-blinds/autoblinds.fzz "Fritzing Native File"
+[gerbers]: https://github.com/traeblain/OSH-Projects/blob/master/automated-blinds/autoblinds-gerbers.zip "Gerber Files"
+[schematic]: https://github.com/traeblain/OSH-Projects/blob/master/automated-blinds/autoblinds_esd.pdf "Project Schematic"
 
