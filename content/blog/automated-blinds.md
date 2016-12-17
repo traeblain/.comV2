@@ -126,9 +126,11 @@ Finally, I filled the rest of the space with a block that holds all the parts.  
 
 If you have your own 3D printer, then feel free to build the parts yourself.  If you don't, then I'd highly suggest [3D Hubs][3dhubs].  I had 2 of the base parts made for $15.00 total. That's cheap... So tack on $7.50 more (or less if you have your own printer) to the overall cost, and you're still getting out cheap.
 
-Another design choice I really wanted to address was power to the Trinket.  I wanted to use USB (the trinket can get power elsewhere up to 16V) because I wanted to be able to change the code without ripping the whole thing out of the blinds all the time.  This worked out with a 10ft USB cord I had lying around so it became really easy to troubleshoot (remember to debounce...).  All the wire was run towards the window down the wall and fairly hidden away.  Then the button mounted on the wall.  I bought a nice brushed nickel  door bell switch one to--again--keep my wife from see a "hobby home" instead of a "living home".  If you do use a door bell switch, keep in mind that most have a light in them and so technically it's like the button is constantly pushed. But it is easy to remedy by just snipping out the light and you'll have a true momentary switch.
+Another design choice I really wanted to address was power to the Trinket.  I wanted to use USB (the trinket can get power elsewhere up to 16V) because I wanted to be able to change the code without ripping the whole thing out of the blinds all the time.  This worked out with a 10ft USB cord I had lying around so it became really easy to troubleshoot (remember to debounce...).  All the wire was run towards the window down the wall and fairly hidden away.  
 
-Everything looks really nice and instead of a twist pole, I have a button....but that's not automated.  That's simply a convenience you don't need.
+To get everything to fit, I had to cut about 2 inches off the tilt rod.  It's not a problem, even if things go horribly bad you're blinds can still work with the shortened rod.  But this off, gives you the needed space to get all the parts in the blinds.  Finally, the button is wired and mounted on the wall.  I bought a nice brushed nickel  door bell switch to--again--keep my wife from seeing a "hobby home" instead of our "living home".  If you do use a door bell switch, keep in mind that most have a light in them, so technically it's like the button is constantly pushed. But it is easy to remedy by just snipping out the light and you'll have a true momentary switch.
+
+Everything looks really nice and instead of a twist pole, I have a button....but that's not automated.  That's simply a convenience you don't need...
 
 ## Z-Wave
 
@@ -138,23 +140,23 @@ Enter the [Monoprice Z-Wave Curtain Module][curtainmodule]! This little device i
 
 ### Adding it to the Push Button
 
-So we don't want to abandon the button (it's automated but need manual control...), so we need to add this to the system.  This was a pretty big hurdle.  The datasheet says it need 12V, so I began to reconsider everything I built regarding how I would powered the push button portion.  I'd need a [12V-to-5V converter][1225], a 12V Power supply instead of a standard phone charger type supply, and more wire....
+So we don't want to abandon the button (it's automated but need manual control...), so we need to add this to the system.  This was a pretty big hurdle.  The datasheet says it needs 12V, so I began to reconsider everything I built regarding how I would powered the push button portion.  USB is 5V, not 12V... I'd need a [12V-to-5V converter][1225], a 12V Power supply instead of a standard phone charger type supply, and more wire....
 
 After some experimentation with a 12V battery and knowing how I wanted  to wire things, I said..."Screw it, let's see if it will run on 5V from the Arduino Bus."  Sure enough, it runs fine on 5V.  So that was a life saver, I don't need any special 12V power sources and more wires. I can keep things clean.  And since I'm using the 5V Bus on the FTDI header, I have a wide open 5V bus pin available (power to the push button can be move to the 5V 150mA MAX pin right next to the Bus line).  
 
 ### Wiring
 
-Since I have no details to how this little thing works, I had to do some experimenting with the device.  Additionally some Google-fu helped me understand that the 3 Signal lines are connected to the collector end of a NPN Transistor.  Looking at this schematic (I'll admit, I stared at it a while...), I realized instead of a pull-down (like the push button), I can use the Transistor as a switch for a pull-up style circuit.
+Since I have no details to how this little thing works, I had to do some experimenting with the device.  Additionally some Google-fu helped me understand that the 3 Signal lines are connected to the collector end of a NPN Transistor.  Looking at this schematic (I'll admit, this took me a second to fully grasp), I realized instead of a pull-down (like the push button), I can use the Transistor as a switch for a pull-up style circuit.
 
 ![NPN Transistor](https://upload.wikimedia.org/wikipedia/commons/9/91/Transistor_Simple_Circuit_Diagram_with_NPN_Labels.svg)
 
-The box is emitted to ground already (same 5V ground now that it's being powered by the same Bus), so when the signal for the OPEN (V~IN~) is energized, the Trinket (V~OUT~) will see a low voltage instead of the high voltage seen when not energized.  Using 2 more 10k Ohm resistors, I loaded them into that diagram (equivalent) and proceeded to have my Wink Hub command to Open the blinds, then Close the Blinds.
+The box is emitted to ground already (same 5V ground now that it's being powered by the same Bus), so when the signal for the OPEN (V-IN) is energized, the Trinket (V-OUT) will see a low voltage instead of the high voltage seen when not energized.  Using 2 more 10k Ohm resistors, I loaded them into that diagram (equivalent) and proceeded to have my Wink Hub command to Open the blinds, then Close the Blinds.
 
 ![Final Breadboard](https://cl.ly/1W3l2r1z2a1c/2016-12-16%2023_51_55-autoblinds.fzz_%20-%20Fritzing%20-%20[Breadboard%20View].png)
 
 Things worked great, but I notice one really odd thing.  The Open signal (WHITE from the datasheet) would only read LOW when commanded to Close.  The Close (GRAY from the datasheet) would only read LOW when commanded to Open.  No big deal, just need to swap my Pin assignments in the Arduino code and I'm ready to rock.
 
-Since the new Z Wave code only compliments the push button code, there's nothing I had to change on the button code. I simply added the additional Z-Wave information.  Like I said, check your pin assignment (can guess, then just fix it if you guessed wrong) for the OPEN and CLOSE signals are correct.  Then it's ready to load.
+Since the new Z Wave code only compliments the push button code, there's nothing I had to change on the button code. I simply added the additional Z-Wave information.  Like I said, check your pin assignment (just guess, then just fix it if you guessed wrong) for the OPEN and CLOSE signals are correct.  Then it's ready to load.
 
 ```clike
 /*===================================================================
@@ -260,7 +262,7 @@ The final result is what you see here.
 
 ## The Source
 
-You can do this too.  It's not that hard.  All the data you need is right here, you don't have to skip through my pains of working out the problems...you can just grab and go.  I've decided to run things though a CC-BY-4.0 license.  If you want to use it, just attribute the source.  Also, let me know if you improve on the build...you probably can do massively better than my soldering for starters.
+You can do this too.  It's not that hard.  All the data you need is right here, you can skip through my pains of working out the problems...just grab and go.  I've decided to run things though a CC-BY-4.0 license.  If you want to use it, just attribute the source.  Also, let me know if you improve on the build...you probably can do massively better than my soldering for starters.
 
 - [Assembly Model Source Data][onshapedata] - OnShape
 - [Mount Block FDM Model][mntblock] (.stl)
@@ -271,7 +273,7 @@ You can do this too.  It's not that hard.  All the data you need is right here, 
 - [Graphics][fritzingfiles] (.fzz) - Github (Using [Fritzing][])
 - [Custom Board Gerbers][gerbers] - Github (Not used, but could be useful.)
 
-In general you can get all the latest parts/code from [this Github repository][oshblinds] and offer better ways of doing things.
+In general you can get all the latest parts/code from [this Github repository][oshblinds] and--like I said--offer better ways of doing things.
 
 <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
