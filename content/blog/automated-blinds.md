@@ -137,6 +137,8 @@ Everything looks really nice and instead of a twist pole, I have a button....but
 
 Now we need to automate it.  In the original video, (if you watched it) the guy mentioned a Z-Wave button.  That device was a [Remotec ZFM-80US][remotec], and although good and working it's bulky (remember my wife does not want ugly fixturing) and if you can find it, it's expensive ($40-$50).  So I decided to avoid that.  Additionally, I use the [Wink][] system and if I was to install that switch, the system will think it's a Light/Power switch. I don't want a power switch to control my blinds, I want blind controllers!
 
+![Monoprice Z-Wave Curtain Module](https://res.cloudinary.com/dixwznarl/image/upload/notebook/auto-blinds/zwave-curtain-monoprice.jpg)
+
 Enter the [Monoprice Z-Wave Curtain Module][curtainmodule]! This little device is designed to control motorized curtain rolls, like Metech's or a Projector Screen.  For $14, it handles all the Z-Wave functions, provides some features we can use in the Trinket, and shows up as blinds in my Wink app...pretty awesome!
 
 ### Adding it to the Push Button
