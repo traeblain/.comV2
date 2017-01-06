@@ -14,7 +14,7 @@ It was another great year in book reading.  I didn't travel as much I did the pr
 {{< figure src="/images/books/golden-son.jpg" title="Golden Son" class="align-left" link="http://www.amazon.com/gp/product/0345539834/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0345539834&linkCode=as2&tag=traeblain-20&linkId=537WE74NWTOJV4EW" >}}
 [Morning Star][], along with Pierce Brown's first two of the series: [Golden Son][] and [Red Rising][], is the best post-Apocalyptic story I've ever read.  In fact, Golden Son was my favorite read of [last year](/blog/so-many-books/).  Morning Star may be the best of the three.  The pace is blistering for a book of its size, but Brown continues to deliver page after page. I cannot think of a better series for Science-Fiction/Fantasy lovers to digest.  Now it's just time for me to sit back and wait for the movie to come out and destroy the series for me...
 
-### Honorable Mentions
+#### Honorable Mentions
 
 - Age of Myth by Michael J Sullivan
 - The Blinding Knife by Brent Weeks
@@ -26,7 +26,7 @@ It was another great year in book reading.  I didn't travel as much I did the pr
 
 Get all three and binge through them, I'd bet you'd enjoy it.
 
-### Honorable Mentions
+#### Honorable Mentions
 
 - The Dresden Files by Jim Butcher
 - The Chronicles of St. Mary's by Jodi Taylor
@@ -38,7 +38,7 @@ Normally, I'd lay out my favorite Non-Fiction story....but it turns out I read z
 
 [The Lock Artist][lock] was a book that randomly showed up in some recommendation, and the description sounded interesting enough to try it.  I'm glad I did.  A tragic kid's life and his dive into safe cracking pulls on you in two different fronts...and it keeps pulling you in.  I really didn't know what to expect, especially since GoodReads users tend to have a love/hate opinion of the book.  But I thoroughly enjoyed it. Worth giving a try.
 
-### Honorable Mention
+#### Honorable Mention
 
 - Just One Damned Thing After Another by Jodi Taylor
 
