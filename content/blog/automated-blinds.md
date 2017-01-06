@@ -1,7 +1,6 @@
 ---
 title: 'Automated Blinds'
 date: '2017-01-05'
-draft: true
 background: https://res.cloudinary.com/dixwznarl/image/upload/notebook/a-house.jpg
 text_color: "dark"
 tags: ['automation', 'wink', 'smart home']
