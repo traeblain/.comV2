@@ -1,6 +1,6 @@
 ---
 title: 'Automated Blinds'
-date: '2016-12-13'
+date: '2017-01-05'
 draft: true
 background: https://res.cloudinary.com/dixwznarl/image/upload/notebook/a-house.jpg
 text_color: "dark"
@@ -123,7 +123,7 @@ Next was getting the Tilt Rod to move with the servo.  I used 1.25in Dowel rod b
 
 Finally, I filled the rest of the space with a block that holds all the parts.  I did not want to drill holes in the blinds or anything, so just filling the space allows it to hold firmly in place during motion and does not need screws.  This again is huge for troubleshooting and aesthetics. 
 
-<iframe src="https://clara.io/embed/e695bdd6-c3a9-46be-9e95-6cd8935a9592?renderer=webgl" width="800" height="600" allowfullscreen></iframe>
+<div class="align-center"><iframe src="https://clara.io/embed/e695bdd6-c3a9-46be-9e95-6cd8935a9592?renderer=webgl" width="800" height="600" allowfullscreen></iframe></div>
 
 If you have your own 3D printer, then feel free to build the parts yourself.  If you don't, then I'd highly suggest [3D Hubs][3dhubs].  I had 2 of the base parts made for $15.00 total. That's cheap... So tack on $7.50 more (or less if you have your own printer) to the overall cost, and you're still getting out cheap.
 
