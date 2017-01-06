@@ -12,7 +12,7 @@ It was another great year in book reading.  I didn't travel as much I did the pr
 ## Favorite Read
 
 {{< figure src="https://res.cloudinary.com/dixwznarl/image/upload/c_scale,w_230/notebook/books/morning-star.jpg" title="Morning Star" class="align-left" link="https://www.amazon.com/Morning-Star-Book-Rising-Trilogy/dp/0345539869/ref=as_li_ss_tl?ie=UTF8&qid=1483677705&sr=8-1&keywords=morning+star&linkCode=ll1&tag=traeblain-20&linkId=41fab423dea2c6f0ee6fad3310208ca2" >}}
-[Morning Star][], along with Pierce Brown's first two of the series: [Golden Son][] and [Red Rising][], is the best post-Apocalyptic story I've ever read.  In fact, Golden Son was my favorite read of [last year](/blog/so-many-books/).  Morning Star may be the best of the three.  The pace is blistering for a book of its size, but Brown continues to deliver page after page. I cannot think of a better series for Science-Fiction/Fantasy lovers to digest.  Now it's just time for me to sit back and wait for the movie to come out and destroy the series for me...
+[Morning Star][], along with Pierce Brown's first two of the series: [Golden Son][] and [Red Rising][], is the best post-Apocalyptic story I've ever read.  In fact, Golden Son was my favorite read of [last year](/blog/so-many-books/).  Morning Star may be the best of the three.  The pace is blistering for a book of its size, but Brown continues to deliver page after page. Watching as all the events come to ahead, how each character gets further fleshed out, and how you are never sure if the good guys are going to prevail (do they prevail?).  I cannot think of a better series for Science-Fiction/Fantasy lovers to digest.  Now it's just time for me to sit back and wait for the movie to come out and destroy the series for me...
 
 #### Honorable Mentions
 
@@ -22,7 +22,7 @@ It was another great year in book reading.  I didn't travel as much I did the pr
 ## Favorite Series
 
 {{< figure src="https://res.cloudinary.com/dixwznarl/image/upload/c_scale,w_230/notebook/books/fear-saga-sky.jpg" title="The Fear Saga" class="align-left" link="https://www.amazon.com/s/ref=as_li_ss_tl?url=search-alias=stripbooks&field-keywords=The+Fear+Saga&linkCode=ll2&tag=traeblain-20&linkId=1aad8ab2a53c36140d652f1a2ad0fb26" >}}
-[The Fear Saga][fear] is a great story by writer Stephen Moss.  I actually read the first book [Fear the Sky][fearsky] in 2015, but read the second two quickly last year starting with [Fear the Survivors][fearsurvivors].  Although I was super bummed by the direction some of the characters went in the final book, [Fear the Future][fearfuture], I still enjoyed the reading overall.  Moss is an excellent writer.  One of the greatest parts of the series is how realistic the science is.  Many Sci-Fi books take you right into science-fantasy, but these books (although definitely fiction...) are grounded so well in scientific fact that the stretches he makes never feel like fantasy.
+[The Fear Saga][fear] is a great story by writer Stephen Moss.  I actually read the first book [Fear the Sky][fearsky] in 2015, but read the second two quickly last year starting with [Fear the Survivors][fearsurvivors].  Although I was super bummed by the direction some of the characters went in the final book, [Fear the Future][fearfuture], I still enjoyed the reading overall.  Moss is an excellent writer that can keep you interested even during the technical detail.  One of the greatest parts of the series is how realistic the science aspects are.  Many Sci-Fi books take you right into science-fantasy, but these books (although definitely fiction...) are grounded so well in scientific fact that the stretches he makes never feel like fantasy.  The logic leaps are so natural that you believe that what he is saying is really true and not fiction.
 
 Get all three and binge through them, I'd bet you'd enjoy it.
 
@@ -34,7 +34,9 @@ Get all three and binge through them, I'd bet you'd enjoy it.
 ## Biggest Surprise
 
 {{< figure src="https://res.cloudinary.com/dixwznarl/image/upload/c_scale,w_230/notebook/books/the-lock-artist.jpg" title="The Lock Artist" class="align-left" link="https://www.amazon.com/Lock-Artist-Novel-Steve-Hamilton/dp/0312696957/ref=as_li_ss_tl?s=books&ie=UTF8&qid=1483677354&sr=1-1&keywords=The+Lock+Artist&linkCode=ll1&tag=traeblain-20&linkId=6ec994130bf2b11c5916127bcae6cc86" >}}
-Normally, I'd lay out my favorite Non-Fiction story....but it turns out I read zero non-fiction books last year.  (I blame Erik Larson...)  I plan to rectify that, but in lieu of a non-fiction, I will jump right to biggest surprise of last year.  
+Normally, I'd lay out my favorite Non-Fiction story....but it turns out I read zero non-fiction books last year.  (I blame Erik Larson...)  I plan to rectify that for this year
+
+But in lieu of a non-fiction, I will jump right to biggest surprise of last year.  
 
 [The Lock Artist][lock] was a book that randomly showed up in some recommendation, and the description sounded interesting enough to try it.  I'm glad I did.  A tragic kid's life and his dive into safe cracking pulls on you in two different fronts...and it keeps pulling you in.  I really didn't know what to expect, especially since GoodReads users tend to have a love/hate opinion of the book.  But I thoroughly enjoyed it. Worth giving a try.
 
@@ -44,7 +46,7 @@ Normally, I'd lay out my favorite Non-Fiction story....but it turns out I read z
 
 ## Bad Books
 
-This year was much better than last year with regards to bad books.  I will not link to it and will not say much.  _The Unnoticeable_ by Robert Brockway was recommended to me after reading [Futuristic Violence and Fancy Suits][fancy] by David Wong (which is **not** a bad book, by the way, and you should definitely read).  But it was a complete waste of time.  The thought behind it was nice, but I kept feeling like the attempts to be funny were just stupid.  Apparently his publisher wanted more so it is now a series, but I'd just avoid this book .
+This year was much better than last year with regards to bad books.  I will not link to it and will not say much.  _The Unnoticeable_ by Robert Brockway was recommended to me after reading [Futuristic Violence and Fancy Suits][fancy] by David Wong (which is **not** a bad book, by the way, and you should definitely read).  But it was a complete waste of time.  The thought behind it was nice, but I kept feeling like the attempts to be funny were just stupid.  Apparently his publisher wanted more so it is now a series, but I'd just avoid this book.
 
 [gr2016]: https://www.goodreads.com/user/year_in_books/2016/1671848
 [Morning Star]: https://www.amazon.com/Morning-Star-Book-Rising-Trilogy/dp/0345539869/ref=as_li_ss_tl?ie=UTF8&amp;qid=1483677705&amp;sr=8-1&amp;keywords=morning+star&amp;linkCode=ll1&amp;tag=traeblain-20&amp;linkId=41fab423dea2c6f0ee6fad3310208ca2	"Morning Star"
