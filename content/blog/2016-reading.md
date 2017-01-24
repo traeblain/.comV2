@@ -1,9 +1,8 @@
 ---
-date: 2017-01-05
+date: 2017-01-23
 title: Books, Books, and More Books
 tags: [ "reading", "books" ]
-draft: true
-background: "https://res.cloudinary.com/dixwznarl/image/upload/s--6lVJqHt1--/c_scale,q_jpegmini,w_1000/v1483678973/notebook/open-book.jpg"
+background: "https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_jpegmini,w_1000/v1483678973/notebook/open-book.jpg"
 ---
 
 It was another great year in book reading.  I didn't travel as much I did the previous year, but my commutes to work and various other reasons allowed me to keep the words flowing.  I bumped up my goal from 40 to 42 last year, assuming that since I wasn't traveling as much it wasn't worth moving up to 50+ books.  But even with the modest change, I still read 54 book by year's end, and a number of good ones in fact.  Again, [GoodReads does such a better job][gr2016] at presenting my books list than I could do, so hop over there are review my year.  Then quickly come back and checkout my hits---and missed---of 2016.
