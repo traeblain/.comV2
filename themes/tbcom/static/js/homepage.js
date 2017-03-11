@@ -359,7 +359,8 @@ fetch('https://traeblain.apispark.net/v1/reads/?%24size=80', headers)
   regex = /.+author:\s(.+)</g
   var author = regex.exec(finished.Image_Link)[1]
   regex = /.+review:\s<.+?>(.+)</gm
-  var details = regex.exec(finished.Image_Link)[1]
+  var review = regex.exec(finished.Image_Link)
+  var details = review ? review[1] : "Error getting review...follow link below to read it."
   document.getElementById('lastread').innerHTML = imagelink + '<h5>' + finished.Title + ' by ' + author + '</h5><p>' + details + '</p><p><a href="' + finished.Link + '">See my review here &raquo;</a></p>'
 }).catch(function(ex) {
   document.getElementById('lastread').innerHTML = "Data collection failed..."
