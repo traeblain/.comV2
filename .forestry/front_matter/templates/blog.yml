@@ -30,7 +30,7 @@ fields:
   label: Text color
   type: text
   hidden: false
-  default: dark
+  default: ''
 - name: script
   label: Script
   type: text
