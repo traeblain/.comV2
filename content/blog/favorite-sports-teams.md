@@ -1,12 +1,14 @@
 ---
-date: 2016-03-17T00:00:00
-draft: true
+date: 2016-03-17 00:00:00 +0000
 tags:
 - sports
 title: My Favorite Sports Teams
+background: ''
+text_color: ''
+script: ''
+draft: true
+
 ---
-
-
 For posterity sake, I figured I'd make the definitive list of the best sports teams ever.  The best sports teams in the mind of Trae.  If I did keep up with all these sports/leagues, then this would be the teams I'd follow.  Yes, that's right, I don't follow all these...but who cares!?  See if you agree with me.  (I reserve the right to change my mind...)
 
 ### Gridiron
@@ -55,15 +57,21 @@ I was told at my first race that I looked like Kyle Busch, so I thought "Sure, l
 
 #### Formula One: Daniel Ricciardo
 
-F1 racing is having some major issues, the races pretty boring without much excitement.  F1 is the best motor sport circuit out there, yet lately there's simply been little to no suffle after the qualifying runs.  
+F1 racing is having some major issues, the races pretty boring without much excitement.  F1 is the best motor sport circuit out there, yet lately there's simply been little to no suffle after the qualifying runs.
 
-Racing for Red Bull-TAG Heuer, he has a uphill climb.  But he's a great driver and has got a chance to put Mercedes away.  
+Racing for Red Bull-TAG Heuer, he has a uphill climb.  But he's a great driver and has got a chance to put Mercedes away.
 
 ### Cycling
 
 #### Team: Trek-Segafredo
 
 #### Individual: Tejay van Garderen - BMC Racing Team
+
+### Lacrosse
+
+#### Team: Dallas Rattlers
+
+So didn't pay much attention to Lacrosse until my son started playing.  Then I was guessing we could be a Denver Outlaws fan based on relative proximity versus other teams...and Outlaws...you know, I'm from Texas. But Rochester moved to Dallas, so now I'm a Rattlers fan.  Being they were 3rd place prior to moving, it's even a plus that it's not a basement team.
 
 ### Golf
 
@@ -72,8 +80,6 @@ Racing for Red Bull-TAG Heuer, he has a uphill climb.  But he's a great driver a
 ### Cricket
 
 ### Tennis
-
-### Lacrosse
 
 ### Fighting
 
