@@ -49,17 +49,9 @@ Because I can unite in a group of people that maintain an extreme dislike for To
 
 #### IndyCar: Scott Dixon
 
-Because that's my cousin's name...and I thought it would be fun to pull for my cousin...even though that's not my cousin.
-
 #### NASCAR: Joey Logano
 
-I was told at my first race that I looked like Kyle Busch, so I thought "Sure, let's root for that guy!"  But I don't like Kyle...so after his rookie season I started pulling for Logano.
-
 #### Formula One: Daniel Ricciardo
-
-F1 racing is having some major issues, the races pretty boring without much excitement.  F1 is the best motor sport circuit out there, yet lately there's simply been little to no suffle after the qualifying runs.
-
-Racing for Red Bull-TAG Heuer, he has a uphill climb.  But he's a great driver and has got a chance to put Mercedes away.
 
 ### Cycling
 
