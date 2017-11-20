@@ -3,7 +3,7 @@ date: 2016-03-17 00:00:00 +0000
 tags:
 - sports
 title: My Favorite Sports Teams
-background: ''
+background: https://res.cloudinary.com/dixwznarl/image/upload/s--EZbgbnlf--/c_scale,fl_progressive,q_jpegmini,w_2048/v1511153708/notebook/seats-159524.png
 text_color: ''
 script: ''
 draft: true
@@ -108,3 +108,5 @@ Power...raw power.
 #### Mixed Martial Arts: Tyron Woodley
 
 Welterweight is the best MMA division.
+
+_Modified: **2017/11/19**_
