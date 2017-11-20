@@ -49,15 +49,25 @@ Because I can unite in a group of people that maintain an extreme dislike for To
 
 #### IndyCar: Scott Dixon
 
+But I don't really have any alegence to Indy racing.
+
 #### NASCAR: Joey Logano
 
+Because.
+
 #### Formula One: Daniel Ricciardo
+
+Great driver, rough team.
 
 ### Cycling
 
 #### Team: Trek-Segafredo
 
-#### Individual: Tejay van Garderen - BMC Racing Team
+Evolved from a joint US/Euro team and love the makeup.
+
+#### Individual: Tejay van Garderen
+
+BMC Racing Team is a good team, and this guy is a beast.
 
 ### Lacrosse
 
@@ -67,14 +77,34 @@ So didn't pay much attention to Lacrosse until my son started playing.  Then I w
 
 ### Golf
 
+#### Jordan Spieth
+
+Local boy, but I don't have time for golf.
+
 ### Rugby
+
+#### Team: Munster
+
+The Red Army, and by extension the Irish National Team...although I really should be pulling for the US.
 
 ### Cricket
 
+#### Team: Kolkata Knight Riders
+
+[Dodo-dodo-dodo-dodo...dodo-dodo-dodo-dodo...](https://youtu.be/oNyXYPhnUIs)
+
 ### Tennis
+
+#### Jo-Wilfried Tsonga
+
+Big dude...and that's awesome.  Although liking this Sock guy.
 
 ### Fighting
 
-#### Boxing
+#### Boxing: Deontay Wilder
 
-#### Mixed Martial Arts
+Power...raw power.
+
+#### Mixed Martial Arts: Tyron Woodley
+
+Welterweight is the best MMA division.
