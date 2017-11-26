@@ -60,7 +60,7 @@ title = "Trae Blain"
     weight = 6.0
 
 [params]
-  disqus = "traeblain"
+  # disqus = "traeblain"
   rss = "/blog/index.xml"
   segment = "gveNZnsGRVvfcJKu8CfxI3TgX5buZ0DT"
   swiftype = "xxvxuPQWopgGHCpFwzi-"
