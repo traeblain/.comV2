@@ -3,5 +3,6 @@
   <a class='button {{ if .Get "dark" }}button-primary{{ end }}'
      href='{{ if .Get "link" }}{{ .Get "link" }}{{ else }}#{{ end }}'
      {{ if .Get "id" }}id='{{ .Get "id" }}'{{ end }}
+     style="font-size: 3rem;line-height: 5.5rem;height: 6rem;"
   >{{ .Inner }}</a>
 </div>
