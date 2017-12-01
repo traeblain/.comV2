@@ -6,33 +6,43 @@ fields:
   type: datetime
   hidden: false
   default: ''
+  description: Original Publish Date (edit before publishing)
+  config:
+    required: true
 - name: title
   label: Title
   type: text
   hidden: false
   default: ''
+  description: Post Title
+  config:
+    required: true
 - name: tags
   label: Tags
   type: tag_list
   hidden: false
   default: []
+  description: Tag List
 - name: background
   label: Background
   type: textarea
   hidden: false
   default: ''
-- name: type
-  label: Type
-  type: text
-  hidden: false
-  default: ''
+  description: Background Image for Hero Banner
 - name: text_color
   label: Text color
   type: text
   hidden: false
   default: ''
+  description: Color of Hero Text
 - name: script
   label: Script
   type: text
   hidden: false
   default: ''
+  description: Location of any special Javascript that needs to be injected.
+- type: datetime
+  default: Invalid date
+  label: Modified
+  name: modified
+  description: Date and Time it was modified.
