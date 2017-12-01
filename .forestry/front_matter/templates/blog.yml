@@ -17,6 +17,12 @@ fields:
   description: Post Title
   config:
     required: true
+- type: text
+  name: description
+  label: Description
+  description: 200 Character Description
+  config:
+    required: false
 - name: tags
   label: Tags
   type: tag_list
