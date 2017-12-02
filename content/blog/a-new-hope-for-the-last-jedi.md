@@ -8,7 +8,9 @@ text_color: light
 script: ''
 title: A New Hope for the Last Jedi
 date: 2017-12-02 16:00:17 -0600
-description: ''
+description: I got a theory that I hope will be revealed in The Last Jedi.  It is
+  something that has been showing itself for 7 films now, and it would be great to
+  see it confirmed.
 draft: true
 
 ---
@@ -18,8 +20,7 @@ Star Wars: The Last Jedi is about to be released and since they announced the ti
 
 What does it mean to bring balance to The Force?  Qui-gon Jinn believes he found "The Chosen One" in Anakin Skywalker.  "The Chosen One" was supposed to rid the world of the Sith and bring balance to the force.  Obi-won comes to believe this as well.  Mace Windu and Yoda speak to him about the prophesy of who is to restore _balance to the force_.
 
-{{< figure src="http://res.cloudinary.com/dixwznarl/image/upload/v1512247220/notebook/D9QXQy.gif" alt="Bring balance to the force" class="align-right" >}}
-But what is balance?  There is an argument that light and dark cannot live in harmony, but restoring balance is instead treating the dark side as a cancer to the force.  The balance that needs to be restored is the eradication of the dark side so The Force can be rid of this corruption.  Then the Force can live in it's natural balance.  This view seems to be reinforced by George Lucas in various older interviews.
+{{< figure src="https://res.cloudinary.com/dixwznarl/image/upload/v1512247220/notebook/D9QXQy.gif" alt="Bring balance to the force" class="align-right" >}} But what is balance?  There is an argument that light and dark cannot live in harmony, but restoring balance is instead treating the dark side as a cancer to the force.  The balance that needs to be restored is the eradication of the dark side so The Force can be rid of this corruption.  Then the Force can live in it's natural balance.  This view seems to be reinforced by George Lucas in various older interviews.
 
 But this interpretation never sat well with me.  I also don't think that it sat well with many fans either.  Lucas believed that the prophecy was misread (Ref. [Episode III](https://www.youtube.com/watch?v=r360LybT4Ec)) and that Luke was the actual "Chosen One" that restored balance.  Fans for a long time didn't agree.  If you remember in Return of the Jedi, it wasn't Luke that killed Darth Sidious...Vader, after having a crisis of character, throws Sidious over the rail and killing him.  I believe the most fan held interpretation is that Anakin was always the perceived Chosen One, not Luke.
 
@@ -40,9 +41,11 @@ My theory is that balance provided by Anakin was only temporary because the Jedi
 
 In the previews for The Last Jedi, there are two moments that leave me hopeful that this is the direction we are going.
 
-[In the teaser trailer](https://youtu.be/zB4I68XVPzQ?t=1m27s), you hear Luke say: "It's time for the Jedi, to end." I believe (and hope) that Luke finally sees the error of the Jedi tradition.  In their fight to be "Fully Good", all they did was allow the Force to **balance itself** by manifesting "Fully Evil" counterparts.  The Jedi were taught to repress their anger, ignore things they hate, and restrict these emotions because they felt that was the only way to be good.  Remember, [Yoda](https://youtu.be/HMUKGTkiWik?t=22s), [Obi-wan](https://youtu.be/RroB_8Lhogs), and [Maz Kanata](https://youtu.be/3Mrw6l9YiB0?t=53s), spoke about how the Force being all around them, and permeates every living thing.  It should be safe to say that the Force is in all things, love and hate, good and evil...light and dark.
+{{< figure src="https://res.cloudinary.com/dixwznarl/image/upload/c_scale,w_480/notebook/Luke-Last-Jedi-780x438.jpg" title="Luke Skywalker" class="align-left" >}} [In the teaser trailer](https://youtu.be/zB4I68XVPzQ?t=1m27s), you hear Luke say: "It's time for the Jedi, to end." I believe (and hope) that Luke finally sees the error of the Jedi tradition.  In their fight to be "Fully Good", all they did was allow the Force to **balance itself** by manifesting "Fully Evil" counterparts.  The Jedi were taught to repress their anger, ignore things they hate, and restrict these emotions because they felt that was the only way to be good.  Remember, [Yoda](https://youtu.be/HMUKGTkiWik?t=22s), [Obi-wan](https://youtu.be/RroB_8Lhogs), and [Maz Kanata](https://youtu.be/3Mrw6l9YiB0?t=53s), spoke about how the Force being all around them, and permeates every living thing.  It should be safe to say that the Force is in all things, love and hate, good and evil...light and dark.
 
 Luke wants to end the Jedi, because the Jedi's "Fully Good" belief continues to develop "Fully Evil", and the pain and destruction that this action brings is too great. Since you cannot destroy the Force, the key is to let the Force be all things in you.  My hope for The Last Jedi, is that Luke begins to train Rey to embrace her good, understand her emotions and accept them, be okay with the hate she has for Kylo, and harness that anger for justice.
+
+{{< figure src="https://res.cloudinary.com/dixwznarl/image/upload/c_fill,h_320,w_390/notebook/b76aad25c80f086c_Screen_Shot_2017-04-14_at_10.10.02_AM.jpg" alt="Jedi Symbol?" class="align-right" >}}
 
 > _There is no emotion, there is peace.
 > There is no ignorance, there is knowledge.
@@ -51,7 +54,7 @@ Luke wants to end the Jedi, because the Jedi's "Fully Good" belief continues to 
 > There is no death, there is the Force._
 > <cite>- The Jedi Code</cite>
 
-The Jedi Code is wrong and what a great turn of the story would it be to place the Jedi themselves as the bad guys.  I liken the Jedi to the Crusaders.  Great intentions but massively and dangerously mislead.  In their actions to do what they felt was the great good, they left behind a wake of pain, misery, and problems that to centuries to change...and even now there isn't a full recovery.  The Jedi Code pushes the Force to fill the void with evil in the areas the Code rejects.
+The Jedi Code is wrong and what a great turn of the story would it be to place the Jedi themselves as the bad guys.  I liken the Jedi to the Crusaders.  Great intentions but massively and dangerously mislead.  In their actions to do what they felt was the great good, they left behind a wake of pain, misery, and problems that took centuries to change...and even now there is not a full recovery.  The Jedi Code pushes the Force to fill the void with evil in the areas the Code rejects.
 
 * **There IS emotion.**  Emotions must be recognized. Only emotions like empathy and anger will allow there to be peace where peace is not found.
 * **There IS ignorance.**  No one group can know all things.  The Jedi's pursuit of knowledge is admirable, but it's the acceptance that they don't know all which could will keep Force wielders from making mistakes of the past, both in the dark and light sides.
