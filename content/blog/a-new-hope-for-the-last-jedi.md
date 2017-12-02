@@ -7,7 +7,7 @@ background: https://res.cloudinary.com/dixwznarl/image/upload/q_jpegmini/noteboo
 text_color: light
 script: ''
 title: A New Hope for the Last Jedi
-date: 2017-12-02 08:00:17 -0600
+date: 2017-12-02 16:00:17 -0600
 description: ''
 draft: true
 
