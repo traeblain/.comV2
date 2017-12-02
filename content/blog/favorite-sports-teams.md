@@ -3,9 +3,11 @@ date: 2016-03-17 00:00:00 +0000
 tags:
 - sports
 title: My Favorite Sports Teams
-background: https://res.cloudinary.com/dixwznarl/image/upload/s--EZbgbnlf--/c_scale,fl_progressive,q_jpegmini,w_2048/v1511153708/notebook/seats-159524.png
+background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,fl_progressive,q_jpegmini,w_2048/v1511153708/notebook/seats-159524.png
 text_color: ''
 script: ''
+description: ''
+modified: Invalid date
 draft: true
 
 ---
