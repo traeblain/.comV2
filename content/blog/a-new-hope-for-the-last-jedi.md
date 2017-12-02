@@ -7,11 +7,9 @@ background: https://res.cloudinary.com/dixwznarl/image/upload/q_jpegmini/noteboo
 text_color: light
 script: ''
 title: A New Hope for the Last Jedi
-lastmod: Invalid date
 date: 2017-12-02 08:00:17 -0600
 description: ''
 draft: true
-
 ---
 Star Wars: The Last Jedi is about to be released and since they announced the title, I've had a theory that I've really wanted to hope come true.  A brief analysis of the previous films and a few comments from the previews for the new file--taken completely out of context--leads me to what I hope happens for The Last Jedi.  We'll see though, won't we.
 
