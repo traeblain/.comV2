@@ -8,7 +8,7 @@ text_color: light
 script: ''
 title: A New Hope for the Last Jedi
 lastmod: Invalid date
-date: 2017-12-02 10:00:17 +0000
+date: 2017-12-02 08:00:17 -0600
 description: ''
 draft: true
 
