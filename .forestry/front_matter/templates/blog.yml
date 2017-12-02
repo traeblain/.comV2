@@ -50,5 +50,5 @@ fields:
 - type: datetime
   default: Invalid date
   label: Modified
-  name: modified
+  name: lastmod
   description: Date and Time it was modified.
