@@ -10,6 +10,7 @@ title = "Trae Blain"
 
 [author]
   name = "Trae Blain"
+  commonname = "traeblain"
 
 [blackfriday]
   extensions = ["hardLineBreak"]
