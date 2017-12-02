@@ -27,7 +27,7 @@ But this interpretation never sat well with me.  I also don't think that it sat 
 
 I believe that Abrams has this same opinion.  With the rise of the First Order and appearance of Snoke, this seems to be reinforced.  Kylo was also born from Luke's Jedi training work, and if Luke was creating balance...then why would such a great power be so easily seduced to the dark side?
 
-> It  is where you are from. What you are made of. The dark side—and the  light. The finest sculptor cannot fashion a masterpiece from poor  materials. He must have something pure, something strong, something  unbreakable, with which to work.
+> _It  is where you are from. What you are made of. The dark side—and the  light. The finest sculptor cannot fashion a masterpiece from poor  materials. He must have something pure, something strong, something  unbreakable, with which to work._
 > <cite>- Snoke</cite>
 
 So this comes back to "What is balance in the Force?" and how would one restore this?
@@ -36,31 +36,31 @@ Abrams in writing The Force Awakens in the manner he did, showed us that great e
 
 ## My Theory
 
-My theory is that balance provided by Anakin was only temporary because the Jedi Order had no idea what _balance_ meant.  Balance isn't the eradication of things normally related to the Dark Side.  Every discussion of succumbing to the Dark Side involved "feeling the hate, embracing your anger".  Even Luke in Return of the Jedi feeds on his anger when fighting the Emperor.  [Watch it again](https://youtu.be/U1MnMA0TzGI?t=3m56s "Luke Fights Vader"), and don't tell me when he's hacking away at him, swinging as hard as he can, he's doing it out of pure/fully good motives.  Luke becomes powerful, when he becomes himself, his whole self.  Later when he suppresses his passion, the Emperor is able to make quick work of him.  Balance doesn't mean eradication of hate and anger, but it's the application of these emotions in the proper way.
+My theory is that balance provided by Anakin was only temporary because the Jedi Order had no idea what _balance_ meant.  Balance isn't the eradication of things normally related to the Dark Side.  Every discussion of succumbing to the Dark Side involved "feeling the hate, embracing your anger".  Even Luke in Return of the Jedi feeds on his anger when fighting Vader.  [Watch it again](https://youtu.be/U1MnMA0TzGI?t=3m56s "Luke Fights Vader"), and don't tell me when he's hacking away at him, swinging as hard as he can, he's doing it out of pure/fully good motives.  Luke becomes powerful, when he becomes himself, his _whole_ self.  Later when he suppresses his passion, the Emperor is able to make quick work of him.  Balance doesn't mean eradication of hate and anger, but it's the application of these emotions in the proper way.
 
-In the previews for The Last Jedi, there are two moments that leave me hopeful that this is the direction we are going.  
+In the previews for The Last Jedi, there are two moments that leave me hopeful that this is the direction we are going.
 
 [In the teaser trailer](https://youtu.be/zB4I68XVPzQ?t=1m27s), you hear Luke say: "It's time for the Jedi, to end." I believe (and hope) that Luke finally sees the error of the Jedi tradition.  In their fight to be "Fully Good", all they did was allow the Force to **balance itself** by manifesting "Fully Evil" counterparts.  The Jedi were taught to repress their anger, ignore things they hate, and restrict these emotions because they felt that was the only way to be good.  Remember, [Yoda](https://youtu.be/HMUKGTkiWik?t=22s), [Obi-wan](https://youtu.be/RroB_8Lhogs), and [Maz Kanata](https://youtu.be/3Mrw6l9YiB0?t=53s), spoke about how the Force being all around them, and permeates every living thing.  It should be safe to say that the Force is in all things, love and hate, good and evil...light and dark.
 
-Luke wants to end the Jedi, because the Jedi's "Fully Good" belief continues to develop "Fully Evil", and the pain and destruction that brings is too great. Since you cannot destroy the Force, the key is to let the Force be all things in you.  My hope for The Last Jedi, is that Luke begins to train Rey to embrace her good, be okay with the hate she has for Kylo, and harness that anger for justice.
+Luke wants to end the Jedi, because the Jedi's "Fully Good" belief continues to develop "Fully Evil", and the pain and destruction that this action brings is too great. Since you cannot destroy the Force, the key is to let the Force be all things in you.  My hope for The Last Jedi, is that Luke begins to train Rey to embrace her good, understand her emotions and accept them, be okay with the hate she has for Kylo, and harness that anger for justice.
 
-> There is no emotion, there is peace.
+> _There is no emotion, there is peace.
 > There is no ignorance, there is knowledge.
 > There is no passion, there is serenity.
 > There is no chaos, there is harmony.
-> There is no death, there is the Force.
+> There is no death, there is the Force._
 > <cite>- The Jedi Code</cite>
 
-The Jedi Code is wrong.  The Code pushes the Force to create Evil in the areas the Code rejects.
+The Jedi Code is wrong and what a great turn of the story would it be to place the Jedi themselves as the bad guys.  I liken the Jedi to the Crusaders.  Great intentions but massively and dangerously mislead.  In their actions to do what they felt was the great good, they left behind a wake of pain, misery, and problems that to centuries to change...and even now there isn't a full recovery.  The Jedi Code pushes the Force to fill the void with evil in the areas the Code rejects.
 
-* **There IS emotion**, and only emotions like empathy and anger will allow there to be peace where peace is not found.
-* **There IS ignorance**, no one group can know all things.  The Jedi's pursuit of knowledge is admirable, but it's the acceptance that they don't know all is what will keep Force wielders from making mistakes of the past, both dark and light.
-* **There IS passion**, and our passions is what leads us correcting mistakes. Serenity also means there's no empathy...and only with empathy can you fully be agents for peace.
-* **There IS chaos**. Sometimes things happen with no explanation. Embracing the wildness of the cosmos allows you to not be blind-sided when things happen for no reason.
-* **There IS death**.  People die.  Those with strong sensitivity to the Force appear to have spirits that live on, but not everyone has this sensitivity.  The Force doesn't eliminate death...it happens.  Don't ignore it.
+* **There IS emotion.**  Emotions must be recognized. Only emotions like empathy and anger will allow there to be peace where peace is not found.
+* **There IS ignorance.**  No one group can know all things.  The Jedi's pursuit of knowledge is admirable, but it's the acceptance that they don't know all which could will keep Force wielders from making mistakes of the past, both in the dark and light sides.
+* **There IS passion**.  Our passions are what leads us to make and correct mistakes. Serenity also means there's no empathy...and only with empathy can you fully be agents for peace.
+* **There IS chaos**. Sometimes things happen with no explanation. Embracing the wildness of the cosmos allows you to not be blind-sided when things happen, and justification does not exist.
+* **There IS death**.  People die.  Those with strong sensitivity to the Force appear to have spirits that live on, but not everyone has this sensitivity.  The Force doesn't eliminate death...it happens.  It cannot be ignored.
 
-The universe doesn't need Jedi.  It needs real people.  People who understand who they are and can handle hate and anger.  People who know that you cannot let your hate and anger fully control you (fully Dark), but neither can you ignore the emotional characteristics like passion and empathy (fully Light).  We need people that live in the dusk or dawn.  Does it mean that there will be no evil in the universe? No...it exists...evil is part of the Force which permeates all things.  Yet it can be redirected.  No longer do we need to have massively powerful evil beings raining destruction to the cosmos.  When all the Force wielders embrace both sides, it will no longer need to balance the scales with such diametrically opposed forces.
+The universe doesn't need Jedi.  It needs real beings.  Beings who understand who they are and can handle emotional, intellectual, passionate, chaotic, and deathly issues in life.  Beings who know that you cannot let your hate and anger fully control you (fully Dark), but neither can you ignore the emotional characteristics like passion and empathy that lead you to do good (fully Light).  It needs beings that live in the dusk or dawn.  Does it mean that there will be no evil in the universe? No...it exists...evil is part of the Force which permeates all things.  Yet it can be redirected, to some extent harnessed.  No longer do we need to have massively powerful evil beings raining destruction to the cosmos.  When all the Force wielders embrace both sides, it will no longer need to balance the scales with such diametrically opposed forces.
 
-More recently, the latest trailer shows Luke telling Rey that [he's only seen this much raw strength once before]()--Kylo Ren--and it didn't scare him, but it does now.  Once again, this leads me to what the Force is actually doing when it's fighting for balance.  Too much light breads terrible darkness and too much dark breads powerful light.  Balance isn't eradication, it's healthy intermingling of dark and light.  To eliminate one is to deny the essence of the whole.
+This powerful dichotomy is confirmed in the more recent trailer released by Disney.  The latest trailer shows Luke telling Rey that [he's only seen this much raw strength once before](https://youtu.be/Q0CbN8sfihY?t=47s)--Kylo Ren--and it didn't scare him, but it does now.  Once again, this leads me to what the Force is actually doing when it's fighting for balance.  Too much light breads terrible darkness and too much dark breads powerful light.  Balance isn't eradication, it's healthy intermingling of dark and light.  To eliminate one is to deny the essence of the whole.
 
 That's my hope.  And I'm assuming we'll find out in short order.  I really think this take on the Star Wars fantasy to new levels within the boundary established in the previous seven films...but maybe I'm wrong...and there's something better.  I have the opportunity to be pleasantly surprised or happily confirmed.
