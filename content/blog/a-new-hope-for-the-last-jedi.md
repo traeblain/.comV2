@@ -10,6 +10,7 @@ title: A New Hope for the Last Jedi
 date: 2017-12-02 08:00:17 -0600
 description: ''
 draft: true
+
 ---
 Star Wars: The Last Jedi is about to be released and since they announced the title, I've had a theory that I've really wanted to hope come true.  A brief analysis of the previous films and a few comments from the previews for the new file--taken completely out of context--leads me to what I hope happens for The Last Jedi.  We'll see though, won't we.
 
@@ -26,8 +27,7 @@ But this interpretation never sat well with me.  I also don't think that it sat 
 I believe that Abrams has this same opinion.  With the rise of the First Order and appearance of Snoke, this seems to be reinforced.  Kylo was also born from Luke's Jedi training work, and if Luke was creating balance...then why would such a great power be so easily seduced to the dark side?
 
 > It  is where you are from. What you are made of. The dark side—and the  light. The finest sculptor cannot fashion a masterpiece from poor  materials. He must have something pure, something strong, something  unbreakable, with which to work.
-
-Snoke
+> <cite>- Snoke</cite>
 
 So this comes back to "What is balance in the Force?" and how would one restore this?
 
@@ -46,21 +46,16 @@ Luke wants to end the Jedi, because the Jedi's "Fully Good" belief continues to 
 > There is no passion, there is serenity.
 > There is no chaos, there is harmony.
 > There is no death, there is the Force.
+> <cite>- The Jedi Code</cite>
 
-The Jedi Code
+The Jedi Code is wrong.  The Code pushes the Force to create Evil in the areas the Code rejects.
 
-The Jedi Code is wrong.  The Code pushes the Force to create Evil in the areas the Code rejects.  
-
-**There IS emotion**, and only emotions like empathy and anger will allow there to be peace where peace is not found.
-
-**There IS ignorance**, no one group can know all things.  The Jedi's pursuit of knowledge is admirable, but it's the acceptance that they don't know all is what will keep Force wielders from making mistakes of the past, both dark and light.
-
-**There IS passion**, and our passions is what leads us correcting mistakes. Serenity also means there's no empathy...and only with empathy can you fully be agents for peace.
-
-**There IS chaos**. Sometimes things happen with no explanation. Embracing the wildness of the cosmos allows you to not be blind-sided when things happen for no reason.
-
-**There IS death**.  People die.  Those with strong sensitivity to the Force appear to have spirits that live on, but not everyone has this sensitivity.  The Force doesn't eliminate death...it happens.  Don't ignore it.
+* **There IS emotion**, and only emotions like empathy and anger will allow there to be peace where peace is not found.
+* **There IS ignorance**, no one group can know all things.  The Jedi's pursuit of knowledge is admirable, but it's the acceptance that they don't know all is what will keep Force wielders from making mistakes of the past, both dark and light.
+* **There IS passion**, and our passions is what leads us correcting mistakes. Serenity also means there's no empathy...and only with empathy can you fully be agents for peace.
+* **There IS chaos**. Sometimes things happen with no explanation. Embracing the wildness of the cosmos allows you to not be blind-sided when things happen for no reason.
+* **There IS death**.  People die.  Those with strong sensitivity to the Force appear to have spirits that live on, but not everyone has this sensitivity.  The Force doesn't eliminate death...it happens.  Don't ignore it.
 
 The universe doesn't need Jedi.  It needs real people.  People who understand who they are and can handle hate and anger.  People who know that you cannot let your hate and anger fully control you (fully Dark), but neither can you ignore the emotional characteristics like passion and empathy (fully Light).  We need people that live in the dusk or dawn.  Does it mean that there will be no evil in the universe? No...it exists...evil is part of the Force which permeates all things.  Yet it can be redirected.  No longer do we need to have massively powerful evil beings raining destruction to the cosmos.  When all the Force wielders embrace both sides, it will no longer need to balance the scales with such diametrically opposed forces.
 
-That's my hope.  And I'm assuming we'll find out in short order.  I really think this take the Star Wars fantasy to new levels within the boundary established in the previous seven films...but maybe I'm wrong...and there's something better.  
+That's my hope.  And I'm assuming we'll find out in short order.  I really think this take the Star Wars fantasy to new levels within the boundary established in the previous seven films...but maybe I'm wrong...and there's something better.
