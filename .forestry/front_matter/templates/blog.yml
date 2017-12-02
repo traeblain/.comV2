@@ -47,8 +47,3 @@ fields:
   hidden: false
   default: ''
   description: Location of any special Javascript that needs to be injected.
-- type: datetime
-  default: Invalid date
-  label: Modified
-  name: lastmod
-  description: Date and Time it was modified.
