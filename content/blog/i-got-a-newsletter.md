@@ -2,7 +2,7 @@
 tags:
 - newsletter
 - links
-background: https://static.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg
+background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:eco,w_2048/notebook/newspaper-stack.jpg
 text_color: dark
 script: ''
 title: I Got A Newsletter!
