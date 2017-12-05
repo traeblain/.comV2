@@ -9,4 +9,4 @@ webhook_url:
 sections:
   blog:
     default_front_matter_template: blog
-version: 0.30.2
+version: 0.31.1
