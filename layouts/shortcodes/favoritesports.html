@@ -1,0 +1,48 @@
+<!-- Favorite Sports -->
+{{ $t := $.Site.Data.favoriteteams }}
+<table>
+  <thead>
+    <tr>
+      <th>
+        Team/Individual
+      </th>
+      <th>
+        League
+      </th>
+      <th>
+        Logo
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range $t.Sports }}
+    <tr>
+      <th colspan="100">
+        {{ .sport | title }}
+      </th>
+    </tr>
+    {{ range .info }}
+    <tr>
+      <td>
+        <a href="{{ .link }}" target="_blank">{{ .favorite }}</a>
+      </td>
+      <td>
+        {{ .league | title }}
+      </td>
+      <td>
+        Nothing
+      </td>
+    </tr>
+    <tr>
+      <td colspan="100">
+        {{ .comment | markdownify }}
+      </td>
+    </tr>
+    {{ end }}
+    {{ end }}
+  </tbody>
+</table>
+<div>
+  {{ .Site.Data.favoriteteams.Description }}
+</div>
+
