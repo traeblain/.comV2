@@ -1,6 +1,6 @@
     <head profile="http://www.w3.org/2005/10/profile">
         {{ partial "meta.html" . }}
-        <title>{{ if and (.Title) (.IsPage) }}{{ .Title }} &middot; {{ else }}{{ replace .Title "Blogs" "Notebook" }} &middot; {{ end }}{{ .Site.Title }}</title>
+        <title>{{ if .IsHome }}{{ else }}{{ if and (.Title) (.IsPage) }}{{ .Title }}{{ else }}{{ replace .Title "Blogs" "Notebook" }}{{ end }} &middot; {{ end }}{{ .Site.Title }}</title>
         <link rel="canonical" href="{{ .Permalink }}" />
         {{ if and (.RSSLink) (not .IsHome) }}
         <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ .RSSLink }}">

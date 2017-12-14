@@ -17,6 +17,12 @@
         <meta property="og:title" content="{{ .Title }}">
         <meta property="og:url" content="{{ .Permalink }}">
         <meta property="og:description" content="{{ .Description }}">
+        <!-- Swiftype -->
+        <meta class="swiftype" name="title" data-type="string" content="{{ replace .Title "Blogs" "Notebook" }}">
+        <meta class="swiftype" name="published_at" data-type="date" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+        <meta class="swiftype" name="info" data-type="string" content="{{ .Description }}">
+        {{ range .Params.tags }}<meta class="swiftype" name="tags" data-type="string" content="{{ . }}">
+        {{ end }}
     {{ if .IsPage }}
         <meta property="og:type" content="article" />
         <meta property="article:author" content="{{ .Site.Author.name }}" />
@@ -84,5 +90,7 @@
         <meta name="twitter:image" content="{{ .Params.background | replaceRE "[/]upload[/]((notebook[/])|.+?[/])" "/upload/c_fill,h_120,w_120/$2" }}" />
         <meta name="twitter:image" content="{{ .Params.background | replaceRE "[/]upload[/]((notebook[/])|.+?[/])" "/upload/c_fill,h_150,w_280/$2" }}" />
         <meta name="twitter:image" content="{{ .Params.background | replaceRE "[/]upload[/]((notebook[/])|.+?[/])" "/upload/c_fill,h_506,w_506/$2" }}" />
+        <!-- Swiftype -->
+        <meta class="swiftype" name="image" data-type="enum" content="{{ .Params.background | replaceRE "[/]upload[/]((notebook[/])|.+?[/])" "/upload/c_fill,h_120,w_120/$2" }}" />
         {{ end }}
         {{ .Hugo.Generator }}
