@@ -3,7 +3,7 @@ tags:
 - commentary
 - thoughts
 background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:eco,w_2048/v1513568977/notebook/pretty-cake.jpg
-text_color: ''
+text_color: light
 script: ''
 title: Let's All Eat Cake
 date: 2017-12-17 20:56:28 +0000
