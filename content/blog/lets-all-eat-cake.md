@@ -22,6 +22,6 @@ This makes sense.  Of course, you cannot eat your cake, and have it as well.  On
 
 <iframe name="ngram_chart" src="https://books.google.com/ngrams/interactive_chart?content=eat+your+cake+and+have%2C+have+your+cake+and+eat&year_start=1800&year_end=2000&corpus=0&smoothing=3&direct_url=t1%3B%2Ceat%20your%20cake%20and%20have%3B%2Cc0%3B.t1%3B%2Chave%20your%20cake%20and%20eat%3B%2Cc0" width=900 height=500 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></iframe>
 
-And let's be honest, nothing good came out of the 30s.  Depression, Hitler, King Edward VII...so let's change it back.  Seriously... I mean let's all eat cake!
+And let's be honest, nothing good came out of the 30s.  Depression, Hitler, King Edward VIII...so let's change it back.  Seriously... I mean let's all eat cake!
 
 {{< figure src="https://media.giphy.com/media/rRQiJHGNSyPVS/giphy.gif" class="align-center" >}}
