@@ -1,7 +1,7 @@
 ---
 tags:
-- movie
 - review
+- movies
 background: https://res.cloudinary.com/dixwznarl/image/upload/q_auto:eco/notebook/bright-movie.jpg
 text_color: light
 script: "//cdn.embedly.com/widgets/platform.js"
