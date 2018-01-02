@@ -10,7 +10,6 @@ date: 2018-01-01 19:26:00 -0600
 type: ''
 description: A new year, a new-sletter.  Get a weekly run of great sites I've stumbled
   across this week.
-draft: true
 
 ---
 So I've been tossing around the idea of starting a newsletter but didn't really like any of the options out there in circulating one.  Yes, [Mailchimp](https://mailchimp.com/) and other services aren't difficult, yes things like [TinyLetter](https://tinyletter.com/) make it even more simple...but what I really wanted to do is basically share links.  I never really wanted to _create_ content for a newsletter.  Digging up all that content for a quality letter is a pain and what I really wanted is a simple way of curating links I find across the net for the week and sharing those.
