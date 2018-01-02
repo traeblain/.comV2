@@ -8,7 +8,7 @@ script: ''
 title: I Got A Newsletter!
 date: 2017-11-26 13:14:23 +0000
 type: ''
-description: ''
+description: 'A new year, a new-sletter.  '
 draft: true
 
 ---
@@ -22,7 +22,7 @@ Where many people make link-posts on their blogs, I feel that clutters up the po
 
 ## Enter Refind
 
-If you haven't found [Refind](https://refind.com/), you're missing out.  Refind is similar to other bookmarking services but adds what many lack.  Powerful search and a great Discovery section.  I used to like delicious, but always felt the related links or discovery aspect was lacking.  I do use Pocket, but found it's long term storage isn't what it's for.  Refind does all this.  The great thing about Refind is also that I get a newsletter baked right in.  Every Sunday (or daily if you like), the collection of my saved links goes out to my followers.  Currently, Refind is very tech related, but I keep posting things that I hope will help shift that to a broader audience.
+If you haven't found [Refind](https://refind.com/traeblain?invite=819532306b), you're missing out.  Refind is similar to other bookmarking services but adds what many lack.  Powerful search and a great Discovery section.  I used to like delicious, but always felt the related links or discovery aspect was lacking.  I do use Pocket, but found it's long term storage isn't what it's for.  Refind does all this.  The great thing about Refind is also that I get a newsletter baked right in.  Every Sunday (or daily if you like), the collection of my saved links goes out to my followers.  Currently, Refind is very tech related, but I keep posting things that I hope will help shift that to a broader audience.
 
 ## Get the Newsletter
 
