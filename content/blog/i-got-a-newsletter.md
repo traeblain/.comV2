@@ -6,9 +6,10 @@ background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:eco
 text_color: dark
 script: ''
 title: I Got A Newsletter!
-date: 2017-11-26 13:14:23 +0000
+date: 2018-01-01 19:26:00 -0600
 type: ''
-description: 'A new year, a new-sletter.  '
+description: A new year, a new-sletter.  Get a weekly run of great sites I've stumbled
+  across this week.
 draft: true
 
 ---
