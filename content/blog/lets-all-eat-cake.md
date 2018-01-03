@@ -20,7 +20,7 @@ Lately I've been thinking about the things we say.  Words have meaning.  And alt
 > You cannot eat your cake and have it too. 
 > <cite>Everybody back in the day</cite>
 
-This makes sense.  Of course, you cannot eat your cake, and have it as well.  Once you eat it...it's gone!  This fits in its usage.  [Wikipedia says](https://en.wikipedia.org/wiki/You_can%27t_have_your_cake_and_eat_it "you can't have your cake and eat it") that the meaning (even though it's usage doesn't really mean it) is that you "cannot simultaneously retain your cake and eat it".   But going back to the original usage would make so much more sense.  If you look at Google Ngram, sometime in 1938 usage changed from "eat" to "have".
+This makes sense.  Of course, you cannot eat your cake, and have it as well.  Once you eat it...it's gone!  This fits in its usage.  [Wikipedia says](https://en.wikipedia.org/wiki/You_can%27t_have_your_cake_and_eat_it "you can't have your cake and eat it") that the meaning (even though it's usage doesn't really mean it) is that you "cannot simultaneously retain your cake and eat it".   But going back to the original usage would make so much more sense.  If you look at Google Ngram, sometime in 1938 usage changed from starting with "eat" to "have".
 
 <iframe name="ngram_chart" src="https://books.google.com/ngrams/interactive_chart?content=eat+your+cake+and+have%2C+have+your+cake+and+eat&year_start=1800&year_end=2000&corpus=0&smoothing=3&direct_url=t1%3B%2Ceat%20your%20cake%20and%20have%3B%2Cc0%3B.t1%3B%2Chave%20your%20cake%20and%20eat%3B%2Cc0" width=900 height=500 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></iframe>
 
