@@ -10,7 +10,6 @@ date: 2018-01-09 14:56:28 -0600
 description: Ever heard the saying, "You can't have your cake and eat it too."?  What
   does that mean.  Think about it, if I have cake... I'm going to eat it.  Seriously,
   why can't I have cake and eat it as well?
-draft: true
 
 ---
 Ever heard the saying, "You can't have your cake and eat it too."?  What does that mean.  Think about it, if I have cake... I'm going to eat it.  Seriously, why can't I have cake and eat it as well? I know I can...
