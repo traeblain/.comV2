@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 
 var menu = document.getElementsByClassName('mainmenu')
 var clicker = document.getElementById('showmenu')
@@ -23,9 +23,9 @@ function toggleMenu () {
   }
 }
 
-clicker.onclick = function (e) { toggleMenu(); e.preventDefault(); }
-closer.onclick = function (e) { toggleMenu(); e.preventDefault(); }
-side.onclick = function (e) { toggleMenu(); e.preventDefault(); }
+clicker.onclick = function (e) { toggleMenu(); e.preventDefault() }
+closer.onclick = function (e) { toggleMenu(); e.preventDefault() }
+side.onclick = function (e) { toggleMenu(); e.preventDefault() }
 
 var pres = document.getElementsByTagName('pre')
 for (var i = 0; i < pres.length; i++) {
@@ -39,7 +39,7 @@ let progressbar = function () {
   let percentread = ((window.scrollY - thecontent.offsetTop) / (thecontent.offsetHeight - window.innerHeight + thecontent.offsetTop))
   let progress = window.innerWidth * percentread
   //console.log(progress)
-  document.getElementById('progressbar').children[0].setAttribute("x2", progress)
+  document.getElementById('progressbar').children[0].setAttribute('x2', progress)
 }
 setInterval(progressbar, 50)
 
