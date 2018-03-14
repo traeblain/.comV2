@@ -1,0 +1,31 @@
+{{ if (.Params.noapi) }}{{ else }}{
+  "title": {{ .Title | jsonify }},
+  "date": "{{ .Date }}",
+  "tags": {{ .Params.tags | jsonify }},
+  "description": {{ .Description | jsonify}},
+  "draft": {{ .Draft }},
+  "plainWords": "{{ .PlainWords }}",
+  "content": {{ .Content | jsonify }},
+  "rawContent": {{ .RawContent | jsonify }},
+  "readingTime": {{ .ReadingTime }},
+  "summary": {{ .Summary | jsonify}},
+  "wordCount": {{ .WordCount }},
+  "fuzzyWordCount": {{ .FuzzyWordCount }},
+  "buildDate": {{ .Hugo.BuildDate | jsonify }},
+  "keywords": {{ .Keywords }},
+  "lastMod": "{{ .Lastmod }}",
+  "next": "{{ .Next.RelPermalink }}",
+  "type": "{{ .Type }}",
+  "url": "{{ .URL }}",
+  "id": "{{ .UniqueID }}",
+  "weight": "{{ .Weight }}",
+  "background": {{ if .Params.background }}{{ .Params.background | jsonify }}{{ else }}false{{ end }},
+  "textColor": {{ if .Params.text_color }}{{ .Params.text_color | jsonify }}{{ else }}false{{ end }},
+  "script": {{ if .Params.script }}{{ .Params.script | jsonify }}{{ else }}false{{ end }},
+  "related": [{{ $related := .Site.RegularPages.Related . | first 5 }}{{ range after 1 $index, $value := $related }}{{ if (ne $index 0) }},{{ end }}{
+    "link": {{ $value.RelPermalink | jsonify }},
+     "title": {{ $value.Title | jsonify }}
+    }{{ end }}
+  ]
+}
+{{ end }}

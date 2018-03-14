@@ -1,3 +1,4 @@
 ---
 type: "json"
+noapi: true
 ---
