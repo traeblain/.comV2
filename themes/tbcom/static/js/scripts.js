@@ -34,12 +34,14 @@ for (var i = 0; i < pres.length; i++) {
   }
 }
 
-let progressbar = function () {
-  let thecontent = document.getElementById('thecontent')
-  let percentread = ((window.scrollY - thecontent.offsetTop) / (thecontent.offsetHeight - window.innerHeight + thecontent.offsetTop))
-  let progress = window.innerWidth * percentread
-  //console.log(progress)
-  document.getElementById('progressbar').children[0].setAttribute('x2', progress)
+var progressbar = function () {
+  var thecontent = document.getElementById('thecontent')
+  if (thecontent !== null) {
+    var percentread = ((window.scrollY - thecontent.offsetTop) / (thecontent.offsetHeight - window.innerHeight + thecontent.offsetTop))
+    var progress = window.innerWidth * percentread
+    //console.log(progress)
+    document.getElementById('progressbar').children[0].setAttribute('x2', progress)
+  }
 }
 setInterval(progressbar, 50)
 
