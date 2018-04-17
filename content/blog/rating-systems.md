@@ -106,6 +106,7 @@ Title Photo by [Mark Tegethoff](https://unsplash.com/photos/NbgQfUvKFE0)
 [Goodreads]: https://www.goodreads.com
 [Amazon]: https://www.amazon.com
 [Lyft]: https://www.lyft.com
+[Uber]: https://www.uber.com
 [Trakt]: https://trakt.tv
 [IMDB]: https://www.imdb.com
 [Netflix]: https://www.netflix.com
