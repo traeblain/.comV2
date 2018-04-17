@@ -1,14 +1,17 @@
 ---
-tags: ['geek', 'thoughts', 'review']
-background: ''
-text_color: dark
+tags:
+- geek
+- thoughts
+- review
+background: http://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:eco,w_2048/v1523972078/notebook/moon-phases.jpg
+text_color: light
 script: ''
 title: 'Rating Systems: What does it mean?'
-date: 2018-03-19 11:43:42 +0000
+date: 2018-04-16 06:43:00 -0500
 description: ''
 draft: true
----
 
+---
 The lack of standardized rating systems sucks.  There's so many ways to rate something that you begin to lose all understanding what what something means.  Even systems designed to simplify things muddy the waters, because they often lack the granularity that allows for meaning to be derived.  I'll offer a guide...
 
 ## Current Systems
@@ -94,6 +97,8 @@ For posterity sake, here's my rating system when you see my reviews for anything
 10. Utterly Amazing! So much love...
 
 That's it, what do you think?
+
+Title Photo by [Mark Tegethoff](https://unsplash.com/photos/NbgQfUvKFE0)
 
 [my homepage]: /
 [Pain]: https://dfzljdn9uc3pi.cloudfront.net/2013/37/1/fig-1-2x.jpg
