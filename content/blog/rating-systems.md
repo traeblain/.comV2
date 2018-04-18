@@ -3,7 +3,7 @@ tags:
 - geek
 - thoughts
 - review
-background: http://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:eco,w_2048/notebook/moon-phases.jpg
+background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:eco,w_2048/notebook/moon-phases.jpg
 text_color: light
 script: ''
 title: 'Rating Systems: What does it mean?'
