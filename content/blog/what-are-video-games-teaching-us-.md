@@ -54,7 +54,7 @@ Video games are far from the major player in this, but they do emphasize artific
 
 Real life doesn't allow for this.  At some point you will have to present yourself face-to-face with someone and building those skills now need to happen.
 
-### Conclusion
+## Conclusion
 
 Remember, I'm not knocking video games as a whole.  But we should be aware of the character traits that video games emphasize.  We should always be aware of these and be intentional about combating these with counter traits.
 
