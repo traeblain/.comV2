@@ -66,4 +66,4 @@ Slow things down with prayer or meditation.  Reading a book (and doing it over a
 
 Talk to someone.  Go to physical group events and put yourself out there.  Know you aren't the only person in the place you are at, find a crew and have some fun.  You will be so much the better for it.
 
-_Photo by_ [_Rohit Choudhari_](https://unsplash.com/photos/tk2_RBZq7RA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) _on_ [_Unsplash_](https://unsplash.com/search/photos/video-game?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+_Photo by [Rohit Choudhari](https://unsplash.com/photos/tk2_RBZq7RA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/video-game?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)_
