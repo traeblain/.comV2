@@ -69,3 +69,5 @@ How God experiences time is an evaluation of God that cannot be revealed simply 
 I do want to make a brief point on Calvinistic Predestination. I think Calvinism has fallen into what I've started calling "Job's Fallacy". The entire book of Job is amazing and if you haven't read it lately you should. Job is a narrative on how our simplistic models for God and His character are always insufficient. We really must be careful about placing models of God into a hard-line doctrinal category. What most many Reformed/Calvinist do (from my experience) is apply the predestination of the elect into doctrine (the essence of a system of belief) instead of leaving this in theology (study of the nature of God). I hear statements all the time like, "Five point Calvinism is the only true understanding of the gospel."
 
 This is dangerous and leads to what I stated before as applying theological descriptors to doctrinal principles.
+
+_Photo by_ [_ahmadreza sajadi_](https://unsplash.com/photos/55xd_uiUYEE) _on_ [_Unsplash_](https://unsplash.com/)
