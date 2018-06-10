@@ -1,11 +1,16 @@
 ---
-tags: []
+tags:
+- commentary
+- life
+- thoughts
 background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:eco,w_2048/notebook/xbox-controller.jpg
 text_color: light
 script: ''
 title: What Are Video Games Teaching Us?
-date: 2018-05-21 18:56:34 -0500
-description: ''
+date: 2018-06-10 12:56:34 -0500
+description: Video games effect our daily activity.  A few points are seriously poignant
+  to me when I really started thinking about what they were.  I hope to lay out some
+  here.
 draft: true
 
 ---
