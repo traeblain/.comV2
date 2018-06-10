@@ -1,17 +1,23 @@
 ---
-tags: []
-background: ''
+tags:
+- science
+- theology
+- calvinism
+- bible
+background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:good,w_2048/notebook/space-time.jpg
 text_color: dark
 script: "/js/reftagger.js"
-title: Einstein's Reletivity and Predestination
+title: Einstein's Relativity and Predestination
 date: 2018-06-10 14:11:42 -0500
-description: ''
+description: Preston Sprinkle answered a question someone had on if Einstein's Theory
+  of Relativity has disproven Predestination.  I thought his answer was lacking, so
+  I filled in the blanks.
 draft: true
 
 ---
 Today I listened to a podcast from Preston Sprinkle speaking to questions provided by some listeners. The first question asked, "Has relativity has disprove predestination of the Calvinist tradition?" Preston's answers were good within the realm of his expertise, but left me highly lacking. I'd like to offer my thoughts.
 
-_Note: I am not a theologian, philosopher, or scientist. But I have given this quite a bit of thought and I think where I land is substantially reasonable._
+_Note: I am not a theologian, philosopher, nor scientist. But I have given this quite a bit of thought and I think where I land is substantially reasonable._
 
 ## Point One: Cultural Context
 
@@ -23,7 +29,7 @@ The Bible does state:
 
 * The natural world reveals God and His glory (Psalms 19:1-4)
 * The natural world reveals God's divinity and power (Romans 1:19-20)
-* The natural world reveals God's goodness (Genesis 1)
+* The natural world reveals God's goodness (Genesis 1:31)
 * Our intelligence and conscience (human nature) reveals God (Romans 2:14-16)
 * Weather events attest to his kindness (Acts 14:17)
 
