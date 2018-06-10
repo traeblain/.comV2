@@ -63,12 +63,12 @@ Real life doesn't allow for this.  At some point you will have to present yourse
 
 Remember, I'm not knocking video games as a whole.  But we should be aware of the character traits that video games emphasize.  We should always be aware of these and be intentional about combating these with counter traits.
 
-Let's gain some LX by going hiking, learning to pilot a plane (instead of video game simulations), taking archery lessons, painting, or photography.  Do things that build you up.
+**Let's gain some Life eXperience** by going hiking, learning to pilot a plane (instead of video game simulations), taking archery lessons, painting, or photography.  Do things that build you up.
 
-In those LX activities, take risks.  Start conversations with people you normally wouldn't...be willing to get rejected.  Learn from these so when real, truly painful consequences arise, you are ready for them.  And try thinking about the other person before doing something for a change...you'll be surprised on the outcome.
+In those LX activities, **take risks.**  Start conversations with people you normally wouldn't...be willing to get rejected.  Learn from these so when real, truly painful consequences arise, you are ready for them.  And try thinking about the other person before doing something for a change...you'll be surprised on the outcome.
 
-Slow things down with prayer or meditation.  Reading a book (and doing it over and over again) to cultivate focus.
+**Slow things down with prayer or meditation.**  Reading a book (and doing it over and over again) to cultivate focus.
 
-Talk to someone.  Go to physical group events and put yourself out there.  Know you aren't the only person in the place you are at, find a crew and have some fun.  You will be so much the better for it.
+**Talk to someone.**  Go to physical group events and put yourself out there.  Know you aren't the only person in the place you are at, find a crew and have some fun.  You will be so much the better for it.
 
-_Photo by [Rohit Choudhari](https://unsplash.com/photos/tk2_RBZq7RA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/video-game?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)_
+_Photo by_ [_Rohit Choudhari_](https://unsplash.com/photos/tk2_RBZq7RA) _on_ [_Unsplash_](https://unsplash.com/search/photos/video-game)
