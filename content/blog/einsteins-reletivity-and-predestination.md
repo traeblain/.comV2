@@ -2,7 +2,7 @@
 tags: []
 background: ''
 text_color: dark
-script: ''
+script: "/js/reftagger.js"
 title: Einstein's Reletivity and Predestination
 date: 2018-06-10 14:11:42 -0500
 description: ''
@@ -51,7 +51,7 @@ Here's my best reconstruction of the questioner's logic flow:
 
 1. God exists outside of the natural world as He is the creator of it.
 2. Since relativity shows how the natural world can affect time, time is no longer a meta-physical construct but a physical one.
-3. God experiences time differently than us as it is His creation (view's time like a map instead of how humans percieve it).
+3. God experiences time differently than us as it is His creation (view's time like a map instead of how humans perceive it).
 4. Predestination cannot exist outside of this time construct
 
 Where I do see logic problems, the first problem is the Is/Ought fallacy in the logic flow. God exists outside of nature (descriptive), relativity defines time is a natural thing (descriptive), therefore God experiences time differently (prescriptive). This is a difficult logic problem to solve. An example that doesn't have an Is/Ought fallacy is: God created the physical world (descriptive), relativity defines time as physical (descriptive), therefore God created time (descriptive).
@@ -60,6 +60,6 @@ How God experiences time is an evaluation of God that cannot be revealed simply 
 
 ## Final Note: Calvinistic Predestination
 
-I do want to make a brief point on Calvinistic Predestination. I think Calvinism has fallen into what I've started calling the "Job Fallacy". The entire book of Job is amazing and if you haven't read it lately you should. Job is a narrative on how our simplistic models for God and His character are always insufficient. We really must be careful about placing models of God into a hard-line doctrinal category. What most many Reformed/Calvinist do (from my experience) is apply the predestination of the elect into doctrine (the essence of a system of belief) instead of leaving this in theology (study of the nature of God). I hear statements all the time like, "Five point Calvinism is the only true understanding of the gospel."
+I do want to make a brief point on Calvinistic Predestination. I think Calvinism has fallen into what I've started calling "Job's Fallacy". The entire book of Job is amazing and if you haven't read it lately you should. Job is a narrative on how our simplistic models for God and His character are always insufficient. We really must be careful about placing models of God into a hard-line doctrinal category. What most many Reformed/Calvinist do (from my experience) is apply the predestination of the elect into doctrine (the essence of a system of belief) instead of leaving this in theology (study of the nature of God). I hear statements all the time like, "Five point Calvinism is the only true understanding of the gospel."
 
 This is dangerous and leads to what I stated before as applying theological descriptors to doctrinal principles.
