@@ -15,7 +15,7 @@ description: Preston Sprinkle answered a question someone had on if Einstein's T
 draft: true
 
 ---
-The other day, I listened to a [podcast][] from [Preston Sprinkle][] speaking to questions provided by some listeners. The first question asked, "Has relativity disproved predestination of the Calvinist tradition?" Preston's answers were good within the realm of his expertise, but left me highly lacking. I'd like to offer my thoughts.
+The other day, I listened to a [podcast](https://www.prestonsprinkle.com/theology-in-the-raw/2018/6/4/672-june-questions-and-answers) from [Preston Sprinkle](https://www.prestonsprinkle.com/) speaking to questions provided by some listeners. The first question asked, "Has relativity disproved predestination of the Calvinist tradition?" Preston's answers were good within the realm of his expertise, but left me highly lacking. I'd like to offer my thoughts.
 
 _Note: I am not a theologian, philosopher, nor a scientist. But I have given this quite a bit of thought and I think where I land is substantially reasonable._
 
@@ -23,7 +23,7 @@ _Note: I am not a theologian, philosopher, nor a scientist. But I have given thi
 
 Sprinkle states that we have to understand the Biblical references used in the predestination doctrine was done in a "pre-scientific" worldview. The advances of modern science were not in the minds of the writers, thus we cannot prescribe modern scientific findings to the context of the text.
 
-While I 100% agree with this, I feel this also denies the doctrine of ["General Revelation"][revogod] and belittles those of us that don't use scriptural and textual study as the sole basis for worship. I believe scripture is very clear on general revelation. (Granted, I could have exegetical issues here.)
+While I 100% agree with this, I feel this also denies the doctrine of ["General Revelation"](https://www.theopedia.com/revelation-of-god) and belittles those of us that don't use scriptural and textual study as the sole basis for worship. I believe scripture is very clear on general revelation. (Granted, I could have exegetical issues here.)
 
 The Bible does state:
 
@@ -32,7 +32,7 @@ The Bible does state:
 * The natural world reveals God's goodness (Genesis 1:31)
 * Our intelligence and conscience (human nature) reveals God (Romans 2:14-16)
 
-These are statements that are accepted within the cultural context. So it is unfair to say the scientific revelation tells us nothing about the nature of God. Even [Francis Collins][] calls the definition of the Human Genome: **The Language of God.** So although I agree with Sprinkle's use of cultural context to the exegesis of the text, I disagree with its applicability to this particular question.
+These are statements that are accepted within the cultural context. So it is unfair to say the scientific revelation tells us nothing about the nature of God. Even [Francis Collins](https://en.wikipedia.org/wiki/Francis_Collins) calls the definition of the Human Genome: **The Language of God.** So although I agree with Sprinkle's use of cultural context to the exegesis of the text, I disagree with its applicability to this particular question.
 
 ## Point Two: Jesus is God
 
@@ -44,11 +44,11 @@ Additionally, we must also consider that Jesus on earth was "fully man". By maki
 
 ### Brief Note on Biblical Sufficiency
 
-After arguing against these two topics, you may think I don't believe in the sufficiency of scripture. But that isn't true. I believe the Bible is completely sufficient to form our Christian [doctrines][doctrine]. That we should not need to look beyond the text to establish our principles, but there are things like general revelation and more that can expand our [theology][].
+After arguing against these two topics, you may think I don't believe in the sufficiency of scripture. But that isn't true. I believe the Bible is completely sufficient to form our Christian [doctrines](https://www.merriam-webster.com/dictionary/doctrine). That we should not need to look beyond the text to establish our principles, but there are things like general revelation and more that can expand our [theology](https://www.merriam-webster.com/dictionary/theology).
 
 ## Point Three: False Dilemma
 
-Lastly, Sprinkle's final argument--and definitively his strongest--is that the question provides a ["false dilemma"][falsedilemma]. Preston's point is that the question being proposed contains logic problems, therefore cannot provide the answer the questioner is looking for.
+Lastly, Sprinkle's final argument--and definitely his strongest--is that the question provides a ["false dilemma"](https://www.logicallyfallacious.com/tools/lp/Bo/LogicalFallacies/94/False-Dilemma). Preston's point is that the question being proposed contains logic problems, therefore cannot provide the answer the questioner is looking for.
 
 Although it is more than just a false dilemma, Preston is correct. Simply because relativity has brought us a better understanding of time doesn't imply God's relationship to time denies predestination (one does not conclude an either/or position on the other).
 
@@ -59,24 +59,14 @@ Here's my best reconstruction of the questioner's logic flow:
 3. God experiences time differently than us as it is His creation (view's time like a map instead of how humans perceive it).
 4. Predestination cannot exist outside of this time construct
 
-Where I do see logic problems, the first problem is the Is/Ought fallacy in the logic flow. God exists outside of nature (descriptive), relativity defines time is a natural thing (descriptive), therefore God experiences time differently (prescriptive). This is a difficult logic problem to solve. An example that doesn't have an [Is/Ought fallacy][isought] is: God created the physical world (descriptive), relativity defines time as physical (descriptive), therefore God created time (descriptive).
+Where I do see logic problems, the first problem is the [Is/Ought fallacy](https://www.logicallyfallacious.com/tools/lp/Bo/LogicalFallacies/131/Naturalistic-Fallacy) in the logic flow. God exists outside of nature (descriptive), relativity defines time is a natural thing (descriptive), therefore God experiences time differently (prescriptive). This is a difficult logic problem to solve. An example that doesn't have an Is/Ought fallacy is: God created the physical world (descriptive), relativity defines time as physical (descriptive), therefore God created time (descriptive).
 
-How God experiences time is an evaluation of God that cannot be revealed simply by general revelation. So we look to [special revelation][revogod] (Scripture) to see what it says. The Bible doesn't say anything about God's experience of time outside of the fact that it is significantly different than our experience (2 Peter 3:8). Implications can be made by the fact that as Creator, God exists outside of his creation. And Isaiah 55:8 shows that he doesn't think or act like we do. Yet none of this can determine the validity of predestination.
+How God experiences time is an evaluation of God that cannot be revealed simply by general revelation. So we look to [special revelation](https://www.theopedia.com/revelation-of-god) (Scripture) to see what it says. The Bible doesn't say anything about God's experience of time outside of the fact that it is significantly different than our experience (2 Peter 3:8). Implications can be made by the fact that as Creator, God exists outside of his creation. And Isaiah 55:8 shows that he doesn't think or act like we do. Yet none of this can determine the validity of predestination.
 
 ## Final Note: Calvinistic Predestination
 
-I do want to make a brief point on Calvinistic [Predestination][predestination]. I think Calvinism has fallen into what I've started calling "Job's Fallacy". The entire book of Job is amazing and if you haven't read it lately you should. Job is a narrative on how our simplistic models for God and His character are _always_ insufficient. We really must be careful about placing models of God into a hard-line doctrinal category. What most many Reformed/Calvinist do (from my experience) is apply the predestination of the elect into doctrine (the essence of a system of belief) instead of leaving this in theology (study of the nature of God). I hear statements all the time like, "Five point Calvinism is the only true understanding of the gospel."
+I do want to make a brief point on Calvinistic [Predestination](https://www.theopedia.com/predestination). I think Calvinism has fallen into what I've started calling "Job's Fallacy". The entire book of Job is amazing and if you haven't read it lately you should. Job is a narrative on how our simplistic models for God and His character are _always_ insufficient. We really must be careful about placing models of God into a hard-line doctrinal category. What many Reformed/Calvinist do (from my experience) is apply the predestination of the elect into doctrine (the essence of a system of belief) instead of leaving this in theology (study of the nature of God). I hear statements all the time like, "Five point Calvinism is the only true understanding of the gospel."  This is dangerous and leads to what I stated before as applying theological descriptors to doctrinal principles.  
 
-This is dangerous and leads to what I stated before as applying theological descriptors to doctrinal principles.  To keep from finding myself in a semantical argument, please take note of my definitions of doctrine and theology.
+To keep from finding myself in a semantics argument, I have taken pains to define what I mean when I use the terms doctrine and theology.  I may be wrong in their exact definitions, but this is how I'm using them.
 
 _Photo by_ [_ahmadreza sajadi_](https://unsplash.com/photos/55xd_uiUYEE) _on_ [_Unsplash_](https://unsplash.com/)
-
-[Preston Sprinkle]: https://www.prestonsprinkle.com/
-[podcast]: https://www.prestonsprinkle.com/theology-in-the-raw/2018/6/4/672-june-questions-and-answers
-[revogod]: https://www.theopedia.com/revelation-of-god
-[Francis Collins]: https://en.wikipedia.org/wiki/Francis_Collins
-[doctrine]: https://www.merriam-webster.com/dictionary/doctrine
-[theology]: https://www.merriam-webster.com/dictionary/theology
-[falsedilemma]: https://www.logicallyfallacious.com/tools/lp/Bo/LogicalFallacies/94/False-Dilemma
-[isought]: https://www.logicallyfallacious.com/tools/lp/Bo/LogicalFallacies/131/Naturalistic-Fallacy
-[predestination]: https://www.theopedia.com/predestination
