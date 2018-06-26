@@ -12,7 +12,6 @@ date: 2018-06-26 20:11:00 -0500
 description: Preston Sprinkle answered a question someone had on if Einstein's Theory
   of Relativity has disproven Predestination.  I thought his answer was lacking, so
   I filled in the blanks.
-draft: true
 
 ---
 The other day, I listened to a [podcast](https://www.prestonsprinkle.com/theology-in-the-raw/2018/6/4/672-june-questions-and-answers) from [Preston Sprinkle](https://www.prestonsprinkle.com/) speaking to questions provided by some listeners. The first question asked, "Has relativity disproved predestination of the Calvinist tradition?" Preston's answers were good within the realm of his expertise, but left me highly lacking. I'd like to offer my thoughts.
