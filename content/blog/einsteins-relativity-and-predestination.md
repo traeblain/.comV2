@@ -8,7 +8,7 @@ background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:goo
 text_color: dark
 script: "/js/reftagger.js"
 title: Einstein's Relativity and Predestination
-date: 2018-06-26 20:11:00 -0500
+date: 2018-06-26 08:11:00 -0500
 description: Preston Sprinkle answered a question someone had on if Einstein's Theory
   of Relativity has disproven Predestination.  I thought his answer was lacking, so
   I filled in the blanks.
