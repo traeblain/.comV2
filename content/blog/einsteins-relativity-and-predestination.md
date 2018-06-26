@@ -8,7 +8,7 @@ background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:goo
 text_color: dark
 script: "/js/reftagger.js"
 title: Einstein's Relativity and Predestination
-date: 2018-06-23 14:11:42 -0500
+date: 2018-06-26 20:11:00 -0500
 description: Preston Sprinkle answered a question someone had on if Einstein's Theory
   of Relativity has disproven Predestination.  I thought his answer was lacking, so
   I filled in the blanks.
@@ -40,7 +40,7 @@ Second, Sprinkle states that the full revelation of God is revealed in Jesus. An
 
 I do agree that Jesus was "fully God and fully man". So Preston's point is true, Jesus is the full revelation of God. But all we know of Jesus is what was written down about Him and supplied by the Biblical authors. To claim that the Bible gives us a _complete_ revelation of God, through Jesus, through the Biblical text is to claim that I can gain a complete revelation of who Abraham Lincoln was by reading a biography. Where the biography will greatly inform us, it doesn't provide a _complete_ picture.
 
-Additionally, we must also consider that Jesus on earth was "fully man". By making Himself fully man, incarnate Jesus intentionally gave Himself over to some limits of creation for a time, at the same time performing miracles that illustrate his transcendence of nature.  Where Jesus is the default (that which supersedes all other images of God), questions like "How does God experience time?" are not and could not be revealed in the incarnate Christ (although I am fully open to being proven wrong here). 
+Additionally, we must also consider that Jesus on earth was "fully man". By making Himself fully man, incarnate Jesus intentionally gave Himself over to some limits of creation for a time, at the same time performing miracles that illustrate his transcendence of nature.  Where Jesus is the default (that which supersedes all other images of God), questions like "How does God experience time?" are not clearly revealed in the incarnate Christ by the very nature of His becoming man (although I am fully open to being proven wrong here). 
 
 ### Brief Note on Biblical Sufficiency
 
