@@ -4,8 +4,21 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-  content/blog:
-    default_front_matter_template: blog
+- type: directory
+  path: content
+  label: Pages
+  create: all
+  match: "*"
+- type: directory
+  path: content/data
+  label: Data
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/blog
+  label: Blog
+  create: all
+  match: "**/*"
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: "/uploads"
