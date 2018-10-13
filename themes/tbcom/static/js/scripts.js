@@ -23,9 +23,11 @@ function toggleMenu () {
   }
 }
 
-if (!!clicker ) { clicker.onclick = function (e) { toggleMenu(); e.preventDefault() } }
-closer.onclick = function (e) { toggleMenu(); e.preventDefault() }
-side.onclick = function (e) { toggleMenu(); e.preventDefault() }
+if (!!clicker ) {
+  clicker.onclick = function (e) { toggleMenu(); e.preventDefault() }
+  closer.onclick = function (e) { toggleMenu(); e.preventDefault() }
+  side.onclick = function (e) { toggleMenu(); e.preventDefault() }
+}
 
 var pres = document.getElementsByTagName('pre')
 for (var i = 0; i < pres.length; i++) {
