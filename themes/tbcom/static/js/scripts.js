@@ -23,7 +23,7 @@ function toggleMenu () {
   }
 }
 
-clicker.onclick = function (e) { toggleMenu(); e.preventDefault() }
+if (!!clicker ) { clicker.onclick = function (e) { toggleMenu(); e.preventDefault() } }
 closer.onclick = function (e) { toggleMenu(); e.preventDefault() }
 side.onclick = function (e) { toggleMenu(); e.preventDefault() }
 
