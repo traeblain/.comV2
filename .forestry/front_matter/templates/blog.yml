@@ -50,7 +50,11 @@ fields:
   default: ''
   description: Location of any special Javascript that needs to be injected.
 pages:
+- content/blog/2015-where-do-we-go-next.md
 - content/blog/kalam-cosmological-argument.md
+- content/blog/test-post.md
+- content/blog/a-new-hope-for-the-last-jedi.md
+- content/blog/to-dh-or-not-to-dh.md
 - content/blog/fifteen-by-green-river-ordinance.md
 - content/blog/data-driven-site.md
 - content/blog/wheres-the-old-content.md
@@ -59,16 +63,12 @@ pages:
 - content/blog/einsteins-relativity-and-predestination.md
 - content/blog/why-dont-i-post.md
 - content/blog/what-are-video-games-teaching-us-.md
-- content/blog/test-post.md
 - content/blog/rating-systems.md
 - content/blog/post-ideas.md
 - content/blog/bright.md
-- content/blog/a-new-hope-for-the-last-jedi.md
-- content/blog/to-dh-or-not-to-dh.md
 - content/blog/2016-new-site.md
 - content/blog/2016-reading.md
 - content/blog/automated-blinds.md
-- content/blog/2015-where-do-we-go-next.md
 - content/blog/i-got-a-newsletter.md
 - content/blog/lets-all-eat-cake.md
 - content/blog/so-many-books.md
