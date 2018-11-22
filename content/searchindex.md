@@ -1,3 +1,5 @@
 ---
 type: "json"
+outputs:
+- json
 ---
