@@ -8,9 +8,8 @@ background: 'https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:go
 text_color: light
 script: '//cdn.embedly.com/widgets/platform.js'
 title: Kalām Cosmological Argument
-date: 2018-08-20 08:38:48 -0500
+date: 2018-11-21 10:36:48 -0600
 description: ''
-draft: true
 
 ---
 I've been thinking heavily on the [Kalām Cosmological Argument](https://plato.stanford.edu/entries/cosmological-argument/#KalaCosmArgu).  I'm finding it a fairly significant and well reasoned defense for the existence of God.  I understand that there are fundamental arguments against this, but from a simple reasoned defense, it is very compelling.  Most defenses against this argument for God tend to require a bit of mental gymnastics that go against Occam's Razor.
