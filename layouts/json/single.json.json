@@ -1,4 +1,4 @@
-[{{ range $index, $page := .Site.Pages}}{{ if ne $page.Type "json" }}{{ if eq $page.Draft false }}{{ if eq $page.Kind "page" }}
+[{{ range $index, $page := .Site.Pages}}{{ if ne $page.Type "json" }}{{ if eq $page.Draft false }}{{ if eq $page.Kind "page" }}{{ if $page.Params.hidden }}{{ else }}
 {
   "href": "{{ $page.RelPermalink }}",
   "title": "{{ $page.Title }}",
@@ -6,7 +6,7 @@
   "content": "{{ $page.PlainWords }}",
   "image": "{{ .Params.background }}",
   "date": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"
-},{{ end }}{{ end }}{{ end }}{{ end }}
+},{{ end }}{{ end }}{{ end }}{{ end }}{{ end }}
 {
   "href": "/",
   "title": "Trae Blain",

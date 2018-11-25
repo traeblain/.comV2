@@ -40,3 +40,94 @@
   </script>
   {{ end }}
 {{ end }}
+
+{{ if not .IsHome }}
+<script type="text/javascript">
+  var showSearch = function (e) {
+    document.getElementById("searchinput").classList.toggle("hide")
+    e.preventDefault()
+  }
+  document.getElementById("searchlink").addEventListener('click', showSearch)
+</script>
+{{ end }}
+{{ if eq .Kind "section" }}{{ if eq .Title "Searches" }}
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script type="text/javascript">
+  var url = new URL(window.location)
+  var search = url.searchParams.get("q")
+  document.getElementById("searchlink").click()
+  document.getElementById("searchlink").removeEventListener('click', showSearch)
+  document.getElementById("searchtext").value = search
+  var documents = {}
+  var idx = {}
+  var data = []
+  fetch('{{ ref . "searchindex.md" }}')
+    .then(function(response) {
+      return response.json()
+    }).then(function(json) {
+      documents = json
+      idx = lunr(function () { 
+        this.ref('href')
+        this.field('title')
+        this.field('tags')
+        this.field('content')
+        json.forEach(function (doc) { this.add(doc) }, this)
+      })
+      document.getElementById('searchtext').addEventListener("input", Search)
+      Search()
+    }).catch(function(ex) {
+      documents = [
+        { title: "Error Getting Index" }
+      ]
+    })
+  
+  var insertAfter = function (newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+  }
+
+  var debounce = function (func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args)
+      }
+      var callNow = immediate && !timeout
+      clearTimeout(timeout)
+      timeout = setTimeout(later, wait)
+      if (callNow) func.apply(context, args)
+    }
+  }
+
+  var Search = debounce(function () { 
+    data = idx.search(document.getElementById('searchtext').value)
+    data.forEach(function (doc) { 
+      doc.title = documents.filter(function (post) { 
+        return post.href === doc.ref })[0].title
+      doc.date = documents.filter(function (post) { 
+        return post.href === doc.ref })[0].date 
+      })
+    Array.prototype.slice.call(document.getElementsByTagName('article')).forEach(function (item) {
+      item.remove()
+    })
+    for (var i = data.length - 1; i >= 0; i--) {
+      var article = document.createElement('article')
+      article.className = 'twelve columns black search'
+      var header = document.createElement('header')
+      var h1 = document.createElement('h1')
+      h1.className = 'headline'
+      var link = document.createElement('a')
+      var linktext = document.createTextNode(data[i].title)
+      link.title = data[i].title
+      link.href = data[i].ref
+      link.appendChild(linktext)
+      h1.appendChild(link)
+      header.appendChild(h1)
+      article.appendChild(header)
+      insertAfter(article, document.getElementById('searchinput'))
+      }
+    }, 250)
+  
+</script>
+{{ end }}{{ end }}

@@ -6,9 +6,9 @@
           <img src="https://res.cloudinary.com/dixwznarl/image/upload/tbcom/tbmonogram.svg"> <span>Trae</span> <span>Blain</span>
         </a>
       </h1>
-      <div class="box bottom searchbox">
-        <input type="text" placeholder="Search..." class="st-default-search-input st-search-input">
-      </div>
+      <h1 class="box bottom searchbox">
+        <a href="#" id="searchlink"><i class="fa fa-search"></i></a>
+      </h1>
       <h1 class="box bottom showmenu">
         <a href="#" id="showmenu">
           <i class="fa fa-bars"></i>
@@ -16,4 +16,9 @@
       </h1>
     </div>
   </div>
+</div>
+<div class="twelve columns hide" id="searchinput">
+  <form action="/search/" method="get">
+    <input type="text" id="searchtext" name="q" class="fa searchinput" placeholder="SEARCH..." />
+  </form>
 </div>

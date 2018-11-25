@@ -1444,29 +1444,30 @@ hr {
   border-top: 3px solid @primary-color;
 }
 
-.st-default-search-input {
-    background-color: @primary-color !important;
-    color: @background-color !important;
-    display: none !important;
-    .st-ui-header & {
-      display: block !important;
-    }
-}
-.st-ui-injected-overlay-container .st-ui-header {
-  color: @background-color;
-  .st-ui-close-button, .st-ui-close-button:hover {
-    background-position-x: -16px;
+#searchinput {
+  background: @primary-color;
+  -webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+  transition: max-height 0.8s;
+  max-height: 150px;
+  form {
+    margin-bottom: 0;
   }
-  border-radius: 0 !important;
-}
-.st-ui-content, .st-ui-container-header_bar {
-  border-radius: 0 !important;
-}
-a.st-ui-pagination-link, a.st-ui-pagination-link span {
-  color: @primary-color !important;
-  border-color: inherit !important;
-  &.active {
-    color: @link-color !important;
+  .searchinput {
+    width: 90%;
+    background: transparent;
+    margin-top: 15px;
+    border: 0;
+    border-bottom: 2px solid @background-color;
+    margin-left: 5%;
+    color: @background-color;
+    text-transform: uppercase;
+    height: 8rem;
+    font-size: 7rem;
+    font-family: @font-family;
+  }
+  &.hide {
+    max-height: 0;
   }
 }
 

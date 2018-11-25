@@ -1,4 +1,4 @@
-<article class="twelve columns black {{ .Type }}">
+{{ if .Params.hidden }}{{ else }}<article class="twelve columns black {{ .Type }}">
     <header>
         <h1 class="headline">
             {{ if .Params.link }}
@@ -9,4 +9,4 @@
          </h1>
         <!-- <p class="post-time"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "January 2, 2006" }}</time></p> -->
     </header>
-</article>
+</article>{{ end }}

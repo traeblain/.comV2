@@ -11,11 +11,12 @@
 <main class="container" role="main">
   {{ partial "header.html" . }}
 
-	{{ $paginator := .Paginate (where .Data.Pages "Draft" false) }}
+  {{ $paginator := .Paginate (where .Data.Pages "Draft" false) }}
+  <div id="articlelist">
   {{ range $paginator.Pages }}
 		{{ .Render "li" }}
-	{{ end }}
-
+  {{ end }}
+  </div>
 	{{ partial "pagination.html" . }}
 
   {{ partial "menu.html" . }}
