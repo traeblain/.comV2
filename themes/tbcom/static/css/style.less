@@ -1450,6 +1450,7 @@ hr {
 	-moz-transition: max-height 0.8s;
   transition: max-height 0.8s;
   max-height: 150px;
+  overflow: hidden;
   form {
     margin-bottom: 0;
   }
@@ -1462,8 +1463,6 @@ hr {
     margin-left: 5%;
     color: @background-color;
     text-transform: uppercase;
-    height: 8rem;
-    font-size: 7rem;
     font-family: @font-family;
   }
   &.hide {
@@ -1480,18 +1479,14 @@ hr {
 }
 
 @media (min-width: @bp-larger-than-tablet) {
-  .st-default-search-input {
-    display: block !important;
+  #searchinput {
+    .searchinput{
+      height: 8rem;
+      font-size: 7rem;
+    }
   }
   a.search-link {
     display: none;
-  }
-  .st-query-present {
-    border-radius: 0 !important;
-    border: 1px solid @primary-color !important;
-    .st-ui-embed & {
-      border: none !important;
-    }
   }
   .index {
     .index-block {
