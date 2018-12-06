@@ -61,7 +61,7 @@
   var documents = {}
   var idx = {}
   var data = []
-  fetch('{{ ref . "searchindex.md" }}')
+  fetch('{{ ref . "/searchindex.md" }}')
     .then(function(response) {
       return response.json()
     }).then(function(json) {
@@ -101,13 +101,18 @@
   }
 
   var Search = debounce(function () { 
-    data = idx.search(document.getElementById('searchtext').value)
-    data.forEach(function (doc) { 
-      doc.title = documents.filter(function (post) { 
-        return post.href === doc.ref })[0].title
-      doc.date = documents.filter(function (post) { 
-        return post.href === doc.ref })[0].date 
-      })
+    var what = document.getElementById('searchtext').value
+    if (what != "") {
+      data = idx.search(what)
+      data.forEach(function (doc) { 
+        doc.title = documents.filter(function (post) { 
+          return post.href === doc.ref })[0].title
+        doc.date = documents.filter(function (post) { 
+          return post.href === doc.ref })[0].date 
+        })
+    } else {
+      data = []
+    }
     Array.prototype.slice.call(document.getElementsByTagName('article')).forEach(function (item) {
       item.remove()
     })
