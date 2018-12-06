@@ -38,7 +38,7 @@ There's bound to be some hiccups.  One for instance is that the search doesn't w
 What do you think?  Like or not?  I'm kind of proud of it.
 
 
-[expect]: {{< ref "blog/2015-where-do-we-go-next.md" >}}
+[expect]: {{< ref "/blog/2015-where-do-we-go-next.md" >}}
 [Flavors.me]: http://flavors.me/
 [About.me]: http://about.me/
 [homepage]: /
