@@ -45,3 +45,21 @@ Guilt is understanding that you've done something wrong, maybe you need to recti
 Apart from simply recognizing this difference and making sure that guilt you feel does not transition to shame, why is the difference important? I think as a culture, there's no more guilt...but we constantly wrestle with shame.
 
 I do think there's an built-in human understanding of sin (regardless of if it is recognized as such). _Sin_, I'm defining with Cornelius Plantiga's definition: "Sin is culpable disturbance of shalom". And _shalom_ to be defined as: "the webbing together of God, humans, and all creation in justice, fulfillment, and delight". This has a basis in the classic objective morality argument. But with widespread acceptance of the post-modernist philosophy, we've lost culpability to any objective morality.
+
+This is seen where there are significant arguments against laying any guilt on a person for most anything. If it doesn't hurt anyone but themselves, should they feel guilty for it? If my actions offend you, it is your fault for taking offence and I need maintain zero guilt. Although I experience this last statement all the time, I have also experienced this one: I am offended by your actions and therefore demand you make restitution/reparation for it, regardless of your intent. Even though both thoughts are in contradiction to each other, they are both rooted in pointing guilt to someone/something other than the self.
+
+So when we disturb shalom, guilt cannot be placed on us, it must be placed on others. I've noticed that when pastors speak about sin, today there's a disconnect with regards to what they are saying and how people are relating to it. We used to be able to relate sin to guilt, that feeling of doing something wrong...means you know what it is like to sin. Today, no one is guilty, others are at fault for their bad feelings.
+
+Alternatively, there has been an embrace of shame. Again this takes two forms. In those times that we do see fault in ourselves, it's not guilt, we see that fault as a part of us. "I don't get satisfaction from \_\_\_\_\_\_, because that's how I am." Or, our simple failures are magnified by others and their reactions that shame is put on us, even for the smallest infraction. "You disagree with me? You are a racist and a bigot!" Others don't attack our opinions anymore, they correlate opinions (which can change) with identity, in this example. This leads to significant shame as feelings aren't being attacked but who you are, which implies a condition you may not be able to correct.
+
+We should care about this as it has far reaching implications. This affects both our attitudes, reactions, and responses. As well as, how we minister to others.
+
+## So...
+
+I don't have any answers, other than recognition of this. I do know my posture to people both in life and in evangelical positions have been from a identity perspective as opposed to a guilt one. "We are all sinners" only works after you've shown someone that their worth and value is not based on their opinions, actions, or conditions. It is derived from the Creator of all things who is the very embodiment of love. After that is established, you can address the shortcomings that we all have.
+
+This is also important when addressing any person with a difference of opinion. In today's culture, we attack the person. You own a gun? You're a criminal. You question medicare-for-all? You hate poor people. You want medicare-for-all? You are a communist.
+
+I have a hard time transitioning to a _shame-based_ discussion from a _guilt-based_ one. The reason is that shame is unhelpful in any way you look at it.  There is also too much cultural resistance to any conversation that doesn't include identity posturing.  
+
+What should we do as people, Americans, Christians, etc.?  Just some food for thought.
