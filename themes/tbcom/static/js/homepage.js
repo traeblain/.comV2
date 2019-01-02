@@ -340,7 +340,7 @@ fetch('https://traeblain.apispark.net/v1/reads/?%24size=80', headers)
     json = json.filter(book => book.Date.indexOf(moment().year()) >= 0)
     var finished = json[json.length - 1]
     tester = json
-    var total = 52
+    var total = 26
     var count = json.length
     var perComplete = Math.round(count/total * 100)
     var completeSize = (perComplete > 100) ? 100 : perComplete
