@@ -10,7 +10,6 @@ script:
 title: Guilt and Shame
 date: 2019-01-08 10:36:48 -0600
 description: Guilt versus Shame has been a specific issue I've been considering. Finally realizing that they are different, not just in definition but in its core.
-draft: true
 ---
 
 Guilt versus Shame has been a specific issue I've been considering. For a long time, I considered them synonymous. Through discussions with other people, counselors, and my reading; I've come to realize they are different. Different not in just how they are defined, but different in their core.
