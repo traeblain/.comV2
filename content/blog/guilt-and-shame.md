@@ -9,7 +9,7 @@ text_color: light
 script:
 title: Guilt and Shame
 date: 2018-12-05 10:36:48 -0600
-description:
+description: Guilt versus Shame has been a specific issue I've been considering. Finally realizing that they are different, not just in definition but in its core.
 draft: true
 ---
 
@@ -60,7 +60,7 @@ We should care about this as it has far reaching implications. This affects both
 
 I don't have any answers, other than recognition of this. I do know my posture to people both in life and in evangelical positions have been from a identity perspective as opposed to a guilt one. "We are all sinners" only works after you've shown someone that their worth and value is not based on their opinions, actions, or conditions. It is derived from the Creator of all things who is the very embodiment of love. After that is established, you can address the shortcomings that we all have.
 
-This is also important when addressing any person with a difference of opinion.As I said before, in today's culture, we tend to attack the person. You own a gun? You're a criminal. You question medicare-for-all? You hate poor people. You want medicare-for-all? You are a communist.
+This is also important when addressing any person with a difference of opinion. As I said before, in today's culture, we tend to attack the person. You own a gun? You're a criminal. You question Medicare-for-all? You hate poor people. You want Medicare-for-all? You are a communist.
 
 I have a hard time transitioning out of a _shame-based_ discussion. Shame is unhelpful in any way you look at it. There is also too much cultural resistance to any conversation that doesn't include identity posturing.
 
