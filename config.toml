@@ -63,6 +63,6 @@ title = "Trae Blain"
 [params]
   # disqus = "traeblain"
   rss = "/blog/index.xml"
-  segment = "gveNZnsGRVvfcJKu8CfxI3TgX5buZ0DT"
+  # segment = "gveNZnsGRVvfcJKu8CfxI3TgX5buZ0DT"
   # swiftype = "xxvxuPQWopgGHCpFwzi-"
-
+  matomo = true
