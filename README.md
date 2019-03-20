@@ -1,4 +1,5 @@
 # Trae Blain's Website
+![Netlify Status](https://api.netlify.com/api/v1/badges/673ccdde-2c26-40f1-b781-470308fbf6c2/deploy-status)
 ![Writing is Slacking](https://img.shields.io/badge/writing-slacking-red.svg)
 ![Awesome Style!!](https://img.shields.io/badge/style-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%C2%BD-brightgreen.svg)
 ![PB&J Sandwich has been eaten...](https://img.shields.io/badge/sandwich-devoured-blue.svg)
