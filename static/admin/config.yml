@@ -12,6 +12,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - { label: "Draft?", name: "draft", widget: "boolean", default: true }
       - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Date",
@@ -29,3 +30,4 @@ collections:
         }
       - { label: "Tags", name: "tags", widget: "list", allow_add: false }
       - { label: "Script", name: "script", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
