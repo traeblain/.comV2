@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: master
+  accept_roles:
+    - admin
+media_folder: "static/images"
+public_folder: "/images"
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD HH:mm:ss ZZ",
+        }
+      - { label: "Summary", name: "description", widget: "text" }
+      - { label: "Background Image", name: "background", widget: "string" }
+      - {
+          label: "Header Text Color",
+          name: "text_color",
+          widget: "select",
+          options: ["dark", "light"],
+        }
+      - { label: "Tags", name: "tags", widget: "list", allow_add: false }
+      - { label: "Script", name: "script", widget: "string" }

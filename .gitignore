@@ -4,6 +4,7 @@
 *.sublime*
 /log/
 /static/*
+!/static/admin
 !/static/images
 hugo*
 .vscode
