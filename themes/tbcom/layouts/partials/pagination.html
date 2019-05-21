@@ -1,23 +1,40 @@
-{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-<div class="twelve columns">
-  <nav class="pagination" role="navigation">
-    <div class="pageinate">
-    {{ if .Paginator.HasPrev }}
-      <a href="{{.Paginator.Prev.URL}}">&laquo; Newer</a>
-    {{ else }}
-      &nbsp;
-    {{ end }}
-    </div>
-    <div class="pageinate">
-      <span>Page</span> {{.Paginator.PageNumber}} of {{.Paginator.TotalPages}}
-    </div>
-    <div class="pageinate">
-      {{ if .Paginator.HasNext }}
-        <a href="{{ .Paginator.Next.URL }}"> Older &raquo;</a>
-      {{ else }}
-        &nbsp;
-      {{ end }}
-    </div>
-  </nav>
+{{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+<div class="pagination">
+  <!-- {{ with $pag.First }}
+  <a href="{{ .URL }}" class="page-first">&laquo;&laquo;</a>
+  {{ end }} -->
+  {{ if gt $pag.PageNumber 1 }}
+  <a href="{{ if $pag.HasPrev }}{{ $pag.Prev.URL }}{{ end }}" class="page-link">&laquo; Previous</a>
+  {{ else }}
+  <div class="page-link">&laquo; Previous</div>
+  {{ end }}
+  {{ $ellipsed := false }}
+  {{ $shouldEllipse := false }}
+  {{ range $pag.Pagers }}
+  {{ $right := sub .TotalPages .PageNumber }}
+  {{ $showNumber := or (le .PageNumber 1) (eq $right 0) }}
+  {{ $showNumber := or $showNumber (and (gt .PageNumber (sub $pag.PageNumber 2)) (lt .PageNumber (add $pag.PageNumber 2))) }}
+  {{ if $showNumber }}
+    {{ $ellipsed = false }}
+    {{ $shouldEllipse = false }}
+  {{ else }}
+    {{ $shouldEllipse = not $ellipsed }}
+    {{ $ellipsed = true }}
+  {{ end }}
+  {{ if $showNumber }}
+  <a href="{{ .URL }}" class="page-link{{ if eq . $pag }} active{{ end }}">{{ .PageNumber }}</a>
+  {{ else if $shouldEllipse }}
+  <div class="page-link">&nbsp;&hellip;&nbsp;</div>
+  {{ end }}
+  {{ end }}
+  {{ if eq $pag.PageNumber $pag.TotalPages }}
+  <div class="page-link">Next &raquo;</div>
+  {{ else }}
+  <a href="{{ if $pag.HasNext }}{{ $pag.Next.URL }}{{ end }}" class="page-link">Next &raquo;</a>
+  {{ end }}
+  <!-- {{ with $pag.Last }}
+  <a href="{{ .URL }}" class="page-link">&raquo;&raquo;</a>
+  {{ end }} -->
 </div>
 {{ end }}

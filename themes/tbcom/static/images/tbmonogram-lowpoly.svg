@@ -13,7 +13,7 @@
  <g id="layer2" stroke-linejoin="bevel" stroke-width="5">
   <g id="g5268" stroke="#262626">
    <g id="g4930">
-    <g id="g4458" fill="none">
+    <g id="g4458" fill="#fff">
      <path id="path4460" d="m188.08 47.17h162.21 149.65z"/>
      <path id="path4462" d="m424.95 146.95l74.99-99.78h-149.65z"/>
      <path id="path4464" d="m575.79 146.95l86.88-99.78h-162.73z"/>
@@ -43,20 +43,20 @@
      <path id="path4552" d="m394.18 946.4h105.76l-74.99-98.43z"/>
     </g>
     <g id="g4714">
-     <path id="path4716" stroke-linejoin="bevel" d="m575.79 422.29v-275.34l-75.85 123.07z" stroke="#262626" stroke-width="5" fill="none"/>
+     <path id="path4716" stroke-linejoin="bevel" d="m575.79 422.29v-275.34l-75.85 123.07z" stroke="#262626" stroke-width="5" fill="#fff"/>
     </g>
     <g id="g4856">
-     <path id="path4858" stroke-linejoin="bevel" d="m424.95 146.95v275.34l74.99-152.27z" stroke="#262626" stroke-width="5" fill="none"/>
+     <path id="path4858" stroke-linejoin="bevel" d="m424.95 146.95v275.34l74.99-152.27z" stroke="#262626" stroke-width="5" fill="#fff"/>
     </g>
    </g>
    <g id="g5037">
-    <path id="path5039" stroke-linejoin="bevel" d="m575.79 847.97v-274.96l-75.85 136.79z" stroke="#262626" stroke-width="5" fill="none"/>
+    <path id="path5039" stroke-linejoin="bevel" d="m575.79 847.97v-274.96l-75.85 136.79z" stroke="#262626" stroke-width="5" fill="#fff"/>
    </g>
    <g id="g5189">
-    <path id="path5191" stroke-linejoin="bevel" d="m424.95 573.01v274.96l74.99-138.17z" stroke="#262626" stroke-width="5" fill="none"/>
+    <path id="path5191" stroke-linejoin="bevel" d="m424.95 573.01v274.96l74.99-138.17z" stroke="#262626" stroke-width="5" fill="#fff"/>
    </g>
   </g>
-  <g id="g5633" stroke="#8c8c8c" fill="none">
+  <g id="g5633" stroke="#8c8c8c" fill="#fff">
    <path id="path5637" d="m601.2 174.21l99.35 96.12 12.25-96.12z"/>
    <path id="path5639" d="m299.91 270.33l100.27-96.12h-112.75z"/>
    <path id="path5641" d="m601.2 270.33h99.35l-99.35-96.12z"/>

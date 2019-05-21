@@ -4,68 +4,36 @@
 {{ `<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->` | safeHTML }}
 {{ `<!--[if gt IE 8]><!-->` | safeHTML }}<html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#">{{ `<!--<![endif]-->` | safeHTML }}
 
+
 {{ partial "head.html" . }}
 <body>
-{{ `<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to experience this site.</p><![endif]-->` | safeHTML }}
+{{ `<!--[if lte IE 9]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p><![endif]-->` | safeHTML }}
 {{ $.Scratch.Add "section" "404" }}
-<main class="container" role="main">
-  {{ partial "header.html" . }}
+<a id="top"></a>
 
-  <section class="twelve columns">
-    <div class="fourohfour">
-      <h1>404</h1>
-      <h2>page not found</h2>
-      <p>Oh, no... you have found a part of this site that does not exist...Leave now, my friend!  A hoard of mini-ninjas are on their way!</p>
-      <p>Try one of the following links or go back from whence you came.  But do it quickly, before it's too late!!</p>
-    </div>
-    <div id="st-results-container"></div>
-  </section>
+{{ .Render "menu" }}
 
-  {{ partial "menu.html" . }}
+{{ .Render "header" }}
 
-  {{ partial "footer.html" . }}
+<!--
+  *****************************
+  Content
+  *****************************
+-->
+<a id="start"></a>
+<main class="{{ .Kind }}" role="main">
+  <div class="fourohfour">
+    <h1>404</h1>
+    <h2>page not found</h2>
+    <p>Oh, no... you have found a part of this site that does not exist...Leave now, my friend!  A hoard of mini-ninjas are on their way!</p>
+    <span></span>
+    <p>Try one of the menu links or go back from whence you came.  But do it quickly, before it's too late!!</p>
+  </div>
 </main>
+{{ partial "footer.html" . }}
+{{ partial "sprites.html" . }}
+{{ partial "modals.html" . }}
 {{ partial "scripts.html" . }}
-<script type="text/javascript">
-function getKeywordsFromPath() {
-  return window.location.pathname.split(/[-/_]/).join(" ")
-}
 
-var searchParams = {engine_key: "r1hJh2nWQLEHagJP6as-",
-                    q: getKeywordsFromPath(),
-                    per_page: 5
-                  }
-
-var headers = {
-  method: 'get',
-  headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json'
-  }
-}
-function serialize( obj ) {
-  return '?'+Object.keys(obj).reduce(function(a,k){a.push(k+'='+encodeURIComponent(obj[k]));return a},[]).join('&')
-}
-
-fetch("http://api.swiftype.com/api/v1/public/engines/search" + serialize(searchParams), headers)
-.then(function(response) { return response.json() })
-.then(function(json) {
-  var container = document.getElementById('st-results-container')
-  container.innerHTML = ""
-  /*if (json['records']['page'].length > 0) {
-    var child = document.createElement('h2')
-    child.innerHTML = 'Suggested pages based on this URL'
-    container.appendChild(child)
-  }*/
-  json['records']['page'].forEach(function (result, index) {
-    var child = document.createElement('p')
-    child.innerHTML = "<a href='" + result['url'] + "'>" +
-       (result['highlight']['title'] || result['title']) + "</a><br>" +
-       (result['highlight']['body'] || result['body'].substring(78, 378))
-    container.appendChild(child)
-  })
-})
-.catch(function(ex) { console.log('parsing failed', ex) })
-</script>
 </body>
 </html>

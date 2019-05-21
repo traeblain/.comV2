@@ -1,0 +1,12 @@
+{{ if .Params.hidden }}{{ else }}<article class="twelve columns black {{ .Type }}">
+    <header>
+        <h1 class="headline">
+            {{ if .Params.link }}
+                <a href="{{ .Params.link }}" target="_blank" itemprop="url">{{ .Title }}</a>
+            {{ else }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ end }}
+         </h1>
+        <!-- <p class="post-time"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "January 2, 2006" }}</time></p> -->
+    </header>
+</article>{{ end }}

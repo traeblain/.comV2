@@ -11,7 +11,7 @@
   </rdf:RDF>
  </metadata>
  <g id="layer2" stroke-linejoin="bevel" stroke="#86e2f9" stroke-width="5">
-  <g id="g4726" fill="none">
+  <g id="g4726" fill="#fff">
    <path id="path4728" d="m365.71 50 88.571 30 51.429-60z"/>
    <path id="path4730" d="m534.29 134.29 87.14-90.004-115.72-24.286z"/>
    <path id="path4732" d="m454.29 80 80 54.286l-28.58-114.29z"/>
@@ -109,13 +109,13 @@
    <path id="path4982" d="m155.71 978.57 284.29 1.43-147.14-1.43z"/>
   </g>
   <g id="g5378">
-   <path id="path5380" stroke-linejoin="bevel" d="m791.43 447.14v-184.28l-54.29 95.71z" stroke="#86e2f9" stroke-width="5" fill="none"/>
+   <path id="path5380" stroke-linejoin="bevel" d="m791.43 447.14v-184.28l-54.29 95.71z" stroke="#86e2f9" stroke-width="5" fill="#fff"/>
   </g>
   <g id="g5756">
-   <path id="path5758" stroke-linejoin="bevel" d="m208.57 264.29l-1.43 182.85 42.86-102.85z" stroke="#86e2f9" stroke-width="5" fill="none"/>
+   <path id="path5758" stroke-linejoin="bevel" d="m208.57 264.29l-1.43 182.85 42.86-102.85z" stroke="#86e2f9" stroke-width="5" fill="#fff"/>
   </g>
   <g id="g6138">
-   <path id="path6140" stroke-linejoin="bevel" d="m498.57 520l175.72-75.71-345.72-1.43z" stroke="#86e2f9" stroke-width="5" fill="none"/>
+   <path id="path6140" stroke-linejoin="bevel" d="m498.57 520l175.72-75.71-345.72-1.43z" stroke="#86e2f9" stroke-width="5" fill="#fff"/>
   </g>
  </g>
 </svg>

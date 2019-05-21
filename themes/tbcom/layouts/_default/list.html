@@ -4,25 +4,41 @@
 {{ `<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->` | safeHTML }}
 {{ `<!--[if gt IE 8]><!-->` | safeHTML }}<html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#">{{ `<!--<![endif]-->` | safeHTML }}
 
+
 {{ partial "head.html" . }}
 <body>
-{{ `<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to experience this site.</p><![endif]-->` | safeHTML }}
+<a id="top"></a>
+{{ `<!--[if lte IE 9]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p><![endif]-->` | safeHTML }}
 {{ $.Scratch.Add "section" "blog" }}
-<main class="container" role="main">
-  {{ partial "header.html" . }}
+
+{{ .Render "menu" }}
+
+{{ .Render "header" }}
+<!--
+  *****************************
+  Blog Post List Content
+  *****************************
+-->
+<a id="start"></a>
+<main class="{{ .Kind }}" role="main">
+  {{ if eq .Kind "section" }}{{ if eq .Title "Searches" }}
+  <h5 id="searchResults">Search Results for: <em>?</em></h5>
+  {{ end }}{{ end }}
 
   {{ $paginator := .Paginate (where .Data.Pages "Draft" false) }}
-  <div id="articlelist">
-  {{ range $paginator.Pages }}
-		{{ .Render "li" }}
+
+  {{ range $paginator.Pages }}{{ .Render "li" }}
   {{ end }}
+
+  {{ partial "pagination.html" . }}
+  
+  <div class="back-to-top">
+    <a href="#top">&Uparrow; Back to Top</a>
   </div>
-	{{ partial "pagination.html" . }}
-
-  {{ partial "menu.html" . }}
-
-  {{ partial "footer.html" . }}
 </main>
+{{ partial "footer.html" . }}
+{{ partial "sprites.html" . }}
+{{ partial "modals.html" . }}
 {{ partial "scripts.html" . }}
 </body>
 </html>

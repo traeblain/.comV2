@@ -1,0 +1,34 @@
+<!--
+  *****************************
+  Main Image/Hero Image
+  *****************************
+-->
+{{ $background := "none" }}
+{{ if .Params.background }}
+  {{ $background = .Params.background }}
+{{ end }}
+{{ if eq .Kind "section" }}
+  {{ range first 1 (where .Pages "Draft" false) }}
+    {{ if .Params.background }}
+      {{ $background = .Params.background }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ if eq .Kind "404" }}
+  {{ $background = "https://res.cloudinary.com/dixwznarl/image/upload/tbcom/lego-ninja-a.svg" }}
+{{ end }}
+{{ if eq .Kind "section" }}{{ if eq .Title "Searches" }}
+ {{ $background = "https://res.cloudinary.com/dixwznarl/image/upload/c_scale,h_900/tbcom/night-light.jpg" }}
+{{ end }}{{ end }}
+<header>
+  {{ if .IsHome }}
+  <div id="particles">
+    <canvas id="dots" height="100%" width="100%"></canvas>
+  </div>
+  {{ else }}
+  <div id="hero" style="background-image: url({{ $background }});"></div>
+  {{ end }}
+</header>
+<!--
+  ****** End Hero ******
+-->
