@@ -2,7 +2,7 @@
 // if (document.querySelector("canvas")) {
 var canvas, ctx, color, mono, xloc, yloc, xsize, ysize, mousePosition
 function sizeCanvas(img) {
-  console.log(img)
+  // console.log(img)
   if (typeof img !== 'string') {
     img = 'https://res.cloudinary.com/dixwznarl/image/upload/tbcom/tbmonogram.svg'
   }
@@ -132,7 +132,7 @@ if (document.querySelector('canvas')) {
   document.getElementById('dots').onmousemove = function(e) {
     mousePosition.x = e.pageX
     mousePosition.y = e.pageY - document.documentElement.scrollTop
-    console.log(mousePosition.y + document.documentElement.scrollTop)
+    // console.log(mousePosition.y + document.documentElement.scrollTop)
   }
   sizeCanvas()
   setInterval(createDots, 1000 / 30)
@@ -158,19 +158,19 @@ if (document.querySelector('canvas')) {
       if (currentLoc !== 'activity' && document.documentElement.offsetWidth >= 769) {
         currentLoc = 'activity'
         sizeCanvas('https://res.cloudinary.com/dixwznarl/image/upload/v1558453563/tbcom/fitbit-lowpoly.svg')
-        console.log('Activity')
+        // console.log('Activity')
       }
     } else if (document.documentElement.scrollTop >= (notebook - document.documentElement.offsetHeight / 4)) {
       if (currentLoc !== 'notebook' && document.documentElement.offsetWidth >= 769) {
         currentLoc = 'notebook'
         sizeCanvas('https://res.cloudinary.com/dixwznarl/image/upload/v1558453597/tbcom/pencil-lowpoly.svg')
-        console.log('Notebook')
+        // console.log('Notebook')
       }
     } else {
       if (currentLoc !== 'monogram' && document.documentElement.offsetWidth >= 769) {
         currentLoc = 'monogram'
         sizeCanvas('https://res.cloudinary.com/dixwznarl/image/upload/tbcom/tbmonogram.svg')
-        console.log('Monogram')
+        // console.log('Monogram')
       }
     }
   })
@@ -191,7 +191,7 @@ function tabSelect(el) {
   }
   if (document.documentElement.offsetWidth >= 769) {
     sizeCanvas(item[checked])
-    console.log(el)
+    // console.log(el)
   }
 }
 
@@ -340,7 +340,7 @@ if (homepage) {
       document.getElementById('lastread').innerHTML = imagelink + '<h5>' + finished.Title + ' by ' + author + '</h5><p>' + details + '</p><p><a href="' + finished.Link + '">See my review here &raquo;</a></p>'
     }).catch(function(ex) {
       document.getElementById('lastread').innerHTML = 'Data collection failed...'
-      console.log('parsing failed', ex)
+      // console.log('parsing failed', ex)
     })
   fetch('https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=tblain&api_key=b25b959554ed76058ac220b7b2e0a026&period=6month&format=json', headers)
     .then(function(response) {
@@ -371,7 +371,7 @@ if (homepage) {
       fanart()
     }).catch(function(ex) {
       document.getElementById('musicTab').innerHTML = 'Failed to gather music data...'
-      console.log('parsing failed', ex)
+      // console.log('parsing failed', ex)
     })
 }
 

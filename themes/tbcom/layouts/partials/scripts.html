@@ -68,7 +68,7 @@
   var documents = {}
   var idx = {}
   var data = []
-  fetch('{{ ref . "/searchindex.md" }}')
+  fetch('{{ relref . "/searchindex.md" }}')
     .then(function(response) {
       return response.json()
     }).then(function(json) {
