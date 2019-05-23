@@ -30,7 +30,7 @@
   </div>{{ end }}
   <div class="social-icons">
     {{ range .Site.Menus.social }}
-    <a href="{{ .URL }}" title="{{ .Name }}">
+    <a href="{{ .URL }}" title="{{ .Name }}"{{ if .Post }} rel="me"{{ end }}>
       <svg class="svg svg-{{ .Identifier }}"><use xlink:href="#{{ .Identifier }}"></use></svg>
     </a>{{ end }}
   </div>

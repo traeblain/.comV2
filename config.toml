@@ -55,42 +55,41 @@ title = "Trae Blain"
   [[menu.social]]
     identifier = "twitter"
     name = "Twitter"
-    icon = "<i class='fa fa-twitter'></i>"
+    post = "me"
     url = "http://twitter.com/traeblain"
     weight = 2
 
   [[menu.social]]
     identifier = "instagram"
     name = "Instagram"
-    icon = "<i class='fa fa-instagram'></i>"
+    post = "me"
     url = "http://instagram.com/traeblain"
     weight = 3
 
   [[menu.social]]
     identifier = "linkedin"
     name = "LinkedIn"
-    icon = "<i class='fa fa-linkedin'></i>"
+    post = "me"
     url = "http://linkedin.com/in/traeblain/"
     weight = 4
 
   [[menu.social]]
     identifier = "github"
     name = "Github"
-    icon = "<i class='fa fa-github'></i>"
+    post = "me"
     url = "http://github.com/traeblain"
     weight = 5
 
   [[menu.social]]
     identifier = "lock"
     name = "PGP Info"
-    icon = "<i class='fa fa-lock'></i>"
+    post = "me"
     url = "http://keybase.io/traeblain"
     weight = 6
 
   [[menu.social]]
     identifier = "rss"
     name = "RSS"
-    icon = "<i class='fa fa-rss'></i>"
     url = "/blog/index.xml"
     weight = 7
 
