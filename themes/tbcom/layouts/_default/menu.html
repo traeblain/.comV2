@@ -1,0 +1,40 @@
+<!--
+  *****************************
+  Navigation Bar
+  *****************************
+-->
+<nav id="nav">
+  <div class="brand">
+    <a href="/">
+      <img
+        src="https://res.cloudinary.com/dixwznarl/image/upload/tbcom/tbmonogram.svg"
+        alt="TB Monogram"
+      /><strong> | {{ .Site.Title }}</strong>
+    </a>
+  </div>
+  <div class="menu">
+    <button onclick="toggleElement('subnav', this, true)">
+      &#9776;
+    </button>
+  </div>
+  <div class="search">
+    <button onclick="toggleElement('searchform', this, false)">
+      <svg class="svg svg-search"><use xlink:href="#search"></use></svg>
+    </button>
+  </div>
+</nav>
+<nav id="subnav">
+  {{ range .Site.Menus.main }}
+  <div class="menu-{{ .Identifier }}">
+    <a href="{{ .URL }}">{{ .Title }}</a>
+  </div>{{ end }}
+  <div class="social-icons">
+    {{ range .Site.Menus.social }}
+    <a href="{{ .URL }}" title="{{ .Name }}"{{ if .Post }} rel="me"{{ end }}>
+      <svg class="svg svg-{{ .Identifier }}"><use xlink:href="#{{ .Identifier }}"></use></svg>
+    </a>{{ end }}
+  </div>
+</nav>
+<!--
+  ****** End Navigation Bar ******
+-->

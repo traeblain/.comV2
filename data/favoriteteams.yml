@@ -74,7 +74,7 @@ Sports:
         favorite: Daniel Ricciardo
         link: http://danielricciardo.com/
         comment: Great driver, rough team.
-        image: https://res.cloudinary.com/dixwznarl/image/upload/c_crop,w_500/favorite-sports/ricciardo.jpg
+        image: https://res.cloudinary.com/dixwznarl/image/upload/c_crop,w_500/c_scale,w_300/favorite-sports/ricciardo.jpg
   - sport: cycling
     info:
       - league: International Cycling Organization
@@ -130,14 +130,14 @@ Sports:
         link: http://www.jowilfriedtsonga.com/
         comment: Big dude...and that's awesome.  Although liking this
           [Sock guy](https://en.wikipedia.org/wiki/Jack_Sock).
-        image: https://res.cloudinary.com/dixwznarl/image/upload/c_crop,h_350,w_350/favorite-sports/tsonga-camp.png
+        image: https://res.cloudinary.com/dixwznarl/image/upload/c_crop,h_300,w_300/favorite-sports/tsonga-camp.png
   - sport: fighting
     info:
       - league: All the Boxing Leagues
         favorite: Deontay Wilder
         link: https://en.wikipedia.org/wiki/Deontay_Wilder
         comment: Power...raw power.
-        image: https://res.cloudinary.com/dixwznarl/image/upload/c_crop,w_650,x_80,y_90/favorite-sports/deontay-wilder.jpg
+        image: https://res.cloudinary.com/dixwznarl/image/upload/c_crop,w_600,x_80,y_90/c_scale,w_300/favorite-sports/deontay-wilder.jpg
       - league: Ultimate Fighting Championship
         favorite: Tyron Woodley
         link: http://www.tyronwoodley.com/

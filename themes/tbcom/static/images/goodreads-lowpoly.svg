@@ -11,7 +11,7 @@
   </rdf:RDF>
  </metadata>
  <g id="layer1" transform="translate(0 -52.362)" stroke="#aa7339" stroke-width="5">
-  <g id="g5438" fill="none">
+  <g id="g5438" fill="#fff">
    <path id="path5440" d="m642.14 102.01h244.65l-784.29-1.08z"/>
    <path id="path5442" d="m322.14 102.01h320l-539.64-1.08z"/>
    <path id="path5444" d="m322.14 102.01l257.69 45.26 62.31-45.26z"/>
@@ -106,19 +106,19 @@
    <path id="path5700" d="m326.43 1002.4l265.52-61.15-191.93-12.13z"/>
    <path id="path5702" d="m326.43 1002.4h375.36l-109.84-61.15z"/>
   </g>
-  <g id="g6581" fill="none">
+  <g id="g6581" fill="#fff">
    <path id="path6583" d="m591.43 241.65l53.05-13.57-64.65-80.81z"/>
    <path id="path6585" d="m488.91 211.92l102.52 29.73-11.6-94.38z"/>
    <path id="path6587" d="m591.43 241.65l55.07 55.12-2.02-68.69z"/>
   </g>
   <g id="g7020">
-   <path id="path7022" d="m363.65 260.4l125.26-48.48-129.3-44.45z" stroke="#aa7339" stroke-width="5" fill="none"/>
+   <path id="path7022" d="m363.65 260.4l125.26-48.48-129.3-44.45z" stroke="#aa7339" stroke-width="5" fill="#fff"/>
   </g>
   <g id="g7436">
-   <path id="path7438" d="m541.44 634.16l88.9-74.75-78.8 16.16z" stroke="#aa7339" stroke-width="5" fill="none"/>
+   <path id="path7438" d="m541.44 634.16l88.9-74.75-78.8 16.16z" stroke="#aa7339" stroke-width="5" fill="#fff"/>
   </g>
   <g id="g7829">
-   <path id="path7831" d="m632.36 749.32l12.12-143.45-56.57 64.65z" stroke="#aa7339" stroke-width="5" fill="none"/>
+   <path id="path7831" d="m632.36 749.32l12.12-143.45-56.57 64.65z" stroke="#aa7339" stroke-width="5" fill="#fff"/>
   </g>
  </g>
 </svg>

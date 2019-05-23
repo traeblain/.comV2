@@ -1,13 +1,16 @@
-    <head profile="http://www.w3.org/2005/10/profile">
-        {{ partial "meta.html" . }}
+    <head>
         <title>{{ if .IsHome }}{{ else }}{{ if and (.Title) (.IsPage) }}{{ .Title }}{{ else }}{{ replace .Title "Blogs" "Notebook" }}{{ end }} &middot; {{ end }}{{ .Site.Title }}</title>
+        {{ partial "meta.html" . }}
         <link rel="canonical" href="{{ .Permalink }}" />
-        {{ if and (.RSSLink) (not .IsHome) }}
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ .RSSLink }}">
-        {{ else }}
-        <link rel="home" type="application/rss+xml" title="RSS" href="{{ .Site.Params.rss | absURL}}">
-        {{ end }}
-        <link rel="stylesheet" type='text/css' href="/css/style.css"/>
+        {{ with .OutputFormats.Get "rss" -}}
+            {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+        {{ end -}}
+        <!-- Need to look into combining these -->
+        <link rel="stylesheet" href="/css/normalize.css" />
+        <link rel="stylesheet" type='text/css' href="/css/main.css"/>
+        <!-- Need to see if I can add this only to pages that have a <pre><code> block... -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/nord.min.css">
+
         <!-- FavIcon... -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=BGAXEnakbQ">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=BGAXEnakbQ">
@@ -17,5 +20,8 @@
         <link rel="shortcut icon" href="/favicon.ico?v=BGAXEnakbQ">
         <meta name="msapplication-TileColor" content="#ffc40d">
         <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=BGAXEnakbQ">
-        <meta name="theme-color" content="#757575">
+        <meta name="theme-color" content="#3b4252">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#3b4252">
     </head>

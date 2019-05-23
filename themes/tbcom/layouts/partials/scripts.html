@@ -1,10 +1,16 @@
-<script type="text/javascript" src="/js/scripts.js"></script>
+<!--
+  *****************************
+  Scripts
+  *****************************
+-->
+<script>
+  var homepage = false
+</script>
 
 {{ if .IsHome }}
-<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
-<script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<script type="text/javascript" src="/js/homepage.js"></script>
+<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script>
+  homepage = true
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
       if (!user) {
@@ -17,14 +23,11 @@
 </script>
 {{ end }}
 
-{{ if .Site.Params.segment }}
-  <script type="text/javascript">
-    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
-      analytics.load("{{ .Site.Params.segment }}");
-      analytics.page('{{ $.Scratch.Get "section" }}', {properties: {title: '{{ .Title }}'}});
-      }}();
-  </script>
-{{ end }}
+<script type="text/javascript" src="/js/main.js"></script>
+
+<!-- Need to see if I can add this only to pages that have a <pre><code> block... -->        
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
 {{ if .Site.Params.matomo }}
 <script type="text/javascript">
@@ -49,53 +52,23 @@
 </script>
 {{ end }}
 
-{{ if .Site.Params.disqus }}
-  {{ if .IsPage }}
-    <script type="text/javascript">
-      var disqus_shortname = '{{ .Site.Params.disqus }}';
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-    </script>
-  {{ end }}
-{{ end }}
-
-{{ if .Site.Params.swiftype }}
-  {{ if not .IsHome }}
-  <script type="text/javascript">
-    (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-    })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-    _st('install','{{ .Site.Params.swiftype }}','2.0.0');
-  </script>
-  {{ end }}
-{{ end }}
-
-{{ if not .IsHome }}
-<script type="text/javascript">
-  var showSearch = function (e) {
-    document.getElementById("searchinput").classList.toggle("hide")
-    e.preventDefault()
-  }
-  document.getElementById("searchlink").addEventListener('click', showSearch)
-</script>
-{{ end }}
+<!-- I hope this works.... -->
 {{ if eq .Kind "section" }}{{ if eq .Title "Searches" }}
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 <script type="text/javascript">
   var url = new URL(window.location)
   var search = url.searchParams.get("q")
-  document.getElementById("searchlink").click()
-  document.getElementById("searchlink").removeEventListener('click', showSearch)
-  document.getElementById("searchtext").value = search
+  document.getElementById("searchbutton").addEventListener('click', function (e) {
+    e.preventDefault()
+    Search(document.getElementById("searchtext").value)
+    toggleElement("searchform", this, false)
+    var newurl = window.location.origin + window.location.pathname + '?q=' + document.getElementById("searchtext").value
+    window.history.pushState({ path: newurl }, '', newurl)
+  })
   var documents = {}
   var idx = {}
   var data = []
-  fetch('{{ ref . "/searchindex.md" }}')
+  fetch('{{ relref . "/searchindex.md" }}')
     .then(function(response) {
       return response.json()
     }).then(function(json) {
@@ -107,8 +80,7 @@
         this.field('content')
         json.forEach(function (doc) { this.add(doc) }, this)
       })
-      document.getElementById('searchtext').addEventListener("input", Search)
-      Search()
+      Search(search)
     }).catch(function(ex) {
       documents = [
         { title: "Error Getting Index" }
@@ -134,10 +106,10 @@
     }
   }
 
-  var Search = debounce(function () { 
-    var what = document.getElementById('searchtext').value
-    if (what != "") {
-      data = idx.search(what)
+  var Search = debounce(function (search) { 
+    // var what = document.getElementById('searchtext').value
+    if (search != "") {
+      data = idx.search(search)
       data.forEach(function (doc) { 
         doc.title = documents.filter(function (post) { 
           return post.href === doc.ref })[0].title
@@ -150,22 +122,32 @@
     Array.prototype.slice.call(document.getElementsByTagName('article')).forEach(function (item) {
       item.remove()
     })
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     for (var i = data.length - 1; i >= 0; i--) {
       var article = document.createElement('article')
-      article.className = 'twelve columns black search'
+      article.className = 'content blog'
       var header = document.createElement('header')
       var h1 = document.createElement('h1')
-      h1.className = 'headline'
+      h1.className = 'with-subheading'
       var link = document.createElement('a')
       var linktext = document.createTextNode(data[i].title)
+      var span = document.createElement('span')
+      span.classList = 'subheading'
+      var time = document.createElement('time')
+      var date = new Date(data[i].date)
+      time.dateTime = data[i].date
+      time.appendChild(document.createTextNode(date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear()))
       link.title = data[i].title
       link.href = data[i].ref
       link.appendChild(linktext)
       h1.appendChild(link)
       header.appendChild(h1)
+      header.appendChild(span)
+      header.appendChild(time)
       article.appendChild(header)
-      insertAfter(article, document.getElementById('searchinput'))
+      insertAfter(article, document.getElementById('searchResults'))
       }
+      document.getElementById('searchResults').firstElementChild.innerHTML = search
     }, 250)
   
 </script>

@@ -1,0 +1,11 @@
+name = "Trae Blain Personal"
+license = "MIT"
+licenselink = "None"
+description = "Personal website design by Trae"
+homepage = "http://traeblain.com"
+tags = ["blog", "minimal", "white"]
+features = ["blog", "disqus", "pagination", "rss"]
+
+[author]
+  name = "Trae Blain"
+  homepage = "http://traeblain.com"

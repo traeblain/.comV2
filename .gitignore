@@ -1,5 +1,6 @@
 /themes/*
 !/themes/tbcom
+!/themes/tbcom2016
 /public/
 *.sublime*
 /log/

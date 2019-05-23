@@ -12,7 +12,7 @@
  </metadata>
  <g id="layer4">
   <g id="g6797" stroke-linejoin="bevel" transform="translate(-25.403 -30.437)" stroke="#6545a0" stroke-width="5">
-   <g id="g5949" fill="none">
+   <g id="g5949" fill="#fff">
     <path id="path5951" d="m337.39 236.32 135.36-38.38-167.68 6.06z"/>
     <path id="path5953" d="m547.5 262.59 74.75-62.63-149.5-2.02z"/>
     <path id="path5955" d="m337.39 236.32 80.812 26.264 54.548-64.65z"/>
@@ -101,7 +101,7 @@
     <path id="path6177" d="m301.03 860.6 163.64 2.0203-78.792-22.223z"/>
    </g>
    <g id="g6694">
-    <path id="path6696" stroke-linejoin="bevel" d="m318.57 665 345-157.5-345-157.5z" stroke="#6545a0" stroke-width="5" fill="none"/>
+    <path id="path6696" stroke-linejoin="bevel" d="m318.57 665 345-157.5-345-157.5z" stroke="#6545a0" stroke-width="5" fill="#fff"/>
    </g>
   </g>
  </g>

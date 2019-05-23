@@ -4,378 +4,281 @@
 {{ `<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->` | safeHTML }}
 {{ `<!--[if gt IE 8]><!-->` | safeHTML }}<html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#">{{ `<!--<![endif]-->` | safeHTML }}
 
+
 {{ partial "head.html" . }}
-<body class="{{ if .IsHome }}home{{ end }}">
+<body>
 {{ `<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to experience this site.</p><![endif]-->` | safeHTML }}
 {{ $.Scratch.Add "section" "homepage" }}
-<header>
-  <div class="front">
-    <div id="pt">
-      <canvas id="dots" height="400px"></canvas>
-    </div>
-  </div>
-  <div class="sep"></div>
-</header>
+<a id="top"></a>
 
-<main class="container index" role="main">
+{{ .Render "menu" }}
 
+{{ .Render "header" }}
+<!--
+  *****************************
+  Primary Homepage Content
+  *****************************
+-->
+<a id="start"></a>
+<main class="{{ if .IsHome }}home{{ end }}" role="main">
+
+  <!-- ###### Intro ###### -->
+  <section id="intro">
+    <!-- <div class="section-title">
+      <h1>About Me</h1>
+    </div> -->
+    <article class="content about">
+      <h3>I am Trae Blain.</h3>
+      <p>I'm 3 parts Husband, 2 parts Father, 1 part Geek, 2 parts Christ-follower, 6 parts Sarcasm, and 9 parts Sexy...wait...that's too many parts.</p>
+      <p>Here I <a href="#notebook">wax poetic</a>, <a href="#activity">perambulate</a> a bit, <a href="#social" onclick="document.getElementById('goodreadsCheck').click()">read profusely</a>, offer <a href="#social" onclick="document.getElementById('twitterCheck').click()">hot opinions</a>, <a href="#social" onclick="document.getElementById('githubCheck').click()">code</a>...I'm a coder..., <a href="#sensory" onclick="document.getElementById('musicCheck').click()">jam</a>, watch <a href="#sensory" onclick="document.getElementById('movieCheck').click()">movie films</a> and <a href="#sensory" onclick="document.getElementById('televisionCheck').click()">my stories</a>.</p>
+    </article>
+  </section>
+  
   <!-- ###### Blog ###### -->
   <section id="notebook">
-    <div class="row">
-      <div class="twelve columns">
-        <h2>Notebook</h2>
-      </div>
+    <div class="section-title">
+      <h1><a href="{{ "blog" | absURL }}">Notebook</a></h1>
     </div>
-    <div class="row flex">
-      <div class="four columns index-block">
-        <a href="{{ "blog" | absURL }}">&nbsp;</a>
-      </div>
-      <div class="eight columns">
-        {{ $paginator := .Paginate (where .Data.Pages "Draft" false) }}
-        {{ range first 4 $paginator.Pages }}
-          {{ .Render "li" }}
-        {{ end }}
-      </div>
+    {{ $paginator := .Paginate (where .Data.Pages "Draft" false) }}
+    {{ range first 6 $paginator.Pages }}
+      {{ .Render "li" }}
+    {{ end }}
+    <div class="readmore">
+      <p><a href="{{ "blog" | absURL }}">But Wait...There's More!</a></p>
     </div>
-    <div class="sep"></div>
   </section>
 
   <!-- ###### Fitbit ###### -->
-  <section id="fitbit">
-    <div class="row">
-      <div class="twelve columns">
-        <h2>Activity</h2>
-      </div>
+  <section id="activity">
+    <div class="section-title">
+      <h1>Activity</h1>
     </div>
-    <div class="row flex">
-      <div class="four columns index-block">
-        &nbsp;
-      </div>
-      <div class="eight columns">
-        <input checked="" type="radio" name="fitslider" class="fitslide-button" id="fitslide1" selected="true">
-        <input type="radio" name="fitslider" class="fitslide-button" id="fitslide2">
-        <input type="radio" name="fitslider" class="fitslide-button" id="fitslide3">
-        <input type="radio" name="fitslider" class="fitslide-button" id="fitslide4">
-        <div class="fitactive">
-          <label for="fitslide1" class="slide-button">Summary</label>
-          <label for="fitslide2" class="slide-button">Steps</label>
-          <label for="fitslide3" class="slide-button">Floors</label>
-          <label for="fitslide4" class="slide-button">Calories</label>
-        </div>
-        <div id="fitslides">
-          <div class="overflow">
-            <div class="inner">
-              <article class="fitsummary">
-                <h4>Activity Level: <span id="fitlevel">Getting Data...</span></h4>
-                <h5>Steps this Week: <span id="fitsteps">?</span></h5>
-                <h5>Floors this Week: <span id="fitfloors">?</span></h5>
-                <h5>Percentage Active: <span id="fitpercent">?</span></h5>
-              </article>
-              <article>
-                <div id="stepschart"></div>
-              </article>
-              <article>
-                <div id="floorchart"></div>
-              </article>
-              <article>
-                <div id="caloriechart"></div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sep"></div>
-  </section>
+    <svg id="steps" xmlns="http://www.w3.org/2000/svg" version="1.1" class="knob-graph" viewBox="0 0 100 120">
+      <circle class="knob-base" cx="50" cy="50" r="40" style="fill: transparent; stroke: #eee; stroke-width: 5;" />
+      <path class="knob-progress" d="M 50, 50 m 0, -40 a 40,40 0 0 1 0,0"
+        style="fill:transparent;stroke:#66cccc;stroke-width:10;stroke-linecap:round;" />
+      <use xlink:href="#feet" x="50%" y="50%" height="50px" width="50px" transform="translate(-25, -35)"></use>
+      <text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline" text-anchor="middle"
+        style="fill:#66cccc">Fetching</text>
+    </svg>
+    <svg id="calories" xmlns="http://www.w3.org/2000/svg" version="1.1" class="knob-graph"
+      viewBox="0 0 100 120">
+      <circle class="knob-base" cx="50" cy="50" r="40" style="fill: transparent; stroke: #eee; stroke-width: 5;" />
+      <path class="knob-progress" d="M 50, 50 m 0, -40 a 40,40 0 0 1 0,0"
+        style="fill:transparent;stroke:#FDBF2D;stroke-width:10;stroke-linecap:round;" />
+      <use xlink:href="#flame" x="50%" y="50%" height="50px" width="50px" transform="translate(-15, -35)"></use>
+      <text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline" text-anchor="middle"
+        style="fill:#FDBF2D">Fetching</text>
+    </svg>
+    <svg id="floors" xmlns="http://www.w3.org/2000/svg" version="1.1" class="knob-graph"
+      viewBox="0 0 100 120">
+      <circle class="knob-base" cx="50" cy="50" r="40" style="fill: transparent; stroke: #eee; stroke-width: 5;" />
+      <path class="knob-progress" d="M 50, 50 m 0, -40 a 40,40 0 0 1 0,0"
+        style="fill:transparent;stroke:#325d88;stroke-width:10;stroke-linecap:round;" />
+      <use xlink:href="#stairs" x="50%" y="50%" height="50px" width="50px" transform="translate(-15, -32)"></use>
+      <text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline" text-anchor="middle"
+        style="fill:#325d88">Fetching</text>
+    </svg>
+    <svg id="weight" xmlns="http://www.w3.org/2000/svg" version="1.1" class="knob-graph"
+      viewBox="0 0 100 120">
+      <circle class="knob-base" cx="50" cy="50" r="40" style="fill: transparent; stroke: #eee; stroke-width: 5;" />
+      <path class="knob-progress" d="M 50, 50 m 0, -40 a 40,40 0 0 1 0,0"
+        style="fill:transparent;stroke:#28a745;stroke-width:10;stroke-linecap:round;" />
+      <use xlink:href="#scale" x="50%" y="50%" height="50px" width="50px" transform="translate(-20, -37)"></use>
+      <text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline" text-anchor="middle"
+        style="fill:#28a745">Fetching</text>
+    </svg>
 
-  <!-- ###### Dash ###### -->
-  <section id="dash">
-    <div class="row">
-      <div class="twelve columns">
-        <h2>Excursion</h2>
-      </div>
-    </div>
-    <div class="row flex">
-      <div class="four columns index-block">
-        &nbsp;
-      </div>
-      <div class="eight columns">
-        <input checked="" type="radio" name="dashslider" class="dashslide-button" id="dashslide1" selected="true">
-        <input type="radio" name="dashslider" class="dashslide-button" id="dashslide2">
-        <input type="radio" name="dashslider" class="dashslide-button" id="dashslide3">
-        <input type="radio" name="dashslider" class="dashslide-button" id="dashslide4">
-        <div class="dashactive">
-          <label for="dashslide1" class="slide-button">Driving</label>
-          <label for="dashslide2" class="slide-button">Score</label>
-          <label for="dashslide3" class="slide-button">Distance</label>
-          <label for="dashslide4" class="slide-button">States</label>
-        </div>
-        <div id="dashslides">
-          <div class="overflow">
-            <div class="inner">
-              <article class="dashsummary">
-                <h4>Driving Score: <span id="dashscore">Getting Data...</span></h4>
-                <h5>Weekly Distance: <span id="dashdistance">?</span></h5>
-                <h5>Average MPG: <span id="dashmpg">?</span></h5>
-                <h5>Fuel Used: <span id="dashfuel">?</span></h5>
-              </article>
-              <article>
-                <div id="drivescorechart"></div>
-              </article>
-              <article>
-                <div id="drivedistchart"></div>
-              </article>
-              <article>
-                <div id="visitchart"></div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sep"></div>
   </section>
 
   <!-- ###### Social ###### -->
   <section id="social">
-    <div class="row">
-      <div class="twelve columns">
-        <h2>Social</h2>
+    <div class="section-title">
+      <h1>Social</h1>
+    </div>
+    <div class="tabs">
+      <label for="twitterCheck">Twitter</label>
+      <label for="goodreadsCheck">Goodreads</label>
+      <label for="githubCheck">Github</label>
+      <!-- <label for="instagramCheck">Instagram</label> -->
+    </div>
+    <input type="radio" name="social" id="twitterCheck" onclick="tabSelect('twitter')" style="display: none;" checked>
+    <div id="twitterTab" class="tab-content active">
+      <div class="tabs">
+        <div class="active">&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <!-- <div>&nbsp;</div> -->
+      </div>
+      <div id="twitter-status" class="twitter-tweet">
+        <p lang="en" dir="ltr">Getting Tweet...</p>
+        &mdash; @traeblain
       </div>
     </div>
-    <div class="row">
-      <input checked="" type="radio" name="socialslider" class="socialslide-button" id="socialslide1" selected="true">
-      <input type="radio" name="socialslider" class="socialslide-button" id="socialslide2">
-      <input type="radio" name="socialslider" class="socialslide-button" id="socialslide3">
-      <input type="radio" name="socialslider" class="socialslide-button" id="socialslide4">
-      <div class="socialactive">
-        <label for="socialslide1" class="slide-button">Twitter</label>
-        <label for="socialslide2" class="slide-button">Goodreads</label>
-        <label for="socialslide3" class="slide-button">Tumblr</label>
-        <label for="socialslide4" class="slide-button">Github</label>
+    <input type="radio" name="social" id="goodreadsCheck" onclick="tabSelect('goodreads')" style="display: none;">
+    <div id="goodreadsTab" class="tab-content">
+      <div class="tabs">
+        <div>&nbsp;</div>
+        <div class="active">&nbsp;</div>
+        <div>&nbsp;</div>
+        <!-- <div>&nbsp;</div> -->
       </div>
-      <div id="socialslides" class="row">
-        <div class="overflow">
-          <div class="inner flex">
-            <article class="twitter flex">
-              <div class="four columns sub-block index-block">
-                &nbsp;
-              </div>
-              <div class="eight columns" id="twitter-status">
-                <h3>Finding Latest Tweet...</h3>
-              </div>
-            </article>
-            <article class="goodreads flex">
-              <div class="four columns sub-block index-block">
-                &nbsp;
-              </div>
-              <div class="eight columns" id="goodreads-review">
-                <h4>Reading Challenge</h4>
-                <div><a href="https://www.goodreads.com/user_challenges/3831535" class="goodreads-link">You have read <span id="readcount">?</span> of <span id="readtotal">?</span> books.</a></div>
-                <div id="readingprogress"><div></div></div>
-                <div><span id="bookprogress">?</span> books <span id="booksahead">behind</span> schedule</div>
-                <h4>Recently Read</h4>
-                <div id="lastread">Fetching Data...</div>
-              </div>
-            </article>
-            <article class="breakthebike flex">
-              <div class="four columns sub-block index-block">
-                &nbsp;
-              </div>
-              <div class="eight columns" id="breakthebike">
-                <a class="embedly-card" href="http://breakingthebike.com/">Breaking the Bike</a>
-              </div>
-            </article>
-            <article class="github flex">
-              <div class="four columns sub-block index-block">
-                &nbsp;
-              </div>
-              <div class="eight columns" id="github">
-                <div class="gh-wrap">
-                  <div class="gh-upper flex">
-                    Contributions
-                  </div>
-                  <div class="gh-cal">
-                    <img src="https://res.cloudinary.com/dixwznarl/image/upload/github-cal.svg" width="100%">
-                    <span class="qty">Less <span></span><span></span><span></span><span></span><span></span> More</span>
-                  </div>
-                  <div class="gh-flex">
-                    <span class="gh-small">Repositories</span>
-                    <span>12</span>
-                    <span class="gh-small"><a href="https://github.com/traeblain?tab=repositories">Public</a></span>
-                  </div>
-                  <div class="gh-flex">
-                    <span class="gh-small">Stars</span>
-                    <span>18</span>
-                    <span class="gh-small"><a href="https://github.com/stars/traeblain">View</a></span>
-                  </div>
-                  <div class="gh-flex">
-                    <span class="gh-small">More</span>
-                    <span><a href="http://bitbucket.org/traeblain"><i class="fa fa-bitbucket"></i></a> <a href="http://gitlab.com/u/traeblain/"><i class="fa fa-gitlab"></i></a></span>
-                    <span class="gh-small"><a href="https://github.com/traeblain">Github</a></span>
-                  </div>
-                </div>
-              </div>
-            </article>
+      <h4>Reading Challenge</h4>
+      <svg id="readprogress" xmlns="http://www.w3.org/2000/svg" version="1.1" class="knob-graph"
+        viewBox="0 0 100 120">
+        <circle class="knob-base" cx="50" cy="50" r="40" style="fill: transparent; stroke: #eee; stroke-width: 5;" />
+        <path class="knob-progress" d="M 50, 50 m 0, -40 a 40,40 0 0 1 0,0"
+          style="fill:transparent;stroke:#5e81ac;stroke-width:10;stroke-linecap:round;" />
+        <use xlink:href="#goodreads" x="50%" y="50%" height="50px" width="50px" transform="translate(-25, -35)"></use>
+        <text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline" text-anchor="middle"
+          style="fill:#5e81ac">Fetching</text>
+      </svg>
+      <div>
+        <a href="https://www.goodreads.com/user_challenges/15077224">You have read <span id="readcount">X</span> of <span id="readtotal">X</span> books.</a>
+      </div>
+      <div><em><span id="bookprogress">X</span> books <span id="booksahead">around</span> schedule</em></div>
+      <div id="lastread">
+        Fetching status...
+      </div>
+    </div>
+    <!-- <input type="radio" name="social" id="instagramCheck" style="display: none;">
+    <div id="instagramTab" class="tab-content">
+      <div class="tabs">
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div class="active">&nbsp;</div>
+      </div>
+      <h4>Instagram</h4>
+      <div>
+        <img src="https://res.cloudinary.com/dixwznarl/image/upload/c_fill,h_470,w_470/notebook/books-in-grass.jpg"/>
+      </div>
+      <div>
+        BLAH
+      </div>
+    </div> -->
+    <input type="radio" name="social" id="githubCheck" onclick="tabSelect('github')" style="display: none;">
+    <div id="githubTab" class="tab-content">
+      <div class="tabs">
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div class="active">&nbsp;</div>
+        <!-- <div>&nbsp;</div> -->
+      </div>
+      <h4>GitHub Contributions</h4>
+      <div>
+        <img src="https://res.cloudinary.com/dixwznarl/image/upload/github-cal.svg" width="100%">
+      </div>
+      <div class="github-details">
+        <div>
+          <h6>Repositories</h6>
+          <div class="gh-count">18</div>
+          <div><a href="#">Public</a></div>
+        </div>
+        <div>
+          <h6>Stars</h6>
+          <div class="gh-count">18</div>
+          <div><a href="#">View</a></div>
+        </div>
+        <div>
+          <h6>More</h6>
+          <div class="github-more">
+            <a href="#"><svg class="svg svg-github"><use xlink:href="#github"></use></svg></a>
+            <a href="#"><svg class="svg svg-gitlab"><use xlink:href="#gitlab"></use></svg></a>
+            <a href="#"><svg class="svg svg-bitbucket"><use xlink:href="#bitbucket"></use></svg></a>
           </div>
         </div>
       </div>
     </div>
-    <div class="sep"></div>
   </section>
 
   <!-- ###### Entertainment ###### -->
-  <section id="entertainment">
-    <div class="row">
-      <div class="twelve columns">
-        <h2>Sensory</h2>
-      </div>
+  <section id="sensory">
+    <div class="section-title">
+      <h1>Sensory</h1>
     </div>
-    <div class="row">
-      <input checked="" type="radio" name="entslider" class="entslide-button" id="entslide1" selected="true">
-      <input type="radio" name="entslider" class="entslide-button" id="entslide2">
-      <input type="radio" name="entslider" class="entslide-button" id="entslide3">
-      <div class="entactive">
-        <label for="entslide1" class="slide-button">Music</label>
-        <label for="entslide2" class="slide-button">Television</label>
-        <label for="entslide3" class="slide-button">Movies</label>
+    <div class="tabs">
+      <label for="musicCheck">Music</label>
+      <label for="movieCheck">Movie</label>
+      <label for="televisionCheck">Television</label>
+    </div>
+    <input type="radio" name="sensory" id="musicCheck" onclick="tabSelect('music')" style="display: none;" checked>
+    <div id="musicTab" class="tab-content">
+      <div class="tabs">
+        <div class="active">&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
       </div>
-      <div id="entslides" class="row">
-        <div class="overflow">
-          <div class="inner flex">
-            <article class="music flex">
-              <div class="four columns sub-block index-block">
-                &nbsp;
-              </div>
-              <div class="eight columns" id="music">
-                <h4>Loading Data...</h4>
-              </div>
-            </article>
-            <article class="television flex">
-              <div class="four columns sub-block index-block">
-                &nbsp;
-              </div>
-              <div class="eight columns" id="television">
-                <a target="_blank" href="https://www.trakt.tv/users/traeblain"><img width="100%" alt="traeblain" src="https://widgets.trakt.tv/users/3ce95a43ea6297d34071aab460918b21/watched/fanart2@2x.jpg?type=episode" /></a>
-              </div>
-            </article>
-            <article class="movie flex">
-              <div class="four columns sub-block index-block">
-                &nbsp;
-              </div>
-              <div class="eight columns" id="movie">
-                <a target="_blank" href="http://www.trakt.tv/users/traeblain"><img width="100%" alt="traeblain" src="https://widgets.trakt.tv/users/3ce95a43ea6297d34071aab460918b21/watched/fanart2@2x.jpg?type=movie" /></a>
-              </div>
-            </article>
-            <article class="blank flex">
-              &nbsp;
-            </article>
-          </div>
+      <div class="first">
+        <div>
+          <span class="artistbottom">
+            <p><a target="_blank" href="#">Top Artist</a></p>
+            <p><em>X plays</em></p>
+          </span>
+        </div>
+      </div>
+      <div class="rest">
+        <div>
+          <span class="artistbottom">
+            <p><a target="_blank" href="#">2nd Artist</a></p>
+            <p><em>X plays</em></p>
+          </span>
+        </div>
+        <div>
+          <span class="artistbottom">
+            <p><a target="_blank" href="#">3rd Artist</a></p>
+            <p><em>X plays</em></p>
+          </span>
+        </div>
+        <div>
+          <span class="artistbottom">
+            <p><a target="_blank" href="#">4th Artist</a></p>
+            <p><em>X plays</em></p>
+          </span>
+        </div>
+        <div>
+          <span class="artistbottom">
+            <p><a target="_blank" href="#">5th Artist</a></p>
+            <p><em>X plays</em></p>
+          </span>
         </div>
       </div>
     </div>
-    <div class="sep"></div>
+    <input type="radio" name="sensory" id="movieCheck" onclick="tabSelect('movie')" style="display: none;">
+    <div id="movieTab" class="tab-content">
+      <div class="tabs">
+        <div>&nbsp;</div>
+        <div class="active">&nbsp;</div>
+        <div>&nbsp;</div>
+      </div>
+      <a target="_blank" href="http://www.trakt.tv/users/traeblain"><img alt="traeblain"
+        src="https://widgets.trakt.tv/users/3ce95a43ea6297d34071aab460918b21/watched/fanart2@2x.jpg?type=movie"
+        width="100%"></a>
+    </div>
+    <input type="radio" name="sensory" id="televisionCheck" onclick="tabSelect('television')" style="display: none;">
+    <div id="televisionTab" class="tab-content">
+      <div class="tabs">
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div class="active">&nbsp;</div>
+      </div>
+      <a target="_blank" href="https://www.trakt.tv/users/traeblain"><img alt="traeblain"
+        src="https://widgets.trakt.tv/users/3ce95a43ea6297d34071aab460918b21/watched/fanart2@2x.jpg?type=episode"
+        width="100%"></a>
+    </div>
   </section>
 
-  <!-- Crypto -->
-  <section id="misc">
-    <div class="row">
-      <div class="twelve columns">
-        <h2>Misc</h2>
-      </div>
+  <!-- ###### Miscellaneous ###### -->
+  <!-- <section id="misc">
+    <div class="section-title">
+      <h1>Misc</h1>
     </div>
-    <div class="row">
-      <input checked="" type="radio" name="miscslider" class="miscslide-button" id="miscslide1" selected="true">
-      <input type="radio" name="miscslider" class="miscslide-button" id="miscslide2">
-      <div class="miscactive">
-        <label for="miscslide1" class="slide-button">PGP Key</label>
-        <label for="miscslide2" class="slide-button">Bitcoin</label>
-      </div>
-      <div id="miscslides" class="row">
-        <div class="overflow">
-          <div class="inner flex">
-            <article class="pgp flex">
-              <div class="four columns sub-block index-block">
-                &nbsp;
-              </div>
-              <div class="eight columns" id="pgp">
-                <h5>Fingerprint</h5>
-                <p><span>0337</span><span>778D</span><span>2A99</span><span>E3AE</span><span>13A1</span><span>89BA</span><span>5426</span><span>CFE9</span><span>ED1F</span><span>039D</span></p>
-                <h5>64-bit</h5>
-                <p><span>5426</span><span>CFE9</span><span>ED1F</span><span>039D</span></p>
-                <h5>Curl/RAW</h5>
-                <p><a href="https://keybase.io/traeblain/key.asc">https://keybase.io/traeblain/key.asc</a></p>
-                <textarea readonly onclick="selectAll(this)">-----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: GnuPG v2
-
-mQINBFIqOIABEAC8rXwo3cIceM442aLVH731jwFShh6OFPvbFfYJ9KQdnpgdRC9R
-m1D29ie4gPyK5UQzKcKcqHYQXyzqBHZ0DPpyLn/ntFkm9ktt7Ij9jonkN6AOcw8f
-DRB8S8t2G3JxmHoLeFlHQmB+n6pVrrDF5tZWk+VujavRZH+vuIrZT6P5wYSjt0dz
-/1zGlR1aQjCUI+/VqECCZPr0gLxCStUKN4UJXsUY0cEQt59yG8ifmOd8iQGHTLE/
-CufBU+AsKVv0dYLv+9yX6JKLaJAAEbDutbfH01UKPoa8HGgYbGINmg6OPgbNQm2d
-eh6NbdxleeniH0zPT81kewBogPJV9cpyxIjWZeO41oEq8AyJiMVESpRbAuwWM1zN
-OI5q8Jlt0YkFHpkkUjbui87tE9MEb9++pnyRD2b7frMd04Q8D5m6ENDy78Htn5Df
-SbMulUWOsxiYPYsgr6AjrEuqvKOrjZOAyW46ndmzy+53USOXEgABwp4t+PPwtI8F
-olrLtTe92XV7mw3ZYsjDhw90I5jAIBHF/MkJgkrkV0OPj1r+DMz/KbYBJ32ZDSlA
-C0HAW7SUdGsrCOCq1QzO9tlaLpI8QCBz519phEH6a8gddmLysHQFKYVnhbUJgar1
-Dob7SwN8Ege5l5rt5UPuKsEAb1ITEobhjaFp5+85ZUWdZ7RyboJZBqzrQwARAQAB
-tCFUcmFlIEJsYWluIDx0cmFlLmJsYWluQGdtYWlsLmNvbT6JAjkEEwECACMCGw8H
-CwkIBwMCAQYVCAIJCgsEFgIDAQIeAQIXgAUCWGXrAAAKCRBUJs/p7R8Dndc8D/9W
-4f+AyfgVA5tGCIVAFsDEnYGsIFGJNrPCSFLJh64NXrr7eqMjGTcZEopPS9djJLcJ
-MCBosRhi7C5V7aZ3QtP4O6nSjNOXKuILzqiSkXY7XV28NKs+i43S8KMkc/wYkP++
-JUpGoKQPArITMFOIVlxofQ/fP3GorTUcLEmcW3HNjBe73asnQ+Q9XXOWtpS6y3nE
-z62MXeAXKxGIbsC0jivV4QCIdQs4hB0Py1VgZVBIaE3YkSQnDU6OIfhplSrtrawg
-4UjD0WstTIXPXBoKvjEGhy/vJlkiz+J71tA7kNvZ+j95PDqLQbWwMdVlm0YFhdNs
-/TEZtRvT3pJ2PBEeSCoolR8Yc/SZsu1x5723uIbRlLtVofbEmIjvPIg6od7CiVII
-M78UocPvzjmvH1qBoqo8+EhpPuohXY8+r/SUg54chAePaZJxnNpWqfI4se2/Yjrd
-h6obyUc2+w7Kj1steUxrB0RH9HerBsaydk8v3EVTJbXaWsxCqmZ1NHZu9jaMnp9L
-maiAJu07LoJKv/U37Sdlt86F1VOQr7esKavB+zWp4D9ozNabjjDyqqMcXVPmmAnv
-5I0nerOfKUwcIAqLeXsVV6RK3U457tT4cvcD2JBgyqdAAPBqYWrC2h4r/DMx7atc
-s/TMo/ugQIWs5fk6e6ViXsci/oNBl9dOl+PO04U4n7Q3VHJhZSBCbGFpbiAoaHR0
-cDovL3RyYWVibGFpbi5jb20vKSA8dHJhZUB0cmFlYmxhaW4uY29tPokCOQQTAQIA
-IwIbDwcLCQgHAwIBBhUIAgkKCwQWAgMBAh4BAheABQJYZetKAAoJEFQmz+ntHwOd
-YUcP/3r6lqMmWliiw8B5B9DG2h/sZ8nHWPVrXyfkQxUi/ceHqV6juZZ3VNLJS36e
-9NxSOmyFZid1SQ2mveOfPVEcE8YOrVVWlm+69uS1+b1oh+1AYvv62TllifYF95iF
-0saTfdn4AkSqFd2kS45gpot+2ziTcX0vHQWpJkAAvNZ/yNWMWQaoKyuI9bVkm+e0
-ZWtBDd9iriJ2NpRsMjUo2irfDMboKBEj8FSu+z086aLev9ns1I3Xp4CbfEoy9hLT
-3vD3Vtmlr6E7kpg5+/uicZkhwzUKkcEdZ5Qj614GF4CxEP8lcB/RX/HGaLHfAm0o
-bpb/EPw9+I+Oe6NFlNVr39cCcjdzmTjdy+pNZ1Zg/zcR5I3n+553ywAJBPTYc5oL
-6NK2Pt+2Pss0Umssi5pl8hslMAhUa0X66ZfRKfMf98dP+5tOOlt55WpNQNiR492n
-+bKLwaiv50S6oMczwJRjylxwx3HhZFScgmdd8VRYXH249KRkA4k4VdVpxHj5gH/t
-/mDofTsgDRZQZvYsJwzX364R6FLHCupFlTJDoWPWmKTsY4yzQg4I/MAbEGydJnc5
-VwzrG8P7gzpkqZFbGdyV6a1i0JGknmJl8qxwVdWNG0eI2uZpB6pSvgr/9x76bLer
-S00LGTTrXIhjk4Y6sTFwaPOAPH9n7MDY4EJYqLyCp0o2/5rG
-=DdiL
------END PGP PUBLIC KEY BLOCK-----</textarea>
-                <p class="verify"><a href="https://keybase.io/traeblain">Identity Verified at Keybase &raquo;</a></p>
-              </div>
-            </article>
-            <article class="bitcoin flex">
-              <div class="four columns sub-block index-block">
-                &nbsp;
-              </div>
-              <div class="eight columns" id="bitcoin">
-                <p class="bc-title">Send Bitcoin to</p>
-                <p><a href="bitcoin:1MwB5g19ewrq8XzoKpwhJeXcAoWj5ERKqC"><img src="https://res.cloudinary.com/dixwznarl/image/upload/tbcom/bitcoin-address.png"></a></p>
-                <p><pre><code><a href="bitcoin:1MwB5g19ewrq8XzoKpwhJeXcAoWj5ERKqC">1MwB5g19ewrq8XzoKpwhJeXcAoWj5ERKqC</a></code></pre></p>
-                <p class="verify"><a href="https://www.coinbase.com/traeblain">&laquo; Use Coinbase Wallet &raquo;</a></p>
-              </div>
-            </article>
-            <article class="blank flex">
-              &nbsp;
-            </article>
-            <article class="blank flex">
-              &nbsp;
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sep"></div>
-  </section>
-  {{ partial "footer.html" . }}
+  </section> -->
 
 </main>
+{{ partial "footer.html" . }}
+{{ partial "sprites.html" . }}
+{{ partial "modals.html" . }}
 {{ partial "scripts.html" . }}
 
 </body>

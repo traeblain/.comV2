@@ -1,0 +1,21 @@
+    <head profile="http://www.w3.org/2005/10/profile">
+        {{ partial "meta.html" . }}
+        <title>{{ if .IsHome }}{{ else }}{{ if and (.Title) (.IsPage) }}{{ .Title }}{{ else }}{{ replace .Title "Blogs" "Notebook" }}{{ end }} &middot; {{ end }}{{ .Site.Title }}</title>
+        <link rel="canonical" href="{{ .Permalink }}" />
+        {{ if and (.RSSLink) (not .IsHome) }}
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ .RSSLink }}">
+        {{ else }}
+        <link rel="home" type="application/rss+xml" title="RSS" href="{{ .Site.Params.rss | absURL}}">
+        {{ end }}
+        <link rel="stylesheet" type='text/css' href="/css/style.css"/>
+        <!-- FavIcon... -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=BGAXEnakbQ">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=BGAXEnakbQ">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=BGAXEnakbQ">
+        <link rel="manifest" href="/manifest.json?v=BGAXEnakbQ">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg?v=BGAXEnakbQ" color="#5a5a5a">
+        <link rel="shortcut icon" href="/favicon.ico?v=BGAXEnakbQ">
+        <meta name="msapplication-TileColor" content="#ffc40d">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=BGAXEnakbQ">
+        <meta name="theme-color" content="#757575">
+    </head>

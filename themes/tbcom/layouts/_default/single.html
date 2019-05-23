@@ -4,20 +4,29 @@
 {{ `<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->` | safeHTML }}
 {{ `<!--[if gt IE 8]><!-->` | safeHTML }}<html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#">{{ `<!--<![endif]-->` | safeHTML }}
 
+
 {{ partial "head.html" . }}
 <body>
-{{ `<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to experience this site.</p><![endif]-->` | safeHTML }}
+{{ `<!--[if lte IE 9]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p><![endif]-->` | safeHTML }}
 {{ $.Scratch.Add "section" "page" }}
-<main class="container" role="main">
-  {{ partial "header.html" . }}
+<a id="top"></a>
 
+{{ .Render "menu" }}
+
+{{ .Render "header" }}
+
+<!--
+  *****************************
+  Content
+  *****************************
+-->
+<a id="start"></a>
+<main class="{{ .Kind }}" role="main">
   {{ .Render "post" }}
-
-  {{ partial "menu.html" . }}
-
-  {{ partial "footer.html" . }}
-
 </main>
+{{ partial "footer.html" . }}
+{{ partial "sprites.html" . }}
+{{ partial "modals.html" . }}
 {{ partial "scripts.html" . }}
 {{ if .Params.script }}
 <script type="text/javascript" src="{{ .Params.script }}"></script>

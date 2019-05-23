@@ -1,10 +1,10 @@
-name = "Trae Blain Personal"
+name = "Trae Blain Personal 2019"
 license = "MIT"
 licenselink = "None"
 description = "Personal website design by Trae"
 homepage = "http://traeblain.com"
 tags = ["blog", "minimal", "white"]
-features = ["blog", "disqus", "pagination", "rss"]
+features = ["blog", "pagination", "rss"]
 
 [author]
   name = "Trae Blain"

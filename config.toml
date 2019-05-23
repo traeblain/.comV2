@@ -3,7 +3,6 @@ copyright = "This work is licensed under an All Rights Reserved licensed."
 ignoreFiles = ["\\.less$"]
 languageCode = "en-us"
 metaDataFormat = "yaml"
-paginate = 5.0
 publishdir = "public"
 theme = "tbcom"
 title = "Trae Blain"
@@ -19,46 +18,80 @@ title = "Trae Blain"
 [menu]
 
   [[menu.main]]
-    identifier = "Notebook"
+    identifier = "blog"
     name = "Notebook"
-    pre = "<i class='fa fa-home'></i>"
+    title = "Notebook"
     url = "/blog"
-    weight = 1.0
+    weight = 1
 
   [[menu.main]]
-    identifier = "Facebook"
-    name = "Facebook"
-    pre = "<i class='fa fa-facebook'></i>"
-    url = "http://facebook.com/traeblain"
-    weight = 2.0
+    identifier = "activity"
+    name = "Activity"
+    title = "Activity"
+    url = "/#activity"
+    weight = 2
 
   [[menu.main]]
-    identifier = "Twitter"
+    identifier = "social"
+    name = "Social"
+    title = "Social"
+    url = "/#social"
+    weight = 3
+  
+  [[menu.main]]
+    identifier = "sensory"
+    name = "Sensory"
+    title = "Sensory"
+    url = "/#sensory"
+    weight = 4
+  
+  # [[menu.main]]
+  #   identifier = "miscellaneous"
+  #   name = "Miscellaneous"
+  #   title = "Miscellaneous"
+  #   url = "/#miscellaneous"
+  #   weight = 5
+
+  [[menu.social]]
+    identifier = "twitter"
     name = "Twitter"
-    pre = "<i class='fa fa-twitter'></i>"
+    post = "me"
     url = "http://twitter.com/traeblain"
-    weight = 3.0
+    weight = 2
 
-  [[menu.main]]
-    identifier = "Breaking the Bike"
-    name = "B<span class='small'>the</span>B"
-    pre = "<i class='fa fa-bicycle'></i>"
-    url = "http://breakingthebike.com/"
-    weight = 4.0
+  [[menu.social]]
+    identifier = "instagram"
+    name = "Instagram"
+    post = "me"
+    url = "http://instagram.com/traeblain"
+    weight = 3
 
-  [[menu.main]]
-    identifier = "Github"
+  [[menu.social]]
+    identifier = "linkedin"
+    name = "LinkedIn"
+    post = "me"
+    url = "http://linkedin.com/in/traeblain/"
+    weight = 4
+
+  [[menu.social]]
+    identifier = "github"
     name = "Github"
-    pre = "<i class='fa fa-github'></i>"
+    post = "me"
     url = "http://github.com/traeblain"
-    weight = 5.0
+    weight = 5
 
-  [[menu.main]]
-    identifier = "PGP Info (Keybase)"
+  [[menu.social]]
+    identifier = "lock"
     name = "PGP Info"
-    pre = "<i class='fa fa-lock'></i>"
+    post = "me"
     url = "http://keybase.io/traeblain"
-    weight = 6.0
+    weight = 6
+
+  [[menu.social]]
+    identifier = "rss"
+    name = "RSS"
+    url = "/blog/index.xml"
+    weight = 7
 
 [params]
   # disqus = "traeblain"
