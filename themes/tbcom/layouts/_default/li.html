@@ -1,10 +1,10 @@
-{{ if .Params.hidden }}{{ else }}<article class="content {{ .Type }}">
+{{ if .Params.hidden }}{{ else }}<article class="content {{ .Type }} h-entry">
   <header>
     <h1 class="with-subheading">
-      {{ if .Params.link }}<a href="{{ .Params.link }}" target="_blank" itemprop="url">{{ .Title }}</a>
-      {{ else }}<a href="{{ .Permalink }}">{{ .Title }}</a>{{ end }}
+      {{ if .Params.link }}<a href="{{ .Params.link }}" target="_blank" itemprop="url" class="p-name">{{ .Title }}</a>
+      {{ else }}<a href="{{ .Permalink }}" class="p-name">{{ .Title }}</a>{{ end }}
     </h1>
-    <span class="subheading">{{ .Description }}</span>
-    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "02 January 2006" }}</time>
+    <span class="subheading p-summary">{{ .Description }}</span>
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" class="dt-published">{{ .Date.Format "02 January 2006" }}</time>
   </header>
 </article>{{ end }}

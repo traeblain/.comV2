@@ -1,12 +1,15 @@
-<article class="content">
+<article class="content h-entry">
   <header>
-    <h1 class="with-subheading">{{ .Title }}</h1>
-    <span class="subheading">{{ .Params.subtitle }}</span>
-    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "02 January 2006" }}</time>
+    <h1 class="with-subheading p-name">{{ .Title }}</h1>
+    <span class="subheading p-summary">{{ .Description }}</span>
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" class="dt-published">{{ .Date.Format "02 January 2006" }}</time>
     <!-- Need to add tags, either here or at the end... -->
   </header>
-  <p>
+  <p class="e-content">
     {{ .Content }}
+    <a href="https://brid.gy/publish/twitter"></a>
+    <data class="p-bridgy-omit-link" value="false"></data>
+    <a href="{{ .Permalink }}" class="u-url" style="display: none;">Permalink</a>
   </p>
 </article>
 <div class="back-to-top">
