@@ -349,6 +349,7 @@ if (homepage) {
       var r = '<div{0} style="background-image: url({1})"><span class="artistbottom"><p><a target="_blank" href="{5}">{3}</a></p><p><em>{4} plays</em></p></span></div>'
       var html = '<div class="first">'
       var artists = json.topartists.artist
+      var artistthumb
       //var images = ['/images/topartists/first.png', '/images/topartists/second.png', '/images/topartists/third.png', '/images/topartists/fourth.png', '/images/topartists/fifth.png']
       var fanart = async () => {
         for (var i = 0; i < 5; i++) {
@@ -356,13 +357,18 @@ if (homepage) {
           .then(function (res) {
             return res.json()
           }).then(function(j) {
+            if (typeof j.artistthumb !== 'undefined') {
+              artistthumb = j.artistthumb[0].url
+            } else {
+              artistthumb = artists[i].image[3]['#text']
+            }
             if (i < 4) {
-              html = html + r.replace('{0}', '').replace('{1}', j.artistthumb[0].url).replace('{3}', artists[i].name).replace('{4}', artists[i].playcount).replace('{5}', artists[i].url)
+              html = html + r.replace('{0}', '').replace('{1}', artistthumb).replace('{3}', artists[i].name).replace('{4}', artists[i].playcount).replace('{5}', artists[i].url)
               if (i == 0) {
                 html = html + '</div><div class="rest">'
               }
             } else {
-              html = html + r.replace('{0}', '').replace('{1}', j.artistthumb[0].url).replace('{3}', artists[i].name).replace('{4}', artists[i].playcount).replace('{5}', artists[i].url)
+              html = html + r.replace('{0}', '').replace('{1}', artistthumb).replace('{3}', artists[i].name).replace('{4}', artists[i].playcount).replace('{5}', artists[i].url)
               document.getElementById('musicTab').innerHTML = '<div class="tabs"><div class="active">&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div></div>' + html + '</div>'
             }
           })
