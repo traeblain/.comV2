@@ -286,13 +286,11 @@ if (homepage) {
       document.getElementById('weight').getElementsByTagName('text')[0].innerHTML = 'Error'
       // console.log('parsing failed', ex)
     })
-  fetch('https://traeblain.apispark.net/v1/statuses/?%24sort=Link%20DESC&%24size=10', headers)
+  fetch('https://wt-trae-traeblain-com-0.sandbox.auth0-extend.com/get-social-data', headers)
     .then(function(response) {
       return response.json()
     }).then(function(json) {
-
-      var first = json[0]
-      var id = first.Link.split('/')
+      var id = json.results[0].twitter[0].link.split('/')
       document.getElementById('twitter-status').innerHTML = ''
       twttr.widgets.createTweet(
         id[id.length - 1],
@@ -301,21 +299,9 @@ if (homepage) {
       ).then (function (el) {
         // console.log('Tweet Displayed')
       })
-    }).catch(function(ex) {
-      document.getElementById('twitter-status').innerHTML = 'Error getting Tweet...'
-      // console.log('parsing failed', ex)
-    })
-  fetch('https://traeblain.apispark.net/v1/reads/?%24size=80', headers)
-    .then(function(response) {
-      return response.json()
-    }).then(function(json) {
-      json.sort(function (a, b) {
-        return convertDate(b.started) - convertDate(a.started)
-      })
-      var finished = json[json.length - 1]
       var total = 26
-      var count = json.length
-      var perComplete = count/total
+      var finished = json.results[0].goodreads[0]
+      var count = json.results[0].counts[0].goodreads
       var completeSize = (perComplete > 100) ? 100 : perComplete
       var progress = count - Math.floor(daysIntoYear(new Date()) / 365.25 * total)
       document.getElementById('readcount').innerHTML = count
@@ -330,18 +316,50 @@ if (homepage) {
       } else {
         document.getElementById('booksahead').innerHTML = 'behind'
       }
-      var regex = /(^<a.+?)<br[/]>/g
-      var imagelink = regex.exec(finished.Image_Link)[1]
-      regex = /.+author:\s(.+)</g
-      var author = regex.exec(finished.Image_Link)[1]
-      regex = /.+review:\s<.+?>(.+)</gm
-      var review = regex.exec(finished.Image_Link)
-      var details = review ? review[1] : 'Error getting review...follow link below to read it.'
-      document.getElementById('lastread').innerHTML = imagelink + '<h5>' + finished.Title + ' by ' + author + '</h5><p>' + details + '</p><p><a href="' + finished.Link + '">See my review here &raquo;</a></p>'
+      var details = (finished.review.length >= 8) ? finished.review : 'Error getting review...follow link below to read it.'
+      document.getElementById('lastread').innerHTML = finished.imageLink + '<h5>' + finished.title + ' by ' + finished.author + '</h5><p>' + details + '</p><p><a href="' + finished.link + '">See my review here &raquo;</a></p>'
     }).catch(function(ex) {
-      document.getElementById('lastread').innerHTML = 'Data collection failed...'
+      document.getElementById('twitter-status').innerHTML = 'Social Data collection failed...'
+      document.getElementById('lastread').innerHTML = 'Social Data collection failed...'
       // console.log('parsing failed', ex)
     })
+//   fetch('https://traeblain.apispark.net/v1/reads/?%24size=80', headers)
+//     .then(function(response) {
+//       return response.json()
+//     }).then(function(json) {
+//       json.sort(function (a, b) {
+//         return convertDate(b.started) - convertDate(a.started)
+//       })
+//       var finished = json[json.length - 1]
+//       var total = 26
+//       var count = json.length
+//       var perComplete = count/total
+//       var completeSize = (perComplete > 100) ? 100 : perComplete
+//       var progress = count - Math.floor(daysIntoYear(new Date()) / 365.25 * total)
+//       document.getElementById('readcount').innerHTML = count
+//       document.getElementById('readtotal').innerHTML = total
+//       document.getElementById('readprogress').getElementsByTagName('text')[0].innerHTML = Math.round(perComplete * 100) + '% Done'
+//       document.getElementById('readprogress').getElementsByTagName('path')[0].setAttribute('d', knobProgress(Math.min(perComplete, 1)))
+//       document.getElementById('bookprogress').innerHTML = Math.abs(progress)
+//       if (progress === 0) {
+//         document.getElementById('bookprogress').parentNode.innerHTML = 'Reading right on schedule.'
+//       } else if (progress > 0) {
+//         document.getElementById('booksahead').innerHTML = 'ahead of'
+//       } else {
+//         document.getElementById('booksahead').innerHTML = 'behind'
+//       }
+//       var regex = /(^<a.+?)<br[/]>/g
+//       var imagelink = regex.exec(finished.Image_Link)[1]
+//       regex = /.+author:\s(.+)</g
+//       var author = regex.exec(finished.Image_Link)[1]
+//       regex = /.+review:\s<.+?>(.+)</gm
+//       var review = regex.exec(finished.Image_Link)
+//       var details = review ? review[1] : 'Error getting review...follow link below to read it.'
+//       document.getElementById('lastread').innerHTML = imagelink + '<h5>' + finished.Title + ' by ' + author + '</h5><p>' + details + '</p><p><a href="' + finished.Link + '">See my review here &raquo;</a></p>'
+//     }).catch(function(ex) {
+//       document.getElementById('lastread').innerHTML = 'Data collection failed...'
+//       // console.log('parsing failed', ex)
+//     })
   fetch('https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=tblain&api_key=b25b959554ed76058ac220b7b2e0a026&period=6month&format=json', headers)
     .then(function(response) {
       return response.json()
