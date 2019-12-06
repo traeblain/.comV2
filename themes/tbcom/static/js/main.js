@@ -299,9 +299,12 @@ if (homepage) {
       ).then (function (el) {
         // console.log('Tweet Displayed')
       })
+      // START GOODREADS...
+      console.log(json.results[0].goodreads[0], json.results[0].counts[0].goodreads)
       var total = 26
       var finished = json.results[0].goodreads[0]
       var count = json.results[0].counts[0].goodreads
+      var perComplete = count/total
       var completeSize = (perComplete > 100) ? 100 : perComplete
       var progress = count - Math.floor(daysIntoYear(new Date()) / 365.25 * total)
       document.getElementById('readcount').innerHTML = count
