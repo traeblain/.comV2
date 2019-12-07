@@ -315,16 +315,24 @@ if (homepage) {
       var details = (finished.review.length >= 8) ? finished.review : 'Error getting review...follow link below to read it.'
       document.getElementById('lastread').innerHTML = finished.imageLink + '<h5>' + finished.title + ' by ' + finished.author + '</h5><p>' + details + '</p><p><a href="' + finished.link + '">See my review here &raquo;</a></p>'
       // Finish Twitter
-      twttr.widgets.createTweet(
-        id[id.length - 1],
-        document.getElementById('twitter-status'),
-        { align: 'center', theme: 'light' }
-      ).then (function (el) {
-        // console.log('Tweet Displayed')
-      }).catch(function (e) {
-        document.getElementById('twitter-status').innerHTML = 'Twitter display has failed...'
-      })
+      if (typeof twttr === 'undefined') {
+        var htmlTwitter = '<blockquote>{0}<cite><a href="https://twitter.com/traeblain">Trae Blain</a><br><a href="{1}">{2}</a></cite></blockquote>'
+        htmlTwitter = htmlTwitter.replace('{0}', json.results[0].twitter[0].post.replace(/((http:|https:)[^\s]+[\w])/g, '<a href="$1" target="_blank">$1</a>'))
+          .replace(/(\s|^)([@]([^\s]+[\w]))/g, '$1<a href="https://twitter.com/$3" target="_blank">$2</a>')
+          .replace('{1}', json.results[0].twitter[0].link)
+          .replace('{2}', json.results[0].twitter[0].stringdate)
+        document.getElementById('twitter-status').innerHTML = htmlTwitter
+      } else {
+        twttr.widgets.createTweet(
+          id[id.length - 1],
+          document.getElementById('twitter-status'),
+          { align: 'center', theme: 'light' }
+        ).then (function (el) {
+          // console.log('Tweet Displayed')
+        })
+      }
     }).catch(function(ex) {
+      document.getElementById('twitter-status').innerHTML = 'Social Data collection failed...'
       document.getElementById('lastread').innerHTML = 'Social Data collection failed...'
       // console.log('parsing failed', ex)
     })
