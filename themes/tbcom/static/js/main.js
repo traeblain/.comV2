@@ -292,13 +292,6 @@ if (homepage) {
     }).then(function(json) {
       var id = json.results[0].twitter[0].link.split('/')
       document.getElementById('twitter-status').innerHTML = ''
-      twttr.widgets.createTweet(
-        id[id.length - 1],
-        document.getElementById('twitter-status'),
-        { align: 'center', theme: 'light' }
-      ).then (function (el) {
-        // console.log('Tweet Displayed')
-      })
       // START GOODREADS...
       console.log(json.results[0].goodreads[0], json.results[0].counts[0].goodreads)
       var total = 26
@@ -321,8 +314,17 @@ if (homepage) {
       }
       var details = (finished.review.length >= 8) ? finished.review : 'Error getting review...follow link below to read it.'
       document.getElementById('lastread').innerHTML = finished.imageLink + '<h5>' + finished.title + ' by ' + finished.author + '</h5><p>' + details + '</p><p><a href="' + finished.link + '">See my review here &raquo;</a></p>'
+      // Finish Twitter
+      twttr.widgets.createTweet(
+        id[id.length - 1],
+        document.getElementById('twitter-status'),
+        { align: 'center', theme: 'light' }
+      ).then (function (el) {
+        // console.log('Tweet Displayed')
+      }).catch(function (e) {
+        document.getElementById('twitter-status').innerHTML = 'Twitter display has failed...'
+      })
     }).catch(function(ex) {
-      document.getElementById('twitter-status').innerHTML = 'Social Data collection failed...'
       document.getElementById('lastread').innerHTML = 'Social Data collection failed...'
       // console.log('parsing failed', ex)
     })
