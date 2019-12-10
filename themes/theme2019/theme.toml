@@ -1,0 +1,11 @@
+name = "Trae Blain Personal 2019"
+license = "MIT"
+licenselink = "https://github.com/traeblain/.comV2/blob/master/themes/theme2019/LICENSE.md"
+description = "Personal website design by Trae"
+homepage = "http://traeblain.com"
+tags = ["blog", "white"]
+features = ["blog"]
+
+[author]
+  name = "Trae Blain"
+  homepage = "http://traeblain.com"

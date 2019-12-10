@@ -4,7 +4,7 @@ ignoreFiles = ["\\.less$"]
 languageCode = "en-us"
 metaDataFormat = "yaml"
 publishdir = "public"
-theme = "tbcom"
+theme = "theme2019"
 title = "Trae Blain"
 
 [author]

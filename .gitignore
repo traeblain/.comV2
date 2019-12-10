@@ -1,6 +1,7 @@
 /themes/*
 !/themes/tbcom
 !/themes/tbcom2016
+!/themes/theme2019
 /public/
 *.sublime*
 /log/

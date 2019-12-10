@@ -1,0 +1,27 @@
+<header>
+	<div class="header-top">
+		<a href="{{ .Site.BaseURL }}">
+			<img src="/images/tbmonogram.svg" alt="{{ .Site.Title }}" class="header-image">
+		</a>
+		<span>
+			Trae
+		</span>
+	</div>
+	<div class="header-mid">
+		<div class="welcome-text">Welcome</div>
+		<div class="color-list">Colors</div>
+		<div class="search-link">Search</div>
+	</div>
+	<div class="header-bottom">
+		<div>Social Icons</div>
+	</div>
+	<!-- {{ with .Site.Menus.main }}
+	<nav>
+		<ul>
+			{{ range . }}
+			<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+			{{ end }}
+		</ul>
+	</nav>
+	{{ end }} -->
+</header>
