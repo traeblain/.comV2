@@ -195,10 +195,8 @@ aside {
   border-right: 1px solid var(--nord-light);
   font-family: var(--font-family-headline);
   font-weight: 900;
-  font-size: 30vw;
-}
-aside svg {
-  width: 100%;
+  font-size: 8vw;
+  letter-spacing: -0.2rem;
 }
 /* =============================
       Main
