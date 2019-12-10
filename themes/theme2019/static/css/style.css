@@ -36,9 +36,10 @@
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: "Source Code Pro", SFMono-Regular, Menlo, Monaco,
     Consolas, "Liberation Mono", "Courier New", monospace;
-  --font-family-headline: "BinderStyle", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  --font-family-headline: 'Hikou Inline', "Impact", -apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-condensed: "Roboto Condensed", /*iOS*/"AvenirNextCondensed-Bold", "Futura-CondensedExtraBold", /*MacOSX*/HelveticaNeue-CondensedBold, /*Ubuntu*/ "Ubuntu Condensed", "Liberation Sans Narrow",  /*Windows*/"Franklin Gothic Demi Cond", "Arial Narrow", /*Android*/sans-serif-condensed, /*Fallback*/Arial, "Trebuchet MS", "Lucida Grande", Tahoma, Verdana, sans-serif;
 }
 /* =============================
       CSS Reset
@@ -133,16 +134,18 @@ input::-ms-clear {
       Start
    ============================= */
 @font-face {
-  font-family: "BinderStyle";
-  font-style: normal;
-  font-weight: 900;
-  src: url(/fonts/OPBinderStyle-Bold.otf) format("opentype");
+    font-family: 'cinematografica-extrabold';
+    src: url('/fonts/cinematografica-extrabold-webfont.woff2') format('woff2'),
+         url('/fonts/cinematografica-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-  font-family: "BinderStyle";
-  font-style: normal;
-  font-weight: 500;
-  src: url(/fonts/OPBinderStyle-Light.otf) format("opentype");
+    font-family: 'Hikou Inline';
+    src: url('/fonts/hikou-inline.otf') format('opentype'),
+         url('/fonts/hikou-inline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 body {
   display: flex;
@@ -160,9 +163,12 @@ header {
   height: 100vh;
   border-right: 1px solid var(--nord-light);
   text-align: center;
+  font-weight: 200;
+  font-size: 2vmin;
+  text-transform: uppercase;
 }
 .header-image {
-  width: 4rem;
+  width: 3rem;
 }
 .header-top, .header-bottom {
   height: 25vh;
@@ -170,7 +176,10 @@ header {
 .header-top {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-end;  
+}
+.header-top span {
+  margin: 2vmin 0;
 }
 .header-mid {
   border-top: 1px solid var(--nord-light);
@@ -179,6 +188,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 2vmin 0;
 }
 .header-mid .color-list {
   flex-grow: 2;
@@ -194,9 +204,35 @@ aside {
   height: 100vh;
   border-right: 1px solid var(--nord-light);
   font-family: var(--font-family-headline);
-  font-weight: 900;
-  font-size: 8vw;
-  letter-spacing: -0.2rem;
+  font-size: 6vw;
+  font-stretch: condensed;
+  letter-spacing: -0.3vw;
+  padding-top: 9vh;
+}
+aside div {
+  height: 14.2vh;
+}
+aside a {
+  text-decoration: none;
+  color: var(--text-color);
+  opacity: .25;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: baseline;
+  line-height: 8vmin;
+}
+aside a, aside a span{
+  transition: opacity 0.5s ease-in-out;
+}
+aside a:hover, aside a:hover span {
+  opacity: 1;
+}
+aside a span {
+  font-size: 2vw;
+  letter-spacing: -0.1vw;
+  position: relative;
+  opacity: 0;
+  line-height: 1.5vw;
 }
 /* =============================
       Main
@@ -205,7 +241,7 @@ main {
   width: calc(100% - 5rem - 25vw);
   height: 100vh;
   overflow: auto;
-  padding: 0 10rem;
+  padding: 10vh 5vw 0;
 }
 footer {
   width: 25vw;

@@ -1,16 +1,13 @@
 <aside>
+{{ with .Site.Menus.main }}
+	{{ range . }}
 	<div>
-		Notebook
+		<a href="{{ .URL | relURL }}">
+			<span>{{ .Weight | replaceRE "^([0-9])$" "0$1" }}</span><h3>{{ .Name | upper }}</h3>
+		</a>
 	</div>
-	<div>
-		Activity
-	</div>
-	<div>
-		Social
-	</div>
-	<div>
-		Sensory
-	</div>
+	{{ end }}
+{{ end }}
 	<!-- <div>
 		<div>
 			<h3>LATEST POSTS</h3>
