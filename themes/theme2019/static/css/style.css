@@ -130,6 +130,9 @@ input[type=color] {
 input::-ms-clear {
   display: none;
 }
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
 /* =============================
       Start
    ============================= */
@@ -155,6 +158,20 @@ body {
   color: var(--text-color);
   font-family: var(--font-family-sans-serif);
 }
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--primary);
+  transition: color 0.75s ease-in-out;
+}
+a:hover {
+  color: var(--nord);
+}
+.svg {
+  display: inline-block;
+  color: var(--nord);
+  fill: currentColor;
+}
 /* =============================
       Header
    ============================= */
@@ -164,22 +181,28 @@ header {
   border-right: 1px solid var(--nord-light);
   text-align: center;
   font-weight: 200;
-  font-size: 2vmin;
+  font-size: 0.9rem;
   text-transform: uppercase;
+  padding-top: 12.5vh;
+  z-index: 101;
+}
+header div {
+  background-color: var(--background);
 }
 .header-image {
-  width: 3rem;
+  width: 5vh;
+  max-width: 3rem;
 }
-.header-top, .header-bottom {
-  height: 25vh;
+.header-top {
+  height: 12.5vh;
 }
 .header-top {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;  
+  justify-content: flex-start;  
 }
 .header-top span {
-  margin: 2vmin 0;
+  margin: auto 0;
 }
 .header-mid {
   border-top: 1px solid var(--nord-light);
@@ -188,13 +211,88 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2vmin 0;
+  padding: 3vh 0;
 }
 .header-mid .color-list {
   flex-grow: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.header-mid .color-list button {
+  border: 1px solid var(--nord-light);
+  height: 1.5rem;
+  width: 1rem;
+  margin: 0 auto;
+  content: "";
+}
+.header-mid .color-list button:hover {
+  cursor: pointer;
+}
+.header-mid .search-link .svg-search-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.header-mid .search-link a:hover .svg-search-icon {
+  opacity: 1;
+}
+#whiteButton {
+  height: 3rem;
+  background: var(--background);
+}
+#blackButton {
+  border-top: 0;
+  background: var(--text-color);
+}
+#nordButton {
+  border-top: 0;
+  background: var(--primary);
+}
+div[class*='header-bottom'] {
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  position: relative;
+}
+div[class*='header-bottom'] a {
+  display: block;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1px solid var(--nord-light);
+  outline: none;
+  transition: border-bottom-width 0.5s ease, border-bottom-color 0s ease 0.5s;
+}
+div[class*='header-bottom'] a:hover {
+  border-bottom-color: var(--nord);
+  border-bottom-width: calc(2.5rem - 1px);
+  transition: border-bottom-width 0.5s ease, border-bottom-color 0s ease;
+}
+div[class*='header-bottom'] svg {
+  height: 2.5rem;
+  width: 1.25rem;
+  color: var(--nord-light);
+}
+div.header-bottom-more {
+  position: absolute;
+  width: 5rem;
+  height: calc(25vh + 1px);
+  bottom: 0;
+  left: -5rem;
+  transition: left 0.75s;
+  border: 1px solid var(--nord-light);
+  border-left: 0;
+  z-index: 98;
+}
+.header-bottom:hover {
+  /* width: 10rem; */
+}
+div.header-bottom:hover + div, div.header-bottom-more:hover {
+  left: 5rem;
 }
 /* =============================
       Aside/Menu
@@ -207,10 +305,7 @@ aside {
   font-size: 6vw;
   font-stretch: condensed;
   letter-spacing: -0.3vw;
-  padding-top: 9vh;
-}
-aside div {
-  height: 14.2vh;
+  padding-top: calc(12.5vh - 1vw);
 }
 aside a {
   text-decoration: none;
@@ -219,10 +314,12 @@ aside a {
   display: inline-flex;
   flex-direction: row;
   align-items: baseline;
-  line-height: 8vmin;
+  margin-bottom: 2vh;
+  font-weight: 200;
 }
 aside a, aside a span{
   transition: opacity 0.5s ease-in-out;
+  transition: color 0 ease-in;
 }
 aside a:hover, aside a:hover span {
   opacity: 1;
@@ -232,7 +329,6 @@ aside a span {
   letter-spacing: -0.1vw;
   position: relative;
   opacity: 0;
-  line-height: 1.5vw;
 }
 /* =============================
       Main
