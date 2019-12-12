@@ -103,7 +103,7 @@ input, button, textarea, select {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  text-index: 0;
+  text-indent: 0;
   border: none;
   outline: none;
   background: none;
@@ -152,7 +152,6 @@ audio, canvas, iframe, img, svg, video {
 }
 body {
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
   height: 100%;
   color: var(--text-color);
@@ -160,7 +159,7 @@ body {
 }
 a {
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--primary);
   transition: color 0.75s ease-in-out;
 }
@@ -171,6 +170,18 @@ a:hover {
   display: inline-block;
   color: var(--nord);
   fill: currentColor;
+}
+main h2 {
+  font-size: 3.5rem;
+  line-height: 5rem;
+}
+main h3 {
+  font-size: 3rem;
+  line-height: 4.25rem;
+}
+main h4 {
+  font-size: 2.25rem;
+  line-height: 3rem;
 }
 /* =============================
       Header
@@ -339,11 +350,75 @@ main {
   overflow: auto;
   padding: 10vh 5vw 0;
 }
+main article h1 {
+  font-family: var(--font-family-headline);
+  font-size: 6vw;
+  letter-spacing: -0.3vw;
+  display: inline;
+}
+main article time {
+  font-family: var(--font-family-headline);
+  font-size: 1.5rem;
+}
+main article img {
+  max-width: calc(100% - 1rem);
+}
+main article {
+  font-weight: 200;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+main article p {
+  margin-bottom: 0.75rem;
+}
+main article p + p {
+  text-indent: 2rem;
+}
+main figure {
+  border: 1px solid var(--nord);
+  padding: 0.75rem 0.5rem;
+  display: inline-block;
+  text-align: center;
+}
+main figcaption h4 {
+  font-size: 1em;
+  line-height: 1.1em;
+  display: inline;
+}
+hr {
+  background-color: var(--nord-light);
+  border: 0;
+  height: 1px;
+}
+main .align-left {
+  float: left;
+  margin-right: 1.5rem;
+}
+main .align-right {
+  float: right;
+  margin-left: 1.5rem;
+}
+main ul {
+  list-style: square inside none;
+}
+/* =============================
+      Footer
+   ============================= */
 footer {
   width: 25vw;
   height: 25px;
   position: absolute;
   bottom: 25px;
   left: 5rem;
+  padding: 2vh 1vw;
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+footer p a {
+  font-weight: 200;
+}
+footer img {
+  height: 0.8rem;
+  vertical-align: bottom;
 }
 
