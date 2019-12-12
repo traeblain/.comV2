@@ -11,10 +11,6 @@ title = "Trae Blain"
   name = "Trae Blain"
   commonname = "traeblain"
 
-[blackfriday]
-  extensions = ["hardLineBreak"]
-  plainIDAnchors = true
-
 [menu]
 
   [[menu.main]]

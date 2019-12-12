@@ -1,10 +1,51 @@
 {{ define "main" }}
 {{ partial "sidebar.html" . }}
-	<main>
-		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-		{{ range $paginator.Pages }}
-			{{ .Render "summary" }}
-		{{ end }}
-		{{ partial "pagination.html" . }}
+	<main class="home">
+		<div>
+			<h1 class="me-title">{{ .Params.me_title }}</h1>
+			{{ .Params.me_content | safeHTML }}
+		</div>
+		<div class="half-basis">
+			<h1>Latest Posts</h1>
+			{{ range first 3 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+				{{ .Render "titlesonly" }}
+			{{ end }}
+		</div>
+		<div class="half-basis">
+			<h1>FIX ME!</h1>
+			<div class="power-list">
+				{{ range first 3 .Site.Taxonomies.tags.ByCount }}
+				<div><h6><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> <span class="tax-count">{{ .Count }}</span></h6></div>
+				{{ end }}
+			</div>
+		</div>
+		<div>
+			<h1>Garden</h1>
+			<div class="garden">
+				{{ range $key, $taxonomy := .Site.Taxonomies.tags }}
+				<div>
+					<h6><a href="#">{{ $key }}</a>&nbsp;&nbsp;<i class="chevron"></i></h6>
+					<div class="tax-content">
+						<ul>
+							{{ range first 4 $taxonomy.Pages }}
+							<li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .LinkTitle }}</a></li>
+							{{ end }}
+							<li><a href="{{ .Page.Permalink }}">All Items</a></li>
+						</ul>
+					</div>
+				</div>
+				{{ end }}
+			</div>
+		</div>
+		<div>
+			<h1>Activity</h1>
+			<p>{{ .Params.activity_content | safeHTML }}</p>
+		</div>
+		<div>
+			<h1>Social</h1>
+		</div>
+		<div>
+			<h1>Sensory</h1>
+		</div>
 	</main>
 {{ end }}

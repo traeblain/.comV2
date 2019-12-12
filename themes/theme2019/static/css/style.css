@@ -171,6 +171,12 @@ a:hover {
   color: var(--nord);
   fill: currentColor;
 }
+strong {
+  font-weight: 700;
+}
+em {
+  font-style: italic;
+}
 main h2 {
   font-size: 3.5rem;
   line-height: 5rem;
@@ -245,6 +251,8 @@ header div {
   height: 1.6rem;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  display: block;
+  margin: 0 auto;
 }
 .header-mid .search-link a:hover .svg-search-icon {
   opacity: 1;
@@ -299,11 +307,12 @@ div.header-bottom-more {
   border-left: 0;
   z-index: 98;
 }
-.header-bottom:hover {
-  /* width: 10rem; */
-}
 div.header-bottom:hover + div, div.header-bottom-more:hover {
   left: 5rem;
+}
+.headline {
+  background-position: center;
+  background-size: cover;
 }
 /* =============================
       Aside/Menu
@@ -350,37 +359,138 @@ main {
   overflow: auto;
   padding: 10vh 5vw 0;
 }
-main article h1 {
+main h1 {
   font-family: var(--font-family-headline);
   font-size: 6vw;
   letter-spacing: -0.3vw;
   display: inline;
 }
-main article time {
-  font-family: var(--font-family-headline);
-  font-size: 1.5rem;
+main article h1 a {
+  font-weight: 200;
 }
-main article img {
+/* =============================
+      Homepage
+   ============================= */
+main h1.me-title ~ p {
+  margin-top: 2.5vw;
+  font-size: 1.5vw;
+  line-height: 2.25vw;
+}
+main.home {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main.home > div {
+  flex-basis: 100%;
+  margin-bottom: 6vw;
+}
+main.home > div.half-basis {
+  flex-basis: calc(50% - 5vw / 2);
+}
+main.home h1 {
+  font-size: 3vw;
+  letter-spacing: -0.1vw;
+}
+main h1.me-title {
+  font-size: 6vw;
+}
+main.home h6 {
+  font-size: 2vw;
+  display: inline;
+}
+main.home article, .power-list > div {
+  padding: 0.5rem 0.25rem;
+  border-bottom: 1px solid var(--nord-light);
+}
+main.home div.garden {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: flex-start;
+  margin-top: 2vw;
+}
+main.home div.garden > div {
+  flex-basis: calc((100% / 4) - (1.25vw * 3) / 4);
+  border: 1px solid var(--nord-light);
+  padding: 0.5rem 0;
+  text-align: center;
+  margin-bottom: 1.25vw;
+  transition: flex-basis 0.5s ease-in-out;
+}
+main.home div.garden div h6 {
+  font-size: 1.25vw;
+  text-transform: uppercase;
+}
+main.home div.garden .tax-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+main.home div.garden > div.active .tax-content {
+  max-height: calc(12 * 0.5rem + 6 * 1vw);
+}
+main.home div.garden .tax-content ul {
+  padding-top: 0.5rem;
+}
+main.home div.garden .tax-content li {
+  font-size: 1.25vw;
+  border-top: 1px solid var(--nord-light);
+  padding: 0.5rem 0;
+}
+main.home div.garden .tax-content li:last-child {
+  padding-bottom: 0;
+}
+main.home div.garden > div.active {
+  flex-basis: calc(50% - (1.25vw / 3) * 2);
+}
+main article time, main span.tax-count {
+  font-family: var(--font-family-headline);
+  font-size: 2vw;
+}
+main.home article time, main.home span.tax-count {
+  font-size: 1.5vw;
+}
+/* =============================
+      Articles
+   ============================= */
+article .title {
+  display: flex;
+  justify-content: space-between;
+}
+article .title div:last-child {
+  align-self: flex-end;
+  text-align: right;
+  text-transform: uppercase;
+}
+article .title div:last-child a {
+  font-weight: 300;
+}
+.article img {
   max-width: calc(100% - 1rem);
 }
-main article {
+.article {
   font-weight: 200;
   font-size: 1.3rem;
   line-height: 1.8rem;
 }
-main article p {
+.article p{
+  margin-bottom: 0.5rem;
+}
+div.article > p {
   margin-bottom: 0.75rem;
 }
-main article p + p {
+div.article > p + p {
   text-indent: 2rem;
 }
-main figure {
+.article figure {
   border: 1px solid var(--nord);
   padding: 0.75rem 0.5rem;
   display: inline-block;
   text-align: center;
 }
-main figcaption h4 {
+.article figcaption h4 {
   font-size: 1em;
   line-height: 1.1em;
   display: inline;
@@ -398,8 +508,53 @@ main .align-right {
   float: right;
   margin-left: 1.5rem;
 }
-main ul {
-  list-style: square inside none;
+.article ul {
+  list-style: square outside none;
+  margin-left: 2rem;
+}
+.article ol{
+  list-style: decimal outside none;
+  margin-left: 2rem;
+}
+.article blockquote {
+  border-left: 4px solid var(--nord-light);
+  padding: 0 1rem;
+  font-weight: 400;
+}
+pre {
+  white-space: pre;
+  overflow-x: auto;
+  line-height: 1.1rem;
+  font-size: 1rem;
+  padding: 1rem;
+}
+code {
+  font-family: var(--font-family-monospace);
+  white-space: pre;
+}
+pre code {
+  word-break: normal;
+}
+i.chevron {
+    position: relative;
+    display: inline-block;
+    height: 1vw; /*height should be double border*/
+}
+i.chevron::before,
+i.chevron::after {
+    position: absolute;
+    display: block;
+    content: "";
+    border: calc(1vw / 2) solid transparent; /*adjust size*/
+}
+/*Change the four instances of 'top' below to rotate (top/right/bottom/left)*/
+i.chevron::before {
+    left: 0;
+    border-left-color: var(--nord-light); /*Chevron Color*/
+}
+i.chevron::after {
+    left: -2px; /*adjust thickness*/
+    border-left-color: var(--background); /*Match background colour*/
 }
 /* =============================
       Footer

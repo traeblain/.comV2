@@ -2,21 +2,25 @@
 {{ partial "headline.html" . }}
 	<main>
 		<article>
-			<h1>{{ .Title }}</h1>
-			<time>{{ .Date.Format "2006.01" }}</time>
+			<div class="title">
+				<div>
+					<h1>{{ .Title }}</h1>
+					<time>{{ .Date.Format "2006.01" }}</time>
+				</div>
+				<div>
+					{{ with .Params.tags }}
+					<ul id="tags">
+						{{ range . }}
+						<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+						{{ end }}
+					</ul>
+					{{ end }}
+				</div>
+			</div>
 			<hr/>
-			<div>
+			<div class="article">
 				{{ .Content }}
 			</div>
-			{{ with .Params.tags }}
-			<div>
-				<ul id="tags">
-					{{ range . }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-					{{ end }}
-				</ul>
-			</div>
-			{{ end }}
 			<div>
 				{{ template "_internal/disqus.html" . }}
 			</div>

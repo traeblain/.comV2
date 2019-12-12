@@ -1,3 +1,7 @@
-<aside class="headline">
+{{ $background := "none" }}
+{{ if .Params.background }}
+{{ $background = .Params.background }}
+{{ end }}
+<aside class="headline" style="background-image: url({{ $background }});">
 	&nbsp;
 </aside>
