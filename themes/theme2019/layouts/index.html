@@ -1,51 +1,201 @@
 {{ define "main" }}
 {{ partial "sidebar.html" . }}
 	<main class="home">
-		<div>
+		<div id="sectionTitle">
 			<h1 class="me-title">{{ .Params.me_title }}</h1>
 			{{ .Params.me_content | safeHTML }}
 		</div>
-		<div class="half-basis">
+		<div id="sectionLatest" class="half-basis">
 			<h1>Latest Posts</h1>
 			{{ range first 3 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
 				{{ .Render "titlesonly" }}
 			{{ end }}
+			<article>
+				<h6><a href="#">All Posts</a></h6>
+			</article>
 		</div>
-		<div class="half-basis">
+		<div id="sectionFix" class="half-basis">
 			<h1>FIX ME!</h1>
 			<div class="power-list">
-				{{ range first 3 .Site.Taxonomies.tags.ByCount }}
+				{{ range first 4 .Site.Taxonomies.tags.ByCount }}
 				<div><h6><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> <span class="tax-count">{{ .Count }}</span></h6></div>
 				{{ end }}
 			</div>
 		</div>
-		<div>
-			<h1>Garden</h1>
+		<div id="sectionGarden">
+			<h1>Digital Garden</h1>
 			<div class="garden">
 				{{ range $key, $taxonomy := .Site.Taxonomies.tags }}
-				<div>
-					<h6><a href="#">{{ $key }}</a>&nbsp;&nbsp;<i class="chevron"></i></h6>
+				<div id="taxonomy-{{ $key }}">
+					<h6><a href="#" onclick="document.getElementById('taxonomy-{{ $key }}').classList.toggle('active')">{{ $key }}</a>&nbsp;&nbsp;<i class="chevron"></i></h6>
 					<div class="tax-content">
 						<ul>
 							{{ range first 4 $taxonomy.Pages }}
 							<li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .LinkTitle }}</a></li>
-							{{ end }}
-							<li><a href="{{ .Page.Permalink }}">All Items</a></li>
+							{{ end }}{{ if gt .Count 4 }}
+							<li class="tax-all"><em><a href="{{ .Page.Permalink }}">MORE {{ $key | upper }}</a></em>&nbsp;&nbsp;<i class="chevron"></i></li>{{ end }}
 						</ul>
 					</div>
 				</div>
 				{{ end }}
 			</div>
 		</div>
-		<div>
-			<h1>Activity</h1>
-			<p>{{ .Params.activity_content | safeHTML }}</p>
+		<div id="sectionActivity">
+			<div>
+				<h1>Activity</h1>
+				<p>{{ .Params.activity_content | safeHTML }}</p>
+			</div>
+			<svg id="steps" xmlns="http://www.w3.org/2000/svg" version="1.1" class="knob-graph" viewBox="0 0 100 120">
+				<circle class="knob-base" cx="50" cy="50" r="40" style="fill: transparent; stroke: #eee; stroke-width: 5;" />
+				<path class="knob-progress" d="M 50, 50 m 0, -40 a 40,40 0 0 1 0,0"
+					style="fill:transparent;stroke:#66cccc;stroke-width:10;stroke-linecap:round;" />
+				<use xlink:href="#feet" x="50%" y="50%" height="50px" width="50px" transform="translate(-25, -35)"></use>
+				<text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline" text-anchor="middle"
+					style="fill:#66cccc">Fetching</text>
+			</svg>
+			<svg id="calories" xmlns="http://www.w3.org/2000/svg" version="1.1" class="knob-graph"
+				viewBox="0 0 100 120">
+				<circle class="knob-base" cx="50" cy="50" r="40" style="fill: transparent; stroke: #eee; stroke-width: 5;" />
+				<path class="knob-progress" d="M 50, 50 m 0, -40 a 40,40 0 0 1 0,0"
+					style="fill:transparent;stroke:#FDBF2D;stroke-width:10;stroke-linecap:round;" />
+				<use xlink:href="#flame" x="50%" y="50%" height="50px" width="50px" transform="translate(-15, -35)"></use>
+				<text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline" text-anchor="middle"
+					style="fill:#FDBF2D">Fetching</text>
+			</svg>
+			<svg id="floors" xmlns="http://www.w3.org/2000/svg" version="1.1" class="knob-graph"
+				viewBox="0 0 100 120">
+				<circle class="knob-base" cx="50" cy="50" r="40" style="fill: transparent; stroke: #eee; stroke-width: 5;" />
+				<path class="knob-progress" d="M 50, 50 m 0, -40 a 40,40 0 0 1 0,0"
+					style="fill:transparent;stroke:#325d88;stroke-width:10;stroke-linecap:round;" />
+				<use xlink:href="#stairs" x="50%" y="50%" height="50px" width="50px" transform="translate(-15, -32)"></use>
+				<text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline" text-anchor="middle"
+					style="fill:#325d88">Fetching</text>
+			</svg>
+			<svg id="weight" xmlns="http://www.w3.org/2000/svg" version="1.1" class="knob-graph"
+				viewBox="0 0 100 120">
+				<circle class="knob-base" cx="50" cy="50" r="40" style="fill: transparent; stroke: #eee; stroke-width: 5;" />
+				<path class="knob-progress" d="M 50, 50 m 0, -40 a 40,40 0 0 1 0,0"
+					style="fill:transparent;stroke:#28a745;stroke-width:10;stroke-linecap:round;" />
+				<use xlink:href="#scale" x="50%" y="50%" height="50px" width="50px" transform="translate(-20, -37)"></use>
+				<text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline" text-anchor="middle"
+					style="fill:#28a745">Fetching</text>
+			</svg>
 		</div>
-		<div>
-			<h1>Social</h1>
+		<div id="sectionSocial">
+			<div>
+					<h1>Social</h1>
+			</div>
+			<div>
+				<div>
+					<h2>Twitter</h2>
+				</div>
+				<div class="flexbox-h">
+					<blockquote id="twitter-status" class="twitter-tweet">
+						<p lang="en" dir="ltr">Getting Tweet...</p>
+						&mdash; @<a href="https://twitter.com/traeblain">traeblain</a>
+					</blockquote>
+					<div>
+						<a href="https://twitter.com/traeblain">
+							<svg class="svg svg-social-icon"><use xlink:href="#twitter"></use></svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div>
+					<h2>GoodReads</h2>
+				</div>
+				<div class="flexbox-h">
+					<div>
+						<p><a href="https://www.goodreads.com/user_challenges/15077224">You have read <span id="readcount">X</span> of <span id="readtotal">X</span> books.</a></p>
+						<p><em><span id="bookprogress">X</span> books <span id="booksahead">around</span> schedule</em></p>
+						<div id="lastread">
+							<h6><a href="https://www.goodreads.com/book/show/37632682-the-toll?utm_medium=api&amp;utm_source=rss"><img alt="The Toll (Arc of a Scythe, #3)" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1560651381l/37632682._SY75_.jpg"></a><div>The Toll (Arc of a Scythe, #3) by Neal Shusterman</div></h6><p>Really dug the wrap up, it was pleasantly satisfying without being overly predictable. There were a couple characters that I was unsure about, felt under developed with the roll they played, but all in all a wonderful read. <br></p><p><a href="https://www.goodreads.com/review/show/2913202350?utm_medium=api&amp;utm_source=rss">See my review here »</a></p>
+						</div>
+					</div>
+					<div>
+						<svg id="readprogress" xmlns="http://www.w3.org/2000/svg" version="1.1" class="knob-graph"
+						viewBox="0 0 100 120">
+						<circle class="knob-base" cx="50" cy="50" r="40" style="fill: transparent; stroke: #eee; stroke-width: 5;" />
+						<path class="knob-progress" d="M 50, 50 m 0, -40 a 40,40 0 0 1 0,0"
+							style="fill:transparent;stroke:#5e81ac;stroke-width:10;stroke-linecap:round;" />
+						<use xlink:href="#goodreads" x="50%" y="50%" height="50px" width="50px" transform="translate(-25, -35)"></use>
+						<text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline" text-anchor="middle"
+							style="fill:#5e81ac">Fetching</text>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div>
+					<h2>Code</h2>
+				</div>
+				<div class="flexbox-h">
+					<div>
+						<img src="https://res.cloudinary.com/dixwznarl/image/upload/github-cal.svg" width="95%">
+					</div>
+					<div class="repos-container">
+						<div class="repos space">
+								<p>20</p>
+								<p>9</p>
+								<p>19</p>
+						</div>
+						<div class="repos">
+								<a href="https://github.com/traeblain">
+									<svg class="svg svg-social-icon"><use xlink:href="#github"></use></svg>
+								</a>
+								<a href="https://gitlab.com/traeblain">
+										<svg class="svg svg-social-icon"><use xlink:href="#gitlab"></use></svg>
+								</a>
+								<a href="https://bitbucket.org/traeblain/">
+										<svg class="svg svg-social-icon"><use xlink:href="#bitbucket"></use></svg>
+								</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div>
-			<h1>Sensory</h1>
+		<div id="sectionSensory">
+			<div>
+					<h1>Sensory</h1>
+			</div>
+			<div>
+				<h2>Movie</h2>
+			</div>
+			<div>
+				<div>
+					<a target="_blank" href="http://www.trakt.tv/users/traeblain"><img alt="traeblain"
+					src="https://widgets.trakt.tv/users/3ce95a43ea6297d34071aab460918b21/watched/fanart2@2x.jpg?type=movie"
+					width="100%"></a>
+				</div>
+				<div><svg class="svg svg-social-icon"><use xlink:href="#film"></use></svg></div>
+			</div>
+			<div>
+				<h2>Television</h2>
+			</div>
+			<div>
+				<div><a target="_blank" href="https://www.trakt.tv/users/traeblain"><img alt="traeblain"
+					src="https://widgets.trakt.tv/users/3ce95a43ea6297d34071aab460918b21/watched/fanart2@2x.jpg?type=episode"
+					width="100%"></a>
+				</div>
+				<div><svg class="svg svg-social-icon"><use xlink:href="#tv"></use></svg></div>
+			</div>
+			<div>
+				<h2>Music</h2>
+			</div>
+			<div>
+				<div class="top-artists">
+					<div><svg class="svg svg-social-icon"><use xlink:href="#lastfm"></use></svg></div>
+					<div><svg class="svg svg-social-icon"><use xlink:href="#lastfm"></use></svg></div>
+					<div><svg class="svg svg-social-icon"><use xlink:href="#lastfm"></use></svg></div>
+					<div><svg class="svg svg-social-icon"><use xlink:href="#lastfm"></use></svg></div>
+					<div><svg class="svg svg-social-icon"><use xlink:href="#lastfm"></use></svg></div>
+				</div>
+				<div><svg class="svg svg-social-icon"><use xlink:href="#lastfm"></use></svg></div>
+			</div>
+		</div>
+		<div id="backToTop" onclick="document.getElementsByTagName('main')[0].scrollTo({ top: 0, behavior: 'smooth' })">
+				<svg class="svg svg-search-icon" width="9" height="19"><use xlink:href="#upArrow"></use></svg>
 		</div>
 	</main>
 {{ end }}
