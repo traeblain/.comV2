@@ -11,6 +11,11 @@ title = "Trae Blain"
   name = "Trae Blain"
   commonname = "traeblain"
 
+[markup]
+  [markup.highlight]
+    lineNos = true
+    style = "solarized-dark256"
+
 [menu]
 
   [[menu.main]]

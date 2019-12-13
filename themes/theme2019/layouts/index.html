@@ -2,7 +2,7 @@
 {{ partial "sidebar.html" . }}
 	<main class="home" onscroll="scrollProgress()">
 		<div id="sectionTitle">
-			<h1 class="me-title">{{ .Params.me_title }}</h1>
+			<h1 class="me-title">{{ .Params.me_title | upper }}</h1>
 			{{ .Params.me_content | safeHTML }}
 		</div>
 		<div id="sectionLatest" class="half-basis">
@@ -22,7 +22,7 @@
 				{{ end }}
 			</div>
 		</div>
-		<div id="sectionGarden">
+		<div id="sectionGarden"><a id="garden"></a>
 			<h1>Digital Garden</h1>
 			<div class="garden">
 				{{ range $key, $taxonomy := .Site.Taxonomies.tags }}
@@ -87,7 +87,7 @@
 			</div>
 			<div>
 				<div>
-					<h2>Twitter</h2>
+					<h2>Twitter</h2><a id="tweet"></a>
 				</div>
 				<div class="flexbox-h">
 					<blockquote id="twitter-status" class="twitter-tweet">
@@ -103,14 +103,16 @@
 			</div>
 			<div>
 				<div>
-					<h2>GoodReads</h2>
+					<h2>GoodReads</h2><a id="reads"></a>
 				</div>
 				<div class="flexbox-h">
 					<div>
-						<p><a href="https://www.goodreads.com/user_challenges/15077224">You have read <span id="readcount">X</span> of <span id="readtotal">X</span> books.</a></p>
+						<p><a href="{{ .Params.goodreads }}">You have read <span id="readcount">X</span> of <span id="readtotal">X</span> books.</a></p>
 						<p><em><span id="bookprogress">X</span> books <span id="booksahead">around</span> schedule</em></p>
 						<div id="lastread">
-							<h6><a href="https://www.goodreads.com/book/show/37632682-the-toll?utm_medium=api&amp;utm_source=rss"><img alt="The Toll (Arc of a Scythe, #3)" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1560651381l/37632682._SY75_.jpg"></a><div>The Toll (Arc of a Scythe, #3) by Neal Shusterman</div></h6><p>Really dug the wrap up, it was pleasantly satisfying without being overly predictable. There were a couple characters that I was unsure about, felt under developed with the roll they played, but all in all a wonderful read. <br></p><p><a href="https://www.goodreads.com/review/show/2913202350?utm_medium=api&amp;utm_source=rss">See my review here »</a></p>
+							<h6>
+								<div>Fetching Last Book Read Data...</div>
+							</h6>
 						</div>
 					</div>
 					<div>
@@ -128,7 +130,7 @@
 			</div>
 			<div>
 				<div>
-					<h2>Code</h2>
+					<h2>Code</h2><a id="code"></a>
 				</div>
 				<div class="flexbox-h">
 					<div>
@@ -156,11 +158,12 @@
 			</div>
 		</div>
 		<div id="sectionSensory"><a id="sensory"></a>
+
 			<div>
 					<h1>Sensory</h1>
 			</div>
 			<div>
-				<h2>Movie</h2>
+				<h2>Movie</h2><a id="moviefilm"></a>
 			</div>
 			<div>
 				<div>
@@ -171,7 +174,7 @@
 				<div><svg class="svg svg-social-icon"><use xlink:href="#film"></use></svg></div>
 			</div>
 			<div>
-				<h2>Television</h2>
+				<h2>Television</h2><a id="tube"></a>
 			</div>
 			<div>
 				<div><a target="_blank" href="https://www.trakt.tv/users/traeblain"><img alt="traeblain"
@@ -181,18 +184,15 @@
 				<div><svg class="svg svg-social-icon"><use xlink:href="#tv"></use></svg></div>
 			</div>
 			<div>
-				<h2>Music</h2>
+				<h2>Music</h2><a id="listen"></a>
 			</div>
 			<div>
 				<div class="top-artists">
-					<div><svg class="svg svg-social-icon"><use xlink:href="#lastfm"></use></svg></div>
-					<div><svg class="svg svg-social-icon"><use xlink:href="#lastfm"></use></svg></div>
-					<div><svg class="svg svg-social-icon"><use xlink:href="#lastfm"></use></svg></div>
-					<div><svg class="svg svg-social-icon"><use xlink:href="#lastfm"></use></svg></div>
 					<div><svg class="svg svg-social-icon"><use xlink:href="#lastfm"></use></svg></div>
 				</div>
 				<div><svg class="svg svg-social-icon"><use xlink:href="#lastfm"></use></svg></div>
 			</div>
 		</div>
+		<div class="spacer"></div>
 	</main>
 {{ end }}

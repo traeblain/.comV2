@@ -1,14 +1,276 @@
 <script type="text/javascript">
-
-  function scrollProgress() {
-    var winScroll = document.body.scrollTop || document.getElementsByTagName("main")[0].scrollTop;
-    var height = document.getElementsByTagName("main")[0].scrollHeight - document.getElementsByTagName("main")[0].clientHeight;
-    var scrolled = Math.min((winScroll / height) * 100, 100);
-    if (scrolled > 99) {
-      document.getElementById("progressBar").style.top = 0 + "px";
-    } else {
-      document.getElementById("progressBar").style.top = -4 + "px";
-    }
-    document.getElementById("progressBar").style.height = scrolled + "vh";
+function scrollProgress() {
+  var winScroll = document.body.scrollTop || document.getElementsByTagName("main")[0].scrollTop;
+  var height = document.getElementsByTagName("main")[0].scrollHeight - document.getElementsByTagName("main")[0].clientHeight;
+  var scrolled = Math.min((winScroll / height) * 100, 100);
+  if (scrolled > 99) {
+    document.getElementById("progressBar").style.top = 0 + "px";
+  } else {
+    document.getElementById("progressBar").style.top = -4 + "px";
   }
+  document.getElementById("progressBar").style.height = scrolled + "vh";
+}
+
+// Homepage Dancing Lines...
+{{ if eq .Kind "home" }}
+// Cool Background
+// if (document.querySelector("canvas")) {
+var canvas, ctx, color, mono, xloc, yloc, xsize, ysize, mousePosition
+function sizeCanvas(img) {
+  // console.log(img)
+  // if (typeof img !== 'string') {
+  //   img = 'https://res.cloudinary.com/dixwznarl/image/upload/tbcom/tbmonogram.svg'
+  // }
+  canvas = document.querySelector('canvas')
+  ctx = canvas.getContext('2d')
+  color = '#b7bbc2'
+  canvas.width = document.getElementById('particles').offsetWidth
+  canvas.height = document.getElementById('particles').offsetHeight
+  canvas.style.display = 'block'
+  ctx.fillStyle = '#767d8a'
+  ctx.lineWidth = 0.1
+  ctx.strokeStyle = color
+  // mono = new Image()
+  // mono.src = img
+  // xloc = canvas.width / 2 - 125
+  // yloc = canvas.height / 2 - 125
+  // xsize = 250
+  // ysize = 250
+  mousePosition = {
+    x: canvas.width / 2,
+    y: canvas.height / 2
+  }
+}
+
+var moveDir = [20, 8]
+
+function fakemovement() {
+  if (mousePosition.x < 0 || mousePosition.x > canvas.width) {
+    moveDir[0] = -moveDir[0]
+  } else if (mousePosition.y < 0 || mousePosition.y > canvas.height) {
+    moveDir[1] = -moveDir[1]
+  }
+  mousePosition.x += moveDir[0]
+  mousePosition.y += moveDir[1]
+}
+
+var dots = {
+  nb: 175,
+  distance: 100,
+  d_radius: 350,
+  array: []
+}
+
+if (window.innerWidth <= 760) {
+  dots.nb = 50
+}
+
+function Dot() {
+  this.x = Math.random() * canvas.width
+  this.y = Math.random() * canvas.height
+
+  this.vx = -0.5 + Math.random()
+  this.vy = -0.5 + Math.random()
+
+  this.radius = 2 * Math.random()
+}
+
+Dot.prototype = {
+  create: function() {
+    ctx.beginPath()
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
+    ctx.fill()
+  },
+
+  animate: function() {
+    for (var i = 0; i < dots.nb; i++) {
+      var dot = dots.array[i]
+
+      if (dot.y < 0 || dot.y > canvas.height) {
+        dot.vx = dot.vx
+        dot.vy = -dot.vy
+      } else if (dot.x < 0 || dot.x > canvas.width) {
+        dot.vx = -dot.vx
+        dot.vy = dot.vy
+      }
+      dot.x += dot.vx
+      dot.y += dot.vy
+    }
+  },
+
+  line: function() {
+    for (var i = 0; i < dots.nb; i++) {
+      for (var j = 0; j < dots.nb; j++) {
+        var i_dot = dots.array[i]
+        var j_dot = dots.array[j]
+
+        if (
+          i_dot.x - j_dot.x < dots.distance &&
+          i_dot.y - j_dot.y < dots.distance &&
+          i_dot.x - j_dot.x > -dots.distance &&
+          i_dot.y - j_dot.y > -dots.distance
+        ) {
+          if (
+            i_dot.x - mousePosition.x < dots.d_radius &&
+            i_dot.y - mousePosition.y < dots.d_radius &&
+            i_dot.x - mousePosition.x > -dots.d_radius &&
+            i_dot.y - mousePosition.y > -dots.d_radius
+          ) {
+            ctx.beginPath()
+            ctx.moveTo(i_dot.x, i_dot.y)
+            ctx.lineTo(j_dot.x, j_dot.y)
+            ctx.stroke()
+            ctx.closePath()
+          }
+        }
+      }
+    }
+  }
+}
+
+function createDots() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+  for (var i = 0; i < dots.nb; i++) {
+    dots.array.push(new Dot())
+    var dot = dots.array[i]
+    dot.create()
+  }
+
+  dot.line()
+  dot.animate()
+  //ctx.drawImage(mono, xloc, yloc, xsize, ysize)
+}
+
+if (document.querySelector('canvas')) {
+  window.addEventListener('resize', sizeCanvas, true)
+  document.getElementById('particles').parentNode.onmousemove = function(e) {
+    mousePosition.x = e.pageX
+    mousePosition.y = e.pageY - document.documentElement.scrollTop
+    // console.log(mousePosition.y + document.documentElement.scrollTop)
+  }
+  sizeCanvas()
+  setInterval(createDots, 1000 / 30)
+  setInterval(fakemovement, 250)
+}
+
+function knobProgress(value) {
+  var axy = 'a 40,40 0 0 1 0,80'
+  var bxy = ''
+  if (value < 0.5) {
+    axy = 'a 40,40 0 0 1 ' + (40 * Math.sin(Math.PI * (2 * value))) + ',' + (40 * (-1 * (Math.cos(Math.PI * (2 * value)) - 1)))
+  }
+  if (value > 0.5) {
+    bxy = ' a 40,40 0 0 1 ' + (40 * Math.sin(Math.PI * (2 * value))) + ',' + (40 * (Math.cos(Math.PI * (2 * (0.5 - value))) - 1))
+  }
+  return 'M 50, 50 m 0, -40 ' + axy + bxy
+}
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function convertDate(date) {
+  if (date === undefined) { return 0 }
+  var ampm = date.slice(-2)
+  var hour = parseInt(date.match(/[0-1][0-9][:]/)[0].slice(0,-1))
+  if (ampm.toUpperCase() === 'PM') {
+    hour = hour + 12
+  }
+  var cleandate = date.slice(0,-2).replace(' at', '').replace(/[0-1][0-9][:]/, hour + ':')
+  return Date.parse(cleandate)
+}
+
+function daysIntoYear(date){
+  return (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000;
+}
+
+var headers = {
+  method: 'get',
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+  }
+}
+fetch('https://wt-trae-traeblain-com-0.sandbox.auth0-extend.com/get-social-data', headers)
+  .then(function(response) {
+    return response.json()
+  }).then(function(json) {
+    var id = json.results[0].twitter[0].link.split('/')
+    document.getElementById('twitter-status').innerHTML = ''
+    // START GOODREADS...
+    var total = 26
+    var finished = json.results[0].goodreads[0]
+    var count = json.results[0].counts[0].goodreads
+    var perComplete = count/total
+    var completeSize = (perComplete > 100) ? 100 : perComplete
+    var progress = count - Math.floor(daysIntoYear(new Date()) / 365.25 * total)
+    document.getElementById('readcount').innerHTML = count
+    document.getElementById('readtotal').innerHTML = total
+    document.getElementById('readprogress').getElementsByTagName('text')[0].innerHTML = Math.round(perComplete * 100) + '% Done'
+    document.getElementById('readprogress').getElementsByTagName('path')[0].setAttribute('d', knobProgress(Math.min(perComplete, 1)))
+    document.getElementById('bookprogress').innerHTML = Math.abs(progress)
+    if (progress === 0) {
+      document.getElementById('bookprogress').parentNode.innerHTML = 'Reading right on schedule.'
+    } else if (progress > 0) {
+      document.getElementById('booksahead').innerHTML = 'ahead of'
+    } else {
+      document.getElementById('booksahead').innerHTML = 'behind'
+    }
+    var details = (finished.review.length >= 8) ? finished.review : 'Error getting review...follow link below to read it.'
+    document.getElementById('lastread').innerHTML = '<h6>' + finished.imageLink + '<div>' + finished.title + ' by ' + finished.author + '</div></h6><p>' + details + '</p><p><a href="' + finished.link + '">See my review here &raquo;</a></p>'
+    // Finish Twitter
+    if (typeof twttr === 'undefined') {
+      var htmlTwitter = '<p lang="en" dir="ltr">{0}<p><cite><a href="https://twitter.com/traeblain">Trae 🧠</a><time><a href="{1}">{2}</a><time></cite>'
+      htmlTwitter = htmlTwitter.replace('{0}', json.results[0].twitter[0].post.replace(/((http:|https:)[^\s]+[\w])/g, '<a href="$1" target="_blank">$1</a>'))
+        .replace(/(\s|^)([@]([^\s]+[\w]))/g, '$1<a href="https://twitter.com/$3" target="_blank">$2</a>')
+        .replace('{1}', json.results[0].twitter[0].link)
+        .replace('{2}', json.results[0].twitter[0].stringdate)
+      document.getElementById('twitter-status').innerHTML = htmlTwitter
+    } else {
+      twttr.widgets.createTweet(
+        id[id.length - 1],
+        document.getElementById('twitter-status'),
+        { align: 'center', theme: 'light' }
+      ).then (function (el) {
+        // console.log('Tweet Displayed')
+      })
+    }
+  }).catch(function(ex) {
+    document.getElementById('twitter-status').innerHTML = 'Social Data collection failed...'
+    document.getElementById('lastread').innerHTML = 'Social Data collection failed...'
+    // console.log('parsing failed', ex)
+  })
+fetch('https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=tblain&api_key=b25b959554ed76058ac220b7b2e0a026&period=6month&format=json', headers)
+  .then(function(response) {
+    return response.json()
+  }).then(function(json) {
+    var r = '<div style="background-image: url({1})"><span class="artistbottom"><p><a target="_blank" href="{5}">{3}</a></p><p><em>{4} plays</em></p></span></div>'
+    var html = ''
+    var artists = json.topartists.artist
+    var artistthumb
+    var fanart = async () => {
+      for (var i = 0; i < 5; i++) {
+        await fetch('https://webservice.fanart.tv/v3/music/' + artists[i].mbid + '&?api_key=06f56465de874e4c75a2e9f0cc284fa3&format=json')
+        .then(function (res) {
+          return res.json()
+        }).then(function(j) {
+          if (typeof j.artistthumb !== 'undefined') {
+            // Fix this when FanArt fixes API
+            artistthumb = j.artistthumb[0].url.replace('https://assets.', 'https://')
+          } else {
+            artistthumb = artists[i].image[3]['#text']
+          }
+          html = html + r.replace('{1}', artistthumb).replace('{3}', artists[i].name).replace('{4}', artists[i].playcount).replace('{5}', artists[i].url)
+          if (i === 4) {
+            document.getElementsByClassName('top-artists')[0].innerHTML = html
+          }
+        })
+      }
+    }
+    fanart()
+  }).catch(function(ex) {
+    document.getElementsByClassName('top-artists')[0].innerHTML = 'Failed to gather music data...'
+    // console.log('parsing failed', ex)
+  })
+{{ end }}
 </script>
