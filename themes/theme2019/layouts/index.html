@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ partial "sidebar.html" . }}
-	<main class="home">
+	<main class="home" onscroll="scrollProgress()">
 		<div id="sectionTitle">
 			<h1 class="me-title">{{ .Params.me_title }}</h1>
 			{{ .Params.me_content | safeHTML }}
@@ -11,7 +11,7 @@
 				{{ .Render "titlesonly" }}
 			{{ end }}
 			<article>
-				<h6><a href="#">All Posts</a></h6>
+				<h6><a href="/blog/">All Posts</a></h6>
 			</article>
 		</div>
 		<div id="sectionFix" class="half-basis">
@@ -40,7 +40,7 @@
 				{{ end }}
 			</div>
 		</div>
-		<div id="sectionActivity">
+		<div id="sectionActivity"><a id="activity"></a>
 			<div>
 				<h1>Activity</h1>
 				<p>{{ .Params.activity_content | safeHTML }}</p>
@@ -81,7 +81,7 @@
 					style="fill:#28a745">Fetching</text>
 			</svg>
 		</div>
-		<div id="sectionSocial">
+		<div id="sectionSocial"><a id="social"></a>
 			<div>
 					<h1>Social</h1>
 			</div>
@@ -155,7 +155,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="sectionSensory">
+		<div id="sectionSensory"><a id="sensory"></a>
 			<div>
 					<h1>Sensory</h1>
 			</div>
@@ -193,9 +193,6 @@
 				</div>
 				<div><svg class="svg svg-social-icon"><use xlink:href="#lastfm"></use></svg></div>
 			</div>
-		</div>
-		<div id="backToTop" onclick="document.getElementsByTagName('main')[0].scrollTo({ top: 0, behavior: 'smooth' })">
-				<svg class="svg svg-search-icon" width="9" height="19"><use xlink:href="#upArrow"></use></svg>
 		</div>
 	</main>
 {{ end }}

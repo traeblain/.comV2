@@ -1,0 +1,14 @@
+<script type="text/javascript">
+
+  function scrollProgress() {
+    var winScroll = document.body.scrollTop || document.getElementsByTagName("main")[0].scrollTop;
+    var height = document.getElementsByTagName("main")[0].scrollHeight - document.getElementsByTagName("main")[0].clientHeight;
+    var scrolled = Math.min((winScroll / height) * 100, 100);
+    if (scrolled > 99) {
+      document.getElementById("progressBar").style.top = 0 + "px";
+    } else {
+      document.getElementById("progressBar").style.top = -4 + "px";
+    }
+    document.getElementById("progressBar").style.height = scrolled + "vh";
+  }
+</script>

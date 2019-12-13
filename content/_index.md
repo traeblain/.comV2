@@ -1,4 +1,5 @@
 ---
+title: "Trae Blain"
 me_title: "I am Trae Blain"
 me_content: >
   <p>I'm 3 parts Husband, 2 parts Father, 1 part Geek, 2 parts Christ-follower, 6 parts Sarcasm, and 9 parts Sexy...wait...that's too many parts.</p>

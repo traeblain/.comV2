@@ -1,6 +1,10 @@
 {{ define "main" }}
-{{ partial "sidebar.html" . }}
-	<main class="list">
+{{ $background := "none" }}
+{{ range first 1 .Pages }}
+{{ $background = .Params.background }}
+{{ end }}
+{{ partial "headline.html" . }}
+	<main class="list" onscroll="scrollProgress()">
 		{{ if or .Title .Content }}
 		<div>
 			{{ with .Title }}<h1>{{ . }}</h1>{{ end }}

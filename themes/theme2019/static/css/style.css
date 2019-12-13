@@ -346,6 +346,7 @@ aside {
   font-stretch: condensed;
   letter-spacing: -0.3vw;
   padding-top: calc(12.5vh - 1vw);
+  position: relative;
 }
 aside a {
   text-decoration: none;
@@ -369,6 +370,15 @@ aside a span {
   letter-spacing: -0.1vw;
   position: relative;
   opacity: 0;
+}
+#progressBar {
+  position: absolute;
+  top: -4px;
+  right: -3px;
+  border-right: 4px solid var(--nord);
+  border-bottom: 4px solid var(--nord);
+  height: 0vh;
+  width: 0vh;
 }
 /* =============================
       Main
@@ -529,7 +539,7 @@ main.home h2 {
   display: flex;
 }
 #sectionSocial .repos {
-  height: 15vh;
+  height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -596,32 +606,14 @@ main.list article div.title {
   margin: 3vw 0 1vw;
   border-bottom: 1px solid var(--nord-light);
 }
+main.list article div.title div:last-child {
+  margin-bottom: 0.25vw;
+}
+.pagination {
+  margin: 5vh 0.5vw;
+  font-size: calc(1rem + 0.5vw);
+}
 
-#backToTop {
-  height: 2.5rem;
-  width: 2.5rem;
-  border: 1px solid var(--nord-light);
-  background-color: var(--background);
-  display: block;
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  margin: 0;
-  cursor: pointer;
-  transition: border-bottom-width 0.5s ease, border-bottom-color 0s ease 0.5s;
-}
-#backToTop svg {
-  color: var(--nord-light);
-  width: 9px;
-  height: 2.5rem;
-  display: block;
-  margin: 0 auto;
-}
-#backToTop:hover {
-  border-bottom-width: calc(2.5rem - 1px);
-  border-bottom-color: var(--nord);
-  transition: border-bottom-width 0.5s ease, border-bottom-color 0s ease;
-}
 /* =============================
       Articles
    ============================= */
@@ -746,6 +738,49 @@ footer img {
   height: 0.8rem;
   vertical-align: bottom;
 }
+#backToTop, .previous-arrow, .next-arrow {
+  height: 2.5rem;
+  width: 2.5rem;
+  opacity: 1;
+  border: 1px solid var(--nord-light);
+  background-color: var(--background);
+  display: block;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  margin: 0;
+  cursor: pointer;
+  transition: border-bottom-width 0.5s ease, border-bottom-color 0s ease 0.5s;
+}
+#backToTop svg, .previous-arrow svg, .next-arrow svg {
+  color: var(--nord-light);
+  width: 9px;
+  height: 2.5rem;
+  display: block;
+  margin: 0 auto;
+}
+#backToTop:hover, a.previous-arrow:hover, a.next-arrow:hover {
+  border-bottom-width: calc(2.5rem - 1px);
+  border-bottom-color: var(--nord);
+  transition: border-bottom-width 0.5s ease, border-bottom-color 0s ease;
+}
+.previous-arrow, .next-arrow {
+  position: relative;
+  bottom: auto;
+  right: auto;
+}
+.previous-arrow svg {
+  transform: rotate(-90deg);
+}
+.next-arrow svg {
+  transform: rotate(90deg);
+}
+.back-arrow {
+  position: absolute;
+  right: calc(-1rem - 3vw);
+  margin-top: 1rem;
+}
+
 
 @media only screen and (min-width: 1600px) {
   main {
