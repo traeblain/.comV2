@@ -235,6 +235,7 @@ header {
   text-transform: uppercase;
   padding-top: 12.5vh;
   z-index: 101;
+  background-color: var(--background);
 }
 header div {
   background-color: var(--background);
@@ -451,11 +452,27 @@ main h1.me-title {
 }
 main.home h6 {
   font-size: 2vw;
-  display: inline-block;
+  display: inline;
 }
 main.home article, .power-list > div {
   padding: 0.5rem 0.25rem;
   border-bottom: 1px solid var(--nord-light);
+}
+a.qi img {
+  width: 100%;
+}
+a.qi {
+  font-weight: 200;
+  color: var(--text-color);
+  line-height: 1.2;
+}
+a.qi h6 {
+  font-size: 1.75vw;
+  font-weight: 600;
+  color: var(--primary);
+}
+a.qi time {
+  font-style: italic;
 }
 main.home div.garden {
   display: flex;
@@ -477,6 +494,7 @@ main.home div.garden div h6 {
   font-size: 1.25vw;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
+  display: inline-block;
 }
 main.home div.garden .tax-content {
   max-height: 0;
@@ -596,7 +614,7 @@ main.home h2 {
 #sectionSensory .top-artists {
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 17vmin));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   width: 100%;
 }
 #sectionSensory .top-artists div:first-child {
@@ -829,6 +847,60 @@ footer img {
   position: absolute;
   right: calc(-1rem - 3vw);
   margin-top: 1rem;
+}
+/* Search Form */
+#modalBackground {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--nord-light-alpha);
+  z-index: 100;
+}
+#searchBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: 100;
+  align-items: center;
+  background-color: var(--nord-light-alpha);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#searchBox form {
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#searchBox form input {
+  background-color: var(--background);
+  height: 7rem;
+  width: 60vw;
+  font-family: var(--font-family-headline);
+  font-size: 4rem;
+}
+#searchBox form input:last-child {
+  width: 20vw;
+  font-family: var(--font-family-headline);
+  text-transform: uppercase;
+  font-size: 4rem;
+  border-left: 1px solid var(--nord-light);
+}
+#searchBox form input:first-child {
+  text-indent: 1rem;
+}
+#searchBox.show {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
 }
 
 

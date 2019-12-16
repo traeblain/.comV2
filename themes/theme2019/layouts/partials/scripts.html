@@ -1,4 +1,17 @@
 <script type="text/javascript">
+function toggleSearch () {
+  var searchBox = document.getElementById('searchBox')
+  searchBox.classList.toggle('show')
+  if (searchBox.classList.contains('show')) {
+    searchBox.getElementsByTagName('input')[0].focus()
+  }
+}
+function keepSearch(e) {
+  if (!e) var e = window.event
+  e.cancelBubble = true
+  if (e.stopPropagation) e.stopPropagation()  
+}
+
 function scrollProgress() {
   var winScroll = document.body.scrollTop || document.getElementsByTagName("main")[0].scrollTop;
   var height = document.getElementsByTagName("main")[0].scrollHeight - document.getElementsByTagName("main")[0].clientHeight;
@@ -197,6 +210,16 @@ fetch('https://wt-trae-traeblain-com-0.sandbox.auth0-extend.com/get-social-data'
   }).then(function(json) {
     var id = json.results[0].twitter[0].link.split('/')
     document.getElementById('twitter-status').innerHTML = ''
+    // Start Links Display...
+    var link = json.results[0].links[0]
+    var linkHTML = '<h1>Quite Interesting</h1><a class="qi" href="{0}" title="{1}"><img src="{2}"/><h6>{3}</h6><p><time>{4}</time> &mdash; {5}</p></a>'
+    document.getElementById('sectionQI').innerHTML = linkHTML
+      .replace('{0}', link.link)
+      .replace('{1}', link.sourceLink)
+      .replace('{2}', link.imageLink)
+      .replace('{3}', link.title)
+      .replace('{4}', link.stringdate)
+      .replace('{5}', link.data)
     // START GOODREADS...
     var total = 26
     var finished = json.results[0].goodreads[0]

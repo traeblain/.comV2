@@ -7,20 +7,16 @@
 		</div>
 		<div id="sectionLatest" class="half-basis">
 			<h1>Latest Posts</h1>
-			{{ range first 3 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+			{{ range first 3 (where (where .Site.RegularPages ".Draft" false) "Type" "in" .Site.Params.mainSections) }}
 				{{ .Render "titlesonly" }}
 			{{ end }}
 			<article>
 				<h6><a href="/blog/">All Posts</a></h6>
 			</article>
 		</div>
-		<div id="sectionFix" class="half-basis">
-			<h1>FIX ME!</h1>
-			<div class="power-list">
-				{{ range first 4 .Site.Taxonomies.tags.ByCount }}
-				<div><h6><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> <span class="tax-count">{{ .Count }}</span></h6></div>
-				{{ end }}
-			</div>
+		<div id="sectionQI" class="half-basis">
+			<h1>Quite Interesting</h1>
+			<p>Fetching Data...</p>
 		</div>
 		<div id="sectionGarden"><a id="garden"></a>
 			<h1>Digital Garden</h1>

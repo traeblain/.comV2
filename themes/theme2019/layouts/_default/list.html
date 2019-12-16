@@ -7,12 +7,12 @@
 	<main class="list" onscroll="scrollProgress()">
 		{{ if or .Title .Content }}
 		<div>
-			{{ with .Title }}<h1>{{ . | upper }}</h1>{{ end }}
+			{{ with .Title }}<h1>{{ replace . "Blogs" "Notebook" | upper }}</h1>{{ end }}
 			{{ with .Content }}<div>{{ . }}</div>{{ end }}
 		</div>
 		{{ end }}
 
-		{{ range (.Paginator).Pages }}
+		{{ range where (.Paginator).Pages ".Draft" false }}
 			{{ .Render "summary" }}
 		{{ end }}
 		{{ partial "pagination.html" . }}
