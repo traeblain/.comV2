@@ -465,11 +465,18 @@ a.qi {
   font-weight: 200;
   color: var(--text-color);
   line-height: 1.2;
+  display: block;
+  border: 1px solid var(--nord-light);
+  padding: 0.5rem;
 }
 a.qi h6 {
   font-size: 1.75vw;
   font-weight: 600;
   color: var(--primary);
+  transition: color 0.5s ease;
+}
+a.qi:hover h6 {
+  color: var(--nord);
 }
 a.qi time {
   font-style: italic;
