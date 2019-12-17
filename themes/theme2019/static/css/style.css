@@ -423,6 +423,9 @@ main h1 {
 main article h1 a {
   font-weight: 200;
 }
+main article:last-child {
+  padding-bottom: 10vh;
+}
 /* =============================
       Homepage
    ============================= */
@@ -530,7 +533,7 @@ div.garden div.active h6 .chevron {
 }
 main article time, main span.tax-count {
   font-family: var(--font-family-headline);
-  font-size: 2vw;
+  font-size: calc(1rem + 1.1vw);
 }
 main.home article time, main.home span.tax-count {
   font-size: 1.5vw;
@@ -664,10 +667,10 @@ main.home h2 {
   color: var(--background);
 }
 /* LIST */
-main.list article h1 {
+main.list article h1, div.list-title h1 {
   font-size: 4vw;
 }
-main.list article div.title {
+main.list article div.title, main.search article div.list-title {
   align-items: flex-end;
   margin: 3vw 0 1vw;
   border-bottom: 1px solid var(--nord-light);
@@ -684,16 +687,16 @@ main.list article div.title div:last-child {
 /* =============================
       Articles
    ============================= */
-article .title {
+article .title, article .list-title {
   display: flex;
   justify-content: space-between;
 }
-article .title div:last-child {
+article .title div:last-child, article .list-title div:last-child {
   align-self: flex-end;
   text-align: right;
   text-transform: uppercase;
 }
-article .title div:last-child a {
+article .title div:last-child a, article .list-title div:last-child a {
   font-weight: 300;
 }
 .article img {
@@ -749,6 +752,8 @@ blockquote {
   border-left: 4px solid var(--nord-light);
   padding: 0 1rem;
   font-weight: 400;
+  display: inline-block;
+  margin-bottom: 2rem;
 }
 pre {
   white-space: pre;
@@ -825,6 +830,7 @@ footer img {
   right: 2rem;
   margin: 0;
   cursor: pointer;
+  z-index: 101;
   transition: border-bottom-width 0.5s ease, border-bottom-color 0s ease 0.5s;
 }
 #backToTop svg, .previous-arrow svg, .next-arrow svg {
@@ -879,28 +885,29 @@ footer img {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
-#searchBox form {
+#searchBox form, #fourohfour form, form.search-form {
   height: 20vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#searchBox form input {
+#searchBox form input, #fourohfour form input, form.search-form input {
   background-color: var(--background);
   height: 7rem;
   width: 60vw;
   font-family: var(--font-family-headline);
   font-size: 4rem;
 }
-#searchBox form input:last-child {
+#searchBox form input:last-child, #fourohfour form input:last-child, form.search-form input:last-child {
   width: 20vw;
   font-family: var(--font-family-headline);
   text-transform: uppercase;
   font-size: 4rem;
   border-left: 1px solid var(--nord-light);
+  cursor: pointer;
 }
-#searchBox form input:first-child {
+#searchBox form input:first-child, #fourohfour form input:first-child, form.search-form input:first-child {
   text-indent: 1rem;
 }
 #searchBox.show {
@@ -909,10 +916,139 @@ footer img {
   height: 100vh;
   opacity: 1;
 }
+div.list-title ul {
+  list-style: none;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+/* =====================================
+   Bunch of extras
+===================================== */
+#fourohfour {
+  text-align: center;
+}
+#fourohfour h1 {
+  display: block;
+  margin-bottom: 5vh;
+}
+#fourohfour p {
+  font-weight: 100;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#fourohfour form, form.search-form {
+  width: 100%;
+  height: initial;
+  border: 1px solid var(--nord-light);
+}
+
+/* =====================================
+   Bunch of extras
+===================================== */
+/* Add this attribute to the element that needs a tooltip */
+[title] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[title]:before,
+[title]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[title]:before {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: var(--nord);
+  color: var(--background);
+  content: attr(title);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[title]:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid var(--nord);
+  /* border-top: 5px solid hsla(0, 0%, 20%, 0.9); */
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[title]:hover:before,
+[title]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
 
 
 @media only screen and (min-width: 1600px) {
   main {
     width: 1120px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    display: block;
+  }
+  header, .header-mid, div[class*="header-bottom"] {
+    display: flex;
+    padding: 0;
+  }
+  header {
+    width: 100vw;
+    height: 4rem;
+    padding-top: 0;
+  }
+  /* .header-top, div[class*="header-bottom"], .header-top div, .header-mid div, div[class*="header-bottom"] div {
+    display: block;
+  } */
+  .header-top, .header-mid, div[class*="header-bottom"], .header-mid .color-list {
+    flex-direction: row;
+    height: 4rem;
+    width: 25vw;
+  }
+  .header-mid {
+    width: 50vw;
+  }
+  aside {
+    width: 100vw;
+    max-width: 100vw;
+    height: 30vh;
+  }
+  main {
+    width: 100vw;
+    height: auto;
+    padding-top: 2rem;
   }
 }

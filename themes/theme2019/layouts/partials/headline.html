@@ -9,6 +9,9 @@
 	{{ end }}
 {{ end }}
 {{ end }}
+{{ if eq .Kind "404" }}
+	{{ $background = .Site.Params.fofbackgound }}
+{{ end }}
 <aside class="headline" style="background-image: url({{ $background }})">
 	<a href="javascript:history.back()" class="previous-arrow back-arrow">
 		<svg class="svg svg-search-icon" width="9" height="19">

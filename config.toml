@@ -15,6 +15,12 @@ title = "Trae Blain"
   [markup.highlight]
     lineNos = true
     style = "solarized-dark256"
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[outputs]
+  section = ["html", "json"]
+  page = ["html", "json"]
 
 [menu]
 
@@ -100,3 +106,4 @@ title = "Trae Blain"
   # segment = "gveNZnsGRVvfcJKu8CfxI3TgX5buZ0DT"
   # swiftype = "xxvxuPQWopgGHCpFwzi-"
   matomo = true
+  fofbackgound = "https://res.cloudinary.com/dixwznarl/image/upload/tbcom/lego-ninja-a.svg"

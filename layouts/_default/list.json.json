@@ -1,0 +1,7 @@
+{{ define "response" }}
+[
+    {{ range $index, $e := .Data.Pages }}{{ if .Params.hidden }}{{ else }}
+    {{ if $index }}, {{ end }}{{ .Render "item" }}
+    {{ end }}{{ end }}
+]
+{{ end }}

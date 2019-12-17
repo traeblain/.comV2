@@ -297,3 +297,120 @@ fetch('https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=tblain&
   })
 {{ end }}
 </script>
+
+<!-- Search Section! -->
+{{ if eq .Kind "page" }}{{ if eq .Title "Searches" }}
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script type="text/javascript">
+  var url = new URL(window.location)
+  var search = url.searchParams.get("s")
+  document.getElementById("search_{{ .File.UniqueID }}").addEventListener('click', function (e) {
+    e.preventDefault()
+    Search(document.getElementById("searchtext_{{ .Page.File.UniqueID }}").value)
+    var newurl = window.location.origin + window.location.pathname + '?s=' + document.getElementById("searchtext_{{ .Page.File.UniqueID }}").value
+    window.history.pushState({ path: newurl }, '', newurl)
+  })
+  document.getElementById("searchtext_{{ .File.UniqueID }}").addEventListener('keyup', function () {
+    Search(document.getElementById("searchtext_{{ .Page.File.UniqueID }}").value)
+  })
+  var documents = {}
+  var idx = {}
+  var data = []
+  fetch('/blog/index.json')
+    .then(function(response) {
+      return response.json()
+    }).then(function(json) {
+      documents = json.data
+      idx = lunr(function () { 
+        this.ref('href')
+        this.field('title')
+        this.field('tags')
+        this.field('content')
+        documents.forEach(function (doc) { this.add(doc) }, this)
+      })
+      console.log(idx)
+      Search(search)
+    }).catch(function(ex) {
+      documents = [
+        { title: "Error Getting Index" }
+      ]
+    })
+  
+  var insertAfter = function (newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+  }
+  var debounce = function (func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args)
+      }
+      var callNow = immediate && !timeout
+      clearTimeout(timeout)
+      timeout = setTimeout(later, wait)
+      if (callNow) func.apply(context, args)
+    }
+  }
+  var Search = debounce(function (search) { 
+    // var what = document.getElementById('searchtext').value
+    if (search != "") {
+      data = idx.search(search)
+      data.forEach(function (doc) { 
+        doc.title = documents.filter(function (post) { 
+          return post.href === doc.ref })[0].title
+        doc.date = documents.filter(function (post) { 
+          return post.href === doc.ref })[0].date 
+        doc.tags = documents.filter(function (post) {
+          return post.href === doc.ref})[0].tags
+        doc.content = documents.filter(function (post) {
+          return post.href === doc.ref})[0].content
+        doc.image = documents.filter(function (post) {
+          return post.href === doc.ref})[0].image
+        })
+    } else {
+      data = []
+    }
+    Array.prototype.slice.call(document.querySelectorAll('#searchResults article')).forEach(function (item) {
+      item.remove()
+    })
+    // var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    for (var i = data.length - 1; i >= 0; i--) {
+      var article = document.createElement('article')
+      var header = document.createElement('div')
+      header.classList = 'list-title'
+      var title = document.createElement('div')
+      var h1 = document.createElement('h1')
+      var link = document.createElement('a')
+      var time = document.createElement('time')
+      var date = new Date(data[i].date)
+      time.dateTime = data[i].date
+      time.appendChild(document.createTextNode((date.getYear() + 1900) + '.' + ("0" + (date.getMonth() + 1)).substr(-2)))
+      link.href = data[i].ref
+      link.appendChild(document.createTextNode(data[i].title))
+      h1.appendChild(link)
+      title.appendChild(h1)
+      title.appendChild(time)
+      header.appendChild(title)
+      var taglist = document.createElement('div')
+      var tagul = document.createElement('ul')
+      var tagli, taglink
+      data[i].tags.forEach(function (tag) {
+        tagli = document.createElement('li')
+        taglink = document.createElement('a')
+        taglink.href = '/tags/{0}/'.replace('{0}', tag)
+        taglink.appendChild(document.createTextNode(tag))
+        tagli.appendChild(taglink)
+        tagul.appendChild(tagli)
+      })
+      taglist.appendChild(tagul)
+      header.appendChild(taglist)
+      article.appendChild(header)
+      insertAfter(article, document.getElementById('searchResults').firstElementChild)
+      }
+      document.getElementById('searchTerm_{{ .Page.File.UniqueID }}').innerHTML = search
+    }, 250)
+  
+</script>
+{{ end }}{{ end }}

@@ -1,0 +1,16 @@
+<form action="/search" method="GET" class="search-form">
+  <input type="text" placeholder="Search here..." name="s" id="searchtext_{{ .Page.File.UniqueID }}" />
+  <input type="submit" value="Search" id="search_{{ .Page.File.UniqueID }}">
+</form>
+
+<div id="searchResults">
+  <h4>Search results for: <span id="searchTerm_{{ .Page.File.UniqueID }}">...</span></h4>
+</div>
+
+<style>
+  main.search div.title time{ display: none; }
+  main.search div.title h1{ font-size: 3vw; }
+  #searchTerm_{{ .Page.File.UniqueID }} {
+    font-style: italic;
+  }
+</style>

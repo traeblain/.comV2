@@ -1,0 +1,15 @@
+{{ define "main"}}
+{{ partial "headline.html" . }}
+  <main id="fourohfour">
+    <div>
+      <h1>404</h1>
+      <h1>page not found</h1>
+      <p>Oh, no...you have found a part of this site that does not exist...Leave now, my friend! A hoard of mini-ninjas are on their way!</p>
+      <p>Try to search below or go back from whence you came. But do it quickly, before it's too late!!</p>
+      <form action="/search" method="GET">
+        <input type="text" name="s" />
+        <input type="submit" value="Search">
+      </form>
+    </div>
+  </main>
+{{ end }}
