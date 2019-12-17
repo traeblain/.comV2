@@ -358,7 +358,7 @@ aside {
   height: 100vh;
   border-right: 1px solid var(--nord-light);
   font-family: var(--font-family-headline);
-  font-size: 6vw;
+  font-size: calc(2rem + 6vmin);
   font-stretch: condensed;
   padding-top: calc(12.5vh - 1vw);
   position: relative;
@@ -381,7 +381,7 @@ aside a:hover, aside a:hover span {
   opacity: 1;
 }
 aside a span {
-  font-size: 2vw;
+  font-size: calc(1rem + 0.75vw);
   position: relative;
   opacity: 0;
 }
@@ -416,7 +416,7 @@ main {
 }
 main h1 {
   font-family: var(--font-family-headline);
-  font-size: 6vw;
+  font-size: calc(2rem + 2.75vw);
   display: inline;
   line-height: 120%;
 }
@@ -431,8 +431,8 @@ main article:last-child {
    ============================= */
 main h1.me-title ~ p {
   margin-top: 2.5vw;
-  font-size: 1.5vw;
-  line-height: 2.25vw;
+  font-size: calc(1rem + 1vmin);
+  line-height: calc(1.5rem + 1vmin);
   font-weight: 100;
 }
 main.home {
@@ -448,13 +448,13 @@ main.home > div.half-basis {
   flex-basis: calc(50% - 5vw / 2);
 }
 main.home h1 {
-  font-size: 3.75vw;
+  font-size: calc(2rem + 2.75vmin);
 }
 main h1.me-title {
-  font-size: 6vw;
+  font-size: calc(2rem + 6vmin);
 }
 main.home h6 {
-  font-size: 2vw;
+  font-size: calc(1rem + 1.75vmin);
   display: inline;
 }
 main.home article, .power-list > div {
@@ -473,7 +473,7 @@ a.qi {
   padding: 0.5rem;
 }
 a.qi h6 {
-  font-size: 1.75vw;
+  font-size: calc(1rem + 1vmin);
   font-weight: 600;
   color: var(--primary);
   transition: color 0.5s ease;
@@ -501,7 +501,7 @@ main.home div.garden > div {
   transition: flex-basis 0.5s ease-in-out;
 }
 main.home div.garden div h6 {
-  font-size: 1.25vw;
+  font-size: calc(1rem + 0.25vmin);
   text-transform: uppercase;
   margin-bottom: 0.5rem;
   display: inline-block;
@@ -512,10 +512,10 @@ main.home div.garden .tax-content {
   transition: max-height 0.5s ease-in-out;
 }
 main.home div.garden > div.active .tax-content {
-  max-height: calc(12 * 0.5rem + 6 * 1vw);
+  max-height: calc((12 * 0.5rem) + 6 * (1rem + 0.25vmin));
 }
 main.home div.garden .tax-content li {
-  font-size: 1.25vw;
+  font-size: calc(1rem + 0.25vmin);
   border-top: 1px solid var(--nord-light);
   padding: 0.5rem 0;
 }
@@ -533,14 +533,14 @@ div.garden div.active h6 .chevron {
 }
 main article time, main span.tax-count {
   font-family: var(--font-family-headline);
-  font-size: calc(1rem + 1.1vw);
+  font-size: calc(1rem + 1.1vmin);
 }
-main.home article time, main.home span.tax-count {
-  font-size: 1.5vw;
-}
+/* main.home article time, main.home span.tax-count {
+  font-size: calc(1rem + 1.5vmin);
+} */
 main.home h2 {
   font-family: var(--font-family-headline);
-  font-size: 3vw;
+  font-size: calc(1.5rem + 2vmin);
   color: var(--gray);
 }
 #sectionActivity {
@@ -585,6 +585,7 @@ main.home h2 {
 #sectionSocial p {
   font-size: 1.15rem;
   line-height: 1.5rem;
+  font-weight: 200;
 }
 #sectionSocial .repos-container {
   display: flex;
@@ -668,7 +669,7 @@ main.home h2 {
 }
 /* LIST */
 main.list article h1, div.list-title h1 {
-  font-size: 4vw;
+  font-size: calc(2rem + 2.5vmin);
 }
 main.list article div.title, main.search article div.list-title {
   align-items: flex-end;
@@ -885,30 +886,51 @@ footer img {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
+.search-box {
+  display: flex;
+  align-items: center;
+}
+.search-box input, .search-box button {
+  border: 1px solid var(--nord-light);
+}
 #searchBox form, #fourohfour form, form.search-form {
   height: 20vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#searchBox form input, #fourohfour form input, form.search-form input {
+#searchBox form input, #fourohfour form input, form.search-form input, #searchBox form button, #fourohfour form button {
   background-color: var(--background);
   height: 7rem;
-  width: 60vw;
+  width: 70%;
   font-family: var(--font-family-headline);
   font-size: 4rem;
 }
-#searchBox form input:last-child, #fourohfour form input:last-child, form.search-form input:last-child {
-  width: 20vw;
+#searchBox form button, #fourohfour form button, form.search-form button {
+  width: 30%;
   font-family: var(--font-family-headline);
   text-transform: uppercase;
   font-size: 4rem;
   border-left: 1px solid var(--nord-light);
   cursor: pointer;
+  height: 7rem;
+  border-left: 0;
 }
-#searchBox form input:first-child, #fourohfour form input:first-child, form.search-form input:first-child {
+#searchBox form input {
+  width: 60%;
+}
+#searchBox form button {
+  width: 20%;
+}
+#searchBox form input, #fourohfour form input, form.search-form input {
   text-indent: 1rem;
+}
+#searchBox form button svg, .search-box form button svg {
+  width: 3.5rem;
+  height: 3.25rem;
+  margin-top: -1rem;
+  display: none;
 }
 #searchBox.show {
   display: flex;
@@ -939,10 +961,8 @@ div.list-title ul {
   text-align: center;
   margin-bottom: 2rem;
 }
-#fourohfour form, form.search-form {
-  width: 100%;
-  height: initial;
-  border: 1px solid var(--nord-light);
+#fourohfour > div {
+  margin-bottom: 5rem;
 }
 
 /* =====================================
@@ -1017,13 +1037,14 @@ div.list-title ul {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   body {
     display: block;
   }
   header, .header-mid {
     display: flex;
     padding: 0;
+    align-items: center;
   }
   header {
     width: 100vw;
@@ -1035,35 +1056,143 @@ div.list-title ul {
   /* .header-top, div[class*="header-bottom"], .header-top div, .header-mid div, div[class*="header-bottom"] div {
     display: block;
   } */
-  .header-top, .header-mid, .header-mid .color-list {
+  .header-top, .header-mid, .header-mid .color-list, .header-mid .search-link {
     flex-direction: row;
     height: 4rem;
     width: 25vw;
+    align-items: center;
+    padding: 0 2vw;
   }
   div[class*="header-bottom"] {
     display: none;
   }
+  .welcome-text {
+    display: none;
+  }
+  .header-mid .search-link {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .header-mid .search-link .svg-search-icon {
+    opacity: 1;
+  }
   .header-mid {
     width: 75vw;
+    border: 0;
+  }
+  .header-mid .color-list button {
+    transform: rotate(90deg);
+    margin: auto 0;
+    width: 1.5rem;
   }
   aside {
     width: 100vw;
     max-width: 100vw;
     height: 30vh;
+    padding: 0;
   }
   aside a.back-arrow {
     display: none;
   }
+  #progressBar {
+    top: 0px;
+    right: inherit;
+    left: -4px;
+  }
   main {
     width: 100vw;
-    height: auto;
+    height: calc(100vh - 30vh - 4rem); /*Need to FIX this*/
     padding-top: 2rem;
   }
   footer {
     width: 100vw;
-    position: relative;
+    /* position: relative; */
     left: 0;
-    padding: 0 5vw;
+    padding: 0.2rem 5vw;
     bottom: 0;
+    background: var(--background);
+    z-index: 50;
+    font-size: 0.5rem;
+    height: auto;
+  }
+  footer img {
+    height: 0.5rem;
+  }
+  #backToTop {
+    bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  main.home > div.half-basis {
+    flex-basis: 100%;
+  }
+  main.home div.garden > div {
+    flex-basis: calc((100% / 2) - (1.25vw * 3) / 4);
+  }
+  main.home div.garden > div.active {
+    flex-basis: 100%;
+  }
+  .flexbox-h {
+    flex-direction: column;
+  }
+  .flexbox-h > *:last-child, #sectionSensory > div > div:last-child {
+    display: none;
+  }
+  div.pagination {
+    flex-direction: row;
+  }
+  div.pagination > * {
+    display: block !important;
+  }
+  #readProgressSVG {
+    order: -1;
+    display: block;
+  }
+  #sectionSocial .repos-container {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1vh;
+  }
+  #sectionSocial .repos {
+    height: 2.5rem;
+    flex-direction: row;
+  }
+  #sectionSocial .repos.space {
+    order: 2;
+  }
+  #sectionSocial .repos.space p {
+    font-size: 1.5rem;
+  }
+  main .align-left {
+    float: none;
+    margin: 0 auto;
+    display: table;
+  }
+  main .align-right {
+    float: none;
+    margin: 0 auto;
+    display: table;
+  }
+  #searchBox form button svg, .search-box form button svg {
+    display: inline;
+  }
+  #searchBox form button span, .search-box form button span {
+    display: none;
+  }
+  main.list article div.title, main.search article div.list-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  div.list-title ul li, div.title ul li {
+    display: inline;
+    line-height: 1.5rem;
+  }
+  div.list-title ul li:before, div.title ul li:before {
+    content: " | ";
+    color: var(--nord-light);
+  }
+  div.list-title ul li:first-child:before, div.title ul li:first-child:before {
+    content: "";
   }
 }

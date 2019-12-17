@@ -13,15 +13,37 @@ function keepSearch(e) {
 }
 
 function scrollProgress() {
+  var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   var winScroll = document.body.scrollTop || document.getElementsByTagName("main")[0].scrollTop;
   var height = document.getElementsByTagName("main")[0].scrollHeight - document.getElementsByTagName("main")[0].clientHeight;
   var scrolled = Math.min((winScroll / height) * 100, 100);
-  if (scrolled > 99) {
-    document.getElementById("progressBar").style.top = 0 + "px";
+  var shrinkImg = Math.min((winScroll / Math.max(document.documentElement.clientHeight, window.innerHeight || 0)) * 100, 100);
+  if (width >= 1025) {
+    if (scrolled > 99) {
+      document.getElementById("progressBar").style.top = 0 + "px";
+      document.getElementById("progressBar").style.left = "";
+    } else {
+      document.getElementById("progressBar").style.top = -4 + "px";
+      document.getElementById("progressBar").style.left = "";
+    }
+    document.getElementById("progressBar").style.height = scrolled + "vh";
+    document.getElementById("progressBar").style.width = "";
+    document.querySelector('aside').style.height = "";
+    document.querySelector('main').style.height = "";
   } else {
-    document.getElementById("progressBar").style.top = -4 + "px";
+    if (scrolled > 99) {
+      document.getElementById("progressBar").style.left = 0 + "px";
+      document.getElementById("progressBar").style.top = "";
+    } else {
+      document.getElementById("progressBar").style.left = -4 + "px";
+      document.getElementById("progressBar").style.top = "";
+    }
+    document.getElementById("progressBar").style.width = scrolled + "vw";
+    document.getElementById("progressBar").style.height = "";
+    var asideheight = (shrinkImg >= 30) ? 0 : (30 - (shrinkImg))
+    document.querySelector('aside').style.height = asideheight + "vh";
+    document.querySelector('main').style.height = "calc(100vh - " + asideheight + "vh - 4rem)";
   }
-  document.getElementById("progressBar").style.height = scrolled + "vh";
 }
 
 // Homepage Dancing Lines...
