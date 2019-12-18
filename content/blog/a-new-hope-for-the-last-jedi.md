@@ -27,8 +27,8 @@ But this interpretation never sat well with me.  I also don't think that it sat 
 
 I believe that Abrams has this same opinion.  With the rise of the First Order and appearance of Snoke, this seems to be reinforced.  Kylo was also born from Luke's Jedi training work, and if Luke was creating balance...then why would such a great power be so easily seduced to the dark side?
 
-> _It  is where you are from. What you are made of. The dark side—and the  light. The finest sculptor cannot fashion a masterpiece from poor  materials. He must have something pure, something strong, something  unbreakable, with which to work._
-> <cite>- Snoke</cite>
+> _It is where you are from. What you are made of. The dark side—and the  light. The finest sculptor cannot fashion a masterpiece from poor materials. He must have something pure, something strong, something unbreakable, with which to work._
+> <cite>Snoke</cite>
 
 So this comes back to "What is balance in the Force?" and how would one restore this?
 
@@ -46,12 +46,16 @@ Luke wants to end the Jedi, because the Jedi's "Fully Good" belief continues to 
 
 {{< figure src="https://res.cloudinary.com/dixwznarl/image/upload/c_fill,h_320,w_390/notebook/b76aad25c80f086c_Screen_Shot_2017-04-14_at_10.10.02_AM.jpg" alt="Jedi Symbol?" class="align-right" >}}
 
-> _There is no emotion, there is peace.
-> There is no ignorance, there is knowledge.
-> There is no passion, there is serenity.
-> There is no chaos, there is harmony.
-> There is no death, there is the Force._
-> <cite>- The Jedi Code</cite>
+> _There is no emotion, there is peace._
+>
+> _There is no ignorance, there is knowledge._
+>
+> _There is no passion, there is serenity._
+>
+> _There is no chaos, there is harmony._
+>
+> _There is no death, there is the Force._
+> <cite>The Jedi Code</cite>
 
 The Jedi Code is wrong and what a great turn of the story would it be to place the Jedi themselves as the bad guys.  I liken the Jedi to the Crusaders.  Great intentions but massively and dangerously mislead.  In their actions to do what they felt was the great good, they left behind a wake of pain, misery, and problems that took centuries to change...and even now there is not a full recovery.  The Jedi Code pushes the Force to fill the void with evil in the areas the Code rejects.
 

@@ -6,7 +6,7 @@ tags:
 - theology
 background: 'https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:good/notebook/cosmos.jpg'
 text_color: light
-script: '//cdn.embedly.com/widgets/platform.js'
+script: ''
 title: Kalām Cosmological Argument
 date: 2018-11-21 10:36:48 -0600
 description: Been thinking about some serious philosophical considerations for the
@@ -18,7 +18,7 @@ I've been thinking heavily on the [Kalām Cosmological Argument](https://plato.s
 
 ## The Argument
 
-<blockquote class="embedly-card" data-card-key="bdfeaf9e6c274fb9a648b7a58a607e12"><h4><a href="https://www.youtube.com/embed/6CulBuMCLg0">The Kalam Cosmological Argument</a></h4><p>For more resources visit: http://www.reasonablefaith.org/kalam View the Fine Tuning Argument animation video: https://www.youtube.com/watch?v=UpIiIaC4kRA View the Moral Argument animation video: https://www.youtube.com/watch?v=OxiAikEk2vU View Leibniz' Contingency Argument animation video: https://www.youtube.com/watch?v=FPCzEP0oD7I Reasonable Faith features the work of philosopher and theologian Dr. William Lane Craig and aims to provide in the public arena an intelligent,</p></blockquote>
+{{< youtube 6CulBuMCLg0 >}}
 
 First, let's define the argument.  The video above does a decent job of defining the argument and some of the rational behind them. Let's show the simplicity here:
 
@@ -42,7 +42,7 @@ Agnostic astronomer, [Robert Jastrow](https://en.wikipedia.org/wiki/Robert_Jastr
 
 > At this moment it seems as though science will never be able to raise the curtain on the mystery of creation. For the scientist who has lived by his faith in the power of reason, the story ends like a bad dream. He has scaled the mountains of ignorance; he is about to conquer the highest peak; as he pulls himself over the final rock, he is greeted by a band of theologians who have been sitting there for centuries.
 >  
-> <cite>- Robert Jastrow, God and the Astronomers</cite>
+> <cite>Robert Jastrow, God and the Astronomers</cite>
 
 Additionally, through findings quantum physics and others the need for the big bang to occur out of 'nothing' has become probable (as all things in quantum physics are probable).  In other words, the 't = 0' point that the Big Bang gave us is actually some 't = n' on an infinite time scale.  But there is a question to the physical possibility of an infinite.  Due to the understanding of the Second Law of Thermodynamics (entropy cannot decrease), if there was an infinite past, there'd be no asymmetry between the past and the future.  The other argument is that even if these physical infinites existed, traversing them would be impossible.  If time was infinite, and if we humans are a set of successive beings and evolution is a successive process of one after another, then we'd never actually hit any realizable point in time.  It requires a beginning to ground these successive events.
 
