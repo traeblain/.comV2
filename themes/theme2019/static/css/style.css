@@ -241,6 +241,9 @@ blockquote.twitter-tweet time {
   display: block;
   font-size: 85%;
 }
+iframe {
+  max-width: 100%;
+}
 /* =============================
       Header
    ============================= */
@@ -800,13 +803,31 @@ main .align-right {
   float: right;
   margin-left: 1.5rem;
 }
+main .align-center {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+main .button {
+  border: 4px solid var(--nord-light);
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: var(--background);
+  border-radius: 15px;
+}
+main .button-primary {
+  background: var(--primary);
+  color: var(--background);
+}
 .article ul {
   list-style: square outside none;
   margin-left: 2rem;
+  margin-bottom: 1rem;
 }
 .article ol{
   list-style: decimal outside none;
   margin-left: 2rem;
+  margin-bottom: 1rem;
 }
 blockquote {
   border-left: 4px solid var(--nord-light);

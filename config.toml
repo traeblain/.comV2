@@ -1,11 +1,13 @@
 baseurl = "//traeblain.com/"
-copyright = "This work is licensed under an All Rights Reserved licensed."
+copyright = "This work is licensed under a Creative Commons Attribution 4.0 International License."
 ignoreFiles = ["\\.less$"]
 languageCode = "en-us"
 metaDataFormat = "yaml"
 publishdir = "public"
 theme = "theme2019"
 title = "Trae Blain"
+enableEmoji = true
+enableGitInfo = true
 
 [author]
   name = "Trae Blain"
@@ -19,7 +21,7 @@ title = "Trae Blain"
     unsafe = true
 
 [outputs]
-  section = ["html", "json"]
+  section = ["html", "json", "rss"]
   page = ["html", "json"]
 
 [menu]
@@ -101,9 +103,7 @@ title = "Trae Blain"
     weight = 7
 
 [params]
-  # disqus = "traeblain"
-  rss = "/blog/index.xml"
-  # segment = "gveNZnsGRVvfcJKu8CfxI3TgX5buZ0DT"
-  # swiftype = "xxvxuPQWopgGHCpFwzi-"
   matomo = true
   fofbackgound = "https://res.cloudinary.com/dixwznarl/image/upload/tbcom/lego-ninja-a.svg"
+  description = "I'm 3 parts Husband, 2 parts Father, 1 part Geek, 2 parts Christ-follower, 6 parts Sarcasm, and 9 parts Sexy...wait...that's too many parts..."
+  rssLimit = 20
