@@ -5,6 +5,7 @@ backend:
     - admin
 media_folder: "static/images"
 public_folder: "/images"
+publish_mode: "editorial_workflow"
 collections:
   - name: "blog"
     label: "Blog"
@@ -18,16 +19,10 @@ collections:
           label: "Date",
           name: "date",
           widget: "datetime",
-          format: "YYYY-MM-DD HH:mm:ss ZZ",
+          format: "YYYY-MM-DD HH:mm:ss ZZ"
         }
       - { label: "Summary", name: "description", widget: "text" }
       - { label: "Background Image", name: "background", widget: "string" }
-      - {
-          label: "Header Text Color",
-          name: "text_color",
-          widget: "select",
-          options: ["dark", "light"],
-        }
       - { label: "Tags", name: "tags", widget: "list", allow_add: false }
       - { label: "Script", name: "script", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }

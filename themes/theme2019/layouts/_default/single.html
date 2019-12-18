@@ -22,6 +22,7 @@
 				{{ .Content }}
 			</div>
 			<div>
+				{{ partial "share.html" . }}
 				{{ template "_internal/disqus.html" . }}
 			</div>
 		</article>

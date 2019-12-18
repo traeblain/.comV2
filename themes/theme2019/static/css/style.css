@@ -353,7 +353,7 @@ div[class*='header-bottom'] {
   z-index: 100;
   position: relative;
 }
-div[class*='header-bottom'] a, #sectionSocial .repos a {
+div[class*='header-bottom'] a, #sectionSocial .repos a, .share-links a {
   display: block;
   height: 2.5rem;
   width: 2.5rem;
@@ -362,15 +362,31 @@ div[class*='header-bottom'] a, #sectionSocial .repos a {
   transition: border-bottom-width 0.5s ease, border-bottom-color 0s ease 0.5s;
   text-align: center;
 }
-div[class*='header-bottom'] a:hover, #sectionSocial .repos a:hover {
+div[class*='header-bottom'] a:hover, #sectionSocial .repos a:hover, .share-links a:hover {
   border-bottom-color: var(--primary);
   border-bottom-width: calc(2.5rem - 1px);
   transition: border-bottom-width 0.5s ease, border-bottom-color 0s ease;
 }
-div[class*='header-bottom'] svg, #sectionSocial .repos svg {
+div[class*='header-bottom'] svg, #sectionSocial .repos svg, .share-links a svg {
   height: 2.5rem;
   width: 1.25rem;
   color: var(--nord-light);
+}
+.share-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem 0;
+}
+.share-links a.cheers-icon, .share-links a.cheers-icon svg {
+  height: 5rem;
+  width: 5rem;
+}
+.share-links a.cheers-icon svg {
+  width: 3rem;
+}
+.share-links a.cheers-icon:hover {
+  border-bottom-width: 5rem;
 }
 div.header-bottom-more {
   position: absolute;
