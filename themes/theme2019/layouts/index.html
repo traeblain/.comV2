@@ -23,7 +23,7 @@
 			<div class="garden">
 				{{ range $key, $taxonomy := .Site.Taxonomies.tags }}
 				<div id="taxonomy-{{ $key }}">
-					<h6><a href="#" onclick="document.getElementById('taxonomy-{{ $key }}').classList.toggle('active')">{{ $key }}</a>&nbsp;&nbsp;<i class="chevron"></i></h6>
+					<h6><a href="#" onclick="document.getElementById('taxonomy-{{ $key }}').classList.toggle('active');return false;">{{ $key }}</a>&nbsp;&nbsp;<i class="chevron"></i></h6>
 					<div class="tax-content">
 						<ul>
 							{{ range first 4 $taxonomy.Pages }}
@@ -116,10 +116,9 @@
 						viewBox="0 0 100 120">
 						<circle class="knob-base" cx="50" cy="50" r="40" style="fill: transparent; stroke: #eee; stroke-width: 5;" />
 						<path class="knob-progress" d="M 50, 50 m 0, -40 a 40,40 0 0 1 0,0"
-							style="fill:transparent;stroke:#5e81ac;stroke-width:10;stroke-linecap:round;" />
+							style="fill:transparent;stroke-width:10;stroke-linecap:round;" />
 						<use xlink:href="#goodreads" x="50%" y="50%" height="50px" width="50px" transform="translate(-25, -35)"></use>
-						<text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline" text-anchor="middle"
-							style="fill:#5e81ac">Fetching</text>
+						<text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline" text-anchor="middle">Fetching</text>
 						</svg>
 					</div>
 				</div>

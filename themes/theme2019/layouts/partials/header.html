@@ -1,7 +1,8 @@
 <header>
 	<div class="header-top">
 		<a href="{{ .Site.BaseURL }}">
-			<img src="/images/tbmonogram.svg" alt="{{ .Site.Title }}" class="header-image">
+			<svg class="header-image"><use xlink:href="#monogram"></use></svg>
+			<!-- <img src="/images/tbmonogram.svg" alt="{{ .Site.Title }}" class="header-image"> -->
 		</a>
 		<span>
 			Trae
@@ -9,15 +10,16 @@
 	</div>
 	<div class="header-mid">
 		<div class="welcome-text">
-			<a href="#">Welcome</a>
+			<a href="#" id="welcomeText" onclick="copyWelcome();return false">Welcome</a>
+			<input type="text" value="Welcome" style="height: 0;width: 0;"/>
 		</div>
 		<div class="color-list">
-			<button id="whiteButton">&nbsp;</button>
-			<button id="blackButton">&nbsp;</button>
-			<button id="nordButton">&nbsp;</button>
+			<button id="whiteButton" onclick="colorChange('white')">&nbsp;</button>
+			<button id="blackButton" onclick="colorChange('black')">&nbsp;</button>
+			<button id="nordButton" onclick="colorChange('nord')">&nbsp;</button>
 		</div>
 		<div class="search-link">
-			<a href="#" onclick="toggleSearch()"><svg class="svg svg-search-icon"><use xlink:href="#search"></use></svg><span>Search</span></a>
+			<a href="#" onclick="toggleSearch();return false;"><svg class="svg svg-search-icon"><use xlink:href="#search"></use></svg><span>Search</span></a>
 		</div>
 	</div>
 	<div class="header-bottom">

@@ -1,4 +1,4 @@
-<aside>
+{{ if eq .Kind "home" }}<aside class="particles">{{else}}<aside>{{end}}
 {{ with .Site.Menus.main }}
 	{{ range . }}
 	<div>

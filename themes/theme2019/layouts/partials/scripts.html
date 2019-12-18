@@ -1,3 +1,4 @@
+{{ if .IsHome }}<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>{{end}}
 <script type="text/javascript">
 function toggleSearch () {
   var searchBox = document.getElementById('searchBox')
@@ -5,12 +6,45 @@ function toggleSearch () {
   if (searchBox.classList.contains('show')) {
     searchBox.getElementsByTagName('input')[0].focus()
   }
+  return false
 }
 function keepSearch(e) {
   if (!e) var e = window.event
   e.cancelBubble = true
   if (e.stopPropagation) e.stopPropagation()  
+  return false
 }
+
+colorChange(window.name)
+function colorChange(color) {
+  if (color === "") return
+  document.querySelector('body').className = ""
+  document.querySelector('body').classList.add(color)
+  window.name = color
+}
+
+function copyWelcome() {
+  var text = document.getElementById('welcomeText').nextElementSibling
+  text.select()
+  text.setSelectionRange(0, 50)
+  document.execCommand("copy")
+}
+function changeWelcome() {
+  var welcome = [
+    'Welcome', 'Vítejte', 'Welkom', 'Bienvenue', 'καλως', 'Fáilte', 
+    'Witamy', 'Croeso', 'באַגריסן', '欢迎', 'स्वागत हे', 'ようこそ', 
+    '환영', 'خوش آمدید', 'ברוך הבא', 'خوش آمدی', 'Welkom', 'Bonvenon'
+  ]
+  var welcomeTooLong = [
+    'Velkommen', 'Bienvenido', 'Добродошли', 'Willkommen', 'Benvenuto', 'Gratissimum'
+  ]
+  // Sourced from: https://www.indifferentlanguages.com/words/welcome
+  var pick = welcome[Math.floor(Math.random()*welcome.length)]
+  var element = document.getElementById('welcomeText')
+  element.innerHTML = pick
+  element.nextElementSibling.value = pick
+}
+changeWelcome()
 
 function scrollProgress() {
   var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -30,6 +64,7 @@ function scrollProgress() {
     document.getElementById("progressBar").style.width = "";
     document.querySelector('aside').style.height = "";
     document.querySelector('main').style.height = "";
+    {{ if .IsHome }}document.querySelector('#particles').style.height = "";{{ end }}
   } else {
     if (scrolled > 99) {
       document.getElementById("progressBar").style.left = 0 + "px";
@@ -42,12 +77,13 @@ function scrollProgress() {
     document.getElementById("progressBar").style.height = "";
     var asideheight = (shrinkImg >= 30) ? 0 : (30 - (shrinkImg))
     document.querySelector('aside').style.height = asideheight + "vh";
-    document.querySelector('main').style.height = "calc(100vh - " + asideheight + "vh - 4rem)";
+    {{ if .IsHome }}document.querySelector('#particles').style.height = asideheight + "vh";{{ end }}
+    document.querySelector('main').style.height = "calc(100vh - " + asideheight + "vh - 4rem{{ if .IsHome }} - 4px{{end}})";
   }
 }
 
 // Homepage Dancing Lines...
-{{ if eq .Kind "home" }}
+{{ if .IsHome }}
 // Cool Background
 // if (document.querySelector("canvas")) {
 var canvas, ctx, color, mono, xloc, yloc, xsize, ysize, mousePosition
@@ -92,7 +128,7 @@ function fakemovement() {
 var dots = {
   nb: 175,
   distance: 100,
-  d_radius: 350,
+  d_radius: 200,
   array: []
 }
 
@@ -234,7 +270,7 @@ fetch('https://wt-trae-traeblain-com-0.sandbox.auth0-extend.com/get-social-data'
     document.getElementById('twitter-status').innerHTML = ''
     // Start Links Display...
     var link = json.results[0].links[0]
-    var linkHTML = '<h1>Quite Interesting</h1><a class="qi" href="{0}" title="{1}"><img src="{2}"/><h6>{3}</h6><p><time>{4}</time> &mdash; {5}</p></a>'
+    var linkHTML = '<h1>Quite Interesting</h1><a class="qi" href="{0}"><img src="{2}"/><h6>{3}</h6><p><time>{4}</time> &mdash; {5} <span>{1}</span></p></a>'
     document.getElementById('sectionQI').innerHTML = linkHTML
       .replace('{0}', link.link)
       .replace('{1}', link.sourceLink)
