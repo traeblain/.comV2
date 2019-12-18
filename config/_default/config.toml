@@ -101,9 +101,3 @@ enableGitInfo = true
     name = "RSS"
     url = "/blog/index.xml"
     weight = 7
-
-[params]
-  matomo = true
-  fofbackgound = "https://res.cloudinary.com/dixwznarl/image/upload/tbcom/lego-ninja-a.svg"
-  description = "I'm 3 parts Husband, 2 parts Father, 1 part Geek, 2 parts Christ-follower, 6 parts Sarcasm, and 9 parts Sexy...wait...that's too many parts..."
-  rssLimit = 20

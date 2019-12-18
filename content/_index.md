@@ -7,4 +7,5 @@ me_content: >
 activity_content: >
   Section Suspended due to <a href="https://www.pbs.org/newshour/economy/making-sense/google-bought-fitbit-what-does-that-mean-for-your-data-privacy">Google's Purchase of FitBit</a>.
 goodreads: https://www.goodreads.com/user_challenges/15077224
+description: "List of writings of Trae Blain..."
 ---

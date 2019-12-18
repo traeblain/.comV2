@@ -1,7 +1,7 @@
 ---
 date: "2016-01-14"
 title: "Wheres the Old Content?"
-tags: [ "site", "blog", "housekeeping" ]
+tags: [ "site", "blog" ]
 background: "https://res.cloudinary.com/dixwznarl/image/upload/q_auto:eco/v1480480426/space-horizon_sb61gl.jpg"
 ---
 

@@ -2,7 +2,6 @@
 tags:
 - science
 - theology
-- calvinism
 - bible
 background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:good,w_2048/notebook/space-time.jpg
 text_color: dark

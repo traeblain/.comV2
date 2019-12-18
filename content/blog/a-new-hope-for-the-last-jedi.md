@@ -1,8 +1,7 @@
 ---
 tags:
 - movies
-- star wars
-- force
+- thoughts
 background: https://res.cloudinary.com/dixwznarl/image/upload/q_jpegmini/notebook/star-wars-last-jedi-main.jpg
 text_color: light
 script: ''

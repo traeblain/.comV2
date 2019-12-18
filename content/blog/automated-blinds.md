@@ -3,7 +3,7 @@ title: 'Automated Blinds'
 date: '2017-01-05'
 background: https://res.cloudinary.com/dixwznarl/image/upload/notebook/a-house.jpg
 text_color: "dark"
-tags: ['automation', 'wink', 'smart home']
+tags: ['automation', 'smart home']
 ---
 
 I've really be into home automation lately.  "Hey Alexa, turn on my living room lights!" It's been interesting diving into the world of home automation.  But the one thing I could not fine (at least reasonably priced), was something that would open and close my blinds.  Since I'm currently on parental leave from work and needed something to exercise my mind, I decided to tackle it myself.
