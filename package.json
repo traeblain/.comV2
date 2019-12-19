@@ -5,6 +5,10 @@
   "private": true,
   "author": "Trae Blain",
   "license": "MIT",
+  "scripts": {
+    "start:lambda": "netlify-lambda serve func",
+    "build:lambda": "netlify-lambda build func"
+  },
   "devDependencies": {},
   "repository": {
     "type": "git",
