@@ -182,6 +182,7 @@ body {
   background-color: var(--background);
   font-family: var(--font-family-sans-serif);
   transition: background-color 0.25s ease;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -792,9 +793,6 @@ article .title div:last-child a, article .list-title div:last-child a {
 div.article > p {
   margin-bottom: 0.75rem;
 }
-div.article > p + p {
-  text-indent: 2rem;
-}
 .article figure {
   border: 1px solid var(--primary);
   padding: 0.75rem 0.5rem;
@@ -1209,6 +1207,7 @@ div.list-title ul {
     padding-top: 2rem;
     padding-top: 30vh;
     margin-top: -30vh;
+    overflow-x: hidden;
   }
   main.home {
     height: calc(100vh - 4rem - 4px); /*Feels like a hack...*/
