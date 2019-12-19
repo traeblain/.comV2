@@ -10,4 +10,5 @@
 !/static/images
 hugo*
 .vscode
+/_functions
 /node_modules

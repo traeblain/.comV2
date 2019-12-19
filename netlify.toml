@@ -1,2 +1,3 @@
 [build]
-  Command = "npm run build:lambda; hugo -D"
+  publish = "functions"
+  functions = "_functions"
