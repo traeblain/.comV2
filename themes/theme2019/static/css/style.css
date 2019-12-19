@@ -1133,7 +1133,7 @@ div.list-title ul {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   body {
     display: block;
   }
@@ -1205,11 +1205,13 @@ div.list-title ul {
   }
   main {
     width: 100vw;
-    height: calc(100vh - 30vh - 4rem);
+    height: calc(100vh - 4rem);
     padding-top: 2rem;
+    padding-top: 30vh;
+    margin-top: -30vh;
   }
   main.home {
-    height: calc(100vh - 30vh - 4rem - 4px); /*Feels like a hack...*/
+    height: calc(100vh - 4rem - 4px); /*Feels like a hack...*/
   }
   footer {
     width: 100vw;
@@ -1227,6 +1229,9 @@ div.list-title ul {
   }
   #backToTop {
     bottom: 3rem;
+  }
+  #sectionSocial svg {
+    width: 20vw;
   }
 }
 
@@ -1255,6 +1260,9 @@ div.list-title ul {
   #readProgressSVG {
     order: -1;
     display: block;
+  }
+  #sectionSocial svg {
+    width: 35vw;
   }
   #sectionSocial .repos-container {
     flex-direction: column;

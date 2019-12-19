@@ -74,7 +74,8 @@ function scrollProgress() {
     document.getElementById("progressBar").style.height = scrolled + "vh";
     document.getElementById("progressBar").style.width = "";
     document.querySelector('aside').style.height = "";
-    document.querySelector('main').style.height = "";
+    document.querySelector('aside').style.marginBottom = "";
+    // document.querySelector('main').style.height = "";
     {{ if .IsHome }}document.querySelector('#particles').style.height = "";{{ end }}
   } else {
     if (scrolled > 99) {
@@ -88,8 +89,9 @@ function scrollProgress() {
     document.getElementById("progressBar").style.height = "";
     var asideheight = (shrinkImg >= 30) ? 0 : (30 - (shrinkImg))
     document.querySelector('aside').style.height = asideheight + "vh";
+    document.querySelector('aside').style.marginBottom = 30 - asideheight + "vh";
     {{ if .IsHome }}document.querySelector('#particles').style.height = asideheight + "vh";{{ end }}
-    document.querySelector('main').style.height = "calc(100vh - " + asideheight + "vh - 4rem{{ if .IsHome }} - 4px{{end}})";
+    // document.querySelector('main').style.height = "calc(100vh - " + asideheight + "vh - 4rem{{ if .IsHome }} - 4px{{end}})";
   }
 }
 
