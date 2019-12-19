@@ -1,6 +1,6 @@
 {
-  "name": "Trae Blain's Website",
-  "version": "3.0",
+  "name": "trae-netlify-functions-package-file",
+  "version": "3.0.0",
   "description": "Required package.json for Netlify Functions to work.",
   "private": true,
   "author": "Trae Blain",
