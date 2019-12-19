@@ -5,11 +5,13 @@
   "private": true,
   "author": "Trae Blain",
   "license": "MIT",
-  "devDependencies": {
-    "moment": "^2.24.0"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/traeblain/.comV2.git"
+  },
+  "dependencies": {
+    "moment": "^2.24.0",
+    "netlify-lambda": "^1.6.3"
   }
 }

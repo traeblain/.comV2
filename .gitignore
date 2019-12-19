@@ -10,3 +10,4 @@
 !/static/images
 hugo*
 .vscode
+/node_modules
