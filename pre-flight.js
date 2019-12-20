@@ -55,7 +55,7 @@ fetchIt().then( resp => {
   link = "${goodreads.link}"
   rating = ${goodreads.rating}
   review = '''${goodreads.review}'''
-  image = '''${goodreads.imageLink}'''
+  image = '''${goodreads.image}'''
   total = ${goodreads.totalRead}
   date = "${goodreads.date}"
 `;

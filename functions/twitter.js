@@ -3,15 +3,8 @@ const axios = require('axios').default
 const moment = require('moment')
 const { URLSearchParams } = require('url')
 const md5 = require('js-md5');
-const Parser = require('rss-parser')
-let parser = new Parser({
-  customFields: {
-    item: ['description', 'enclosure', 'comments']
-  }
-})
 const authUrl = "https://auth.meshydb.com/trae/connect/token"
 const postUrl = "https://api.meshydb.com/trae/meshes/"
-
 
 exports.handler = async (event, context) => {
   if (event.httpMethod !== "POST" || event.queryStringParameters.secret !== process.env.POST_SECRET) {
@@ -21,20 +14,16 @@ exports.handler = async (event, context) => {
     }
   }
   try {
+    const data = JSON.parse(event.body)
     const postData = {
-      site: 'links'
+      '_id': md5(data.link),
+      'stringdate': data.date,
+      'atID': "@" + data.user,
+      'post': data.text,
+      'link': data.link,
+      'site': 'twitter',
+      'date': moment(data.date, "MMMM DD, YYYY at hh:mma").format()
     }
-    const feed = await parser.parseURL('https://refind.com/traeblain.rss')
-    const latest = feed.items[0]
-    postData['_id'] = md5(latest.guid)
-    postData.guid = latest.guid
-    postData.stringdate = moment(latest.pubDate).format('MMM DD')
-    postData.date = moment(latest.pubDate).format()
-    postData.title = latest.title
-    postData.link = latest.link
-    postData.data = latest.description
-    postData.imageLink = latest.enclosure.url
-    postData.sourceLink = latest.comments
 
     const formData = new URLSearchParams()
     formData.append('client_id', process.env.API_KEY)

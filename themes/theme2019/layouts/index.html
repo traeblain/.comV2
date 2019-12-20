@@ -115,7 +115,10 @@
 						<p><a href="{{ .Params.goodreads }}">You have read <span id="readcount">{{ .Site.Params.latestRead.total }}</span> of <span id="readtotal">{{ .Site.Params.readgoal }}</span> books.</a></p>
 						<p><em><span id="bookprogress">X</span> books <span id="booksahead">around</span> schedule</em></p>
 						<div id="lastread">
-							<h6>{{ .Site.Params.latestRead.image | safeHTML }}
+							<h6>
+								<a href="{{ .Site.Params.latestRead.link }}">
+									<img src="{{ .Site.Params.latestRead.image }}" alt="{{ .Site.Params.latestRead.title }} by {{ .Site.Params.latestRead.author }}">
+								</a>
 								<div>{{ .Site.Params.latestRead.title }} by {{ .Site.Params.latestRead.author }}</div>
 							</h6>
 							<p>{{ .Site.Params.latestRead.review | safeHTML }}</p>
@@ -165,7 +168,6 @@
 			</div>
 		</div>
 		<div id="sectionSensory"><a id="sensory"></a>
-
 			<div>
 					<h1>Sensory</h1>
 			</div>

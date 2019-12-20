@@ -6,7 +6,7 @@ const md5 = require('js-md5');
 const Parser = require('rss-parser')
 let parser = new Parser({
   customFields: {
-    item: ['description', 'enclosure', 'comments']
+    item: ['user_review', 'user_rating', 'author_name', 'book_id', 'book_medium_image_url']
   }
 })
 const authUrl = "https://auth.meshydb.com/trae/connect/token"
@@ -22,19 +22,18 @@ exports.handler = async (event, context) => {
   }
   try {
     const postData = {
-      site: 'links'
+      site: 'goodreads'
     }
-    const feed = await parser.parseURL('https://refind.com/traeblain.rss')
+    const feed = await parser.parseURL('https://www.goodreads.com/review/list_rss/1671848?key=-EbU6WkbaFFJkROUGqtmluimQRtY6xQMyFYLZHo9dnbocJQd&shelf=read')
     const latest = feed.items[0]
     postData['_id'] = md5(latest.guid)
-    postData.guid = latest.guid
-    postData.stringdate = moment(latest.pubDate).format('MMM DD')
     postData.date = moment(latest.pubDate).format()
     postData.title = latest.title
     postData.link = latest.link
-    postData.data = latest.description
-    postData.imageLink = latest.enclosure.url
-    postData.sourceLink = latest.comments
+    postData.author = latest.author_name
+    postData.rating = latest.user_rating * 1
+    postData.review = latest.user_review
+    postData.image = latest.book_medium_image_url
 
     const formData = new URLSearchParams()
     formData.append('client_id', process.env.API_KEY)
