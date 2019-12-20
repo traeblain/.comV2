@@ -275,6 +275,8 @@ var headers = {
     'Content-Type': 'application/json'
   }
 }
+
+// Simple Real-Time evaluation of reading data.
 var perComplete = {{ .Site.Params.latestRead.total }} / {{ .Site.Params.readgoal }}
 var progress = {{ .Site.Params.latestRead.total }} - Math.floor(daysIntoYear(new Date()) / 365.25 * {{ .Site.Params.readgoal }})
 document.getElementById('bookprogress').innerHTML = Math.abs(progress)
@@ -286,65 +288,8 @@ if (progress === 0) {
   document.getElementById('booksahead').innerHTML = 'behind'
 }
 document.getElementById('readprogress').getElementsByTagName('path')[0].setAttribute('d', knobProgress(Math.min(perComplete, 1)))
-// fetch('https://wt-trae-traeblain-com-0.sandbox.auth0-extend.com/get-social-data', headers)
-//   .then(function(response) {
-//     return response.json()
-//   }).then(function(json) {
-//     var id = json.results[0].twitter[0].link.split('/')
-//     document.getElementById('twitter-status').innerHTML = ''
-//     // Start Links Display...
-//     var link = json.results[0].links[0]
-//     var linkHTML = '<h1>Quite Interesting</h1><a class="qi" href="{0}"><img src="{2}"/><h6>{3}</h6><p><time>{4}</time> &mdash; {5} <span>{1}</span></p></a>'
-//     document.getElementById('sectionQI').innerHTML = linkHTML
-//       .replace('{0}', link.link)
-//       .replace('{1}', link.sourceLink)
-//       .replace('{2}', link.imageLink)
-//       .replace('{3}', link.title)
-//       .replace('{4}', link.stringdate)
-//       .replace('{5}', link.data)
-//     // START GOODREADS...
-//     var total = 26
-//     var finished = json.results[0].goodreads[0]
-//     var count = json.results[0].counts[0].goodreads
-//     var perComplete = count/total
-//     var completeSize = (perComplete > 100) ? 100 : perComplete
-//     var progress = count - Math.floor(daysIntoYear(new Date()) / 365.25 * total)
-//     document.getElementById('readcount').innerHTML = count
-//     document.getElementById('readtotal').innerHTML = total
-//     document.getElementById('readprogress').getElementsByTagName('text')[0].innerHTML = Math.round(perComplete * 100) + '% Done'
-//     document.getElementById('readprogress').getElementsByTagName('path')[0].setAttribute('d', knobProgress(Math.min(perComplete, 1)))
-//     document.getElementById('bookprogress').innerHTML = Math.abs(progress)
-//     if (progress === 0) {
-//       document.getElementById('bookprogress').parentNode.innerHTML = 'Reading right on schedule.'
-//     } else if (progress > 0) {
-//       document.getElementById('booksahead').innerHTML = 'ahead of'
-//     } else {
-//       document.getElementById('booksahead').innerHTML = 'behind'
-//     }
-//     var details = (finished.review.length >= 8) ? finished.review : 'Error getting review...follow link below to read it.'
-//     document.getElementById('lastread').innerHTML = '<h6>' + finished.imageLink + '<div>' + finished.title + ' by ' + finished.author + '</div></h6><p>' + details + '</p><p><a href="' + finished.link + '">See my review here &raquo;</a></p>'
-//     // Finish Twitter
-//     if (typeof twttr === 'undefined') {
-//       var htmlTwitter = '<p lang="en" dir="ltr">{0}<p><cite><a href="https://twitter.com/traeblain">Trae 🧠</a><time><a href="{1}">{2}</a><time></cite>'
-//       htmlTwitter = htmlTwitter.replace('{0}', json.results[0].twitter[0].post.replace(/((http:|https:)[^\s]+[\w])/g, '<a href="$1" target="_blank">$1</a>'))
-//         .replace(/(\s|^)([@]([^\s]+[\w]))/g, '$1<a href="https://twitter.com/$3" target="_blank">$2</a>')
-//         .replace('{1}', json.results[0].twitter[0].link)
-//         .replace('{2}', json.results[0].twitter[0].stringdate)
-//       document.getElementById('twitter-status').innerHTML = htmlTwitter
-//     } else {
-//       twttr.widgets.createTweet(
-//         id[id.length - 1],
-//         document.getElementById('twitter-status'),
-//         { align: 'center', theme: 'light' }
-//       ).then (function (el) {
-//         // console.log('Tweet Displayed')
-//       })
-//     }
-//   }).catch(function(ex) {
-//     document.getElementById('twitter-status').innerHTML = 'Social Data collection failed...'
-//     document.getElementById('lastread').innerHTML = 'Social Data collection failed...'
-//     // console.log('parsing failed', ex)
-//   })
+
+// Get my listening info
 fetch('https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=tblain&api_key=b25b959554ed76058ac220b7b2e0a026&period=6month&format=json', headers)
   .then(function(response) {
     return response.json()
