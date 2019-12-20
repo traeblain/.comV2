@@ -679,6 +679,9 @@ svg#readprogress .knob-undertext {
 #sectionSocial .repos.space p {
   font-size: 2rem;
 }
+#twitter-widget-0 {
+  width: auto !important;
+}
 #sectionSensory > div {
   display: flex;
   justify-content: space-between;
