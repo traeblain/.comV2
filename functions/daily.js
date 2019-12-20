@@ -1,3 +1,4 @@
+require('dotenv').config()
 const { HUGO_VERSION } = process.env
 const moment = require('moment')
 

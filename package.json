@@ -18,6 +18,7 @@
     "url": "https://github.com/traeblain/.comV2.git"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "moment": "^2.24.0",
     "netlify-lambda": "^1.6.3",
     "node-fetch": "^2.6.0",
