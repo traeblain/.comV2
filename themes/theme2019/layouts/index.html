@@ -16,7 +16,11 @@
 		</div>
 		<div id="sectionQI" class="half-basis">
 			<h1>Quite Interesting</h1>
-			<p>Fetching Data...</p>
+			<a class="qi" href="{{ .Site.Params.qi.link }}"><img src="{{ .Site.Params.qi.image }}" />
+				<h6>{{ .Site.Params.qi.title }}</h6>
+				<p><time>{{ dateFormat "Jan 02" .Site.Params.qi.date }}</time> &mdash; {{ .Site.Params.qi.description }}
+					<span>{{ .Site.Params.qi.source }}</span></p>
+			</a>
 		</div>
 		<div id="sectionGarden"><a id="garden"></a>
 			<h1>Digital Garden</h1>
@@ -87,8 +91,13 @@
 				</div>
 				<div class="flexbox-h">
 					<blockquote id="twitter-status" class="twitter-tweet">
-						<p lang="en" dir="ltr">Getting Tweet...</p>
-						&mdash; @<a href="https://twitter.com/traeblain">traeblain</a>
+						<p lang="en" dir="ltr">
+							{{ .Site.Params.newtweet.post | replaceRE "((http:|https:)[^\\s]+[\\w])" "<a href=\"$1\" target=\"_blank\">$1</a>" | safeHTML }}
+						</p>
+						<cite>
+							<a href="https://twitter.com/traeblain">Trae 🧠</a>
+							<time><a href="{{ .Site.Params.newtweet.link }}">{{ dateFormat "January 02, 2006 at 3:04PM" .Site.Params.newtweet.date }}</a></time>
+						</cite>
 					</blockquote>
 					<div>
 						<a href="https://twitter.com/traeblain">
@@ -103,12 +112,14 @@
 				</div>
 				<div class="flexbox-h">
 					<div>
-						<p><a href="{{ .Params.goodreads }}">You have read <span id="readcount">X</span> of <span id="readtotal">X</span> books.</a></p>
+						<p><a href="{{ .Params.goodreads }}">You have read <span id="readcount">{{ .Site.Params.latestRead.total }}</span> of <span id="readtotal">{{ .Site.Params.readgoal }}</span> books.</a></p>
 						<p><em><span id="bookprogress">X</span> books <span id="booksahead">around</span> schedule</em></p>
 						<div id="lastread">
-							<h6>
-								<div>Fetching Last Book Read Data...</div>
+							<h6>{{ .Site.Params.latestRead.image | safeHTML }}
+								<div>{{ .Site.Params.latestRead.title }} by {{ .Site.Params.latestRead.author }}</div>
 							</h6>
+							<p>{{ .Site.Params.latestRead.review | safeHTML }}</p>
+							<p><a href="{{ .Site.Params.latestRead.link }}">See my review here &raquo;</a></p>
 						</div>
 					</div>
 					<div id="readProgressSVG">
@@ -118,7 +129,8 @@
 						<path class="knob-progress" d="M 50, 50 m 0, -40 a 40,40 0 0 1 0,0"
 							style="fill:transparent;stroke-width:10;stroke-linecap:round;" />
 						<use xlink:href="#goodreads" x="50%" y="50%" height="50px" width="50px" transform="translate(-25, -35)"></use>
-						<text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline" text-anchor="middle">Fetching</text>
+						<text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline"
+							text-anchor="middle">{{ math.Round (mul (div .Site.Params.latestRead.total .Site.Params.readgoal) 100) }}% Done</text>
 						</svg>
 					</div>
 				</div>
@@ -162,7 +174,7 @@
 			</div>
 			<div>
 				<div>
-					<a target="_blank" href="http://www.trakt.tv/users/traeblain"><img alt="traeblain"
+					<a target="_blank" href="https://www.trakt.tv/users/traeblain"><img alt="traeblain"
 					src="https://widgets.trakt.tv/users/3ce95a43ea6297d34071aab460918b21/watched/fanart2@2x.jpg?type=movie"
 					width="100%"></a>
 				</div>

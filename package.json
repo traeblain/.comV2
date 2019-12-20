@@ -6,6 +6,9 @@
   "author": "Trae Blain",
   "license": "MIT",
   "scripts": {
+    "build": "node pre-flight.js && hugo -D",
+    "serve": "node pre-flight.js && hugo -Dw server --disableFastRender",
+    "deploy": "npm run build:lambda && node pre-flight.js && hugo -D",
     "start:lambda": "netlify-lambda serve functions",
     "build:lambda": "netlify-lambda build functions"
   },
