@@ -1,5 +1,5 @@
 require('dotenv').config()
-const fetch = require('node-fetch')
+const axios = require('axios').default
 const moment = require('moment')
 const { URLSearchParams } = require('url')
 const Parser = require('rss-parser')
@@ -35,32 +35,22 @@ exports.handler = async (event, context) => {
     formData.append('password', process.env.API_PASSWORD)
     formData.append('scope', 'meshy.api offline_access')
 
-    const tokenData = await fetch(authUrl, {
-      method: 'POST',
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      body: formData
-    })
-    const token = await tokenData.json()
-    console.log(token)
+    const tokenData = await axios.post(authUrl, formData)
+    const token = await tokenData.data.access_token
+    // console.log(token)
 
-    const respData = await fetch(postUrl + 'social/', {
-      method: 'POST',
+    const resp = await axios.post(postUrl + 'social/', postData, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + token.access_token
-      },
-      body: JSON.stringify(postData)
+        'Authorization': 'Bearer ' + token
+      }
     })
 
-    const resp = await respData.json()
-    console.log(JSON.stringify(resp));
+    //console.log(JSON.stringify(resp.data));
     return {
       statusCode: 200,
-      body: JSON.stringify(resp)
+      body: JSON.stringify(resp.data)
     }
   }
   catch (error) {
