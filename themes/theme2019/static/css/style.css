@@ -156,13 +156,6 @@ audio, canvas, iframe, img, svg, video {
       Start
    ============================= */
 @font-face {
-    font-family: 'cinematografica-extrabold';
-    src: url('/fonts/cinematografica-extrabold-webfont.woff2') format('woff2'),
-         url('/fonts/cinematografica-extrabold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
     font-family: 'Grand';
     src: url('/fonts/NTF-Grand-Regular.otf') format('truetype'),
          url('/fonts/NTF-Grand-Regular.woff') format('woff');
@@ -645,17 +638,17 @@ svg#readprogress .knob-undertext {
   padding: 1vw 0;
 }
 #lastread h6 > a {
-  height: calc(10vh + 1rem);
+  height: calc(15vh + 1rem);
   border: 1px solid var(--nord-light);
   transition: border-bottom-width 0.5s ease, border-bottom-color 0s ease 0.5s;
 }
 #lastread h6 > a:hover {
-  border-bottom-width: calc(10vh + 1rem - 1px);
+  border-bottom-width: calc(15vh + 1rem - 1px);
   border-bottom-color: var(--primary);
   transition: border-bottom-width 0.5s ease, border-bottom-color 0s ease;
 }
 #lastread h6 img {
-  height: 10vh;
+  height: 15vh;
   margin: 0.5rem
 }
 #lastread h6 div {
