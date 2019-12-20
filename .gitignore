@@ -12,3 +12,4 @@ hugo*
 .vscode
 /_functions
 /node_modules
+.envs
