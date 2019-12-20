@@ -1,3 +1,4 @@
+require('dotenv').config();
 const fetch = require('node-fetch');
 const moment = require('moment');
 const fs = require('fs');

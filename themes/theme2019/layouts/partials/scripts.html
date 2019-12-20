@@ -11,6 +11,13 @@
   }
 </script>{{end}}
 <script type="text/javascript">
+var headers = {
+  method: 'get',
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+  }
+}
 function toggleSearch () {
   var searchBox = document.getElementById('searchBox')
   searchBox.classList.toggle('show')
@@ -94,6 +101,19 @@ function scrollProgress() {
     // document.querySelector('main').style.height = "calc(100vh - " + asideheight + "vh - 4rem{{ if .IsHome }} - 4px{{end}})";
   }
 }
+{{ if eq .Kind "page" }}
+function kudos(page) {
+  var modifiedHeaders = JSON.parse(JSON.stringify(headers))
+  modifiedHeaders.method = 'POST'
+  fetch('/.netlify/functions/kudos?key=7f2ababa423061c509f4923dd04b6cf1&url=' + page, modifiedHeaders)
+  .then(resp => { resp.json() })
+  .then(json => {
+    console.log("Success!")
+  }).catch( error => {
+    console.log(error)
+  })
+}
+{{ end }}
 
 // Homepage Dancing Lines...
 {{ if .IsHome }}
@@ -266,14 +286,6 @@ function convertDate(date) {
 
 function daysIntoYear(date){
   return (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000;
-}
-
-var headers = {
-  method: 'get',
-  headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json'
-  }
 }
 
 // Simple Real-Time evaluation of reading data.
