@@ -2,14 +2,15 @@ require('dotenv').config()
 const fetch = require('node-fetch')
 const moment = require('moment')
 const { URLSearchParams } = require('url')
-const authUrl = "https://auth.meshydb.com/trae/connect/token"
-const postUrl = "https://api.meshydb.com/trae/meshes/"
 const Parser = require('rss-parser')
 let parser = new Parser({
   customFields: {
     item: ['description', 'enclosure', 'comments']
   }
 })
+const authUrl = "https://auth.meshydb.com/trae/connect/token"
+const postUrl = "https://api.meshydb.com/trae/meshes/"
+
 
 exports.handler = async (event, context) => {
   try {
@@ -43,7 +44,7 @@ exports.handler = async (event, context) => {
       body: formData
     })
     const token = await tokenData.json()
-    console.log(JSON.stringify(token))
+    console.log(token)
 
     const respData = await fetch(postUrl + 'social/', {
       method: 'POST',
