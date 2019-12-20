@@ -13,10 +13,10 @@ let parser = new Parser({
 
 let params = fs.readFileSync('config/_default/params.toml', 'utf8');
 const formData = new URLSearchParams();
-formData.append('client_id', '51effe2e6989432a9139298a5199cb79');
+formData.append('client_id', 'update');
 formData.append('grant_type', 'password');
 formData.append('username', 'api');
-formData.append('password', 'thisisapasswordformetouse');
+formData.append('password', 'update');
 formData.append('scope', 'meshy.api offline_access');  
 
 const fetchIt = async () => {
