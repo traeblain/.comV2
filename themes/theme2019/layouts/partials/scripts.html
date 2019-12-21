@@ -104,8 +104,8 @@ function scrollProgress() {
 {{ if eq .Kind "page" }}
 function kudos(page) {
   var modifiedHeaders = JSON.parse(JSON.stringify(headers))
-  modifiedHeaders.method = 'POST'
-  fetch('/.netlify/functions/kudos?key=7f2ababa423061c509f4923dd04b6cf1&url=' + page, modifiedHeaders)
+  modifiedHeaders.method = 'post'
+  fetch('http://localhost:9000/.netlify/functions/kudos?key=7f2ababa423061c509f4923dd04b6cf1&url=' + page, { method: 'post' })
   .then(resp => { resp.json() })
   .then(json => {
     console.log("Success!")

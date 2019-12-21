@@ -11,7 +11,7 @@ exports.handler = async (event, context) => {
       body: 'This is not the function you are looking for...'
     }
   }
-  try {    
+  try {
     const postData = {
       url: event.queryStringParameters.url,
       kudo: 1
