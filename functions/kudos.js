@@ -1,6 +1,5 @@
 require('dotenv').config()
 const axios = require('axios').default
-const { URLSearchParams } = require('url')
 const authUrl = "https://auth.meshydb.com/trae/connect/token"
 const postUrl = "https://api.meshydb.com/trae/meshes/"
 
@@ -23,13 +22,6 @@ exports.handler = async (event, context) => {
     console.log(updateData)
     console.log("EnVars: ", process.env.API_KEY, process.env.API_PASSWORD)
 
-    const formData = new URLSearchParams()
-    formData.append('client_id', process.env.API_KEY)
-    formData.append('grant_type', 'password')
-    formData.append('username', 'api')
-    formData.append('password', process.env.API_PASSWORD)
-    formData.append('scope', 'meshy.api offline_access')
-    console.log(formData)
     const formObject = {
       'client_id': process.env.API_KEY,
       'grant_type': 'password',

@@ -1,7 +1,6 @@
 require('dotenv').config()
 const axios = require('axios').default
 const moment = require('moment')
-const { URLSearchParams } = require('url')
 const md5 = require('js-md5');
 const authUrl = "https://auth.meshydb.com/trae/connect/token"
 const postUrl = "https://api.meshydb.com/trae/meshes/"
@@ -15,6 +14,7 @@ exports.handler = async (event, context) => {
   }
   try {
     const data = JSON.parse(event.body)
+    console.log(data)
     const postData = {
       '_id': md5(data.link),
       'stringdate': data.date,
@@ -24,13 +24,15 @@ exports.handler = async (event, context) => {
       'site': 'twitter',
       'date': moment(data.date, "MMMM DD, YYYY at hh:mma").format()
     }
+    console.log(postData)
 
-    const formData = new URLSearchParams()
-    formData.append('client_id', process.env.API_KEY)
-    formData.append('grant_type', 'password')
-    formData.append('username', 'api')
-    formData.append('password', process.env.API_PASSWORD)
-    formData.append('scope', 'meshy.api offline_access')
+    const formData = {
+      'client_id': process.env.API_KEY,
+      'grant_type': 'password',
+      'username': 'api',
+      'password': process.env.API_PASSWORD,
+      'scope': 'meshy.api offline_access'
+    }
 
     const tokenData = await axios.post(authUrl, formData)
     const token = await tokenData.data.access_token
@@ -44,7 +46,7 @@ exports.handler = async (event, context) => {
       }
     })
 
-    //console.log(JSON.stringify(resp.data));
+    console.log(JSON.stringify(resp.data));
     return {
       statusCode: 200,
       headers: {
