@@ -31,7 +31,12 @@ exports.handler = async (event, context) => {
     formData.append('scope', 'meshy.api offline_access')
     console.log(formData)
 
-    const tokenData = await axios.post(authUrl, formData)
+    const tokenData = await axios.post(authUrl, formData, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    })
     const token = await tokenData.data.access_token
     console.log(token)
 
