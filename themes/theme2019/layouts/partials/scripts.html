@@ -110,6 +110,7 @@ function kudos(page) {
   .then(text => {
     console.log(text)
     document.getElementById('kudosClick').setAttribute('onclick', 'return false;')
+    document.getElementById('kudosClick').setAttribute('title', 'Thanks!')
     document.getElementById('cheersIcon').style.display = 'none'
     document.getElementById('cheersDone').style.display = 'inline-block'
   }).catch( error => {
