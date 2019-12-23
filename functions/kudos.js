@@ -33,7 +33,6 @@ exports.handler = async (event, context) => {
 
     const tokenData = await axios.post(authUrl, formData, {
       headers: {
-        'Accept': 'application/json',
         'Content-Type': 'application/x-www-form-urlencoded'
       }
     })
