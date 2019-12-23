@@ -5,12 +5,17 @@ const md5 = require('js-md5');
 const Parser = require('rss-parser')
 let parser = new Parser({
   customFields: {
-    item: ['user_review', 'user_rating', 'author_name', 'book_id', 'book_medium_image_url']
+    item: ['user_read_at', 'user_review', 'user_rating', 'author_name', 'book_id', 'book_medium_image_url']
   }
 })
 const authUrl = "https://auth.meshydb.com/trae/connect/token"
 const postUrl = "https://api.meshydb.com/trae/meshes/"
 
+function sortDate(a, b) {
+  if (moment(a.user_read_at) > moment(b.user_read_at)) return -1;
+  if (moment(a.user_read_at) < moment(b.user_read_at)) return 1;
+  return 0;
+}
 
 exports.handler = async (event, context) => {
   if (event.httpMethod !== "POST" || event.queryStringParameters.secret !== process.env.POST_SECRET) {
@@ -24,9 +29,9 @@ exports.handler = async (event, context) => {
       site: 'goodreads'
     }
     const feed = await parser.parseURL('https://www.goodreads.com/review/list_rss/1671848?key=-EbU6WkbaFFJkROUGqtmluimQRtY6xQMyFYLZHo9dnbocJQd&shelf=read')
-    const latest = feed.items[0]
+    const latest = feed.items.sort(sortDate)[0]
     postData['_id'] = md5(latest.guid)
-    postData.date = moment(latest.pubDate).format()
+    postData.date = moment(latest.user_read_at).format()
     postData.title = latest.title
     postData.link = latest.link
     postData.author = latest.author_name
