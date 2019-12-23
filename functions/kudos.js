@@ -20,6 +20,8 @@ exports.handler = async (event, context) => {
       "filter": `{ url : '${event.queryStringParameters.url}' }`,
       "update": "{ $inc: { kudo: 1 }}"
     }
+    console.log(updateData)
+    console.log("EnVars: ", process.env.API_KEY, process.env.API_PASSWORD)
 
     const formData = new URLSearchParams()
     formData.append('client_id', process.env.API_KEY)
@@ -27,10 +29,11 @@ exports.handler = async (event, context) => {
     formData.append('username', 'api')
     formData.append('password', process.env.API_PASSWORD)
     formData.append('scope', 'meshy.api offline_access')
+    console.log(formData)
 
     const tokenData = await axios.post(authUrl, formData)
     const token = await tokenData.data.access_token
-    // console.log(token)
+    console.log(token)
 
     const update = await axios.patch(postUrl + 'kudos/', updateData, {
       headers: {
@@ -39,7 +42,7 @@ exports.handler = async (event, context) => {
         'Authorization': 'Bearer ' + token
       }
     })
-    // console.log(update.data)
+    console.log(update.data)
     if (update.data.matchedCount === 1) {
       return {
         statusCode: 200,
@@ -54,7 +57,7 @@ exports.handler = async (event, context) => {
         }
       })
 
-      //console.log(JSON.stringify(resp.data));
+      console.log(JSON.stringify(resp.data));
       return {
         statusCode: 200,
         body: `Created record and added ${event.queryStringParameters.url} with a kudo!`
