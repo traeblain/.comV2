@@ -15,9 +15,12 @@
     </svg>
   </a>
   
-  <a href='#' onclick="kudos('{{ .RelPermalink }}')" title="Send Some Cheers!" class="cheers-icon" style="z-index: 1;">
-    <svg class="svg svg-social-icon">
+  <a href='#' onclick="kudos('{{ .RelPermalink }}');return false;" title="Send Some Cheers!" class="cheers-icon" id="kudosClick" style="z-index: 1;">
+    <svg class="svg svg-social-icon" id="cheersIcon">
       <use xlink:href="#cheers"></use>
+    </svg>
+    <svg class="svg svg-social-icon" style="display: none;" id="cheersDone">
+      <use xlink:href="#thumbsUp"></use>
     </svg>
   </a>
 

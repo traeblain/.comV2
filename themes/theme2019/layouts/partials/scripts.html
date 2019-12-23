@@ -106,9 +106,12 @@ function kudos(page) {
   var modifiedHeaders = JSON.parse(JSON.stringify(headers))
   modifiedHeaders.method = 'post'
   fetch('/.netlify/functions/kudos?key=7f2ababa423061c509f4923dd04b6cf1&url=' + page, { method: 'post' })
-  .then(resp => { resp.json() })
-  .then(json => {
-    console.log("Success!")
+  .then(resp => { resp.text() })
+  .then(text => {
+    console.log(text)
+    document.getElementById('kudosClick').setAttribute('onclick', 'return false;')
+    document.getElementById('cheersIcon').style.display = 'none'
+    document.getElementById('cheersDone').style.display = 'inline-block'
   }).catch( error => {
     console.log(error)
   })
