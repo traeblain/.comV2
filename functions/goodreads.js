@@ -52,7 +52,7 @@ exports.handler = async (event, context) => {
     const token = await tokenData.data.access_token
     // console.log(token)
 
-    const resp = await axios.post(postUrl + 'social/', postData, {
+    const resp = await axios.post(postUrl + 'socialstaging/', postData, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
