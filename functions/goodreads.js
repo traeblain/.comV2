@@ -30,8 +30,8 @@ exports.handler = async (event, context) => {
     }
     const feed = await parser.parseURL('https://www.goodreads.com/review/list_rss/1671848?key=-EbU6WkbaFFJkROUGqtmluimQRtY6xQMyFYLZHo9dnbocJQd&shelf=read')
     const latest = feed.items.sort(sortDate)[0]
-    // console.log(latest)
-    // postData['_id'] = md5(latest.guid)
+    console.log(latest)
+    postData['_id'] = md5(latest.guid)
     postData.date = moment(latest.user_read_at).format()
     postData.title = latest.title
     postData.link = latest.link
@@ -52,7 +52,7 @@ exports.handler = async (event, context) => {
     const token = await tokenData.data.access_token
     // console.log(token)
 
-    const resp = await axios.post(postUrl + 'socialstaging/', postData, {
+    const resp = await axios.post(postUrl + 'social/', postData, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ exports.handler = async (event, context) => {
       }
     })
 
-    console.log(resp.status, resp.statusText)
+    // console.log(resp.status, resp.statusText)
     if (resp.status === 200 || resp.status === 201) {
       console.log('Attempting to rebuild.')
       const rebuild = await axios.post('https://api.netlify.com/build_hooks/' + process.env.REBUILD_KEY, {})

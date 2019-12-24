@@ -55,7 +55,11 @@ exports.handler = async (event, context) => {
       }
     })
 
-    //console.log(JSON.stringify(resp.data));
+    // console.log(resp.status, resp.statusText)
+    if (resp.status === 200 || resp.status === 201) {
+      console.log('Attempting to rebuild.')
+      const rebuild = await axios.post('https://api.netlify.com/build_hooks/' + process.env.REBUILD_KEY, {})
+    }
     return {
       statusCode: 200,
       headers: {
