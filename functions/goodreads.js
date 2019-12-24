@@ -30,6 +30,7 @@ exports.handler = async (event, context) => {
     }
     const feed = await parser.parseURL('https://www.goodreads.com/review/list_rss/1671848?key=-EbU6WkbaFFJkROUGqtmluimQRtY6xQMyFYLZHo9dnbocJQd&shelf=read')
     const latest = feed.items.sort(sortDate)[0]
+    console.log(latest)
     postData['_id'] = md5(latest.guid)
     postData.date = moment(latest.user_read_at).format()
     postData.title = latest.title
