@@ -61,7 +61,7 @@ exports.handler = async (event, context) => {
     })
 
     console.log(resp.status, resp.statusText)
-    if (resp.statusText === 'OK') {
+    if (resp.status === 200 || resp.status === 201) {
       console.log('Attempting to rebuild.')
       const rebuild = await axios.post('https://api.netlify.com/build_hooks/' + process.env.REBUILD_KEY, {})
     }
