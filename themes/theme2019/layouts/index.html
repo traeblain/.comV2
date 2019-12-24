@@ -197,7 +197,14 @@
 			</div>
 			<div>
 				<div class="top-artists">
-					<div><svg class="svg svg-social-icon"><use xlink:href="#lastfm"></use></svg></div>
+					{{ with .Site.Params.music.artist }}{{ range . }}
+					<div style="background-image:url({{ .image }})">
+						<span class="artistbottom">
+							<p><a href="{{ .link }}" target="_blank">{{ .name }}</a></p>
+							<p><em>{{ .plays }} plays</em></p>
+						</span>
+					</div>
+					{{ end }}{{ end }}
 				</div>
 				<div><svg class="svg svg-social-icon"><use xlink:href="#lastfm"></use></svg></div>
 			</div>

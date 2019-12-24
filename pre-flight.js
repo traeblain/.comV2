@@ -23,6 +23,7 @@ formData.append('scope', 'meshy.api offline_access');
 const fetchIt = async () => {
   const tokenData = await fetch(authUrl, { method: 'POST', body: formData });
   const token = await tokenData.json();
+  // console.log(token);
 
   const respData = await fetch(getUrl + '/', {
     method: 'GET',
@@ -42,6 +43,7 @@ fetchIt().then( resp => {
   const goodreads = resp.results[0].goodreads[0];
   const links = resp.results[0].links[0];
   goodreads.totalRead = resp.results[0].counts[0].goodreads;
+  const music = resp.results[0].music[0].artists;
 
   const twitterParams = `
 [newtweet]
@@ -68,7 +70,17 @@ fetchIt().then( resp => {
   image = '''${links.imageLink}'''
   source = "${links.sourceLink}"
 `;
-  fs.appendFileSync('config/_default/params.toml', twitterParams + goodreadsParams + linkParams, err => {
+  let musicParams = `[music]`;
+  music.forEach(function(artist) {
+    console.log(artist);
+    musicParams = musicParams + `
+  [[music.artist]]
+    name = "${artist.artist}"
+    link = '''${artist.link}'''
+    plays = ${artist.plays}
+    image = '''${artist.image}'''`
+  });
+  fs.appendFileSync('config/_default/params.toml', twitterParams + goodreadsParams + linkParams + musicParams, err => {
     throw new Error('IT DIDN\'T WORK!!');
   });
 }).catch( error => {
