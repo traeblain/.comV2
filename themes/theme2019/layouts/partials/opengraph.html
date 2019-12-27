@@ -19,6 +19,8 @@
   <meta name="twitter:title" content="{{ .Title }}">
   <meta name="twitter:description" content="{{ .Description }}">
   <meta name="twitter:creator" content="@{{ .Site.Author.commonname }}">
+  <!-- disallow Twitter from using your site's info for personalization purposes -->
+  <meta name="twitter:dnt" content="on">
   {{ else }}
   <meta property="og:type" content="website" />
   {{ end }}
