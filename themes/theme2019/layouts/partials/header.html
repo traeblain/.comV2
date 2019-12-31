@@ -1,0 +1,56 @@
+<header>
+	<div class="header-top">
+		<a href="{{ .Site.BaseURL }}">
+			<svg class="header-image"><use xlink:href="#monogram"></use></svg>
+			<!-- <img src="/images/tbmonogram.svg" alt="{{ .Site.Title }}" class="header-image"> -->
+		</a>
+		<span>
+			Trae
+		</span>
+	</div>
+	<div class="header-mid">
+		<div class="welcome-text">
+			<a href="#" id="welcomeText" onclick="copyWelcome();return false">Welcome</a>
+			<input type="text" value="Welcome" style="height: 0;width: 0;"/>
+		</div>
+		<div class="color-list">
+			<button id="whiteButton" onclick="colorChange('white')">&nbsp;</button>
+			<button id="blackButton" onclick="colorChange('black')">&nbsp;</button>
+			<button id="nordButton" onclick="colorChange('nord')">&nbsp;</button>
+		</div>
+		<div class="search-link">
+			<a href="#" onclick="toggleSearch();return false;"><svg class="svg svg-search-icon"><use xlink:href="#search"></use></svg><span>Search</span></a>
+		</div>
+	</div>
+	<div class="header-bottom">
+		<a href="https://twitter.com/traeblain">
+			<svg class="svg svg-social-icon"><use xlink:href="#twitter"></use></svg>
+		</a>
+		<a href="https://linkedin.com/in/traeblain">
+				<svg class="svg svg-social-icon"><use xlink:href="#linkedin"></use></svg>
+		</a>
+		<a href="/blog/index.xml">
+				<svg class="svg svg-social-icon"><use xlink:href="#rss"></use></svg>
+		</a>
+	</div>
+	<div class="header-bottom-more">
+		<a href="https://github.com/traeblain">
+			<svg class="svg svg-social-icon"><use xlink:href="#github"></use></svg>
+		</a>
+		<a href="http://instagram.com/traeblain">
+				<svg class="svg svg-social-icon"><use xlink:href="#instagram"></use></svg>
+		</a>
+		<a href="http://keybase.io/traeblain">
+				<svg class="svg svg-social-icon"><use xlink:href="#lock"></use></svg>
+		</a>
+	</div>
+	<!-- {{ with .Site.Menus.main }}
+	<nav>
+		<ul>
+			{{ range . }}
+			<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+			{{ end }}
+		</ul>
+	</nav>
+	{{ end }} -->
+</header>

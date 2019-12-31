@@ -1,0 +1,15 @@
+{{ if eq .Kind "home" }}<aside class="particles">{{else}}<aside>{{end}}
+{{ with .Site.Menus.main }}
+	{{ range . }}
+	<div>
+		<a href="{{ .URL | relURL }}">
+			<span>{{ .Weight | replaceRE "^([0-9])$" "0$1" }}</span><h3>{{ .Name | upper }}</h3>
+		</a>
+	</div>
+	{{ end }}
+{{ end }}
+	<div id="particles">
+		<canvas id="dots" height="100%" width="100%"></canvas>
+	</div>
+	<div id="progressBar">&nbsp;</div>
+</aside>

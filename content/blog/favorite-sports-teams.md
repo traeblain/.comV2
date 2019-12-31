@@ -3,7 +3,6 @@ date: 2017-12-13 17:00:00 -0600
 tags:
 - sports
 - list
-- data
 title: My Favorite Sports Teams
 background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,fl_progressive,q_auto:eco,w_2048/notebook/seats-159524.png
 text_color: dark

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ (replace .Title "Blogs" "Notebook") | title }}{{ if not (eq .Kind "home") }} - Trae Blain{{ end }}</title>
+  {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  {{ if .IsHome }}{{ with .Site.GetPage "/blog" }}{{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}{{ end }}{{ else }}
+  {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}{{ end }}
+  <link rel="me" href="https://twitter.com/traeblain" type="text/html" />
+  <link rel="me" href="https://github.com/traeblain" type="text/html" />
+  <link rel="pgpkey authn" href="https://keybase.io/traeblain/pgp_keys.asc?fingerprint=0337778d2a99e3ae13a189ba5426cfe9ed1f039d" />
+  <link rel="webmention" href="https://webmention.io/traeblain.com/webmention" />
+  <link rel="pingback" href="https://webmention.io/traeblain.com/xmlrpc" />
+  <!-- FavIcon... -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=BGAXEnakbQ">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=BGAXEnakbQ">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=BGAXEnakbQ">
+  <link rel="manifest" href="/manifest.json?v=BGAXEnakbQ">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=BGAXEnakbQ" color="#5a5a5a">
+  <link rel="shortcut icon" href="/favicon.ico?v=BGAXEnakbQ">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=BGAXEnakbQ">
+  <meta name="theme-color" content="#3b4252">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#3b4252">
+  {{ partial "opengraph" . }}
+</head>
+<body>
+{{ partial "header" . }}
+{{ block "main" . }}{{ end }}
+{{ partial "footer" . }}
+{{ partial "sprites" . }}
+{{ partial "scripts" . }}
+</body>
+</html>

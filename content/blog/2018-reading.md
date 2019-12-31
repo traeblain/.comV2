@@ -14,7 +14,9 @@ By the very last few days of 2018, I was able to meet my reading challenge of 52
 
 ## Favorite Read
 
-{{< figure src="https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:good,w_230/notebook/books/rocket-men.jpg" class="align-left" title="Rocket Men" link="https://www.amazon.com/gp/product/0812988701/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=traeblain03-20&linkId=8e4c5f3432d7ad3f936a6c6bb2f26bb1&language=en_US" >}} [Rocket Men][]: The Daring Odyssey of Apollo 8 and the Astronauts Who Made Man's First Journey to the Moon. This was really hard to decide upon. I read so many extremely good books this past year that I didn't know if I could choose.
+{{< figure src="https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:good,w_230/notebook/books/rocket-men.jpg" class="align-left" title="Rocket Men" link="https://www.amazon.com/gp/product/0812988701/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=traeblain03-20&linkId=8e4c5f3432d7ad3f936a6c6bb2f26bb1&language=en_US" >}} 
+
+[Rocket Men][]: The Daring Odyssey of Apollo 8 and the Astronauts Who Made Man's First Journey to the Moon. This was really hard to decide upon. I read so many extremely good books this past year that I didn't know if I could choose.
 
 I finally settled on this book by Robert Kurson, Rocket Men. It is the story of the Apollo 8 mission. I never realized the scope and importance of this particular Apollo mission. Basically, the Apollo 8 mission was moved up to launch sooner than intended, put on breakneck schedule to solve all issues necessary for successful mission, and increased the mission parameters of not just going to the moon and back...but orbiting. All of this to ensure we beat the Russians to the moon. It is a fantastic read, Kurson paces the book much like a movie or documentary where the details don't get too boring but you don't feel like you are missing something. I would recommend this book to almost anyone. <br class="u-cf">
 

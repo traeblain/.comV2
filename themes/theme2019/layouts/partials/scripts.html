@@ -1,0 +1,433 @@
+{{ if .IsHome }}<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script type="text/javascript">
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>{{end}}
+<script type="text/javascript">
+var headers = {
+  method: 'get',
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+  }
+}
+function toggleSearch () {
+  var searchBox = document.getElementById('searchBox')
+  searchBox.classList.toggle('show')
+  if (searchBox.classList.contains('show')) {
+    searchBox.getElementsByTagName('input')[0].focus()
+  }
+  return false
+}
+function keepSearch(e) {
+  if (!e) var e = window.event
+  e.cancelBubble = true
+  if (e.stopPropagation) e.stopPropagation()  
+  return false
+}
+
+colorChange(window.name)
+function colorChange(color) {
+  if (color === "") return
+  document.querySelector('body').className = ""
+  document.querySelector('body').classList.add(color)
+  window.name = color
+}
+
+function copyWelcome() {
+  var text = document.getElementById('welcomeText').nextElementSibling
+  text.select()
+  text.setSelectionRange(0, 50)
+  document.execCommand("copy")
+}
+function changeWelcome() {
+  var welcome = [
+    'Welcome', 'Vítejte', 'Welkom', 'Bienvenue', 'καλως', 'Fáilte', 
+    'Witamy', 'Croeso', 'באַגריסן', '欢迎', 'स्वागत हे', 'ようこそ', 
+    '환영', 'خوش آمدید', 'ברוך הבא', 'خوش آمدی', 'Welkom', 'Bonvenon'
+  ]
+  var welcomeTooLong = [
+    'Velkommen', 'Bienvenido', 'Добродошли', 'Willkommen', 'Benvenuto', 'Gratissimum'
+  ]
+  // Sourced from: https://www.indifferentlanguages.com/words/welcome
+  var pick = welcome[Math.floor(Math.random()*welcome.length)]
+  var element = document.getElementById('welcomeText')
+  element.innerHTML = pick
+  element.nextElementSibling.value = pick
+}
+changeWelcome()
+
+function scrollProgress() {
+  var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  var winScroll = document.body.scrollTop || document.getElementsByTagName("main")[0].scrollTop;
+  var height = document.getElementsByTagName("main")[0].scrollHeight - document.getElementsByTagName("main")[0].clientHeight;
+  var scrolled = Math.min((winScroll / height) * 100, 100);
+  var shrinkImg = Math.min((winScroll / Math.max(document.documentElement.clientHeight, window.innerHeight || 0)) * 100, 100);
+  if (width >= 1025) {
+    if (scrolled > 99) {
+      document.getElementById("progressBar").style.top = 0 + "px";
+      document.getElementById("progressBar").style.left = "";
+    } else {
+      document.getElementById("progressBar").style.top = -4 + "px";
+      document.getElementById("progressBar").style.left = "";
+    }
+    document.getElementById("progressBar").style.height = scrolled + "vh";
+    document.getElementById("progressBar").style.width = "";
+    document.querySelector('aside').style.height = "";
+    document.querySelector('aside').style.marginBottom = "";
+    // document.querySelector('main').style.height = "";
+    {{ if .IsHome }}document.querySelector('#particles').style.height = "";{{ end }}
+  } else {
+    if (scrolled > 99) {
+      document.getElementById("progressBar").style.left = 0 + "px";
+      document.getElementById("progressBar").style.top = "";
+    } else {
+      document.getElementById("progressBar").style.left = -4 + "px";
+      document.getElementById("progressBar").style.top = "";
+    }
+    document.getElementById("progressBar").style.width = scrolled + "vw";
+    document.getElementById("progressBar").style.height = "";
+    var asideheight = (shrinkImg >= 30) ? 0 : (30 - (shrinkImg))
+    document.querySelector('aside').style.height = asideheight + "vh";
+    document.querySelector('aside').style.marginBottom = 30 - asideheight + "vh";
+    {{ if .IsHome }}document.querySelector('#particles').style.height = asideheight + "vh";{{ end }}
+    // document.querySelector('main').style.height = "calc(100vh - " + asideheight + "vh - 4rem{{ if .IsHome }} - 4px{{end}})";
+  }
+}
+{{ if eq .Kind "page" }}
+function kudos(page) {
+  var modifiedHeaders = JSON.parse(JSON.stringify(headers))
+  modifiedHeaders.method = 'post'
+  fetch('/.netlify/functions/kudos?key=7f2ababa423061c509f4923dd04b6cf1&url=' + page, { method: 'post' })
+  .then(resp => { resp.text() })
+  .then(text => {
+    console.log(text)
+    document.getElementById('kudosClick').setAttribute('onclick', 'return false;')
+    document.getElementById('kudosClick').setAttribute('title', 'Thanks!')
+    document.getElementById('cheersIcon').style.display = 'none'
+    document.getElementById('cheersDone').style.display = 'inline-block'
+  }).catch( error => {
+    console.log(error)
+  })
+}
+{{ end }}
+
+// Homepage Dancing Lines...
+{{ if .IsHome }}
+// Cool Background
+// if (document.querySelector("canvas")) {
+var canvas, ctx, color, mono, xloc, yloc, xsize, ysize, mousePosition
+function sizeCanvas(img) {
+  // console.log(img)
+  // if (typeof img !== 'string') {
+  //   img = 'https://res.cloudinary.com/dixwznarl/image/upload/tbcom/tbmonogram.svg'
+  // }
+  canvas = document.querySelector('canvas')
+  ctx = canvas.getContext('2d')
+  color = '#b7bbc2'
+  canvas.width = document.getElementById('particles').offsetWidth
+  canvas.height = document.getElementById('particles').offsetHeight
+  canvas.style.display = 'block'
+  ctx.fillStyle = '#767d8a'
+  ctx.lineWidth = 0.1
+  ctx.strokeStyle = color
+  // mono = new Image()
+  // mono.src = img
+  // xloc = canvas.width / 2 - 125
+  // yloc = canvas.height / 2 - 125
+  // xsize = 250
+  // ysize = 250
+  mousePosition = {
+    x: canvas.width / 2,
+    y: canvas.height / 2
+  }
+}
+
+var moveDir = [20, 8]
+
+function fakemovement() {
+  if (mousePosition.x < 0 || mousePosition.x > canvas.width) {
+    moveDir[0] = -moveDir[0]
+  } else if (mousePosition.y < 0 || mousePosition.y > canvas.height) {
+    moveDir[1] = -moveDir[1]
+  }
+  mousePosition.x += moveDir[0]
+  mousePosition.y += moveDir[1]
+}
+
+var dots = {
+  nb: 175,
+  distance: 100,
+  d_radius: 200,
+  array: []
+}
+
+if (window.innerWidth <= 760) {
+  dots.nb = 50
+}
+
+function Dot() {
+  this.x = Math.random() * canvas.width
+  this.y = Math.random() * canvas.height
+
+  this.vx = -0.5 + Math.random()
+  this.vy = -0.5 + Math.random()
+
+  this.radius = 2 * Math.random()
+}
+
+Dot.prototype = {
+  create: function() {
+    ctx.beginPath()
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
+    ctx.fill()
+  },
+
+  animate: function() {
+    for (var i = 0; i < dots.nb; i++) {
+      var dot = dots.array[i]
+
+      if (dot.y < 0 || dot.y > canvas.height) {
+        dot.vx = dot.vx
+        dot.vy = -dot.vy
+      } else if (dot.x < 0 || dot.x > canvas.width) {
+        dot.vx = -dot.vx
+        dot.vy = dot.vy
+      }
+      dot.x += dot.vx
+      dot.y += dot.vy
+    }
+  },
+
+  line: function() {
+    for (var i = 0; i < dots.nb; i++) {
+      for (var j = 0; j < dots.nb; j++) {
+        var i_dot = dots.array[i]
+        var j_dot = dots.array[j]
+
+        if (
+          i_dot.x - j_dot.x < dots.distance &&
+          i_dot.y - j_dot.y < dots.distance &&
+          i_dot.x - j_dot.x > -dots.distance &&
+          i_dot.y - j_dot.y > -dots.distance
+        ) {
+          if (
+            i_dot.x - mousePosition.x < dots.d_radius &&
+            i_dot.y - mousePosition.y < dots.d_radius &&
+            i_dot.x - mousePosition.x > -dots.d_radius &&
+            i_dot.y - mousePosition.y > -dots.d_radius
+          ) {
+            ctx.beginPath()
+            ctx.moveTo(i_dot.x, i_dot.y)
+            ctx.lineTo(j_dot.x, j_dot.y)
+            ctx.stroke()
+            ctx.closePath()
+          }
+        }
+      }
+    }
+  }
+}
+
+function createDots() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+  for (var i = 0; i < dots.nb; i++) {
+    dots.array.push(new Dot())
+    var dot = dots.array[i]
+    dot.create()
+  }
+
+  dot.line()
+  dot.animate()
+  //ctx.drawImage(mono, xloc, yloc, xsize, ysize)
+}
+
+if (document.querySelector('canvas')) {
+  window.addEventListener('resize', sizeCanvas, true)
+  document.getElementById('particles').parentNode.onmousemove = function(e) {
+    mousePosition.x = e.pageX
+    mousePosition.y = e.pageY - document.documentElement.scrollTop
+    // console.log(mousePosition.y + document.documentElement.scrollTop)
+  }
+  sizeCanvas()
+  setInterval(createDots, 1000 / 30)
+  setInterval(fakemovement, 250)
+}
+
+function knobProgress(value) {
+  var axy = 'a 40,40 0 0 1 0,80'
+  var bxy = ''
+  if (value < 0.5) {
+    axy = 'a 40,40 0 0 1 ' + (40 * Math.sin(Math.PI * (2 * value))) + ',' + (40 * (-1 * (Math.cos(Math.PI * (2 * value)) - 1)))
+  }
+  if (value > 0.5) {
+    bxy = ' a 40,40 0 0 1 ' + (40 * Math.sin(Math.PI * (2 * value))) + ',' + (40 * (Math.cos(Math.PI * (2 * (0.5 - value))) - 1))
+  }
+  return 'M 50, 50 m 0, -40 ' + axy + bxy
+}
+
+function daysIntoYear(date){
+  return (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000;
+}
+
+// Simple Real-Time evaluation of reading data.
+var perComplete = {{ .Site.Params.latestRead.total }} / {{ .Site.Params.readgoal }}
+var progress = {{ .Site.Params.latestRead.total }} - Math.floor(daysIntoYear(new Date()) / 365.25 * {{ .Site.Params.readgoal }})
+document.getElementById('bookprogress').innerHTML = Math.abs(progress)
+if (progress === 0) {
+  document.getElementById('bookprogress').parentNode.innerHTML = 'Reading right on schedule.'
+} else if (progress > 0) {
+  document.getElementById('booksahead').innerHTML = 'ahead of'
+} else {
+  document.getElementById('booksahead').innerHTML = 'behind'
+}
+document.getElementById('readprogress').getElementsByTagName('path')[0].setAttribute('d', knobProgress(Math.min(perComplete, 1)))
+
+{{ end }}
+</script>
+
+<!-- Search Section! -->
+{{ if eq .Kind "page" }}{{ if eq .Title "Searches" }}
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script type="text/javascript">
+  var url = new URL(window.location)
+  var search = url.searchParams.get("s")
+  document.getElementById("search_{{ .File.UniqueID }}").addEventListener('click', function (e) {
+    e.preventDefault()
+    Search(document.getElementById("searchtext_{{ .Page.File.UniqueID }}").value)
+    var newurl = window.location.origin + window.location.pathname + '?s=' + document.getElementById("searchtext_{{ .Page.File.UniqueID }}").value
+    window.history.pushState({ path: newurl }, '', newurl)
+  })
+  document.getElementById("searchtext_{{ .File.UniqueID }}").addEventListener('keyup', function () {
+    Search(document.getElementById("searchtext_{{ .Page.File.UniqueID }}").value)
+  })
+  var documents = {}
+  var idx = {}
+  var data = []
+  fetch('/blog/index.json')
+    .then(function(response) {
+      return response.json()
+    }).then(function(json) {
+      documents = json.data
+      idx = lunr(function () { 
+        this.ref('href')
+        this.field('title')
+        this.field('tags')
+        this.field('content')
+        documents.forEach(function (doc) { this.add(doc) }, this)
+      })
+      console.log(idx)
+      Search(search)
+    }).catch(function(ex) {
+      documents = [
+        { title: "Error Getting Index" }
+      ]
+    })
+  
+  var insertAfter = function (newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+  }
+  var debounce = function (func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args)
+      }
+      var callNow = immediate && !timeout
+      clearTimeout(timeout)
+      timeout = setTimeout(later, wait)
+      if (callNow) func.apply(context, args)
+    }
+  }
+  var Search = debounce(function (search) { 
+    // var what = document.getElementById('searchtext').value
+    if (search != "") {
+      data = idx.search(search)
+      data.forEach(function (doc) { 
+        doc.title = documents.filter(function (post) { 
+          return post.href === doc.ref })[0].title
+        doc.date = documents.filter(function (post) { 
+          return post.href === doc.ref })[0].date 
+        doc.tags = documents.filter(function (post) {
+          return post.href === doc.ref})[0].tags
+        doc.content = documents.filter(function (post) {
+          return post.href === doc.ref})[0].content
+        doc.image = documents.filter(function (post) {
+          return post.href === doc.ref})[0].image
+        })
+    } else {
+      data = []
+    }
+    Array.prototype.slice.call(document.querySelectorAll('#searchResults article')).forEach(function (item) {
+      item.remove()
+    })
+    // var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    for (var i = data.length - 1; i >= 0; i--) {
+      var article = document.createElement('article')
+      var header = document.createElement('div')
+      header.classList = 'list-title'
+      var title = document.createElement('div')
+      var h1 = document.createElement('h1')
+      var link = document.createElement('a')
+      var time = document.createElement('time')
+      var date = new Date(data[i].date)
+      time.dateTime = data[i].date
+      time.appendChild(document.createTextNode((date.getYear() + 1900) + '.' + ("0" + (date.getMonth() + 1)).substr(-2)))
+      link.href = data[i].ref
+      link.appendChild(document.createTextNode(data[i].title))
+      h1.appendChild(link)
+      title.appendChild(h1)
+      title.appendChild(time)
+      header.appendChild(title)
+      var taglist = document.createElement('div')
+      var tagul = document.createElement('ul')
+      var tagli, taglink
+      data[i].tags.forEach(function (tag) {
+        tagli = document.createElement('li')
+        taglink = document.createElement('a')
+        taglink.href = '/tags/{0}/'.replace('{0}', tag)
+        taglink.appendChild(document.createTextNode(tag))
+        tagli.appendChild(taglink)
+        tagul.appendChild(tagli)
+      })
+      taglist.appendChild(tagul)
+      header.appendChild(taglist)
+      article.appendChild(header)
+      insertAfter(article, document.getElementById('searchResults').firstElementChild)
+      }
+      document.getElementById('searchTerm_{{ .Page.File.UniqueID }}').innerHTML = search
+    }, 250)
+  
+</script>{{ end }}{{ end }}
+{{ if .Params.script }}<script type="text/javascript" src="{{ .Params.script }}"></script>{{ end }}
+{{ if .Site.Params.matomo }}
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setCookieDomain", "*.traeblain.com"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function () {
+    var u = "https://analytics.tra.pt/";
+    _paq.push(['setTrackerUrl', u + 'matomo.php']);
+    _paq.push(['setSiteId', '2']);
+    var d = document,
+      g = d.createElement('script'),
+      s = d.getElementsByTagName('script')[0];
+    g.type = 'text/javascript';
+    g.async = true;
+    g.defer = true;
+    g.src = u + 'matomo.js';
+    s.parentNode.insertBefore(g, s);
+  })();
+</script>
+{{ end }}

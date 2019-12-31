@@ -1,0 +1,19 @@
+<footer>
+	<p><img src="https://res.cloudinary.com/dixwznarl/image/upload/tbcom/by.svg" 
+		title="CC-BY-4.0: Creative Commons Attribution 4.0" alt="CC-BY-4.0: Creative Commons Attribution 4.0">
+		 {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> | 
+		<a href="https://creativecommons.org/licenses/by/4.0/">Some Rights Reserved</a>
+	</p>
+	<div id="backToTop" onclick="document.getElementsByTagName('main')[0].scrollTo({ top: 0, behavior: 'smooth' })">
+		<svg class="svg svg-search-icon" width="9" height="19">
+			<use xlink:href="#upArrow"></use>
+		</svg>
+	</div>
+</footer>
+<div id="modalBackground"></div>
+<div id="searchBox" onclick="toggleSearch()">
+	<form action="/search" method="GET" onclick="keepSearch()">
+		<input type="text" placeholder="Search here..." name="s" />
+		<button type="submit"><svg class="svg svg-search-icon"><use xlink:href="#search"></use></svg><span>Search</span></button>
+	</form>
+</div>

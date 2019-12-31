@@ -20,15 +20,18 @@ Guilt versus Shame has been a specific issue I've been considering. For a long t
 
 1. : the fact of having committed a breach of conduct especially violating law and involving a penalty
 2. a. : the state of one who has committed an offense especially consciously
+  
    b. : feelings of deserving blame especially for imagined offenses or from a sense of inadequacy
-3. : _a feeling of deserving blame for offenses_ <--
+3. : _a feeling of deserving blame for offenses_ :point_left:
 
 **Shame**, though, is defined below (also from [Webster][defshame]):
 
 1.  a. : a painful emotion caused by consciousness of guilt, shortcoming, or impropriety
+    
     b. : the susceptibility to such emotion
-2.  : _a condition of humiliating disgrace or disrepute_ <--
+2.  : _a condition of humiliating disgrace or disrepute_ :point_left:
 3.  a. : something that bring censure or reproach _ALSO_ : something to be regretted
+    
     b. : a cause of feeling shame
 
 None of these really speak directly to the differences. I've marked the items that contain the closest definition, but it still feels lacking. Since I personally approach this from a Judeo-Christian bent, I'll be addressing the differences in the same manner.
