@@ -42,7 +42,7 @@ fetchIt().then( resp => {
   const twitter = resp.results[0].twitter[0];
   const goodreads = resp.results[0].goodreads[0];
   const links = resp.results[0].links[0];
-  goodreads.totalRead = resp.results[0].counts[0].goodreads;
+  goodreads.totalRead = (resp.results[0].counts.length > 0) ? resp.results[0].counts[0].goodreads : 0;
   const music = resp.results[0].music[0].artists;
 
   const twitterParams = `
