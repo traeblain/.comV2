@@ -3,9 +3,6 @@ backend:
   branch: master
   accept_roles:
     - admin
-media_folder: "static/images"
-public_folder: "/images"
-publish_mode: "editorial_workflow"
 collections:
   - name: "blog"
     label: "Blog"
@@ -26,3 +23,10 @@ collections:
       - { label: "Tags", name: "tags", widget: "list", allow_add: false }
       - { label: "Script", name: "script", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dixwznarl
+    api_key: 633573216924142
+site_url: https://traeblain.com
+logo_url: https://res.cloudinary.com/dixwznarl/image/upload/v1480537358/tbcom/tbmonogram.svg
