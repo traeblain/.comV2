@@ -11,6 +11,22 @@
     <!-- Include the script that builds the page and powers Netlify CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
     <script>
+      var BlogPreview = createClass({
+        render: function() {
+          var entry = this.props.entry;
+          var title = entry.getIn(['data', 'title']);
+          var date = entry.getIn(['data', 'date']);
+          var bg = entry.getIn(['data', 'background']);
+          var body = this.props.widgetFor('body');
+
+          return h('main', {},
+            h('h1', {}, title),
+            h('div', {"className": "article"}, body),
+          );
+        }
+      });
+
+      CMS.registerPreviewTemplate("blog", BlogPreview);
       CMS.registerPreviewStyle("/css/style.css");
     </script>
   </body>
