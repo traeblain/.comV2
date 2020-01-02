@@ -1205,6 +1205,11 @@ div.list-title ul {
     margin-top: -30vh;
     overflow-x: hidden;
   }
+  div.frame-content main { /* Fix for Netlify CMS */
+    height: 100vh;
+    padding-top: 0;
+    margin-top: 0;
+  }
   main.home {
     height: calc(100vh - 4rem - 4px); /*Feels like a hack...*/
   }
