@@ -20,7 +20,10 @@
           var body = this.props.widgetFor('body');
 
           return h('main', {},
-            h('h1', {}, title),
+            h('div', {"className": "title"},
+              h('h1', {}, title),
+            ),
+            h('hr', {}),
             h('div', {"className": "article"}, body),
           );
         }

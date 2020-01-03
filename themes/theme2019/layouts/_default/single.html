@@ -19,6 +19,8 @@
 			</div>
 			<hr/>
 			<div class="article">
+				{{ if .Draft }}<p>📝 <em><strong>Note:</strong> This post is still in Draft form. This working copy may change.</em>
+				</p>{{ end }}
 				{{ .Content }}
 			</div>
 			<div>
