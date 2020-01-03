@@ -13,24 +13,29 @@ script: ' '
 ---
 So what tends to happen this time of year is that I rebuild my site for whatever reason I can come up with.  It's what keeps me engaged, finding cool things to do, solving problems, and playing around.  This time, I kept most of the basic style of my previous site but amped it up a notch with more _flash_.
 
-There are **4** main updates that I want to highlight:
+There are **5** main updates that I want to highlight:
 
-1) Digital Garden
+1) Color...ooooohh, aaaaahh.
+2) Digital Garden
 2) Quite Interesting Links
 3) Netlify Functions
 4) Lack of Activity
+
+## Color
+
+This is just for fun.  I was playing around with [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties "Mozilla CSS Variables") and seeing how easy it would be to make a switch and have it propogate throughout the page.  Turns out, it's very easy.  So now there's a color switcher.  I've loved the [Nord Theme](https://www.nordtheme.com/) colors for a while, so I've adopted it to my site. So now you can view it in standard White Background, Dark Mode/Black Background, and Nord Background.  You should see the small colors to the left or top of the page.  Go ahead, have some fun.  
 
 ## Digital Garden
 
 This is probably the most significant piece of the update.  When I write, I write about things on my mind right now.  It doesn't matter the date, really.  I realized that what I want to write about aren't things the fit nicely in a chronological flow of ideas.  Most of what I want to write about has sticking power, something to come back at and look at later, and maybe have the same or better influence a few years later as it has today.
 
-That's why I established this [Digital Garden](/#garden "Home-Digital Garden Area").  This is based off of something I read [Tom Critchlow](https://tomcritchlow.com/2019/02/17/building-digital-garden/ "Building a Digital Garden"), where he moved to create an area that may seem a bit scattered but is like walking through a garden as opposed to a museum type, curated timeline. One key aspect about this, is that the digital garden will also hold my "Drafts".  When I start a post it may be a few weeks/months before I finalize it.  The garden metaphor allows these to be available even if they aren't done, like something sprouting but not fully devloped.
+That's why I established this [Digital Garden](/#garden "Home-Digital Garden Area").  This is based off of something I read [Tom Critchlow](https://tomcritchlow.com/2019/02/17/building-digital-garden/ "Building a Digital Garden"), where he moved to create an area that may seem a bit scattered but is like walking through a garden as opposed to a museum type, curated timeline. One key aspect about this, is that the digital garden will also hold my "Drafts".  When I start a post it may be a few weeks/months before I finalize it.  The garden metaphor allows these to be available even if they aren't done, like something sprouting but not fully developed.
 
 I really dig this process, I always look at this point in the year and say: "I'm going to write more this next year." Then life takes over and it's stays pretty empty.  I think with the garden metaphor, maybe I can ignore the stress of finishing something and just write. It's a plan, but who knows.
 
 ## Quite Interesting Links
 
-I like to share certain links I've discovered, good reads, etc.  But never felt like Twitter was a great place for this to foster and grow.  I started using [Refind](https://refind.com) this past year and like how it works.  I even setup a [Newsletter](/blog/i-got-a-newsletter/) to supply these out in the world. But I rather like the ephemeral nature of some of these with the Refind backend as the record.  So on this site, you should see a new link every once in a while for something that I find: ["Quite Interesting"](/#sectionQI "Home-Section Quite Interesting").
+I like to share certain links I've discovered, good reads, etc.  But never felt like Twitter was a great place for this to foster and grow.  I started using [Refind](https://refind.com) this past year and like how it works.  I even setup a [Newsletter](/blog/i-got-a-newsletter/) to supply these out in the world. But I rather like the ephemeral nature of some of these with the Refind back-end as the record.  So on this site, you should see a new link every once in a while for something that I find: ["Quite Interesting"](/#sectionQI "Home-Section Quite Interesting").
 
 ## Netlify Functions
 
@@ -40,7 +45,7 @@ I moved then to something that I could backup and transition. I looked at [RestD
 
 I started out with [Webtask](https://webtask.io) from Auth0, which I also love, but they stopped taking new registrations and so I feared--like Restlet--they were going to dump it soon. Then I remembered [Netlify](https://netlify.com) who hosts this site, recently offered a Functions service.  Functions (as well as Webtasks) are short pieces of code that get called up and executed based on a web address.  Combined with a "pre-compile" set of code that gets the latest data from my MeshyDB, I can execute and rebuild the site with the latest data in near real time.  I do this by [IFTTT](https://ifttt.com "If This Then That") monitoring of data (i.e. Twitter, Refind, Goodreads, etc.) and executing these functions when something is found.  Then these functions deploy a rebuild of my site giving the site a near dynamic/fresh feel all the while still being a static site.
 
-My previous site shot 3-4 additional web requests to my old API to be able to render the site.  This new version, is compiled with the new data ready to go so there's less overhead on your end.  It was quite fun to impliment. 
+My previous site shot 3-4 additional web requests to my old API to be able to render the site.  This new version, is compiled with the new data ready to go so there's less overhead on your end.  It was quite fun to implement. 
 
 ## Lack of Activity Section
 
@@ -51,3 +56,5 @@ So with that I got a Garmin watch this Christmas and will look to integrate that
 ## And Finally
 
 All in all, I hope you like the new look.  There's a couple of thoughts that I am mulling over.  For instance, re-introducing Disqus comments, Webmentions, or something similar (I'm really liking [Hypothes.is](https://web.hypothes.is/)).  More things I can do with the Netlify Functions.  And of course, writing more.
+
+Feel free to share this to your prefered social media outlet.  Or just give me some cheers.
