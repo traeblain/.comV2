@@ -1,7 +1,7 @@
 ---
-draft: true
+draft: false
 title: Now in Color!
-date: '2019-12-31 10:48:26 -0600'
+date: '2020-01-05 17:48:26 -0600'
 description: >-
   Updated the website design to a new style with multiple colors.  Was fun to
   put together.  Here's the changes to the site.
@@ -23,11 +23,11 @@ There are **5** main updates that I want to highlight:
 
 ## Color
 
-This is just for fun.  I was playing around with [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties "Mozilla CSS Variables") and seeing how easy it would be to make a switch and have it propogate throughout the page.  Turns out, it's very easy.  So now there's a color switcher.  I've loved the [Nord Theme](https://www.nordtheme.com/) colors for a while, so I've adopted it to my site. So now you can view it in standard White Background, Dark Mode/Black Background, and Nord Background.  You should see the small colors to the left or top of the page.  Go ahead, have some fun.  
+This is just for fun.  I was playing around with [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties "Mozilla CSS Variables") and seeing how easy it would be to make a switch and have it propagate throughout the page.  Turns out, it's very easy.  So now there's a color switcher.  I've loved the [Nord Theme](https://www.nordtheme.com/) colors for a while, so I've adopted it to my site. So now you can view it in standard White Background, Dark Mode/Black Background, and Nord Background.  You should see the small colors to the left or top of the page.  Go ahead, have some fun.  
 
 ## Digital Garden
 
-This is probably the most significant piece of the update.  When I write, I write about things on my mind right now.  It doesn't matter the date, really.  I realized that what I want to write about aren't things the fit nicely in a chronological flow of ideas.  Most of what I want to write about has sticking power, something to come back at and look at later, and maybe have the same or better influence a few years later as it has today.
+This is probably the most significant piece of the update.  When I write, I write about things on my mind right now.  It doesn't matter the date, really.  I realized that what I want to write about aren't things the fit nicely in a chronological flow of ideas.  Most of what I want to write about has sticking power, something to come back at and look at later, and maybe have the same or better influence on me a few years later as it has today.
 
 That's why I established this [Digital Garden](/#garden "Home-Digital Garden Area").  This is based off of something I read [Tom Critchlow](https://tomcritchlow.com/2019/02/17/building-digital-garden/ "Building a Digital Garden"), where he moved to create an area that may seem a bit scattered but is like walking through a garden as opposed to a museum type, curated timeline. One key aspect about this, is that the digital garden will also hold my "Drafts".  When I start a post it may be a few weeks/months before I finalize it.  The garden metaphor allows these to be available even if they aren't done, like something sprouting but not fully developed.
 
@@ -51,10 +51,12 @@ My previous site shot 3-4 additional web requests to my old API to be able to re
 
 As you may notice, I don't have any _Activity_ data on the homepage.  Ever since Google bought Fitbit, I'm tired of turning over every aspect of my personal life to the Google.  In fact, I'm constantly searching for ways to dump their services or at lease minimize my exposure to them.  I use [DuckDuckGo](https://duckduckgo.com "Privacy Centered Search Engine") near exclusively, I stopped using Google Maps for **Apple Maps** or [OpenStreetMap](https://www.openstreetmap.org/), and in the process of getting my email and calendar out of their services.  _(Can't seem to dump Photos, though, that service is too good and can't really find a good alternative.)_ 
 
-So with that I got a Garmin watch this Christmas and will look to integrate that in the future.  Unfortunately, Garmin restricts their API to _approved_ application developers...which mean my personal needs probably won't qualify.  This is sad, as the Garmin Connect service is really nice and it would be awesome to get the data out.  I'll be exploring that for a while to see if I can get that setup.
+So with that I got a Garmin watch this Christmas and will look to integrate that in the future.  Unfortunately, Garmin restricts their API to _approved_ application developers...which means my personal needs probably won't qualify.  This is sad, as the [Garmin Connect](https://connect.garmin.com/) service is really nice and it would be awesome to get the data out.  I'll be exploring that in the future to see if I can get that setup.
 
 ## And Finally
 
 All in all, I hope you like the new look.  There's a couple of thoughts that I am mulling over.  For instance, re-introducing Disqus comments, Webmentions, or something similar (I'm really liking [Hypothes.is](https://web.hypothes.is/)).  More things I can do with the Netlify Functions.  And of course, writing more.
 
-Feel free to share this to your prefered social media outlet.  Or just give me some cheers.
+Feel free to share this to your preferred social media outlet.  Or just give me some cheers.
+
+_Photo courtesy of [Jon Tyson](https://unsplash.com/@jontyson)._
