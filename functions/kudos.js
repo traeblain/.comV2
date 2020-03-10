@@ -59,7 +59,7 @@ exports.handler = async (event, context) => {
       })
     } else {
       updateData.fields.url = (event.queryStringParameters.url + '/').replace('//', '/')
-      kudo = await axios.post(postUrl + getData.data.records[0].id, updateData, {
+      kudo = await axios.post(postUrl, updateData, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
