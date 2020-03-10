@@ -1,7 +1,9 @@
 require('dotenv').config()
 const axios = require('axios').default
-const authUrl = "https://auth.meshydb.com/trae/connect/token"
-const postUrl = "https://api.meshydb.com/trae/meshes/"
+// const authUrl = "https://auth.meshydb.com/trae/connect/token"
+// const postUrl = "https://api.meshydb.com/trae/meshes/"
+const getUrl = "https://api.airtable.com/v0/appsrGcwdYD2QikLG/Kudos?filterByFormula=AND(SEARCH('{URLFILL}', {url}))"
+const postUrl = "https://api.airtable.com/v0/appsrGcwdYD2QikLG/Kudos/"
 
 exports.handler = async (event, context) => {
   if (event.httpMethod !== "POST" || event.queryStringParameters.key !== "7f2ababa423061c509f4923dd04b6cf1") {
@@ -16,50 +18,62 @@ exports.handler = async (event, context) => {
       kudo: 1
     }
     const updateData = {
-      "filter": `{ url : '${event.queryStringParameters.url}' }`,
-      "update": "{ $inc: { kudo: 1 }}"
+      fields: {
+        kudo: 1
+      }
     }
-    console.log(updateData)
-    console.log("EnVars: ", process.env.API_KEY, process.env.API_PASSWORD)
+    // const updateData = {
+    //   "filter": `{ url : '${event.queryStringParameters.url}' }`,
+    //   "update": "{ $inc: { kudo: 1 }}"
+    // }
+    // console.log(updateData)
+    // console.log("EnVars: ", process.env.API_KEY, process.env.API_PASSWORD)
 
-    const formObject = {
-      'client_id': process.env.API_KEY,
-      'grant_type': 'password',
-      'username': 'api',
-      'password': process.env.API_PASSWORD,
-      'scope': 'meshy.api offline_access'
-    }
+    // const formObject = {
+    //   'client_id': process.env.API_KEY,
+    //   'grant_type': 'password',
+    //   'username': 'api',
+    //   'password': process.env.API_PASSWORD,
+    //   'scope': 'meshy.api offline_access'
+    // }
 
-    const tokenData = await axios.post(authUrl, formObject)
-    const token = await tokenData.data.access_token
-    console.log(token)
-
-    const update = await axios.patch(postUrl + 'kudos/', updateData, {
+    // const tokenData = await axios.post(authUrl, formObject)
+    // const token = await tokenData.data.access_token
+    // console.log(token)
+    const getData = await axios.get(getUrl.replace('{URLFILL}', event.queryStringParameters.url), {
       headers: {
         'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + token
+        'Authorization': 'Bearer ' + process.env.AIRTABLE_TOKEN
       }
     })
-    console.log(update.data)
-    if (update.data.matchedCount === 1) {
-      return {
-        statusCode: 200,
-        body: `Updated ${event.queryStringParameters.url} with a kudo!`
-      }
-    } else {
-      const resp = await axios.post(postUrl + 'kudos/', postData, {
+    
+    const kudo
+    if (getData.data.records.length === 1) {
+      updateData.fields.kudo = getData.data.records[0].fields.kudo + 1
+      kudo = await axios.patch(postUrl + getData.data.records[0].id, updateData, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + token
+          'Authorization': 'Bearer ' + process.env.AIRTABLE_TOKEN
         }
       })
+    } else {
+      updateData.fields.url = (event.queryStringParameters.url + '/').replace('//', '/')
+      kudo = await axios.post(postUrl + getData.data.records[0].id, updateData, {
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + process.env.AIRTABLE_TOKEN
+        }
+      })
+    }
 
-      console.log(JSON.stringify(resp.data));
+    
+    console.log(kudo.data)
+    if (kudo.status === 200 || kudo.status === 201) {
       return {
         statusCode: 200,
-        body: `Created record and added ${event.queryStringParameters.url} with a kudo!`
+        body: `Updated ${event.queryStringParameters.url} with a kudo!`
       }
     }
   }
