@@ -23,7 +23,7 @@ exports.handler = async (event, context) => {
         id: recordIDs[i],
         fields: {
           link: artists[i].url,
-          plays: artists[i].playcount,
+          plays: artists[i].playcount * 1,
           artist: "#" + artists[i].name,
           image: artists[i].image[3]['#text']
         }
