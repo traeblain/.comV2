@@ -22,7 +22,7 @@ exports.handler = async (event, context) => {
         kudo: 1
       }
     }
-    const kudo
+    let kudo
     // const updateData = {
     //   "filter": `{ url : '${event.queryStringParameters.url}' }`,
     //   "update": "{ $inc: { kudo: 1 }}"
