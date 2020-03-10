@@ -13,15 +13,16 @@ exports.handler = async (event, context) => {
     }
   }
   try {
-    const postData = {
-      url: event.queryStringParameters.url,
-      kudo: 1
-    }
+    // const postData = {
+    //   url: event.queryStringParameters.url,
+    //   kudo: 1
+    // }
     const updateData = {
       fields: {
         kudo: 1
       }
     }
+    const kudo
     // const updateData = {
     //   "filter": `{ url : '${event.queryStringParameters.url}' }`,
     //   "update": "{ $inc: { kudo: 1 }}"
@@ -47,7 +48,6 @@ exports.handler = async (event, context) => {
       }
     })
     
-    const kudo
     if (getData.data.records.length === 1) {
       updateData.fields.kudo = getData.data.records[0].fields.kudo + 1
       kudo = await axios.patch(postUrl + getData.data.records[0].id, updateData, {
