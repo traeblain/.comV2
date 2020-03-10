@@ -1,8 +1,5 @@
 require('dotenv').config()
 const axios = require('axios').default
-// const moment = require('moment')
-// const authUrl = "https://auth.meshydb.com/trae/connect/token"
-// const postUrl = "https://api.meshydb.com/trae/meshes/"
 const postUrl = "https://api.airtable.com/v0/appWQ7mufpoNZv5cS/Music"
 
 exports.handler = async (event, context) => {
@@ -24,7 +21,7 @@ exports.handler = async (event, context) => {
         fields: {
           link: artists[i].url,
           plays: artists[i].playcount * 1,
-          artist: "#" + artists[i].name,
+          artist: artists[i].name,
           image: artists[i].image[3]['#text']
         }
       }
@@ -36,23 +33,8 @@ exports.handler = async (event, context) => {
     }
     
     const postData = {
-      // site: 'music',
       records: cleanArtists
     }
-    // console.log(postData)
-
-    // const formData = {
-    //   'client_id': process.env.API_KEY,
-    //   'grant_type': 'password',
-    //   'username': 'api',
-    //   'password': process.env.API_PASSWORD,
-    //   'scope': 'meshy.api offline_access'
-    // }
-
-    // const tokenData = await axios.post(authUrl, formData)
-    // const token = await tokenData.data.access_token
-    // console.log(token)
-
     const resp = await axios.put(postUrl, postData, {
       headers: {
         'Accept': 'application/json',
@@ -64,7 +46,7 @@ exports.handler = async (event, context) => {
     console.log(resp.status, resp.statusText)
     if (resp.status === 200 || resp.status === 201) {
       console.log('Attempting to rebuild.')
-      // const rebuild = await axios.post('https://api.netlify.com/build_hooks/' + process.env.REBUILD_KEY, {})
+      const rebuild = await axios.post('https://api.netlify.com/build_hooks/' + process.env.REBUILD_KEY, {})
     }
     return {
       statusCode: 200,
