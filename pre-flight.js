@@ -44,7 +44,7 @@ const fetchIt = async () => {
     headers: headers
   });
   const linkJSON = await linkData.json();
-  const musicData = await fetch("https://api.airtable.com/v0/appWQ7mufpoNZv5cS/Music", {
+  const musicData = await fetch("https://api.airtable.com/v0/appWQ7mufpoNZv5cS/Music?sort[0][field]=plays&sort[0][direction]=desc", {
     method: 'GET',
     headers: headers
   });
