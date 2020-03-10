@@ -33,30 +33,30 @@ const fetchIt = async () => {
     method: 'GET',
     headers: headers
   });
-  twitterData = await twitterData.json();  // Will this work?
+  const twitterJSON = await twitterData.json();
   const bookData = await fetch("https://api.airtable.com/v0/appChKYhLC0uF7gPx/Books?maxRecords=100&sort[0][field]=Date&sort[0][direction]=desc&filterByFormula=IS_AFTER({Date}, DATETIME_PARSE('1 Jan 2020 00:00', 'D MMM YYYY HH:mm'))", {
     method: 'GET',
     headers: headers
   });
-  bookData = await bookData.json();
+  const bookJSON = await bookData.json();
   const linkData = await fetch("https://api.airtable.com/v0/appSegmqnDPMPqaGu/Links?maxRecords=1&sort[0][field]=Date&sort[0][direction]=desc", {
     method: 'GET',
     headers: headers
   });
-  linkData = await linkData.json();
+  const linkJSON = await linkData.json();
   const musicData = await fetch("https://api.airtable.com/v0/appWQ7mufpoNZv5cS/Music", {
     method: 'GET',
     headers: headers
   });
-  musicData = await musicData.json();
+  const musicJSON = await musicData.json();
 
   const resp = {
-    twitter: twitterData.records[0].fields,
-    goodreads: bookData.records[0].fields,
-    links: linkData.records[0].fields,
-    music: musicData.records
+    twitter: twitterJSON.records[0].fields,
+    goodreads: bookJSON.records[0].fields,
+    links: linkJSON.records[0].fields,
+    music: musicJSON.records
   };
-  resp.goodreads.totalRead = bookData.records.length;
+  resp.goodreads.totalRead = bookJSON.records.length;
   
 
   // const resp = await respData.json();
@@ -98,7 +98,7 @@ fetchIt().then( resp => {
 `;
   let musicParams = `[music]`;
   resp.music.forEach(function(artist) {
-    console.log(artist);
+    // console.log(artist);
     musicParams = musicParams + `
   [[music.artist]]
     name = "${artist.fields.artist}"
