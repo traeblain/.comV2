@@ -1125,6 +1125,9 @@ div.list-title ul {
   main {
     width: 1120px;
   }
+  footer {
+    left: calc(5rem + 100vw/2 - 800px);
+  }
 }
 
 @media only screen and (max-width: 1023px) {
