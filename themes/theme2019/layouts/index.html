@@ -16,7 +16,7 @@
 		</div>
 		<div id="sectionQI" class="half-basis">
 			<h1>Quite Interesting</h1>
-			<a class="qi" href="{{ .Site.Params.qi.link }}"><img src="{{ .Site.Params.qi.image }}" />
+			<a class="qi" href="{{ .Site.Params.qi.link }}"><img src="{{ .Site.Params.qi.image }}" alt="{{ .Site.Params.qi.title }}" />
 				<h6>{{ .Site.Params.qi.title }}</h6>
 				<p><time>{{ dateFormat "Jan 02" .Site.Params.qi.date }}</time> &mdash; {{ .Site.Params.qi.description }}
 					<span>{{ .Site.Params.qi.source }}</span></p>
@@ -144,7 +144,7 @@
 				</div>
 				<div class="flexbox-h">
 					<div>
-						<img src="https://res.cloudinary.com/dixwznarl/image/upload/github-cal.svg" width="95%">
+						<img src="https://res.cloudinary.com/dixwznarl/image/upload/github-cal.svg" width="95%" alt="Github Calendar">
 					</div>
 					<div class="repos-container">
 						<div class="repos space">
