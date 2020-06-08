@@ -3,6 +3,7 @@
   <meta property="og:title" content="{{ .Title }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Description }}{{ end }}">
+  <meta property="og:image" content="https://res.cloudinary.com/dixwznarl/image/upload/tbmonogram-name_ee22vs.png" />
   {{ if .IsPage }}
   <meta property="og:type" content="article" />
   <meta property="article:author" content="{{ .Site.Author.name }}" />
