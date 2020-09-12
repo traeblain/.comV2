@@ -23,7 +23,7 @@
     "encoding": "^0.1.12",
     "moment": "^2.26.0",
     "netlify-lambda": "^1.6.3",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "rss-parser": "^3.8.0"
   }
 }
