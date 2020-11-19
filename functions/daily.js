@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
     const cleanArtists = []
     let artistData
     for (let i = 0; i < 5; i++) {
-      artistData = await axios.get('https://webservice.fanart.tv/v3/music/' + artists[i].mbid + '&?api_key=06f56465de874e4c75a2e9f0cc284fa3&format=json')
+      artistData = await axios.get('https://webservice.fanart.tv/v3/music/' + artists[i].mbid + '&?api_key=d303b844070acbbdadb5aa8b54816699&format=json')
 
       cleanArtists[i] = {
         id: recordIDs[i],
