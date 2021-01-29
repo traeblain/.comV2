@@ -1,5 +1,6 @@
 require('dotenv').config();
-const fetch = require('node-fetch');
+//const fetch = require('node-fetch');
+const fetch = require('node-fetch-with-proxy');
 // const moment = require('moment');
 const fs = require('fs');
 
@@ -79,5 +80,5 @@ fetchIt().then( resp => {
     throw new Error('IT DIDN\'T WORK!!');
   });
 }).catch( error => {
-  process.stdout.write('There was an error!');
+  process.stdout.write(error);
 });
