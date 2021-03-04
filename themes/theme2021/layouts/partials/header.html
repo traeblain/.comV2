@@ -1,0 +1,71 @@
+<nav>
+  <ul>
+    <li>
+      <a href="//traeblain.com/">
+        <svg class="nav-image"><use xlink:href="#monogram"></use></svg>
+      </a>
+    </li>
+    <li>
+      <!-- <a href="//traeblain.com/">Trae Blain</a> -->
+      &nbsp;Trae Blain
+    </li>
+    <li>
+      <input type="checkbox" id="showmenu" role="button"></input>
+      <label for="showmenu" class="menu-icon"><div></div></label><br><label for="showmenu"><a>Menu</a></label>
+      <ul>
+        <li>
+          <a href="https://twitter.com/traeblain">
+            <svg class="svg svg-social-icon"><use xlink:href="#twitter"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/traeblain">
+            <svg class="svg svg-social-icon"><use xlink:href="#linkedin"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/traeblain">
+            <svg class="svg svg-social-icon"><use xlink:href="#github"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="http://instagram.com/traeblain">
+            <svg class="svg svg-social-icon"><use xlink:href="#instagram"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="http://keybase.io/traeblain">
+            <svg class="svg svg-social-icon"><use xlink:href="#lock"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="/blog/index.xml">
+            <svg class="svg svg-social-icon"><use xlink:href="#rss"></use></svg>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <label for="showsearch" class="nav-icon" onclick="scrollToTop(500);"><svg class="nav-icon"><use xlink:href="#search"></use></svg></label><br><label for="showsearch"><a onclick="scrollToTop(500);return false">Search</a></label>
+    </li>
+    <!-- <li><a href="#"><svg class="nav-icon"><use xlink:href="#search"></use></svg><br>Search</a></li> -->
+    <li>
+      <input type="checkbox" id="darkmode" role="button" onchange="darkmode(document.body)"></input>
+      <label for="darkmode" class="nav-icon"><svg class="nav-icon"><use xlink:href="#radio"></use></svg></label><br><label for="darkmode"><a>Dark</a></label>
+    </li>
+  </ul>
+</nav>
+<input type="checkbox" id="showsearch" role="button"></input>
+<div class="search-form">
+  <form action="/search" method="GET" onclick="keepSearch()">
+    <input
+      type="text"
+      placeholder="Search here..."
+      name="s"
+      aria-label="Search Site"
+    />
+    <button type="submit">
+      <svg class="svg svg-search-icon"><use xlink:href="#search"></use></svg><span>Search</span>
+    </button>
+  </form>
+</div>

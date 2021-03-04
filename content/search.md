@@ -9,3 +9,9 @@ tags: []
 ---
 
 {{< searchform >}}
+
+<style>
+  div.share-links {
+    display: none;
+  }
+</style>

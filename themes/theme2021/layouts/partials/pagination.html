@@ -1,0 +1,22 @@
+<div class="pagination">
+  {{ if .Paginator.HasPrev }}
+    <a href="{{ .Paginator.Prev.URL }}" class="previous-arrow">
+      <svg class="svg svg-search-icon" width="9" height="19">
+        <use xlink:href="#upArrow"></use>
+      </svg>
+    </a>
+  {{ else }}
+    <div>&nbsp;</div>
+  {{ end }}
+  {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
+  {{ if .Paginator.HasNext }}
+    <a href="{{ .Paginator.Next.URL }}" class="next-arrow">
+      <svg class="svg svg-search-icon" width="9" height="19">
+        <use xlink:href="#upArrow"></use>
+      </svg>
+    </a>
+  {{ else }}
+    <div>&nbsp;</div>
+  {{ end }}
+  </div>
+    

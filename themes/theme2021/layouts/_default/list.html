@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+{{ with .Title }}<h1>{{ replace . "Blogs" "Notebook" | upper }}</h1>{{ end }}
+
+{{ $paginator := .Paginate (where .Pages ".Draft" false) }}
+{{ range $paginator.Pages }}
+
+    <div class="list-title">
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <time>{{ .Date.Format "2006.01" }}</time>
+      <div>
+				{{ range .Params.tags }}
+				<svg class="svg svg-taglink"><use xlink:href="#taglink"></use></svg><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+				{{ end }}
+			</div>
+    </div>
+
+    
+    {{ if gt (len .Summary) 0 }}
+
+      <p>
+        {{ .Summary | safeHTML }}
+        <br>
+        <a href="{{ .RelPermalink }}">Continue reading {{ .Title }}</a>
+      </p>
+  {{ end }}
+
+{{ end }}
+{{ template "_internal/pagination.html" . }}
+
+{{ end }}
