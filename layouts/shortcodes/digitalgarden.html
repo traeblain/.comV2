@@ -10,7 +10,7 @@
     <div class="tax-content">
       <ul>
         {{ range $taxonomy.Pages }}
-        <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .LinkTitle }}</a>
+        <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .RelPermalink}}">{{ .LinkTitle }}</a>
         {{- if .Draft }} <em class="draft-flag">Draft</em>{{ end }}
         <time>{{ .Date.Format "2006.01" }}</time></li>
         {{ end }}

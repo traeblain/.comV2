@@ -4,7 +4,7 @@
     {{- range (where (where .Site.RegularPages ".Draft" false) "Type" "in" .Site.Params.mainSections) }}
     {{- if eq .Params.favorite true }}
       <li hugo-nav="{{ .RelPermalink }}">
-        <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
         <time>{{ .Date.Format "2006.01" }}</time>
       </li>
     {{ end -}}{{ end -}}
