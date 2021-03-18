@@ -665,4 +665,92 @@
   .share-links svg {
     margin: 0;
   }
+  .gardentoc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .gardentoc div {
+    flex-basis: 24%;
+    padding: 1ch;
+    border: solid 1px var(--primary);
+    margin: 0.25ch;
+    text-align: center;
+  }
+  .gardentoc div span {
+    font-family: var(--font-family-headline);
+  }
+  .draft-flag {
+    font-family: var(--font-family-headline);
+    color: var(--blue); 
+  }
+  main.search .post-time,
+  main.garden .post-time,
+  main.garden .post-tags > *,
+  main.fourohfour .post-tags,
+  main.fourohfour #searchResults {
+    display: none;
+  }
+  /* Add this attribute to the element that needs a tooltip */
+  [title] {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  /* Hide the tooltip content by default */
+  [title]:before,
+  [title]:after {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  /* Position tooltip above the element */
+  [title]:before {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px;
+    width: 160px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: var(--nord);
+    color: var(--background);
+    content: attr(title);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  /* Triangle hack to make tooltip look like a speech bubble */
+  [title]:after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid var(--nord);
+    /* border-top: 5px solid hsla(0, 0%, 20%, 0.9); */
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+  }
+
+  /* Show tooltip content on hover */
+  [title]:hover:before,
+  [title]:hover:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+  }
 </style>

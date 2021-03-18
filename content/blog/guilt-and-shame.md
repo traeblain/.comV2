@@ -1,9 +1,7 @@
 ---
 tags:
   - faith
-  - philosophy
   - thoughts
-  - theology
 background: "https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:good/notebook/cry-crying-prayer-beads.jpg"
 text_color: light
 script:

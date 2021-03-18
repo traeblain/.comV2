@@ -1,12 +1,33 @@
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-    {{ with .OutputFormats.Get "rss" -}}
-        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-    {{ end -}}
-    {{ $title := print .Site.Title " | " .Title }}
-    {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
-    <title>{{ $title }}</title>
-    {{ partial "style.html" . }}
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel="icon" href="data:;base64,iVBORw0KGgo=" /> -->
+  {{- if .IsHome }}{{ with .Site.GetPage "/blog" }}{{ range .AlternativeOutputFormats -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}{{ end -}}{{ else -}}
+  {{- range .AlternativeOutputFormats -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}{{ end -}}
+  {{- $title := print .Site.Title " | " .Title -}}
+  {{- if .IsHome }}{{ $title = .Site.Title }}{{ end -}}
+  <title>{{ $title }}</title>
+  <link rel="me" href="https://twitter.com/traeblain" type="text/html" />
+  <link rel="me" href="https://github.com/traeblain" type="text/html" />
+  <link rel="pgpkey authn" href="https://keybase.io/traeblain/pgp_keys.asc?fingerprint=0337778d2a99e3ae13a189ba5426cfe9ed1f039d" />
+  <link rel="webmention" href="https://webmention.io/traeblain.com/webmention" />
+  <!-- FavIcon... --><link rel="pingback" href="https://webmention.io/traeblain.com/xmlrpc" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=BGAXEnakbQ">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=BGAXEnakbQ">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=BGAXEnakbQ">
+  <link rel="manifest" href="/manifest.json?v=BGAXEnakbQ">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=BGAXEnakbQ" color="#5a5a5a">
+  <link rel="shortcut icon" href="/favicon.ico?v=BGAXEnakbQ">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=BGAXEnakbQ">
+  <meta name="theme-color" content="#3b4252">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#3b4252">
+{{ partial "opengraph" . }}
+  {{ partial "style.html" . }}
 </head>

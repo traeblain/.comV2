@@ -1,7 +1,6 @@
 ---
 tags:
-- newsletter
-- links
+- site
 background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:eco,w_2048/notebook/newspaper-stack.jpg
 text_color: dark
 script: ''

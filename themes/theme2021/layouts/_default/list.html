@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ with .Title }}<h1>{{ replace . "Blogs" "Notebook" | upper }}</h1>{{ end }}
+{{ with .Title }}<h1>{{ replace . "Blogs" "Posts" | upper }}</h1>{{ end }}
 
 {{ $paginator := .Paginate (where .Pages ".Draft" false) }}
 {{ range $paginator.Pages }}

@@ -1,7 +1,6 @@
 ---
 tags:
   - reading
-  - books
 background: "https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:good/notebook/books-in-grass.jpg"
 text_color: dark
 script:

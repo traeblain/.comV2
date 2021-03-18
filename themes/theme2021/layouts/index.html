@@ -4,13 +4,13 @@
 
   <div id="postslink">
     <div>
-      <h2>Latest Posts<a href="/blog" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#pencil"></use></svg></a></h2><a id="notebook" class="anchor"></a>
+      <h2>Latest Posts<a href="/notebook/" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#pencil"></use></svg></a></h2><a id="notebook" class="anchor"></a>
       <ul class="latest-posts">
       {{ range first 5 (where (where .Site.RegularPages ".Draft" false) "Type" "in" .Site.Params.mainSections) }}
         {{ .Render "titlesonly" }}
       {{ end -}}
       <li>
-        <h3><a href="/blog/">All Notebook Posts</a></h3>
+        <h3><a href="/notebook/">All Notebook Posts</a></h3>
       </li>
       </ul>
     </div>
@@ -20,7 +20,7 @@
         <a class="qi" href="{{ .Site.Params.qi.link }}"><img src="{{ .Site.Params.qi.image }}" alt="{{ .Site.Params.qi.title }}" /></a>
           <h3><a href="{{ .Site.Params.qi.link }}">{{ .Site.Params.qi.title }}</a></h3>
           <p><time>{{ dateFormat "Jan 02" .Site.Params.qi.date }}</time> &mdash; {{ .Site.Params.qi.description }}
-            <span><a href="{{ .Site.Params.qi.link }}">{{ .Site.Params.qi.source }}</a></span></p>
+            <span><a href="{{ .Site.Params.qi.source }}">{{ .Site.Params.qi.link }}</a></span></p>
         </a>
       </div>
     </div>
@@ -45,7 +45,7 @@
     {{- if (eq $progress 0) -}}
     <p><em>Reading right on schedule.</em></p>
     {{- else -}}
-    <p><em>{{ $progress }} books {{ if (gt $progress 0) }}ahead{{ else }}behind{{ end }} schedule</em></p>
+    <p><em>{{ math.Sqrt (math.Pow $progress 2) }} book{{ if (eq (math.Sqrt (math.Pow $progress 2)) 1) }}s{{ end }} {{ if (gt $progress 0) }}ahead{{ else }}behind{{ end }} schedule</em></p>
     {{ end -}}
     <div id="lastread">
       <figure>
