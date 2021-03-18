@@ -1,9 +1,7 @@
 ---
 tags:
 - faith
-- philosophy
 - science
-- theology
 background: 'https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:good/notebook/cosmos.jpg'
 text_color: light
 script: ''

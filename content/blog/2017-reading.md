@@ -1,7 +1,6 @@
 ---
 tags:
 - reading
-- books
 background: https://res.cloudinary.com/dixwznarl/image/upload/q_auto:eco/notebook/big-library.jpg
 text_color: light
 script: ''

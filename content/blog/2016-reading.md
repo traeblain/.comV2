@@ -1,7 +1,7 @@
 ---
 date: 2017-01-23
 title: Books, Books, and More Books
-tags: [ "reading", "books" ]
+tags: [ "reading" ]
 background: "https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_jpegmini,w_1000/v1483678973/notebook/open-book.jpg"
 ---
 

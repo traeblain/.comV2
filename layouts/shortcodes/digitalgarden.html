@@ -1,0 +1,21 @@
+<div class="gardentoc">
+  {{ range $key, $taxonomy := .Site.Taxonomies.tags }}
+  <div><a href="#taxonomy-{{ $key }}">{{ $key | title }}</a> <span>{{ len $taxonomy.Pages }}</span></div>
+  {{ end }}
+</div>
+<div class="garden">
+  {{ range $key, $taxonomy := .Site.Taxonomies.tags }}
+  <div id="taxonomy-{{ $key }}">
+    <h2>{{ $key | upper }}</h2>
+    <div class="tax-content">
+      <ul>
+        {{ range $taxonomy.Pages }}
+        <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .LinkTitle }}</a>
+        {{- if .Draft }} <em class="draft-flag">Draft</em>{{ end }}
+        <time>{{ .Date.Format "2006.01" }}</time></li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+  {{ end }}
+</div>

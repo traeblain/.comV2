@@ -1,17 +1,17 @@
 <div class="search-box">
-  <form action="/search" method="GET" class="search-form">
+  <form action="/search" method="GET">
     <input type="text" placeholder="Search here..." name="s" id="searchtext_{{ .Page.File.UniqueID }}" />
     <button type="submit" id="search_{{ .Page.File.UniqueID }}"><svg class="svg svg-search-icon"><use xlink:href="#search"></use></svg><span>Search</span></button>
   </form>
 </div>
 
 <div id="searchResults">
-  <h4>Search results for: <span id="searchTerm_{{ .Page.File.UniqueID }}">...</span></h4>
+  <h2>Search results for: <span id="searchTerm_{{ .Page.File.UniqueID }}">...</span></h2>
 </div>
 
 <style>
-  main.search div.title time{ display: none; }
-  main.search div.title h1{ font-size: calc(2rem + 3vw); }
+  main .post-time{ display: none; }
+  /* main > h1{ font-size: calc(2rem + 3vw); } */
   #searchTerm_{{ .Page.File.UniqueID }} {
     font-style: italic;
   }

@@ -1,0 +1,38 @@
+{{ $background := "none" }}
+{{ if .Params.background }}
+{{ $background = .Params.background }}
+{{ end }}
+{{ if or (eq .Kind "section") (eq .Kind "taxonomy") }}
+{{ range first 1 (where .Pages "Draft" false) }}
+	{{ if .Params.background }}
+		{{ $background = .Params.background }}
+	{{ end }}
+{{ end }}
+{{ end }}
+{{ if eq .Kind "404" }}
+	{{ $background = .Site.Params.fofbackgound }}
+{{ end }}
+<div class="headline" style="background-image: url({{ $background }})"></div>
+
+<h1>{{ .Title }}</h1>
+
+{{ if not .Date.IsZero }}
+  {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+  {{ $dateFormat := .Site.Params.dateFormat | default "2006.01" }}
+
+  <time class="post-time">{{ .PublishDate.Format $dateFormat }}</time>
+{{end}}
+
+{{ if .Params.tags }}
+  <div class="post-tags">
+
+  {{ with .Params.tags }}
+  {{ range . }}
+  {{ $href := print (absURL "tags/") (urlize .) }}
+  <svg class="svg svg-taglink"><use xlink:href="#taglink"></use></svg><a href="{{ $href }}">{{ . }}</a>
+  {{ end }}
+  {{ end }}
+
+  </div>
+
+{{ end }}
