@@ -1,4 +1,4 @@
 User-agent: *
-Sitemap: /sitemap.xml
-Sitemap: /sitemap2.xml
+Sitemap: https://traeblain.com/sitemap.xml
+Sitemap: https://traeblain.com/sitemap2.xml
 Disallow: /searchindex/
