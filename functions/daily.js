@@ -14,22 +14,33 @@ exports.handler = async (event, context) => {
     const cleanArtists = []
     let artistData
     for (let i = 0; i < 5; i++) {
-      artistData = await axios.get('https://webservice.fanart.tv/v3/music/' + artists[i].mbid + '&?api_key=d303b844070acbbdadb5aa8b54816699&format=json')
+      try {
+        artistData = await axios.get('https://webservice.fanart.tv/v3/music/' + artists[i].mbid + '&?api_key=d303b844070acbbdadb5aa8b54816699&format=json')
 
-      cleanArtists[i] = {
-        id: recordIDs[i],
-        fields: {
-          link: artists[i].url,
-          plays: artists[i].playcount * 1,
-          artist: artists[i].name,
-          image: artists[i].image[3]['#text']
+        cleanArtists[i] = {
+          id: recordIDs[i],
+          fields: {
+            link: artists[i].url,
+            plays: artists[i].playcount * 1,
+            artist: artists[i].name,
+            image: artists[i].image[3]['#text']
+          }
+        }
+
+        if (typeof artistData.data.artistthumb !== 'undefined') {
+          cleanArtists[i].fields.image = artistData.data.artistthumb[0].url.replace('https://assets.fanart.tv/fanart/', 'https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto,w_400/fanart/')
+        }
+      } catch (e) {
+        cleanArtists[i] = {
+          id: recordIDs[i],
+          fields: {
+            link: artists[i].url,
+            plays: artists[i].playcount * 1,
+            artist: artists[i].name,
+            image: artists[i].image[3]['#text']
+          }
         }
       }
-
-      if (typeof artistData.data.artistthumb !== 'undefined') {
-        cleanArtists[i].fields.image = artistData.data.artistthumb[0].url.replace('https://assets.fanart.tv/fanart/', 'https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto,w_400/fanart/')
-      }
-      
     }
     
     const postData = {
