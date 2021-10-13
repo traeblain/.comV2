@@ -30,7 +30,7 @@
   <h2>Twitter<a href="https://twitter.com/traeblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#twitter"></use></svg></a></h2><a id="tweet" class="anchor"></a>
   <blockquote id="twitter-status" class="twitter-tweet">
     <p lang="en" dir="ltr">
-      {{ .Site.Params.newtweet.post | replaceRE "((http:|https:)[^\\s]+[\\w])" "<a href=\"$1\" target=\"_blank\">$1</a>" | safeHTML }}
+      {{ .Site.Params.newtweet.post | replaceRE "((http:|https:)[^\\s]+[\\w])" "<a href=\"$1\" target=\"_blank\" rel=\"noopener\">$1</a>" | safeHTML }}
     </p>
     <cite>
       <a href="https://twitter.com/traeblain">Trae 🧠</a>
@@ -57,7 +57,7 @@
       <svg id="readprogress" xmlns="http://www.w3.org/2000/svg" version="1.1" class="knob-graph" viewBox="0 0 100 120">
         <circle class="knob-base" cx="50" cy="50" r="40" style="fill: transparent; stroke: #eee; stroke-width: 5;" />
         <path class="knob-progress" d="M 50, 50 m 0, -40 a 40,40 0 0 1 0,0" style="fill:transparent;stroke-width:10;stroke-linecap:round;" />
-        <use xlink:href="#goodreads" x="50%" y="50%" height="50px" width="50px" transform="translate(-25, -35)"></use>
+        <use xlink:href="#goodreads" x="50%" y="50%" height="50px" width="50px" transform="translate(-25, -35)" class="symbol-color"></use>
         <text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline"
           text-anchor="middle">{{ math.Round (mul (div .Site.Params.latestRead.total .Site.Params.readgoal) 100) }}% Done</text>
       </svg>
@@ -79,13 +79,42 @@
 
   <h1>Sensory</h1>
   <h2>Movie<a href="https://trakt.tv/users/traeblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#film"></use></svg></a></h2><a id="moviefilm" class="anchor"></a>
-  <p>
-    <img alt="Trae Blain's Last Movie" src="https://widgets.trakt.tv/users/3ce95a43ea6297d34071aab460918b21/watched/fanart2@2x.jpg?type=movie" width="100%">
+  <p class="sensory">
+    <img alt="Trae Blain's Last Movie" src="https://widgets.trakt.tv/users/3ce95a43ea6297d34071aab460918b21/watched/fanart2@2x.jpg?type=movie">
   </p>
 
   <h2>Television<a href="https://trakt.tv/users/traeblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#tv"></use></svg></a></h2><a id="tube" class="anchor"></a>
-  <p>
-    <img alt="Trae Blain's Last Television Episode" src="https://widgets.trakt.tv/users/3ce95a43ea6297d34071aab460918b21/watched/fanart2@2x.jpg?type=episode" width="100%">
+  <p class="sensory">
+    <img alt="Trae Blain's Last Television Episode" src="https://widgets.trakt.tv/users/3ce95a43ea6297d34071aab460918b21/watched/fanart2@2x.jpg?type=episode">
+  </p>
+
+  <h2>Gaming<a href="https://psnprofiles.com/Gothar_Destroyer" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#alien"></use></svg></a></h2><a id="gaming" class="anchor"></a></h2>
+  <p class="sensory">
+    {{- with .Site.Params.game }}
+    <svg version="1.1" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg"
+      font-family="Helvetica Light, Helveticaneue Light, Calibri Light,  Helveticaneue, Helvetica, Gill Sans, Myriad Pro, Arial, Lucida Grande, sans-serif">
+      <defs>
+        <pattern id="avatarimage" x="0" y="0" height="1" width="1">
+          <image height="120" width="120" href="https://i.psnprofiles.com/avatars/m/G101acc290.png" />
+        </pattern>
+      </defs>
+      <image id="background" width="1280" height="720"
+        href="{{ .artwork }}"
+        preserveAspectRatio="none" />
+      <rect x="0" y="600" height="120" width="1280" style="opacity: 80%;" />
+      <circle id="avatar" cx="80" cy="635" r="60" fill="url(#avatarimage)" stroke="white" stroke-width="5px" />
+      <!-- <image id="avatar" width="70" height="70" x="5" y="645" href="https://i.psnprofiles.com/avatars/m/G101acc290.png" /> -->
+      <text id="gamertag" x="170" y="643" style="font-size: 30px; fill: #CBCBCB; text-transform: uppercase">Gothar_Destroyer
+        Last Played</text>
+      <text id="gametitle" y="695" x="170" font-size="55px" fill="white" lengthAdjust="spacingAndGlyphs">{{ .title }}</text>
+      <g text-anchor="middle" transform="translate(1280, 720)">
+        <rect x="-210" y="-120" width="210" height="120" fill="#cbcbcb" opacity=".15" />
+        <text id="hrstitle" x="-105" y="-77" font-size="28px" fill="#CBCBCB" style="text-transform: uppercase">Hours
+          Played</text>
+        <text id="hrsplayed" x="-105" y="-25" font-size="50px" fill="#CBCBCB" style="text-transform: uppercase">{{ math.Round (div .hrs 3600.0) }}</text>
+      </g>
+    </svg>
+    {{ end -}}
   </p>
 
   <h2>Music<a href="https://www.last.fm/user/tblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#headphones"></use></svg></a></h2><a id="listen" class="anchor"></a>
@@ -93,7 +122,7 @@
     {{- with .Site.Params.music.artist }}{{- range . }}
     <div style="background-image:url({{ .image }})">
       <span class="artistbottom">
-        <span><a href="{{ .link }}" target="_blank">{{ .name }}</a></span><br>
+        <span><a href="{{ .link }}" target="_blank" rel="noopener">{{ .name }}</a></span><br>
         <span><em>{{ .plays }} plays</em></span>
       </span>
     </div>

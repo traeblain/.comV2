@@ -1,5 +1,5 @@
 <style type="text/css">
-/* =============================
+  /* =============================
       Variables...
    ============================= */
   body {
@@ -37,15 +37,21 @@
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
     --breakpoint-max: 1600px;
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-monospace: "Source Code Pro", SFMono-Regular, Menlo, Monaco,
-      Consolas, "Liberation Mono", "Courier New", monospace;
-    --font-family-headline: 'Grand', "Impact", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-condensed: "Roboto Condensed", /*iOS*/"AvenirNextCondensed-Bold", "Futura-CondensedExtraBold", /*MacOSX*/HelveticaNeue-CondensedBold, /*Ubuntu*/ "Ubuntu Condensed", "Liberation Sans Narrow",  /*Windows*/"Franklin Gothic Demi Cond", "Arial Narrow", /*Android*/sans-serif-condensed, /*Fallback*/Arial, "Trebuchet MS", "Lucida Grande", Tahoma, Verdana, sans-serif;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-family-monospace: 'Source Code Pro', SFMono-Regular, Menlo, Monaco,
+      Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --font-family-headline: 'Grand', 'Impact', -apple-system, BlinkMacSystemFont,
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+      'Noto Color Emoji';
+    --font-family-condensed: 'Roboto Condensed',
+      /*iOS*/ 'AvenirNextCondensed-Bold', 'Futura-CondensedExtraBold',
+      /*MacOSX*/ HelveticaNeue-CondensedBold, /*Ubuntu*/ 'Ubuntu Condensed',
+      'Liberation Sans Narrow', /*Windows*/ 'Franklin Gothic Demi Cond',
+      'Arial Narrow', /*Android*/ sans-serif-condensed, /*Fallback*/ Arial,
+      'Trebuchet MS', 'Lucida Grande', Tahoma, Verdana, sans-serif;
   }
   body.dark-theme {
     --background: #2e3440;
@@ -68,7 +74,8 @@
   }
   /* Duplicated due to need to bring this out of media/prefers */
   @media (prefers-color-scheme: dark) {
-    body, body.dark-theme {
+    body,
+    body.dark-theme {
       --background: #2e3440;
       --text-color: white;
       --nord: #e5e9f0;
@@ -101,35 +108,109 @@
   @font-face {
     font-family: 'Grand';
     src: url('/fonts/NTF-Grand-Regular.otf') format('truetype'),
-         url('/fonts/NTF-Grand-Regular.woff') format('woff');
+      url('/fonts/NTF-Grand-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
 
-/* =============================
+  /* =============================
       CSS Reset
    ============================= */
-  html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-  a, abbr, acronym, address, big, cite, code,
-  del, dfn, em, img, ins, kbd, q, s, samp,
-  small, strike, strong, sub, sup, tt, var,
-  b, u, i, center,
-  dl, dt, dd,
-  fieldset, form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, embed,
-  figure, figcaption, footer, header, hgroup,
-  menu, nav, output, ruby, section, summary,
-  time, mark, audio, video {
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
     margin: 0;
     padding: 0;
     border: 0;
     vertical-align: baseline;
   }
   /* HTML5 display-role reset for older browsers */
-  article, aside, details, figcaption, figure,
-  footer, header, hgroup, menu, nav, section {
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
     display: block;
   }
   body {
@@ -138,11 +219,14 @@
   /* ol, ul {
     list-style: none;
   } */
-  blockquote, q {
+  blockquote,
+  q {
     quotes: none;
   }
-  blockquote:before, blockquote:after,
-  q:before, q:after {
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
     content: '';
     content: none;
   }
@@ -151,12 +235,19 @@
     border-spacing: 0;
   }
   /* apply a natural box layout model to all elements */
-  *, *::before, *::after, *:before, *:after {
+  *,
+  *::before,
+  *::after,
+  *:before,
+  *:after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   /* inputs */
-  input, button, textarea, select {
+  input,
+  button,
+  textarea,
+  select {
     color: inherit;
     font-size: inherit;
     font-style: inherit;
@@ -177,27 +268,50 @@
     line-height: 1em;
   }
   /* inputs appearance (not for every input)  */
-  input[type=text], input[type=reset], input[type=password], input[type=search], input[type=email], input[type=tel], input[type=url], input[type=time], input[type=week], input[type=month], input[type=date], input[type=datetime], input[type=datetime-local], input[type=number],
-  input[type=submit], input[type=reset], input[type=color], input[type=file],
-  button, textarea, select {
+  input[type='text'],
+  input[type='reset'],
+  input[type='password'],
+  input[type='search'],
+  input[type='email'],
+  input[type='tel'],
+  input[type='url'],
+  input[type='time'],
+  input[type='week'],
+  input[type='month'],
+  input[type='date'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='number'],
+  input[type='submit'],
+  input[type='reset'],
+  input[type='color'],
+  input[type='file'],
+  button,
+  textarea,
+  select {
     height: 1em;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
   }
   /* input color width */
-  input[type=color] {
+  input[type='color'] {
     width: 1em;
   }
   /* IE clear cross */
   input::-ms-clear {
     display: none;
   }
-  audio, canvas, iframe, img, svg, video {
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
     vertical-align: middle;
     max-width: 100%;
   }
-/* =============================
+  /* =============================
       Start
    ============================= */
   body {
@@ -206,19 +320,27 @@
     color: var(--text-color);
     background-color: var(--background);
   }
-  a, a:visited {
+  a,
+  a:visited {
     text-decoration: none;
     color: var(--primary);
     /* fill: var(--primary); */
     cursor: pointer;
     font-weight: 500;
   }
-  a:hover, a:hover svg {
+  a:hover,
+  a:hover svg {
     color: var(--dark);
     fill: var(--dark);
   }
   a:hover {
     border-bottom: solid 1px var(--dark);
+  }
+  :target:before {
+    content: '';
+    display: block;
+    height: 60px; /* fixed header height*/
+    margin: -60px 0 0; /* negative fixed header height */
   }
   main {
     max-width: 70ch;
@@ -228,10 +350,12 @@
   p {
     margin: 2ch 0;
   }
-  p, li {
+  p,
+  li {
     line-height: 3ch;
   }
-  h1, h2 {
+  h1,
+  h2 {
     font-family: var(--font-family-headline);
     font-size: 7ch;
   }
@@ -240,7 +364,12 @@
     color: var(--nord);
     margin-top: 2ch;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-bottom: 1ch;
   }
   nav {
@@ -287,29 +416,33 @@
     width: 50px;
     height: 50px;
   }
-  nav .nav-icon, nav .svg-social-icon {
+  nav .nav-icon,
+  nav .svg-social-icon {
     width: 20px;
     height: 20px;
     margin-left: 0;
     fill: var(--text-color);
   }
-  nav .menu-icon, nav .nav-icon {
+  nav .menu-icon,
+  nav .nav-icon {
     width: 20px;
     height: 18px;
     display: inline-block;
     cursor: pointer;
   }
-  nav .menu-icon::after, nav .menu-icon::before, nav .menu-icon div {
+  nav .menu-icon::after,
+  nav .menu-icon::before,
+  nav .menu-icon div {
     background-color: var(--text-color);
     border-radius: 2px;
     content: '';
     display: block;
     height: 2px;
     margin: 5px 0;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
   nav #showsearch ~ .nav-icon svg {
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
   nav .menu-icon::after {
     margin-bottom: 0;
@@ -326,7 +459,9 @@
   nav #showsearch:checked ~ .nav-icon svg {
     transform: rotate(450deg);
   }
-  nav #showmenu, #showsearch, nav #darkmode {
+  nav #showmenu,
+  #showsearch,
+  nav #darkmode {
     display: none;
   }
   nav #showmenu ~ ul {
@@ -389,16 +524,19 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-	  align-content: flex-start;
+    align-content: flex-start;
   }
   .list-title h2 {
     font-family: var(--font-family-headline);
     font-size: 5ch;
   }
-  .list-title h2 a:hover, .list-title div a:hover, .share-links a:hover {
+  .list-title h2 a:hover,
+  .list-title div a:hover,
+  .share-links a:hover {
     border-bottom: none;
   }
-  .list-title time, .post-time {
+  .list-title time,
+  .post-time {
     font-weight: 500;
     align-self: flex-end;
     font-family: var(--font-family-headline);
@@ -408,17 +546,22 @@
     float: right;
     margin-top: -0.5ch;
   }
-  .list-title div, .post-tags {
+  .list-title div,
+  .post-tags {
     flex-basis: 100%;
     text-transform: uppercase;
   }
-  .list-title div a, .post-tags a {
+  .list-title div a,
+  .post-tags a {
     font-weight: 300;
   }
-  .list-title h2, .list-title time, .list-title div {
+  .list-title h2,
+  .list-title time,
+  .list-title div {
     margin: 0 0 0.5ch;
   }
-  .list-title .svg-taglink, .post-tags .svg-taglink {
+  .list-title .svg-taglink,
+  .post-tags .svg-taglink {
     width: 1.5ch;
     height: 1.5ch;
     margin: 0 0.5ch 0 0.75ch;
@@ -459,11 +602,11 @@
   }
   blockquote::before {
     position: absolute;
-    content: "\201C";
+    content: '\201C';
     font-size: 6em;
     font-family: serif;
-    margin-top: -.2em;
-    margin-left: -.2em;
+    margin-top: -0.2em;
+    margin-left: -0.2em;
     z-index: -1;
     color: var(--secondary);
   }
@@ -476,7 +619,7 @@
     text-align: right;
   }
   blockquote cite::before {
-    content: "\2014  ";
+    content: '\2014  ';
   }
   div#lastread {
     display: flex;
@@ -497,6 +640,9 @@
   svg#readprogress .knob-undertext {
     fill: var(--primary);
   }
+  svg .symbol-color {
+    fill: var(--text-color);
+  }
   div#lastread figure {
     max-width: 50%;
     min-width: 250px;
@@ -504,6 +650,14 @@
   }
   .read-details p {
     margin: 0 2ch;
+  }
+  p.sensory {
+    text-align: center;
+  }
+  p.sensory img,
+  p.sensory svg {
+    width: 500px;
+    max-width: 100%;
   }
   .top-artists {
     display: grid;
@@ -519,7 +673,7 @@
     grid-column-end: span 2;
   }
   .top-artists > div::before {
-    content: "";
+    content: '';
     display: block;
     padding-top: calc(100% - 60px);
   }
@@ -529,7 +683,8 @@
     background-color: var(--dark-alpha);
     padding: 1ch;
   }
-  .top-artists .artistbottom a, .top-artists .artistbottom span {
+  .top-artists .artistbottom a,
+  .top-artists .artistbottom span {
     color: var(--light);
   }
   .svg-social-icon {
@@ -547,26 +702,30 @@
   input#showsearch:checked ~ .search-form {
     margin-top: 0px;
   }
-  .search-form form, .search-box form {
+  .search-form form,
+  .search-box form {
     border: 1px solid var(--primary);
     max-height: 50px;
     line-height: 50px;
     font-size: 2.5ch;
     padding: 0 1ch;
   }
-  .search-form form span, .search-box form span {
+  .search-form form span,
+  .search-box form span {
     display: block;
     width: 0;
     height: 0;
     overflow: hidden;
   }
-  .search-form input, .search-box input {
+  .search-form input,
+  .search-box input {
     height: 50px;
     width: 100%;
     position: relative;
     z-index: 2;
   }
-  .search-form button, .search-box button {
+  .search-form button,
+  .search-box button {
     height: 50px;
     float: right;
     position: relative;
@@ -574,7 +733,8 @@
     margin-top: -50px;
     cursor: pointer;
   }
-  .search-form form svg, .search-box form svg {
+  .search-form form svg,
+  .search-box form svg {
     height: 30px;
     width: 30px;
     fill: var(--text-color);
@@ -682,7 +842,7 @@
   }
   .draft-flag {
     font-family: var(--font-family-headline);
-    color: var(--blue); 
+    color: var(--blue);
   }
   main.search .post-time,
   main.garden .post-time,
@@ -702,7 +862,7 @@
   [title]:before,
   [title]:after {
     visibility: hidden;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
     filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     pointer-events: none;
@@ -740,7 +900,7 @@
     /* border-top: 5px solid hsla(0, 0%, 20%, 0.9); */
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
-    content: " ";
+    content: ' ';
     font-size: 0;
     line-height: 0;
   }
@@ -749,7 +909,7 @@
   [title]:hover:before,
   [title]:hover:after {
     visibility: visible;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
     filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
   }

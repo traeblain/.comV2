@@ -15,34 +15,28 @@
 {{ $finalContent }}
 
 {{ if .Params.categories }}
-
   <p><strong>Related categories:</strong></p>
-
   <ul>
-
   {{ with .Params.categories }}
   {{ range . }}
   {{ $href := print (absURL "categories/") (urlize .) }}
   <li><a href="{{ $href }}">{{ . }}</a></li>
-  {{ end }}
-  {{ end }}
-
+  {{- end }}{{ end -}}
   </ul>
-
-{{ end }}
+{{ end -}}
 
 <div class="share-links">
-  <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" title="Share on Facebook" target="_blank">
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" title="Share on Facebook" target="_blank" rel="noopener">
     <svg class="svg svg-social-icon">
       <use xlink:href="#facebook"></use>
     </svg>
   </a>
-  <a href='https://twitter.com/intent/tweet?{{ (querify "via" "traeblain" "url" .Permalink "text" .Title "source" .Site.BaseURL) | safeURL }}{{ if .IsPage }}&hashtags={{ (delimit .Params.tags ",") | safeURL }}{{ end }}' title="Share on Twitter" target="_blank">
+  <a href='https://twitter.com/intent/tweet?{{ (querify "via" "traeblain" "url" .Permalink "text" .Title "source" .Site.BaseURL) | safeURL }}{{ if (and .IsPage .Params.tags) }}&hashtags={{ (delimit .Params.tags ",") | safeURL }}{{ end }}' title="Share on Twitter" target="_blank" rel="noopener">
     <svg class="svg svg-social-icon">
       <use xlink:href="#twitter"></use>
     </svg>
   </a>
-  <a href='http://www.linkedin.com/shareArticle?{{ (querify "url" .Permalink "title" .Title "source" .Site.BaseURL "mini" "true") | safeURL }}' title="Share on LinkedIn" target="_blank">
+  <a href='http://www.linkedin.com/shareArticle?{{ (querify "url" .Permalink "title" .Title "source" .Site.BaseURL "mini" "true") | safeURL }}' title="Share on LinkedIn" target="_blank" rel="noopener">
     <svg class="svg svg-social-icon">
       <use xlink:href="#linkedin"></use>
     </svg>
@@ -57,21 +51,20 @@
     </svg>
   </a>
 
-  <a href='https://www.reddit.com/submit?{{ (querify "url" .Permalink "title" .Title) | safeURL }}' title="Share on Reddit" target="_blank">
+  <a href='https://www.reddit.com/submit?{{ (querify "url" .Permalink "title" .Title) | safeURL }}' title="Share on Reddit" target="_blank" rel="noopener">
     <svg class="svg svg-social-icon">
       <use xlink:href="#reddit"></use>
     </svg>
   </a>
-  <a href='https://getpocket.com/save?{{ (querify "url" .Permalink "title" .Title) | safeURL }}' title="Add to Pocket" target="_blank">
+  <a href='https://getpocket.com/save?{{ (querify "url" .Permalink "title" .Title) | safeURL }}' title="Add to Pocket" target="_blank" rel="noopener">
     <svg class="svg svg-social-icon">
       <use xlink:href="#getpocket"></use>
     </svg>
   </a>
-  <a href='mailto:?{{ (querify "body" .Permalink "subject" .Title) | safeURL }}' title="Send email" target="_blank">
+  <a href='mailto:?{{ (querify "body" .Permalink "subject" .Title) | safeURL }}' title="Send email" target="_blank" rel="noopener">
     <svg class="svg svg-social-icon">
       <use xlink:href="#emailenvelope"></use>
     </svg>
   </a>
 </div>
-
-{{ end }}
+{{ end -}}

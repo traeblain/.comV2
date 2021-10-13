@@ -10,7 +10,7 @@
     <div class="upper">
       <div class="flexrow">
         <div>
-          <a href="{{ .link }}" target="_blank">{{ .favorite}}</a>
+          <a href="{{ .link }}" target="_blank" rel="noopener">{{ .favorite}}</a>
         </div>
         <div>{{ .league | title }}</div>
       </div>
@@ -24,13 +24,11 @@
       <img src="{{ .image }}" />
     </div>
   </div>
-  
-  {{ end }}
-  {{ end }}
+  {{- end }}{{ end -}}
 </div>
 
-<div class="flexrow updated">
-  <em>Updated: {{ dateFormat "Monday - January 2, 2006" $t.Modified }}</em>
+<div>
+<em>Updated: {{ dateFormat "Monday - January 2, 2006" $t.Modified }}</em>
 </div>
 
 <style>
@@ -68,10 +66,12 @@
   .sportimage{
     text-align: center;
   }
-  @media
-  only screen and (max-device-width: 640px) {
+  @media only screen and (max-device-width: 640px) {
     div.mobilewrap {
       flex-wrap: wrap-reverse;
     }
+  }
+  main blockquote {
+    display: none;
   }
 </style>
