@@ -25,4 +25,4 @@ This makes sense.  Of course, you cannot eat your cake, and have it as well.  On
 
 And let's be honest, nothing good came out of the 30s.  Depression, Hitler, King Edward VIII...so let's change it back.  Seriously... I mean let's all eat cake!
 
-{{< figure src="https://media.giphy.com/media/rRQiJHGNSyPVS/giphy.gif" class="align-center" >}}
+<p><div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/QyJ7bL3HDN57jxABky" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div></p>

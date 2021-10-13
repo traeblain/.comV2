@@ -10,7 +10,7 @@ background: >-
   https://res.cloudinary.com/dixwznarl/image/upload/notebook/lighted-twenty-jontyson.jpg
 tags:
   - review
-  - movie
+  - movies
 ---
 
 This is fun.  I love movies.  I love watching movies and going to movies.  It's one of those things I enjoy a ton.  I have been trying to watch movies with a sharper eye for what these movies say about some things I'm seeing as universal truths.  Good movies poke at these truths and say something about them, and this is why we find these movies good.  Yes, there are some that don't seem to go anywhere, but a majority do...otherwise you find they don't get made.  This is actually difficult for me, because if the movie is good, I'm fully immersed in the story and don't tend to pull on these types of threads.  Return viewing is helping this, so if I make this a regular thing...the movies will most like be older.

@@ -36,7 +36,7 @@ Ok, so let's move down the page and talk about what/how/why/etc.
         {{< figure src="//blog.traeblain.com/theme/images/tblogo.svg" caption="Old Monogram" >}}        
     </div>
     <div class="six columns">
-    {{< figure src="/images/tbmonogram.svg" caption="New Monogram" >}}
+    {{< figure src="https://res.cloudinary.com/dixwznarl/image/upload/tbcom/tbmonogram.svg" caption="New Monogram" >}}
     </div>
 </div>
 
