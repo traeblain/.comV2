@@ -344,7 +344,7 @@
   }
   main {
     max-width: 70ch;
-    padding: calc(2ch + 60px) 2ch 2ch;
+    padding: 60px 2ch 2ch;
     margin: auto;
   }
   p {
@@ -371,6 +371,9 @@
   h5,
   h6 {
     margin-bottom: 1ch;
+  }
+  h1.title {
+    margin-top: 2ch;
   }
   nav {
     position: sticky;
@@ -502,8 +505,8 @@
     height: 500px;
     background-position: center;
     background-size: cover;
-    margin: 2ch -100%; /* old browsers fallback */
-    margin: 2ch calc(50% - 50vw + 1ch);
+    margin: 0 -100% 2ch; /* old browsers fallback */
+    margin: 0 calc(50% - 50vw + 1ch) 2ch;
   }
   ul.latest-posts {
     list-style-type: none;
@@ -687,7 +690,7 @@
   }
   .search-form.search-open,
   input#showsearch:checked ~ .search-form {
-    margin-top: 0px;
+    margin-top: 4ch;
   }
   .search-form form,
   .search-box form {
