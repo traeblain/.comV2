@@ -409,6 +409,11 @@
     text-align: left;
     font-size: 100%;
   }
+  @media only screen and (max-width: 380px) {
+    nav > ul > li:nth-child(2) span {
+      display: none;
+    }
+  }
   nav a:hover {
     border: none;
   }
@@ -666,26 +671,8 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .top-artists div {
-    background-size: cover;
-  }
-  .top-artists div:first-child {
+  .top-artists a:first-child {
     grid-column-end: span 2;
-  }
-  .top-artists > div::before {
-    content: '';
-    display: block;
-    padding-top: calc(100% - 60px);
-  }
-  .top-artists .artistbottom {
-    height: 60px;
-    display: block;
-    background-color: var(--dark-alpha);
-    padding: 1ch;
-  }
-  .top-artists .artistbottom a,
-  .top-artists .artistbottom span {
-    color: var(--light);
   }
   .svg-social-icon {
     height: 30px;
