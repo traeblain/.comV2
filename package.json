@@ -18,13 +18,13 @@
     "url": "https://github.com/traeblain/.comV2.git"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "dotenv": "^8.2.0",
+    "axios": "^0.21.4",
+    "dotenv": "^8.6.0",
     "encoding": "^0.1.13",
     "moment": "^2.29.1",
-    "netlify-lambda": "^1.6.3",
-    "node-fetch": "^2.6.1",
-    "node-fetch-with-proxy": "^0.1.4",
+    "netlify-lambda": "^2.0.15",
+    "node-fetch": "^2.6.5",
+    "node-fetch-with-proxy": "^0.1.6",
     "rss-parser": "^3.12.0"
   }
 }
