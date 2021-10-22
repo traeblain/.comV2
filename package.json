@@ -24,7 +24,7 @@
     "moment": "^2.29.1",
     "netlify-lambda": "^1.6.3",
     "node-fetch": "^2.6.1",
-    "node-fetch-with-proxy": "^0.1.2",
-    "rss-parser": "^3.10.0"
+    "node-fetch-with-proxy": "^0.1.4",
+    "rss-parser": "^3.12.0"
   }
 }

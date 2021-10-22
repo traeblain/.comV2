@@ -1,0 +1,153 @@
+{{ define "main" }}
+  <h1 class="title">{{ .Params.me_title | upper }}</h1>
+  <p>{{ .Params.me_content | safeHTML }}</p>
+
+  <div id="postslink">
+    <div>
+      <h2>Latest Posts<a href="/notebook/" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#pencil"></use></svg></a></h2><a id="notebook" class="anchor"></a>
+      <ul class="latest-posts">
+      {{ range first 5 (where (where .Site.RegularPages ".Draft" false) "Type" "in" .Site.Params.mainSections) }}
+        {{ .Render "titlesonly" }}
+      {{ end -}}
+      <li>
+        <h3><a href="/notebook/">All Notebook Posts</a></h3>
+      </li>
+      </ul>
+    </div>
+    <div>
+      <h2>Quite Interesting<a href="https://refind.com/traeblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#rss"></use></svg></a></h2><a id="qi" class="anchor"></a>
+      <div class="">
+        <a class="qi" href="{{ .Site.Params.qi.link }}"><img src="{{ .Site.Params.qi.image }}" alt="{{ .Site.Params.qi.title }}" /></a>
+          <h3><a href="{{ .Site.Params.qi.link }}">{{ .Site.Params.qi.title }}</a></h3>
+          <p><time>{{ dateFormat "Jan 02" .Site.Params.qi.date }}</time> &mdash; {{ .Site.Params.qi.description }}
+            <span><a href="{{ .Site.Params.qi.source }}">More at Refind...</a></span></p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <h1>Social</h1>
+  <h2>Twitter<a href="https://twitter.com/traeblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#twitter"></use></svg></a></h2><a id="tweet" class="anchor"></a>
+  <blockquote id="twitter-status" class="twitter-tweet">
+    <p lang="en" dir="ltr">
+      {{ .Site.Params.newtweet.post | replaceRE "((http:|https:)[^\\s]+[\\w])" "<a href=\"$1\" target=\"_blank\" rel=\"noopener\">$1</a>" | safeHTML }}
+    </p>
+    <cite>
+      <a href="https://twitter.com/traeblain">Trae 🧠</a>
+      <time><a href="{{ .Site.Params.newtweet.link }}">{{ dateFormat "January 02, 2006 at 3:04PM" .Site.Params.newtweet.date }}</a></time>
+    </cite>
+  </blockquote>
+
+  <h2>GoodReads<a href="https://www.goodreads.com/user/show/1671848-trae" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#goodreads"></use></svg></a></h2><a id="reads" class="anchor"></a>
+  <div class="read-details">
+    <p><a href="{{ .Params.goodreads }}">You have read <span id="readcount">{{ .Site.Params.latestRead.total }}</span> of <span id="readtotal">{{ .Site.Params.readgoal }}</span> books.</a></p>
+    {{- $progress := sub .Site.Params.latestRead.total (math.Floor (mul (div now.YearDay 365.25) .Site.Params.readgoal)) -}}
+    {{- if (eq $progress 0) -}}
+    <p><em>Reading right on schedule.</em></p>
+    {{- else -}}
+    <p><em>{{ math.Sqrt (math.Pow $progress 2) }} book{{ if (eq (math.Sqrt (math.Pow $progress 2)) 1) }}s{{ end }} {{ if (gt $progress 0) }}ahead{{ else }}behind{{ end }} schedule</em></p>
+    {{ end -}}
+    <div id="lastread">
+      <figure>
+        <a href="{{ .Site.Params.latestRead.link }}">
+          <img src="{{ .Site.Params.latestRead.image }}" alt="{{ .Site.Params.latestRead.title }} by {{ .Site.Params.latestRead.author }}">
+        </a>
+        <figcaption>{{ .Site.Params.latestRead.title }} by {{ .Site.Params.latestRead.author }}</figcaption>
+      </figure>
+      <svg id="readprogress" xmlns="http://www.w3.org/2000/svg" version="1.1" class="knob-graph" viewBox="0 0 100 120">
+        <circle class="knob-base" cx="50" cy="50" r="40" style="fill: transparent; stroke: #eee; stroke-width: 5;" />
+        <path class="knob-progress" d="M 50, 50 m 0, -40 a 40,40 0 0 1 0,0" style="fill:transparent;stroke-width:10;stroke-linecap:round;" />
+        <use xlink:href="#goodreads" x="50%" y="50%" height="50px" width="50px" transform="translate(-25, -35)" class="symbol-color"></use>
+        <text class="knob-undertext" x="50%" y="93%" dominant-baseline="baseline"
+          text-anchor="middle">{{ math.Round (mul (div .Site.Params.latestRead.total .Site.Params.readgoal) 100) }}% Done</text>
+      </svg>
+      <p>{{ .Site.Params.latestRead.review | safeHTML }}</p>
+      <p><a href="{{ .Site.Params.latestRead.link }}">See my review here &raquo;</a></p>
+    </div>
+  </div>
+
+  <h2>Code
+    <a href="https://github.com/traeblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#github"></use></svg></a>
+    <a href="https://bitbucket.com/traeblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#bitbucket"></use></svg></a>
+    <a href="https://gitlab.com/traeblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#gitlab"></use></svg></a>
+  </h2><a id="code" class="anchor"></a>
+  <p class="code-details">
+    <figure>
+      <img src="https://github.com/traeblain/traeblain/raw/main/github-metrics.svg" alt="Code Metrics" loading="lazy">
+    </figure>
+  </p>
+
+  <h1>Sensory</h1>
+  <h2>Movie<a href="https://trakt.tv/users/traeblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#film"></use></svg></a></h2><a id="moviefilm" class="anchor"></a>
+  <p class="sensory">
+    <img alt="Trae Blain's Last Movie" src="https://widgets.trakt.tv/users/3ce95a43ea6297d34071aab460918b21/watched/fanart2@2x.jpg?type=movie" loading="lazy">
+  </p>
+
+  <h2>Television<a href="https://trakt.tv/users/traeblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#tv"></use></svg></a></h2><a id="tube" class="anchor"></a>
+  <p class="sensory">
+    <img alt="Trae Blain's Last Television Episode" src="https://widgets.trakt.tv/users/3ce95a43ea6297d34071aab460918b21/watched/fanart2@2x.jpg?type=episode" loading="lazy">
+  </p>
+
+  <h2>Gaming <a href="https://psnprofiles.com/Gothar_Destroyer" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#alien"></use></svg></a><a href="https://ps-timetracker.com/profile/Gothar_Destroyer" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#stopwatch"></use></svg></a></h2><a id="gaming" class="anchor"></a>
+  <p class="sensory">
+    {{- with .Site.Params.game }}
+    <svg version="1.1" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg"
+      font-family="Helvetica Light, Helveticaneue Light, Calibri Light, Helveticaneue, Helvetica, Gill Sans, Myriad Pro, Arial, Lucida Grande, sans-serif">
+      <defs>
+        <pattern id="avatarimage" x="0" y="0" height="1" width="1">
+          <image height="120" width="120" href="https://i.psnprofiles.com/avatars/m/G101acc290.png" />
+        </pattern>
+      </defs>
+      <image id="background" width="1280" height="720"
+        href="{{ .artwork }}"
+        preserveAspectRatio="none" />
+      <rect x="0" y="600" height="120" width="1280" style="opacity: 80%;" />
+      <circle id="avatar" cx="80" cy="635" r="60" fill="url(#avatarimage)" stroke="white" stroke-width="5px" />
+      <!-- <image id="avatar" width="70" height="70" x="5" y="645" href="https://i.psnprofiles.com/avatars/m/G101acc290.png" /> -->
+      <text id="gamertag" x="170" y="643" style="font-size: 30px; fill: #CBCBCB; text-transform: uppercase">Gothar_Destroyer
+        Last Played</text>
+      <text id="gametitle" y="695" x="170" font-size="55px" fill="white" lengthAdjust="spacingAndGlyphs">{{ .title }}</text>
+      <g text-anchor="middle" transform="translate(1280, 720)">
+        <rect x="-210" y="-120" width="210" height="120" fill="#cbcbcb" opacity=".15" />
+        <text id="hrstitle" x="-105" y="-77" font-size="28px" fill="#CBCBCB" style="text-transform: uppercase">Hours
+          Played</text>
+        <text id="hrsplayed" x="-105" y="-25" font-size="50px" fill="#CBCBCB" style="text-transform: uppercase">{{ math.Round (div .hrs 3600.0) }}</text>
+      </g>
+    </svg>
+    {{ end -}}
+  </p>
+
+  <h2>Music<a href="https://www.last.fm/user/tblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#headphones"></use></svg></a></h2><a id="listen" class="anchor"></a>
+  <div class="top-artists">
+    {{- range $i, $e := .Site.Params.music.artist }}{{- with $e }}
+    <a href="{{ .link }}" style="border: 0;">
+      <svg version="1.1" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
+        font-family="Helvetica Light, Helveticaneue Light, Calibri Light, Helveticaneue, Helvetica, Gill Sans, Myriad Pro, Arial, Lucida Grande, sans-serif">
+        <image id="top-artist-{{ $i }}" width="500" height="500"
+          href="{{ .image }}"
+          preserveAspectRatio="none" />
+        {{ if eq $i 0 -}}
+        <rect x="0" y="440" height="60" width="500" style="opacity: 80%;" />
+        <text id="artistname-{{ $i }}" y="470" x="10" font-size="25px" fill="white" lengthAdjust="spacingAndGlyphs">{{ .name }}</text>
+        <text x="10" y="487" style="font-size: 15px; fill: #CBCBCB; text-transform: uppercase;">{{ .plays}} plays</text>
+        {{ else }}
+        <rect x="0" y="380" height="120" width="500" style="opacity: 80%;" />
+        <text id="artistname-{{ $i }}" y="440" x="20" font-size="50px" fill="white" lengthAdjust="spacingAndGlyphs">{{ .name }}</text>
+        <text x="20" y="475" style="font-size: 30px; fill: #CBCBCB; text-transform: uppercase;">{{ .plays}} plays</text>
+        {{- end -}}
+      </svg>
+    </a>
+    {{ end -}}{{ end -}}
+  </div>
+  <!-- <div class="top-artists">
+    {{- with .Site.Params.music.artist }}{{- range . }}
+    <div style="background-image:url({{ .image }})">
+      <span class="artistbottom">
+        <span><a href="{{ .link }}" target="_blank" rel="noopener">{{ .name }}</a></span><br>
+        <span><em>{{ .plays }} plays</em></span>
+      </span>
+    </div>
+    {{ end -}}{{ end -}}
+  </div> -->
+
+{{ end }}

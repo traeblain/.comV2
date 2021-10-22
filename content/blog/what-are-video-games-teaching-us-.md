@@ -1,7 +1,6 @@
 ---
 tags:
 - commentary
-- life
 - thoughts
 background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:eco,w_2048/notebook/xbox-controller.jpg
 text_color: light
