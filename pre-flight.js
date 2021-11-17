@@ -22,21 +22,25 @@ const fetchIt = async () => {
     options
   )
   const twitterJSON = await twitterData.json()
+  process.stdout.write("Twitter fetched\n")
   const bookData = await fetch(
     "https://api.airtable.com/v0/appChKYhLC0uF7gPx/Books?maxRecords=100&sort[0][field]=Date&sort[0][direction]=desc&filterByFormula=IS_AFTER({Date}, DATETIME_PARSE('1 Jan 2020 00:00', 'D MMM YYYY HH:mm'))",
     options
   )
   const bookJSON = await bookData.json()
+  process.stdout.write("Books fetched\n")
   const linkData = await fetch(
     'https://api.airtable.com/v0/appSegmqnDPMPqaGu/Links?maxRecords=1&sort[0][field]=Date&sort[0][direction]=desc',
     options
   )
   const linkJSON = await linkData.json()
+  process.stdout.write("Link fetched\n")
   const musicData = await fetch(
     'https://api.airtable.com/v0/appWQ7mufpoNZv5cS/Music?sort[0][field]=plays&sort[0][direction]=desc',
     options
   )
   const musicJSON = await musicData.json()
+  process.stdout.write("Music fetched\n")
   const gameData = await fetch('https://automate.blain.io/latest-game/')
   const gameJSON = await gameData.json()
 
