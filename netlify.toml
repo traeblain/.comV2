@@ -2,3 +2,7 @@
   command = "npm run deploy"
   publish = "public"
   functions = "_functions"
+[[plugins]]
+package = "@algolia/netlify-plugin-crawler"
+  [plugins.inputs]
+  customDomain = "traeblain.com"
