@@ -111,8 +111,9 @@ fetchIt()
     't_thumb',
     't_screenshot_huge'
   )}"
-  cover = "${resp.game.artwork[0].cover.url.replace('t_thumb', 't_720p')}"
   `
+//   cover = "${resp.game.artwork[0].cover.url.replace('t_thumb', 't_720p')}"
+//   `
     fs.appendFileSync(
       'config/_default/params.toml',
       twitterParams + goodreadsParams + linkParams + musicParams + gameParams,
