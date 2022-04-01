@@ -97,21 +97,23 @@ fetchIt()
     image = '''${artist.fields.image}'''
 `
     })
-    let artwork = ''
-    if (resp.game.artwork[0].artworks) {
-      artwork = resp.game.artwork[0].artworks[0].url
-    } else {
-      artwork = resp.game.artwork[0].screenshots[0].url
-    }
+//     let artwork = ''
+//     if (resp.game.artwork[0].artworks) {
+//       artwork = resp.game.artwork[0].artworks[0].url
+//     } else {
+//       artwork = resp.game.artwork[0].screenshots[0].url
+//     }
     let gameParams = `[game]
   title = '''${resp.game.game.Game}'''
   hrs = ${resp.game.game['Hours Played']}
   lastplayed = ${resp.game.game['Last Played']}
-  artwork = "${artwork.replace(
-    't_thumb',
-    't_screenshot_huge'
-  )}"
-  `
+  artwork = "${resp.artwork}"
+`
+//   artwork = "${artwork.replace(
+//     't_thumb',
+//     't_screenshot_huge'
+//   )}"
+//   `
 //   cover = "${resp.game.artwork[0].cover.url.replace('t_thumb', 't_720p')}"
 //   `
     fs.appendFileSync(
