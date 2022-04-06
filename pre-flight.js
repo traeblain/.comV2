@@ -108,7 +108,7 @@ fetchIt()
   title = '''${resp.game.game.Game}'''
   hrs = ${resp.game.game['Hours Played']}
   lastplayed = ${resp.game.game['Last Played']}
-  artwork = "${resp.artwork}"
+  artwork = "${resp.game.artwork}"
 `
 //   artwork = "${artwork.replace(
 //     't_thumb',
