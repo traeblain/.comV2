@@ -22,27 +22,28 @@ const fetchIt = async () => {
     options
   )
   const twitterJSON = await twitterData.json()
-  process.stdout.write("Twitter fetched\n")
+  process.stdout.write('Twitter fetched\n')
   const bookData = await fetch(
     "https://api.airtable.com/v0/appChKYhLC0uF7gPx/Books?maxRecords=100&sort[0][field]=Date&sort[0][direction]=desc&filterByFormula=IS_AFTER({Date}, DATETIME_PARSE('1 Jan 2020 00:00', 'D MMM YYYY HH:mm'))",
     options
   )
   const bookJSON = await bookData.json()
-  process.stdout.write("Books fetched\n")
+  process.stdout.write('Books fetched\n')
   const linkData = await fetch(
     'https://api.airtable.com/v0/appSegmqnDPMPqaGu/Links?maxRecords=1&sort[0][field]=Date&sort[0][direction]=desc',
     options
   )
   const linkJSON = await linkData.json()
-  process.stdout.write("Link fetched\n")
+  process.stdout.write('Link fetched\n')
   const musicData = await fetch(
     'https://api.airtable.com/v0/appWQ7mufpoNZv5cS/Music?sort[0][field]=plays&sort[0][direction]=desc',
     options
   )
   const musicJSON = await musicData.json()
-  process.stdout.write("Music fetched\n")
+  process.stdout.write('Music fetched\n')
   const gameData = await fetch('https://automate.blain.io/latest-game/')
   const gameJSON = await gameData.json()
+  process.stdout.write('Game fetched\n')
 
   const resp = {
     twitter: twitterJSON.records[0].fields,
@@ -53,7 +54,7 @@ const fetchIt = async () => {
   }
   resp.goodreads.totalRead = bookJSON.records.length
 
-  // console.log(resp);
+  console.log(resp)
   return resp
 }
 
@@ -98,21 +99,18 @@ fetchIt()
 `
     })
     let artwork = ''
-    if (resp.game.artwork[0].artworks) {
-      artwork = resp.game.artwork[0].artworks[0].url
-    } else {
-      artwork = resp.game.artwork[0].screenshots[0].url
-    }
+    // if (resp.game.artwork[0].artworks) {
+    //   artwork = resp.game.artwork[0].artworks[0].url
+    // } else {
+    //   artwork = resp.game.artwork[0].screenshots[0].url
+    // }
     let gameParams = `[game]
   title = '''${resp.game.game.Game}'''
   hrs = ${resp.game.game['Hours Played']}
   lastplayed = ${resp.game.game['Last Played']}
-  artwork = "${artwork.replace(
-    't_thumb',
-    't_screenshot_huge'
-  )}"
-  cover = "${resp.game.artwork[0].cover.url.replace('t_thumb', 't_720p')}"
+  artwork = "${resp.game.artwork.replace('t_thumb', 't_screenshot_huge')}"
   `
+    // cover = "${resp.game.artwork[0].cover.url.replace('t_thumb', 't_720p')}"
     fs.appendFileSync(
       'config/_default/params.toml',
       twitterParams + goodreadsParams + linkParams + musicParams + gameParams,
