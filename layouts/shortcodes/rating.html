@@ -1,8 +1,9 @@
 {{ $words := slice "Nothing..." "Utter Rubbish...Seriously...Bad" "Terrible, comically terrible..." "Bad, with some redeaming qualities" "Poor, but some people might like it" "Meh, depends on my mood" "Decent..." "Good and worth the time" "Great!" "Objectively Superb!!" "Utterly Amazing! So much love..." }}
+{{ $decimal := index (seq 3 6 | shuffle) 0 }}
 <div
   class="align-center"
   title="{{ index $words (index .Params 0) }}"
-  style="cursor: initial"
+  style="cursor: initial;"
 >
   <svg
     width="2000"
@@ -10,10 +11,10 @@
     version="1.1"
     viewBox="0 0 529.17 105.83"
     xmlns="http://www.w3.org/2000/svg"
-    style="height: auto; z-index: 1"
+    style="height: auto; z-index: 1;"
   >
     <defs>
-      <clipPath id="ratingImageClipping">
+      <clipPath id="ratingImageClipping{{ index .Params 0 }}">
         <rect
           transform="matrix(1 0 -.28742 .9578 0 0)"
           x="67.066"
@@ -24,7 +25,15 @@
           stroke-linecap="round"
           stroke-linejoin="round"
         >
-          <animate id="ratingImageClippingAnimate" attributeName="width" from="0" to="{{ mul (index .Params 0) 43 }}" dur="6s" begin="1s;ratingImageClippingAnimate.end+4s" repeatCount="1" />
+          <animate
+            id="ratingImageClippingAnimate{{ index .Params 0 }}"
+            attributeName="width"
+            from="0"
+            to="{{ mul (index .Params 0) 43 }}"
+            dur="{{ $decimal }}s"
+            begin="1s;ratingImageClippingAnimate{{ index .Params 0 }}.end+4s"
+            repeatCount="1"
+          />
         </rect>
       </clipPath>
     </defs>
@@ -139,7 +148,7 @@
         <text
           font-size="10.583px"
           text-align="center"
-          style="line-height: 1.25; white-space: pre"
+          style="line-height: 1.25; white-space: pre;"
           xml:space="preserve"
         />
         <text>
@@ -174,7 +183,11 @@
         letter-spacing="0px"
         text-align="center"
         word-spacing="0px"
-        style="line-height: 0.95; font-family: var(--font-family-headline); fill: var(--text-color);"
+        style="
+          line-height: 0.95;
+          font-family: var(--font-family-headline);
+          fill: var(--text-color);
+        "
         xml:space="preserve"
       >
         <tspan x="465" y="75">
@@ -191,7 +204,7 @@
     </g>
     <g>
       <g
-        clip-path="url(#ratingImageClipping)"
+        clip-path="url(#ratingImageClipping{{ index .Params 0 }})"
         fill="#5e81ac"
         stroke-linecap="round"
         stroke-linejoin="round"
