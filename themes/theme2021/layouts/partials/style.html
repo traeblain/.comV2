@@ -380,6 +380,9 @@
   h1.title {
     margin-top: 2ch;
   }
+  h3 {
+    margin-top: 2ch;
+  }
   nav {
     position: sticky;
     top: 0;
@@ -524,6 +527,7 @@
   }
   ul.latest-posts h3 {
     display: inline-block;
+    margin-top: 0;
   }
   div#postslink {
     display: grid;
@@ -810,6 +814,7 @@
     align-items: center;
     justify-content: stretch;
     margin-top: 2ch;
+    row-gap: 20px;
   }
   .share-links a {
     display: block;
@@ -826,6 +831,16 @@
   }
   .share-links svg {
     margin: 0;
+  }
+  @media only screen and (max-width: 400px) {
+    .share-links {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    #kudosClick {
+      grid-column-start: 1;
+      grid-row-start: 1;
+      grid-column-end: 7;
+    }
   }
   .gardentoc {
     display: flex;
