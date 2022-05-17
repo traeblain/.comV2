@@ -566,7 +566,7 @@
   }, 250)
 </script>
 {{ end }}{{ end -}} {{- if .IsHome }}
-<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script type="text/javascript">
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on('init', (user) => {
@@ -587,6 +587,7 @@
 <noscript>
   <img
     src="https://{{ .Site.Params.goat }}.goatcounter.com/count?p={{ .Page.Permalink }}"
+    alt="Goat Counter Check"
   />
 </noscript>
 {{- end -}}

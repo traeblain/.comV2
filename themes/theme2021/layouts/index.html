@@ -1,6 +1,6 @@
 {{ define "main" }}
   <h1 class="title">{{ .Params.me_title | upper }}</h1>
-  <p>{{ .Params.me_content | safeHTML }}</p>
+  <div>{{ .Params.me_content | safeHTML }}</div>
 
   <div id="postslink">
     <div>
@@ -71,11 +71,9 @@
     <a href="https://bitbucket.com/traeblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#bitbucket"></use></svg></a>
     <a href="https://gitlab.com/traeblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#gitlab"></use></svg></a>
   </h2><a id="code" class="anchor"></a>
-  <p class="code-details">
-    <figure>
-      <img src="https://github.com/traeblain/traeblain/raw/main/github-metrics.svg" alt="Code Metrics" loading="lazy">
-    </figure>
-  </p>
+  <figure>
+    <img src="https://github.com/traeblain/traeblain/raw/main/github-metrics.svg" alt="Code Metrics" loading="lazy">
+  </figure>
 
   <h1>Sensory</h1>
   <h2>Movie<a href="https://trakt.tv/users/traeblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#film"></use></svg></a></h2><a id="moviefilm" class="anchor"></a>
