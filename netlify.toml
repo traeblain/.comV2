@@ -2,6 +2,11 @@
   command = "npm run deploy"
   publish = "public"
   functions = "_functions"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
 [[plugins]]
 package = "@algolia/netlify-plugin-crawler"
   [plugins.inputs]
