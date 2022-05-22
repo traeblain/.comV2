@@ -1,6 +1,6 @@
 ---
 title: 'Horizon Forbidden West'
-date: '2022-05-04 11:48:26 -0600'
+date: '2022-05-21 11:48:26 -0600'
 description: >-
   I just got the platinum trophy for Guerrilla's Horizon Forbidden West and it was awesome. Here are my thoughts on the game.
 background: >-
@@ -9,7 +9,6 @@ tags:
   - games
   - geek
   - review
-draft: true
 ---
 
 [Horizon Forbidden West](https://www.playstation.com/en-us/games/horizon-forbidden-west/) is [Guerrilla Games](https://www.guerrilla-games.com/games) latest action role-playing game following the protagonist, Aloy, through a post-apocalyptic North America.  If you haven't played [Horizon Zero Dawn](https://www.playstation.com/en-us/games/horizon-zero-dawn/), then you should really go out and play it.  As one of my all-time favorite modern games, and is a must have game for the PlayStation 4 and 5.   I have just completed Horizon Forbidden West (HFW) and achieved the [Platinum Trophy](https://psnprofiles.com/trophies/15450-horizon-forbidden-west/Gothar_Destroyer).  Here's my thoughts on the game.
