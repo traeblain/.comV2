@@ -4,7 +4,7 @@ const moment = require('moment')
 const Parser = require('rss-parser')
 let parser = new Parser({
   customFields: {
-    item: ['description', 'enclosure', 'comments']
+    item: ['description', 'enclosure', 'comments', 'updated', 'media:content']
   }
 })
 const postUrl = "https://api.airtable.com/v0/appSegmqnDPMPqaGu/Links"
@@ -19,15 +19,15 @@ exports.handler = async (event, context) => {
   }
   try {
     const postData = {}
-    const feed = await parser.parseURL('https://refind.com/traeblain.rss')
+    const feed = await parser.parseURL('https://feedly.com/f/rTXjCeF8JMcEjFevoSmC4j4R')
     const latest = feed.items[0]
-    postData.ID = latest.guid
-    postData.Date = moment(latest.pubDate).format()
+    postData.ID = latest.id
+    postData.Date = moment(latest.updated).format()
     postData.Title = latest.title
     postData.Link = latest.link
-    postData.Data = latest.description
-    postData.ImageLink = latest.enclosure.url
-    postData.SourceLink = latest.comments
+    postData.Data = latest.summary
+    postData.ImageLink = latest['media:content'].$.url
+    postData.SourceLink = 'https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Ffeedly.com%2Ff%2FrTXjCeF8JMcEjFevoSmC4j4R'
 
     const resp = await axios.post(postUrl, { fields: postData }, {
       headers: {
