@@ -27,13 +27,16 @@
   </div>
 
   <h1>Social</h1>
-  <h2>Twitter<a href="https://twitter.com/traeblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#twitter"></use></svg></a></h2><a id="tweet" class="anchor"></a>
+  <h2>Tweet/Toot
+    <a href="https://twitter.com/traeblain" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#twitter"></use></svg></a> 
+    <a href="https://social.lol/@trae" class="title-icon"><svg class="svg svg-social-icon"><use xlink:href="#mastodon"></use></svg></a>
+  </h2><a id="tweet" class="anchor"></a>
   <blockquote id="twitter-status" class="twitter-tweet">
     <p lang="en" dir="ltr">
       {{ .Site.Params.newtweet.post | replaceRE "((http:|https:)[^\\s]+[\\w])" "<a href=\"$1\" target=\"_blank\" rel=\"noopener\">$1</a>" | safeHTML }}
     </p>
     <cite>
-      <a href="https://twitter.com/traeblain">Trae 🧠</a>
+      <a href="https://twitter.com/traeblain">TᖇᗩE ᗷᒪᗩIᑎ</a>
       <time><a href="{{ .Site.Params.newtweet.link }}">{{ dateFormat "January 02, 2006 at 3:04PM" .Site.Params.newtweet.date }}</a></time>
     </cite>
   </blockquote>
