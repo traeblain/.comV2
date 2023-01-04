@@ -2,8 +2,8 @@ var cloudinary = require('cloudinary').v2
 
 cloudinary.config({
   cloud_name: 'dixwznarl',
-  api_key: '${{ secrets.CLOUDINARYAPI }}',
-  api_secret: '${{ secrets.CLOUDINARYSECRET }}',
+  api_key: process.env.CLOUDINARYAPI,
+  api_secret: process.env.CLOUDINARYSECRET,
   secure: true
 })
 
