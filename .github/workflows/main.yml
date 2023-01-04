@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Node
-      - uses: actions/setup-node@v3.5.1
+        uses: actions/setup-node@v3.5.1
         with:
           node-version: '14.x'
       - name: Install Cloudinary from npm
-      - run: npm install -g cloudinary
+        run: npm install -g cloudinary
       - name: Look at directory
-      - run: ls -ahl
+        run: ls -ahl
       - name: Clear the cache
-      - run: ./scripts/gh-runner.js
+        run: ./scripts/gh-runner.js
       
