@@ -15,7 +15,10 @@ jobs:
       - name: Install Cloudinary from npm
         run: npm install --global --verbose cloudinary
       - name: Add modules to path
-        run: export NODE_PATH=$(npm root --quiet -g)
+        run: |
+          echo $NODE_PATH
+          export NODE_PATH=$(npm root --quiet -g)
+          npm root --quiet -g
 #       - name: Get npm cache directory
 #         id: npm-cache
 #         run: echo "dir=$(npm config get cache)" >> $GITHUB_STATE
