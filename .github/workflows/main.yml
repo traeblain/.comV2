@@ -13,7 +13,7 @@ jobs:
       - name: Install Cloudinary from npm
         run: npm install -g cloudinary
       - name: Look at directory
-        run: ls -ahl ../
+        run: ls -ahl ../.comV2/
       - name: Clear the cache
-        run: ./scripts/gh-runner.js
+        run: node ../.comV2/.github/scripts/gh-runner.js
       
