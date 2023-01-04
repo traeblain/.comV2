@@ -1,0 +1,14 @@
+name: cloudinary-cache-clear
+run-name: ${{ github.actor }} is clearing Cloudinary cache to pull changes
+on: [push, workflow_dispatch]
+jobs:
+  clear-cache:
+    name: Setup Node and Cloudinary then clear cache
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3.5.1
+        with:
+          node-version: '14.x'
+      - run: npm install -g cloudinary
+      - run: ./scripts/gh-runner.js
+      
