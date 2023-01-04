@@ -21,7 +21,7 @@
     "axios": "^0.21.4",
     "dotenv": "^8.6.0",
     "encoding": "^0.1.13",
-    "moment": "^2.29.2",
+    "moment": "^2.29.4",
     "netlify-lambda": "^2.0.15",
     "node-fetch": "^2.6.7",
     "node-fetch-with-proxy": "^0.1.6",
