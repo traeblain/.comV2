@@ -14,18 +14,19 @@ jobs:
           node-version: '19.x'
       - name: Install Cloudinary from npm
         run: npm install --global --verbose cloudinary
-      - name: Get npm cache directory
-        id: npm-cache
-        run: |
-          echo "::set-output name=dir::$(npm config get cache)"
-      - name: Cache NPM
-        uses: actions/cache@v1
-        with:
-          path: ${{ steps.npm-cache.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - name: Clear the cache
+      - name: Add modules to path
+        run: export NODE_PATH=$(npm root --quiet -g)
+#       - name: Get npm cache directory
+#         id: npm-cache
+#         run: echo "dir=$(npm config get cache)" >> $GITHUB_STATE
+#       - name: Cache NPM
+#         uses: actions/cache@v1
+#         with:
+#           path: ${{ steps.npm-cache.outputs.dir }}
+#           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+#           restore-keys: |
+#             ${{ runner.os }}-node-
+      - name: Clear Cloudinary cache
         run: node ${GITHUB_WORKSPACE}/.github/scripts/gh-runner.js
         shell: bash
               
