@@ -1,6 +1,11 @@
 name: cloudinary-cache-clear
 run-name: ${{ github.actor }} is clearing Cloudinary cache to pull changes
-on: [push, workflow_dispatch]
+on: 
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */8 * * *'
+
 jobs:
   clear-cache:
     name: Setup Node and Cloudinary then clear cache
@@ -14,21 +19,17 @@ jobs:
           node-version: '19.x'
       - name: Install Cloudinary from npm
         run: npm install --verbose cloudinary
-#       - name: Add modules to path
-#         run: |
-#           echo $NODE_PATH
-#           export NODE_PATH=$(npm root --quiet -g)
-#           npm root --quiet -g
-#       - name: Get npm cache directory
-#         id: npm-cache
-#         run: echo "dir=$(npm config get cache)" >> $GITHUB_STATE
-#       - name: Cache NPM
-#         uses: actions/cache@v1
-#         with:
-#           path: ${{ steps.npm-cache.outputs.dir }}
-#           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-#           restore-keys: |
-#             ${{ runner.os }}-node-
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+      - uses: actions/cache@v3
+        id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
+        with:
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Clear Cloudinary cache
         run: node ${GITHUB_WORKSPACE}/.github/scripts/gh-runner.js
         env:
