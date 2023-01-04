@@ -30,8 +30,8 @@ jobs:
 #           restore-keys: |
 #             ${{ runner.os }}-node-
       - name: Clear Cloudinary cache
-        run: |
-          chmod +x ${GITHUB_WORKSPACE}/.github/scripts/gh-runner.js
-          node ${GITHUB_WORKSPACE}/.github/scripts/gh-runner.js
-        shell: bash
+        run: node ${GITHUB_WORKSPACE}/.github/scripts/gh-runner.js
+        env:
+          CLOUDINARYAPI: ${{ secrets.CLOUDINARYAPI }}
+          CLOUDINARYSECRET: ${{ secrets.CLOUDINARYSECRET }}
               
