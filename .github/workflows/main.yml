@@ -12,6 +12,8 @@ jobs:
           node-version: '14.x'
       - name: Install Cloudinary from npm
         run: npm install -g cloudinary
+      - name: List the folders...maybe
+        run: ls -ahl /home/runner/work/
       - name: Clear the cache
         run: node ../.github/scripts/gh-runner.js
       
