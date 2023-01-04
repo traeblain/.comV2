@@ -13,12 +13,12 @@ jobs:
         with:
           node-version: '19.x'
       - name: Install Cloudinary from npm
-        run: npm install --global --verbose cloudinary
-      - name: Add modules to path
-        run: |
-          echo $NODE_PATH
-          export NODE_PATH=$(npm root --quiet -g)
-          npm root --quiet -g
+        run: npm install --verbose cloudinary
+#       - name: Add modules to path
+#         run: |
+#           echo $NODE_PATH
+#           export NODE_PATH=$(npm root --quiet -g)
+#           npm root --quiet -g
 #       - name: Get npm cache directory
 #         id: npm-cache
 #         run: echo "dir=$(npm config get cache)" >> $GITHUB_STATE
@@ -32,6 +32,6 @@ jobs:
       - name: Clear Cloudinary cache
         run: |
           chmod +x ${GITHUB_WORKSPACE}/.github/scripts/gh-runner.js
-          ${GITHUB_WORKSPACE}/.github/scripts/gh-runner.js
+          node ${GITHUB_WORKSPACE}/.github/scripts/gh-runner.js
         shell: bash
               
