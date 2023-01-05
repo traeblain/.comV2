@@ -73,38 +73,38 @@ enableGitInfo = true
     name = "Mastodon"
     post = "me"
     url = "http://social.lol/@trae"
-    weight = 2
+    weight = 3
 
   [[menu.social]]
     identifier = "instagram"
     name = "Instagram"
     post = "me"
     url = "http://instagram.com/traeblain"
-    weight = 3
+    weight = 4
 
   [[menu.social]]
     identifier = "linkedin"
     name = "LinkedIn"
     post = "me"
     url = "http://linkedin.com/in/traeblain/"
-    weight = 4
+    weight = 5
 
   [[menu.social]]
     identifier = "github"
     name = "Github"
     post = "me"
     url = "http://github.com/traeblain"
-    weight = 5
+    weight = 6
 
   [[menu.social]]
     identifier = "lock"
     name = "PGP Info"
     post = "me"
     url = "http://keybase.io/traeblain"
-    weight = 6
+    weight = 7
 
   [[menu.social]]
     identifier = "rss"
     name = "RSS"
     url = "/blog/index.xml"
-    weight = 7
+    weight = 8
