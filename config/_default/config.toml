@@ -67,6 +67,13 @@ enableGitInfo = true
     post = "me"
     url = "http://twitter.com/traeblain"
     weight = 2
+    
+  [[menu.social]]
+    identifier = "mastodon"
+    name = "Mastodon"
+    post = "me"
+    url = "http://social.lol/@trae"
+    weight = 2
 
   [[menu.social]]
     identifier = "instagram"
