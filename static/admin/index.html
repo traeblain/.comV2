@@ -20,7 +20,7 @@
           var tags = entry.getIn(['data', 'tags']);
           var body = this.props.widgetFor('body');
           console.log(tags);
-          if (typeOf tags === 'undefined') { console.log(true) };
+          if (typeof tags === 'undefined') { console.log(true) };
 
           return h('main', {},
             h('div', {"className": "headline", "style": {"background-image": "url(" + bg + ")"}}),
