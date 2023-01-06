@@ -18,7 +18,6 @@
           var date = entry.getIn(['data', 'date']);
           var bg = entry.getIn(['data', 'background']);
           var body = this.props.widgetFor('body');
-          console.log(date);
 
           return h('main', {},
             h('div', {"className": "headline", "style": {"background-image": "url(" + bg + ")"}}),
@@ -26,10 +25,7 @@
             h('time', {"className": "post-time"}, date.substring(0,4) + "." + date.substring(5,7)),
             h('div', {"className": "post-tags"},
               this.props.widgetsFor('tags').map(function(tag) {
-                console.log(tag);
-                return 
-                  h('svg', {"className": "svg svg-taglink"}, h('path', {"d": "M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"})) + 
-                  h('a', {"href": "#"}, tag._root.entries[0][1])
+                return h('svg', {"className": "svg svg-taglink"}, h('path', {"d": "M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"})) + h('a', {"href": "#"}, tag._root.entries[0][1]);
               })),
             h('div', {"className": "article"}, body),
           );
