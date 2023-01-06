@@ -1,15 +1,16 @@
 ---
-title: Now in Color!
-date: 2020-01-05 23:48:26 Z
 draft: false
-description: Updated the website design to a new style with multiple colors.  Was
-  fun to put together.  Here's the changes to the site.
-background: https://res.cloudinary.com/dixwznarl/image/upload/notebook/lighted-twenty-jontyson.jpg
+title: Now in Color!
+date: '2020-01-05 17:48:26 -0600'
+description: >-
+  Updated the website design to a new style with multiple colors.  Was fun to
+  put together.  Here's the changes to the site.
+background: >-
+  https://res.cloudinary.com/dixwznarl/image/upload/notebook/lighted-twenty-jontyson.jpg
 tags:
-- site
-script: " "
+  - site
+script: ' '
 ---
-
 So what tends to happen this time of year is that I rebuild my site for whatever reason I can come up with.  It's what keeps me engaged, finding cool things to do, solving problems, and playing around.  This time, I kept most of the basic style of my previous site but amped it up a notch with more _flash_.
 
 There are **5** main updates that I want to highlight:

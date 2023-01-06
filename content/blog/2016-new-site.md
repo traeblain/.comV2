@@ -1,10 +1,8 @@
 ---
-title: New Site!
-date: 2016-01-14 00:00:00 Z
-tags:
-- site
-- geek
-background: https://res.cloudinary.com/dixwznarl/image/upload/q_auto:eco/v1480480425/brooklyn-bridge_nakdn2.jpg
+date: "2016-01-14"
+title: "New Site!"
+tags: [ "site", "geek" ]
+background: "https://res.cloudinary.com/dixwznarl/image/upload/q_auto:eco/v1480480425/brooklyn-bridge_nakdn2.jpg"
 ---
 
 I did it!  I once again threw off the shackles of the old skin and slapped a new one on.  This one is bigger, bolder, better, beautifuler, boomier, ballsier, boisterous, blistering, boilermaking, and bombastic.  At least I like to think so.   What do you think?

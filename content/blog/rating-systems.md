@@ -1,6 +1,4 @@
 ---
-title: 'Rating Systems: What does it mean?'
-date: 2018-04-16 17:01:00 Z
 tags:
 - geek
 - thoughts
@@ -8,12 +6,14 @@ tags:
 background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:eco,w_2048/notebook/moon-phases.jpg
 text_color: light
 script: ''
+title: 'Rating Systems: What does it mean?'
+date: 2018-04-16 12:01:00 -0500
 description: The lack of standardized rating systems sucks. There’s so many ways to
   rate something that you begin to lose all understanding what what something means.
   Even systems designed to simplify things muddy the waters, because they often lack
   the granularity that allows for meaning to be derived. I’ll offer a guide…
----
 
+---
 The lack of standardized rating systems sucks. There's so many ways to rate something that you begin to lose all understanding what what something means. Even systems designed to simplify things muddy the waters, because they often lack the granularity that allows for meaning to be derived. I'll offer a guide...
 
 _**TL/DR** - [After distilling all other rating systems, this is where I sit when I rate things.](#my-default-rating-context)_

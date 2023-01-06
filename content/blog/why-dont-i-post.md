@@ -1,14 +1,14 @@
 ---
-title: Why Don't I Post
-date: 2017-11-16 13:54:00 Z
 background: https://res.cloudinary.com/dixwznarl/image/upload/q_jpegmini/notebook/typewriter.jpg
+date: 2017-11-16 13:54:00 +0000
 tags:
 - site
 - commentary
+title: Why Don't I Post
 text_color: ''
 script: ''
----
 
+---
 You may have noticed that I haven't posted much since getting the site up and running.  That's common.  It happens on most people's sites as they run out of time.  I haven't completely abandoned writing...but typing things out on the site has had its hurdles.
 
 ## So What's Up?

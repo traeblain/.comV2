@@ -1,17 +1,17 @@
 ---
-title: What Are Video Games Teaching Us?
-date: 2018-06-10 17:56:34 Z
 tags:
 - commentary
 - thoughts
 background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:eco,w_2048/notebook/xbox-controller.jpg
 text_color: light
 script: ''
+title: What Are Video Games Teaching Us?
+date: 2018-06-10 12:56:34 -0500
 description: Video games effect our daily activity.  A few points are seriously poignant
   to me when I really started thinking about what they were.  I hope to lay out some
   here.
----
 
+---
 I was listening to a podcast the other day that spoke about (as an aside) how video games effect daily activity.  A number of points became seriously poignant to me when I really started thinking about what they were talking about.  I hope to lay out some points of thought here.
 
 ## Preface

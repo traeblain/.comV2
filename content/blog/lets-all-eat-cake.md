@@ -1,17 +1,17 @@
 ---
-title: Let's All Eat Cake
-date: 2018-01-25 20:56:28 Z
 tags:
 - commentary
 - thoughts
 background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:eco,w_2048/v1513568977/notebook/pretty-cake.jpg
 text_color: light
 script: ''
+title: Let's All Eat Cake
+date: 2018-01-25 14:56:28 -0600
 description: Ever heard the saying, "You can't have your cake and eat it too."?  What
   does that mean.  Think about it, if I have cake... I'm going to eat it.  Seriously,
   why can't I have cake and eat it as well?
----
 
+---
 Ever heard the saying, "You can't have your cake and eat it too."?  What does that mean.  Think about it, if I have cake... I'm going to eat it.  Seriously, why can't I have cake and eat it as well? I know I can...
 
 Lately I've been thinking about the things we say.  Words have meaning.  And although I'm a mess of incorrect word usage, things like this make me think a bit.  It turns out that the order was probably reversed at one point.  John Heywood (1546), John Davies (1611), and Jonathan Swift (1738) all used this phrase, but in essence used it like this:

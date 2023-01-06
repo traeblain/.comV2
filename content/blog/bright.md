@@ -1,16 +1,16 @@
 ---
-title: Bright
-date: 2017-12-26 22:34:31 Z
 tags:
 - review
 - movies
 background: https://res.cloudinary.com/dixwznarl/image/upload/q_auto:eco/notebook/bright-movie.jpg
 text_color: light
 script: "//cdn.embedly.com/widgets/platform.js"
+title: Bright
+date: 2017-12-26 22:34:31 +0000
 description: I'm conflicted about this movie...it was super fun to watch, but the
   writing was horribly lacking.
----
 
+---
 Just watched Netflix's latest entry into the blockbuster movie scene, Bright.  I have to say, I'm conflicted.  The movie is not good, but neither is it bad.  As I consider it, over and over in my head, I get more and more conflicted in my reactions.  Because of that, I am going to say you should watch it...but go into the viewing with an open mind.  I'll barely touch on the good to avoid spoilers, but it's worth watching.
 
 ###  The World

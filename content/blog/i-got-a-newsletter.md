@@ -1,16 +1,16 @@
 ---
-title: I Got A Newsletter!
-date: 2018-01-02 01:26:00 Z
 tags:
 - site
 background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:eco,w_2048/notebook/newspaper-stack.jpg
 text_color: dark
 script: ''
+title: I Got A Newsletter!
+date: 2018-01-01 19:26:00 -0600
 type: ''
 description: A new year, a new-sletter.  Get a weekly run of great sites I've stumbled
   across this week.
----
 
+---
 So I've been tossing around the idea of starting a newsletter but didn't really like any of the options out there in circulating one.  Yes, [Mailchimp](https://mailchimp.com/) and other services aren't difficult, yes things like [TinyLetter](https://tinyletter.com/) make it even more simple...but what I really wanted to do is basically share links.  I never really wanted to _create_ content for a newsletter.  Digging up all that content for a quality letter is a pain and what I really wanted is a simple way of curating links I find across the net for the week and sharing those.
 
 What I found, is that doing that kind of sharing is actually pretty difficult.  [Goodbits](https://goodbits.io/) has a pretty slick way of doing it, but it is still a level of work to get it included into the newsletter.  What I would like is a simple way to grab the links, store them, then share them.  Clean, no fuss...no mess...no special tools...minimal steps...etc.

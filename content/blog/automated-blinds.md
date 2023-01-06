@@ -1,11 +1,9 @@
 ---
-title: Automated Blinds
-date: 2017-01-05 00:00:00 Z
+title: 'Automated Blinds'
+date: '2017-01-05'
 background: https://res.cloudinary.com/dixwznarl/image/upload/notebook/a-house.jpg
-text_color: dark
-tags:
-- hardware
-- geek
+text_color: "dark"
+tags: ['hardware', 'geek']
 favorite: true
 ---
 

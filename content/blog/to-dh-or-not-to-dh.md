@@ -1,10 +1,8 @@
 ---
-title: To DH, or Not To DH
-date: 2016-12-09 00:00:00 Z
-tags:
-- commentary
-- sports
-background: https://res.cloudinary.com/dixwznarl/image/upload/notebook/baseball.jpg
+date: "2016-12-09"
+title: "To DH, or Not To DH"
+tags: [ "commentary", "sports" ]
+background: "https://res.cloudinary.com/dixwznarl/image/upload/notebook/baseball.jpg"
 ---
 
 The question of Major League Baseball's (MLB) use of the Designated Hitter (DH) is once again up for debate.  [ESPN spoke][espn] to all club managers and general mangers last winter meeting on the topic.  Commissioner Rob Manfred [threw out][commishdh] the option...then quickly [took it back][commishnodh].  This argument is probably as old as the 1973 rule change itself.  It's AL'ers vs. NL'ers, Progressives vs. Purists, Shift vs. No Shift, Republicans vs. Democrats, Cats vs. Dogs...er...

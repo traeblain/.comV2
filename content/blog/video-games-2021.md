@@ -1,13 +1,14 @@
 ---
-title: Crushing Video Games
-date: 2021-12-14 17:48:26 Z
-description: I was able to play some serious games this year due to "getting my son"
-  a PlayStation 5 for Christmas.  Here's what I thought.
-background: https://res.cloudinary.com/dixwznarl/image/upload/q_auto:good/v1652118959/notebook/high-res-dualsense.jpg
+title: 'Crushing Video Games'
+date: '2021-12-14 11:48:26 -0600'
+description: >-
+  I was able to play some serious games this year due to "getting my son" a PlayStation 5 for Christmas.  Here's what I thought.
+background: >-
+  https://res.cloudinary.com/dixwznarl/image/upload/q_auto:good/v1652118959/notebook/high-res-dualsense.jpg
 tags:
-- games
-- geek
-- review
+  - games
+  - geek
+  - review
 draft: true
 ---
 
