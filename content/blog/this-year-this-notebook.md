@@ -18,6 +18,6 @@ F﻿ollowing the suggestion of [100DaysToOffload](https://100daystooffload.com),
 
 I﻿ may not specifially participate in the 100DaysToOffload, but think the attempt may be fun to do. The hope is that I'll put some more stuff on here to help out.  I'll probably start with tomorrow and throw out some items of the past.  These will be so lightly edited, that I may have to edit them more later.  Cross your fingers. 🤞 I'm giving it a try.
 
-{﻿{< figure src="https://media4.giphy.com/media/26FmQ6EOvLxp6cWyY/giphy.gif" title="There is no try" >}}
+{{< figure src="https://media4.giphy.com/media/26FmQ6EOvLxp6cWyY/giphy.gif" title="There is no try" >}}
 
 *H﻿eader Image from [Patrick Fore](https://unsplash.com/@patrickian4)*
