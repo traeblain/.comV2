@@ -20,10 +20,13 @@
           var body = this.props.widgetFor('body');
 
           return h('main', {},
-            h('div', {"className": "title"},
-              h('h1', {}, title),
-            ),
-            h('hr', {}),
+            h('div', {"className": "headline", "style": {"background-image": "url(https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:good,w_2048/notebook/horizon-forbidden-west.jpg)"}}),
+            h('h1', {}, title),
+            h('time', {"className": "post-time"}, date),
+            h('div', {"className": "post-tags"},
+              h('svg', {"className": "svg svg-taglink"},
+                h('use', {"xlink:href": "#taglink"})),
+              h('a', {"href": "#"}, "tag")),
             h('div', {"className": "article"}, body),
           );
         }
