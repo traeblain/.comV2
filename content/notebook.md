@@ -1,7 +1,7 @@
 ---
 title: Digital Garden
-background: 'https://res.cloudinary.com/dixwznarl/image/upload/s--3LDngnRy--/q_jpegmini/bluebonnets.jpg'
-date: 2000-01-01 00:00:01 +0000
+date: 2000-01-01 00:00:01 Z
+background: https://res.cloudinary.com/dixwznarl/image/upload/s--3LDngnRy--/q_jpegmini/bluebonnets.jpg
 hidden: true
 draft: false
 class: garden

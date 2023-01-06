@@ -1,13 +1,12 @@
 ---
 title: New Look and Feel
-date: '2021-11-14 11:48:26 -0600'
-description: >-
-  Cleaned up the look and feel of the website again.  Less dealing with large views, and more addressing good design.  Clean and simple look.
-background: >-
-  https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:good,w_2048/notebook/color-pencils.jpg
+date: 2021-11-14 17:48:26 Z
+description: Cleaned up the look and feel of the website again.  Less dealing with
+  large views, and more addressing good design.  Clean and simple look.
+background: https://res.cloudinary.com/dixwznarl/image/upload/c_scale,q_auto:good,w_2048/notebook/color-pencils.jpg
 tags:
-  - site
-  - geek
+- site
+- geek
 ---
 
 It's the COVID isolation theme...  A bit more svelte and easier to handle, but still in the vein of what I've established as my style.  Right about now, is when I start talking about how I wish I would write more and that I will probably do it from now on...then the site sits still for months and months.  So I won't be saying that.

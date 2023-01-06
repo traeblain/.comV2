@@ -1,8 +1,7 @@
 ---
 tags: []
-background: ""
-text_color: "dark"
-script: ""
+background: ''
+text_color: dark
+script: ''
 ---
-
 

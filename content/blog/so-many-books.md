@@ -1,9 +1,10 @@
 ---
-date: "2016-01-30"
-title: "So Many Books!!"
-tags: [ "reading" ]
-background: "https://res.cloudinary.com/dixwznarl/image/upload/q_auto:eco/v1480480424/many-books_mm4e6j.jpg"
-text_color: "dark"
+title: So Many Books!!
+date: 2016-01-30 00:00:00 Z
+tags:
+- reading
+background: https://res.cloudinary.com/dixwznarl/image/upload/q_auto:eco/v1480480424/many-books_mm4e6j.jpg
+text_color: dark
 ---
 
 I read a ton of books last year.  I spent so much time on planes and in travel last year that I was able to read quite a few stories.  I set a goal...then blew it out of the water!  My goal last year was to read 40 books.  Somehow I was able to read 48 books the year before and thought that 40 would still be a good goal without being too easy.  Only I read 55 books last year demolishing that goal.  [Goodreads presents my book reads][goodreads] better than I ever could, so checkout that page first and see what I did.  Then come back as I highlight of few things here.

@@ -1,9 +1,11 @@
 ---
-title: "Data Driven Site"
-date: "2016-01-19"
-background: "https://res.cloudinary.com/dixwznarl/image/upload/q_auto:good/v1480480425/graph-on-screen_nqm0et.jpg"
-text_color: "dark"
-tags: [ "geek", "site" ]
+title: Data Driven Site
+date: 2016-01-19 00:00:00 Z
+background: https://res.cloudinary.com/dixwznarl/image/upload/q_auto:good/v1480480425/graph-on-screen_nqm0et.jpg
+text_color: dark
+tags:
+- geek
+- site
 script: "/data/data-driven-site.js"
 ---
 

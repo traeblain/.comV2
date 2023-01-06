@@ -1,8 +1,10 @@
 ---
-date: "2016-01-14"
-title: "2015 - Where do we go next?"
-tags: [ "commentary", "geek" ]
-background: "https://res.cloudinary.com/dixwznarl/image/upload/q_auto:eco/v1480480425/notebook-and-pen_hmuvwi.jpg"
+title: 2015 - Where do we go next?
+date: 2016-01-14 00:00:00 Z
+tags:
+- commentary
+- geek
+background: https://res.cloudinary.com/dixwznarl/image/upload/q_auto:eco/v1480480425/notebook-and-pen_hmuvwi.jpg
 ---
 
 So if you look at [my old site][blog] you'll see I made one post in 2015.  One solitary post in January of that year, then nothing.  There was a reason for that.  If you [read that post][2015], you'll see it was about simplifying my life.  One of those things I did, was remove myself from blogging for a time.  I don't know if it helped or hurt, but it was one of the things I did.

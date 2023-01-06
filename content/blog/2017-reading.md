@@ -1,15 +1,15 @@
 ---
+title: That's a-lot-a Books!
+date: 2018-02-22 00:00:27 Z
 tags:
 - reading
 background: https://res.cloudinary.com/dixwznarl/image/upload/q_auto:eco/notebook/big-library.jpg
 text_color: light
 script: ''
-title: That's a-lot-a Books!
-date: 2018-02-21 18:00:27 -0600
 description: A total of Sixty books in 2017...that's a ton.  There were some good
   reads in this list.  You should read these too.
-
 ---
+
 Wow!  **Sixty (60)** books!  2017 was another good year with regards to reading for me.  I was able to once again power through a ton a of books.  It was a year of series; only roughly 18 books out of the 60 were stand alone books.  Many of what I read were serial in nature and, towards the end of the year, I was beginning to get a little burned out on these stories.  Hopefully 2018 brings a refreshed view, or better feelings at least.  As always, [Goodreads](https://www.goodreads.com/) does a better job of presenting all the books, so [check it out there](https://www.goodreads.com/user/year_in_books/2017/1671848).
 
 ## Favorite Read

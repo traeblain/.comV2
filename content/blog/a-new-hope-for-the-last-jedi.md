@@ -1,17 +1,17 @@
 ---
+title: A New Hope for the Last Jedi
+date: 2017-12-02 22:00:17 Z
 tags:
 - movies
 - thoughts
 background: https://res.cloudinary.com/dixwznarl/image/upload/q_jpegmini/notebook/star-wars-last-jedi-main.jpg
 text_color: light
 script: ''
-title: A New Hope for the Last Jedi
-date: 2017-12-02 16:00:17 -0600
 description: I got a theory that I hope will be revealed in The Last Jedi.  It is
   something that has been showing itself for 7 films now, and it would be great to
   see it confirmed.
-
 ---
+
 Star Wars: The Last Jedi is about to be released and since they announced the title, I've had a theory that I've really wanted to hope come true.  A brief analysis of the previous films and a few comments from the previews for the new file--taken completely out of context--leads me to what I hope happens for The Last Jedi.  We'll see though, won't we.
 
 ## Balance to The Force
