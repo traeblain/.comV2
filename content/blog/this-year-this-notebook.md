@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: This Year, This Notebook
 date: 2023-01-06 15:39:42 -0600
 description: Going to try to give writing a better go at things.  Cross your
