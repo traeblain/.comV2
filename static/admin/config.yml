@@ -10,19 +10,36 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Draft?", name: "draft", widget: "boolean", default: true }
-      - { label: "Title", name: "title", widget: "string" }
-      - {
-          label: "Date",
-          name: "date",
-          widget: "datetime",
-          format: "YYYY-MM-DD HH:mm:ss ZZ"
-        }
-      - { label: "Summary", name: "description", widget: "text" }
-      - { label: "Background Image", name: "background", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list", allow_add: false }
-      - { label: "Script", name: "script", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Draft?"
+        name: "draft"
+        widget: "boolean"
+        default: true
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD HH:mm:ss ZZ"
+      - label: "Background Image" 
+        name: "background"
+        widget: "image"
+        media_library:
+          config:
+            multiple: false
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        allow_add: false
+      - label: "Summary"
+        name: "description"
+        widget: "text"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+      - label: "Script"
+        name: "script"
+        widget: "string"
 media_library:
   name: cloudinary
   config:
