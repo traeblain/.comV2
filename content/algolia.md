@@ -25,9 +25,24 @@ search.addWidgets([
 
   instantsearch.widgets.hits({
     container: '#hits',
+    templates: {
+      item: document.getElementById('hit-template').innerHTML,
+      empty: "We didn't find any results for the search <em>\"{{query}}\"</em>"
+    }
   })
 ]);
 
 search.start();
+</script>
+<script type="text/html" id="hit-template">
+  <div class="hit">
+    <div class="hit-image">
+      <img src="{{image}}" alt="{{title}}"/>
+    </div>
+    <div class="hit-content">
+      <h3 class="hit-name">{{{_highlightResult.title.value}}}</h3>
+      <p class="hit-description">{{{_highlightResult.content.value}}}</p>
+    </div>
+  </div>
 </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/reset-min.css" integrity="sha256-QlHlZdbSVxaYkUHxhMFhAj/L3pJiW1LuomSCONXBWms=" crossorigin="anonymous">
