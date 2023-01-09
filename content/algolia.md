@@ -14,7 +14,7 @@ draft: true
 const searchClient = algoliasearch('QNV5GOVV6P', '9e6a42783b13baed13f2c6c7dafcae40');
 
 const search = instantsearch({
-  indexName: 'demo_ecommerce',
+  indexName: 'netlify_673ccdde-2c26-40f1-b781-470308fbf6c2_master_all',
   searchClient,
 });
 
