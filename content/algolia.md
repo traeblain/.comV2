@@ -5,6 +5,7 @@ draft: true
 ---
 
 <input id="searchbox"/>
+<div id="poweredby"></div>
 <div id="hits"></div>
 
 
@@ -42,6 +43,10 @@ search.addWidgets([
       item: document.getElementById('hit-template').innerHTML,
       empty: "We didn't find any results for the search <em>\"{{query}}\"</em>"
     }
+  }),
+  
+  instantsearch.widgets.poweredBy({
+    container: '#poweredby',
   })
 ]);
 
