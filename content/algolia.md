@@ -16,7 +16,7 @@ draft: true
     </div>
     <div class="hit-content">
       <h3 class="hit-name">{{{_highlightResult.title.value}}}</h3>
-      <p class="hit-description">{{#helpers.snippet}}{{{_highlightResult.content.value}}}{{/helpers.snippet}}</p>
+      <p class="hit-description">{{#helpers.snippet}}{ "attribute": "content", "highlightedTagName": "mark" }{{/helpers.snippet}}</p>
     </div>
   </div>
 </script>
