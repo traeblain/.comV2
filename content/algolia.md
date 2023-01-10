@@ -4,7 +4,7 @@ date: 2023-01-09
 draft: true
 ---
 
-<input id="searchbox"/>
+<div id="searchbox"/>
 <div id="poweredby"></div>
 <div id="hits"></div>
 
